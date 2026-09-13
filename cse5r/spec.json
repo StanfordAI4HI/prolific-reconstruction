@@ -1,0 +1,154 @@
+{
+ "app": "cse5r",
+ "study": "cse5r",
+ "archive_experiment": "experiment_1",
+ "target": "f04",
+ "title": "Forming a workplace committee",
+ "arms": 2,
+ "arm_keys": [
+  "condition"
+ ],
+ "arm_labels": [
+  {
+   "condition": "control"
+  },
+  {
+   "condition": "representation goals"
+  }
+ ],
+ "arm_blocks": [
+  [
+   {
+    "type": "stimuli",
+    "variable-name": "scenario_intro",
+    "content": "Imagine that you are forming a committee that will represent your work group (or department / unit) at a company-wide event.",
+    "text_source": "paraphrased"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "manipulation",
+    "content": "Imagine that you are forming a committee that will represent your work group (or department / unit) at a company-wide event.\n\nYou have a broad range of different employees to choose from. However, all of the women in your work group currently have full workloads, and sitting on the committee would entail an additional 5-10 hours of work each week. The women in your work group also do not have all of the primary qualifications and skills needed to do well on the committee, so the committee work would be outside their specializations. There are several men who have the required specializations and who also have enough available time to serve on the committee.",
+    "condition": "control",
+    "text_source": "paraphrased"
+   },
+   {
+    "type": "question",
+    "variable-name": "asn_womn",
+    "question": "In this situation: would you assign one of the women in your workgroup to the committee or would you assign only men?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I would assign only men",
+      "I would assign at least one of the women"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   }
+  ],
+  [
+   {
+    "type": "stimuli",
+    "variable-name": "scenario_intro",
+    "content": "Imagine that you are forming a committee that will represent your work group (or department / unit) at a company-wide event.",
+    "text_source": "paraphrased"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "manipulation",
+    "content": "Imagine that you are forming a committee that will represent your work group (or department / unit) at a company-wide event, and your supervisors have indicated that it is important that the committee be diverse with respect to gender.\n\nYou have a broad range of different employees to choose from. However, all of the women in your work group currently have full workloads, and sitting on the committee would entail an additional 5-10 hours of work each week. The women in your work group also do not have all of the primary qualifications and skills needed to do well on the committee, so the committee work would be outside their specializations. There are several men who have the required specializations and who also have enough available time to serve on the committee.",
+    "condition": "representation goals",
+    "text_source": "paraphrased"
+   },
+   {
+    "type": "question",
+    "variable-name": "asn_womn",
+    "question": "In this situation: would you assign one of the women in your workgroup to the committee or would you assign only men?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I would assign only men",
+      "I would assign at least one of the women"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   }
+  ]
+ ],
+ "prescreen": {
+  "countries": [
+   "United States"
+  ],
+  "min_age": 18,
+  "other": [
+   "full-time work experience"
+  ],
+  "exclude_prior_listings": true
+ },
+ "reward_usd": 0.6,
+ "consent_sections": [
+  [
+   "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
+   [
+    "Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400."
+   ]
+  ],
+  [
+   "DESCRIPTION:",
+   [
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read a short workplace scenario and answer one question about it. There are no right or wrong answers and we are interested in your own view.",
+    "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
+    "You must be 18 or older to take part in this study."
+   ]
+  ],
+  [
+   null,
+   [
+    "Participation in this research is voluntary, and you are free to withdraw your consent at any time."
+   ]
+  ],
+  [
+   "TIME INVOLVEMENT:",
+   [
+    "Your participation will take approximately one minute."
+   ]
+  ],
+  [
+   "PAYMENTS:",
+   [
+    "You will receive $0.60, paid through Prolific, as payment for your participation."
+   ]
+  ],
+  [
+   "PRIVACY AND CONFIDENTIALITY:",
+   [
+    "The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.",
+    "Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study."
+   ]
+  ],
+  [
+   "CONTACT INFORMATION:",
+   [
+    "<b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.",
+    "<b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu."
+   ]
+  ],
+  [
+   null,
+   [
+    "Save or print a copy of this page for your records."
+   ]
+  ],
+  [
+   null,
+   [
+    "<b>If you agree to participate in this research, click the Continue button below.</b>"
+   ]
+  ]
+ ],
+ "gdpr_attestation": null,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read a short workplace scenario and answer one question about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately one minute.</p><h4>PAYMENTS:</h4><p>You will receive $0.60, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 0.6,
+ "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/cse5r/"
+}

@@ -1,0 +1,866 @@
+{
+ "app": "ky9u6",
+ "study": "ky9u6",
+ "archive_experiment": "experiment_1",
+ "target": "f20",
+ "title": "Personality and well-being",
+ "blocks": [
+  {
+   "type": "stimuli",
+   "variable-name": "bfi_instructions",
+   "content": "The Big Five Inventory. Here are a number of characteristics that may or may not apply to you. Please write a number next to each statement to indicate the extent to which you agree or disagree with that statement. 1 = Strongly disagree  2 = Disagree  3 = Somewhat disagree  4 = Neutral  5 = Somewhat agree  6 = Agree  7 = Strongly agree. I see myself as someone who...",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.1",
+   "question": "Is talkative",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.2",
+   "question": "Tends to find fault with others",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.3",
+   "question": "Does a thorough job",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.4",
+   "question": "Is depressed, blue",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.5",
+   "question": "Is original, comes up with new ideas",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.6",
+   "question": "Is reserved",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.7",
+   "question": "Is helpful and unselfish with others",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.8",
+   "question": "Can be somewhat careless",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.9",
+   "question": "Is relaxed, handles stress well",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.10",
+   "question": "Is curious about many different things",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.11",
+   "question": "Is full of energy",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.12",
+   "question": "Starts quarrels with others",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.13",
+   "question": "Is a reliable worker",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.14",
+   "question": "Can be tense",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.15",
+   "question": "Is ingenious, a deep thinker",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.16",
+   "question": "Generates a lot of enthusiasm",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.17",
+   "question": "Has a forgiving nature",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.18",
+   "question": "Tends to be disorganized",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.19",
+   "question": "Worries a lot",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.20",
+   "question": "Has an active imagination",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.21",
+   "question": "Tends to be quiet",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.22",
+   "question": "Is generally trusting",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.23",
+   "question": "Tends to be lazy",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.24",
+   "question": "Is emotionally stable, not easily upset",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.25",
+   "question": "Is inventive",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.26",
+   "question": "Has an assertive personality",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.27",
+   "question": "Can be cold and aloof",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.28",
+   "question": "Perseveres until the task is finished",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.29",
+   "question": "Can be moody",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.30",
+   "question": "Values artistic, aesthetic experiences",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.31",
+   "question": "Is sometimes shy, inhibited",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.32",
+   "question": "Is considerate and kind to almost everyone",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.33",
+   "question": "Does things efficiently",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.34",
+   "question": "Remains calm in tense situations",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.35",
+   "question": "Prefers work that is routine",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.36",
+   "question": "Is outgoing, sociable",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.37",
+   "question": "Is sometimes rude to others",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.38",
+   "question": "Makes plans and follows through with them",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.39",
+   "question": "Gets nervous easily",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.40",
+   "question": "Likes to reflect, play with ideas",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.41",
+   "question": "Has few artistic interests",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.42",
+   "question": "Likes to cooperate with others",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.43",
+   "question": "Is easily distracted",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bfi.44",
+   "question": "Is sophisticated in art, music, or literature",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "mhc_instructions",
+   "content": "Mental Health Continuum – Short Form. During the past month, how often did you feel the following ways: 0 = never, 1 = once or twice, 2 = about once a week, 3 = a couple times a week, 4 = almost every day, 5 = every day.",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.1",
+   "question": "Happy",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.2",
+   "question": "Interested in life",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.3",
+   "question": "Satisfied with life",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.4",
+   "question": "That you had something important to contribute to society",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.5",
+   "question": "That you belonged to a community",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.6",
+   "question": "That our society is becoming a better place for all people",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.7",
+   "question": "That people are basically good",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.8",
+   "question": "That the way our society works made sense to you",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.9",
+   "question": "That you liked most parts of your personality",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.10",
+   "question": "Good at managing the responsibilities of your daily life",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.11",
+   "question": "That you had warm and trusting relationships with others",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.12",
+   "question": "That you had experiences that challenged you to grow and become a better person",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.13",
+   "question": "That your life has a sense of direction or meaning to it",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "mhc.14",
+   "question": "Confident to think or express your own ideas and opinions",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 5,
+    "scale-min-desc": "never",
+    "scale-max-desc": "every day"
+   },
+   "text_source": "extracted"
+  }
+ ],
+ "prescreen": {
+  "countries": [
+   "United Kingdom"
+  ],
+  "min_age": 18,
+  "other": [
+   "fluent English"
+  ],
+  "exclude_prior_listings": true
+ },
+ "reward_usd": 1.86,
+ "consent_sections": [
+  [
+   "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
+   [
+    "Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400."
+   ]
+  ],
+  [
+   "DESCRIPTION:",
+   [
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 58 questions about your personality and about how you have been feeling over the past month. There are no right or wrong answers and we are interested in your own view.",
+    "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
+    "Some questions ask how you have been feeling over the past month.",
+    "You must be 18 or older to take part in this study."
+   ]
+  ],
+  [
+   null,
+   [
+    "Participation in this research is voluntary, and you are free to withdraw your consent at any time."
+   ]
+  ],
+  [
+   "TIME INVOLVEMENT:",
+   [
+    "Your participation will take approximately 9 minutes."
+   ]
+  ],
+  [
+   "PAYMENTS:",
+   [
+    "You will receive $1.86, paid through Prolific, as payment for your participation."
+   ]
+  ],
+  [
+   "PRIVACY AND CONFIDENTIALITY:",
+   [
+    "The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.",
+    "Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.",
+    "GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):",
+    "• to carry out and confirm the accuracy of the study;",
+    "• to help us monitor and ensure that the study is following research best practices;",
+    "• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,",
+    "• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.",
+    "The following persons and organizations may process Your Study Data for the purposes listed above:",
+    "• the study team at Stanford University;",
+    "• Prolific, the online platform through which you were recruited and are paid;",
+    "• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;",
+    "• the ethics committee or institutional review board that approved this study; and",
+    "• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.",
+    "We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.",
+    "The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.",
+    "You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.",
+    "There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent."
+   ]
+  ],
+  [
+   "CONTACT INFORMATION:",
+   [
+    "<b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.",
+    "<b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu."
+   ]
+  ],
+  [
+   null,
+   [
+    "Save or print a copy of this page for your records."
+   ]
+  ],
+  [
+   null,
+   [
+    "<b>If you agree to participate in this research, click the Continue button below.</b>"
+   ]
+  ]
+ ],
+ "gdpr_attestation": "You consent to the collection, use and transfer of Your Study Data, which includes other sensitive personal data, for the purpose of carrying out the research study, and know that you can withdraw your consent at any time, and we will stop processing your personal data, except as described above.",
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 58 questions about your personality and about how you have been feeling over the past month. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask how you have been feeling over the past month.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 9 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.86, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 9.3,
+ "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/ky9u6/"
+}

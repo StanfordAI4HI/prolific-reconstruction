@@ -1,0 +1,159 @@
+/* Shared look for every generated app. Deliberately plain: nothing here should
+   change how a participant reads an item, only how legible it is. */
+:root {
+  --ink: #1a1a1a;
+  --muted: #666;
+  --line: #d8d8d8;
+  --accent: #2f5c8f;
+  --bg: #fafafa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.bar { height: 3px; background: var(--line); }
+.fill { height: 3px; background: var(--accent); transition: width .2s; }
+
+.card {
+  max-width: 44em;
+  margin: 2.2em auto;
+  padding: 2em 2.2em;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.stim, .qtext { text-align: left; }
+.stim { margin-bottom: 1.4em; white-space: pre-line; }
+.qtext { margin-bottom: 1.4em; font-size: 1.05em; }
+.stim h3 { margin-top: 0; }
+
+/* ---- navigation ---- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1.8em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--line);
+}
+button {
+  font: inherit;
+  padding: .55em 1.3em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+.primary:hover { background: #24486f; }
+.ghost { background: #fff; color: var(--muted); border: 1px solid var(--line); }
+.ghost:hover { color: var(--ink); border-color: var(--muted); }
+
+.err { color: #b00020; min-height: 1.3em; margin: .8em 0 0; font-size: .92em; }
+.reviewnote { color: #a05a00; font-size: .9em; margin-top: 1em; }
+
+/* ---- Likert grid (scales of 7 points or fewer) ---- */
+.likgrid {
+  display: flex;
+  justify-content: space-between;
+  gap: .4em;
+  margin: .5em 0 .3em;
+}
+.lik {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3em;
+  padding: .6em .3em;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.lik:hover { border-color: var(--muted); }
+.lik .num { font-size: .95em; }
+.lik .anch { font-size: .78em; color: var(--muted); line-height: 1.25; }
+.lik input { margin: 0; }
+
+/* ---- wide slider: no default position until moved ---- */
+.sliderwrap { margin: 1.2em 0 .4em; }
+.slider { width: 100%; }
+.slider.unset { opacity: .45; }
+.anchrow {
+  display: flex;
+  justify-content: space-between;
+  font-size: .85em;
+  color: var(--muted);
+  margin-top: .2em;
+  gap: 1em;
+}
+.sliderval {
+  text-align: center;
+  margin-top: .6em;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-size: .9em;
+}
+
+/* ---- choice options ---- */
+.opts { display: flex; flex-direction: column; gap: .1em; }
+.opt {
+  display: flex;
+  align-items: flex-start;
+  gap: .6em;
+  padding: .5em .6em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.opt:hover { background: #f2f5f8; }
+.opt input { margin-top: .3em; }
+
+.freetext {
+  width: 100%;
+  font: inherit;
+  padding: .6em;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+/* ---- timed idea generation (kxcwm) ---- */
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-size: .95em;
+  margin: 0 0 1em;
+  color: var(--muted);
+}
+#ti-clock { font-weight: 600; color: var(--ink); }
+#ti-clock.low { color: #b00020; }
+
+.idea-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .3em 1.2em;
+  text-align: left;
+}
+.idea-row { display: flex; align-items: center; gap: .4em; }
+.idea-n { width: 1.7em; text-align: right; color: var(--muted); font-size: .9em; }
+.idea-in {
+  flex: 1;
+  font: inherit;
+  font-size: .95em;
+  padding: .3em .4em;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.idea-in:focus { border-color: var(--accent); outline: none; }
+
+@media (max-width: 44em) {
+  .card { margin: 0; border: 0; border-radius: 0; padding: 1.4em 1.1em; }
+  .idea-grid { grid-template-columns: 1fr; }
+  .likgrid { flex-wrap: wrap; }
+  .lik { flex: 0 0 calc(25% - .4em); }
+}

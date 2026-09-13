@@ -1,0 +1,539 @@
+{
+ "app": "dqsv6",
+ "study": "dqsv6",
+ "archive_experiment": "experiment_1",
+ "target": "f37",
+ "title": "Views about Britain and world affairs",
+ "blocks": [
+  {
+   "type": "stimuli",
+   "variable-name": "national_identification_instructions",
+   "content": "Each of us belongs to different groups. Toward many groups we have certain feelings and attitudes. Please describe your feelings and thoughts about belonging to the British nation by responding to the statements below. Response scale: 1 - strongly disagree; 5 - strongly agree",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "ID1",
+   "question": "I have a lot in common with other British people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "ID2",
+   "question": "In general, being British is an important part of my self-image.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "ID3",
+   "question": "Generally, I feel good when I think about myself as British.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "national_narcissism_instructions",
+   "content": "Please think about how you identify with British. Please mark how much you agree, or disagree, with the statements below. Use scale: 1 - I strongly disagree; 5 - I strongly agree",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "CN1",
+   "question": "British people deserve special treatment.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "CN2",
+   "question": "I will never be satisfied until British people get the recognition they deserve.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "CN3",
+   "question": "It really makes me angry when others criticize British people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "CN4",
+   "question": "If British people had a major say in the world, the world would be a much better place.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "CN5",
+   "question": "Not many people seem to fully understand the importance of British people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "anarchism_pacifism_instructions",
+   "content": "Please imagine that the world we live in is ending and you can influence the new political reality. Please read the following statements and try to rate on a scale of 1-5 (where: 1 means I strongly disagree and 5 means I strongly agree) how close the following sentences are to your worldview when you think about the newly created world.",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Anarch1",
+   "question": "The institution of the state is unnecessary/harmful and should be abolished.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Anarch2",
+   "question": "I am not partial to any form of exercising power (e.g. by the president/parliament/government, etc.).",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Anarch3",
+   "question": "The economic system should be based on a complete absence of specific norms/applicable laws.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Anarch4",
+   "question": "I believe that people know what is good for them and are able to organize themselves without any authorities.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Pacyf1",
+   "question": "I am in favor of establishing lasting peace between all countries.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Pacyf2",
+   "question": "We should strive to exercise power based on peaceful talks without the use of armed forces.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Pacyf3",
+   "question": "I am against all military activities.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Pacyf4",
+   "question": "We should strive to create an international legal, political and economic order that will ensure the equality of all earthly beings.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "globalism_instructions",
+   "content": "Please indicate how much you agree with the following statements.",
+   "text_source": "synthesized"
+  },
+  {
+   "type": "question",
+   "variable-name": "Glob1",
+   "question": "I am in favor of creating one world state.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Glob2",
+   "question": "The world should be ruled by one political power (e.g. one world government).",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Glob3",
+   "question": "I support dynamic development aimed at creating a globally unified economic system.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "Glob4",
+   "question": "I believe that since we are living together on one planet, we should strive for mutual respect for all people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "rwa_instructions",
+   "content": "Please indicate how much you agree with the following statements.",
+   "text_source": "synthesized"
+  },
+  {
+   "type": "question",
+   "variable-name": "RWA1",
+   "question": "What our country really needs instead of more “civil rights” is a good stiff dose of law and order.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RWA2",
+   "question": "The withdrawal from tradition will turn out to be a fatal fault one day.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RWA3",
+   "question": "Obedience and respect for authority are the most important values children should learn.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RWA4",
+   "question": "What our country really needs is a strong, determined Chancellor which will crush the evil and set us on our right way again.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RWA5",
+   "question": "Being virtuous and law-abiding is in the long run better for us than permanently challenging the foundation of our society.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RWA6",
+   "question": "The real keys to the “good life” are obedience, discipline, and virtue.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "sdo_instructions",
+   "content": "Please indicate how much you agree with the following statements.",
+   "text_source": "synthesized"
+  },
+  {
+   "type": "question",
+   "variable-name": "SDO1",
+   "question": "In setting priorities, we must consider all groups.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "SDO2",
+   "question": "We should not push for group equality.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "SDO3",
+   "question": "Group equality should be our ideal.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "SDO4",
+   "question": "Superior groups should dominate inferior groups.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "politicalconservatism",
+   "question": "Please imagine a 7-point scale, where 1 means extremely liberal and 7 means extremely conservative. Which place on the scale would best describe your views and beliefs?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "extremely liberal",
+    "scale-max-desc": "extremely conservative"
+   },
+   "text_source": "synthesized"
+  }
+ ],
+ "prescreen": {
+  "countries": [
+   "United Kingdom"
+  ],
+  "min_age": 18,
+  "other": [
+   "fluent English"
+  ],
+  "exclude_prior_listings": true
+ },
+ "reward_usd": 1.19,
+ "consent_sections": [
+  [
+   "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
+   [
+    "Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400."
+   ]
+  ],
+  [
+   "DESCRIPTION:",
+   [
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 31 questions about your views on Britain, on international affairs, and on how a country should be governed. There are no right or wrong answers and we are interested in your own view.",
+    "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
+    "Some questions ask about your political and social views.",
+    "You must be 18 or older to take part in this study."
+   ]
+  ],
+  [
+   null,
+   [
+    "Participation in this research is voluntary, and you are free to withdraw your consent at any time."
+   ]
+  ],
+  [
+   "TIME INVOLVEMENT:",
+   [
+    "Your participation will take approximately 6 minutes."
+   ]
+  ],
+  [
+   "PAYMENTS:",
+   [
+    "You will receive $1.19, paid through Prolific, as payment for your participation."
+   ]
+  ],
+  [
+   "PRIVACY AND CONFIDENTIALITY:",
+   [
+    "The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.",
+    "Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.",
+    "GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):",
+    "• to carry out and confirm the accuracy of the study;",
+    "• to help us monitor and ensure that the study is following research best practices;",
+    "• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,",
+    "• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.",
+    "The following persons and organizations may process Your Study Data for the purposes listed above:",
+    "• the study team at Stanford University;",
+    "• Prolific, the online platform through which you were recruited and are paid;",
+    "• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;",
+    "• the ethics committee or institutional review board that approved this study; and",
+    "• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.",
+    "We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.",
+    "The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.",
+    "You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.",
+    "There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent."
+   ]
+  ],
+  [
+   "CONTACT INFORMATION:",
+   [
+    "<b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.",
+    "<b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu."
+   ]
+  ],
+  [
+   null,
+   [
+    "Save or print a copy of this page for your records."
+   ]
+  ],
+  [
+   null,
+   [
+    "<b>If you agree to participate in this research, click the Continue button below.</b>"
+   ]
+  ]
+ ],
+ "gdpr_attestation": "You consent to the collection, use and transfer of Your Study Data, which includes other sensitive personal data, for the purpose of carrying out the research study, and know that you can withdraw your consent at any time, and we will stop processing your personal data, except as described above.",
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 31 questions about your views on Britain, on international affairs, and on how a country should be governed. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your political and social views.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 6 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.19, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 6.0,
+ "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/dqsv6/"
+}

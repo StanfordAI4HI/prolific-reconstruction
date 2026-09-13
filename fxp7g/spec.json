@@ -1,0 +1,1570 @@
+{
+ "app": "fxp7g",
+ "study": "fxp7g",
+ "archive_experiment": "experiment_4",
+ "target": "f29",
+ "title": "Reading news headlines",
+ "arms": 2,
+ "arm_keys": [
+  "set"
+ ],
+ "arm_labels": [
+  {
+   "set": "1"
+  },
+  {
+   "set": "2"
+  }
+ ],
+ "arm_blocks": [
+  [
+   {
+    "type": "stimuli",
+    "variable-name": "mindset_framing",
+    "content": "Imagine that you’re online with a purpose: you want to find credible, trustworthy news. You’re looking for facts, clarity, and reliable reporting.\n\nYou’re carefully scanning websites, seeking out sources you can depend on. In the next few pages, you’ll see a few headlines—imagine you’re encountering them as part of your search for credible news. Think about them while in this mindset, that is, looking for real and reliable information.",
+    "condition": "credibility",
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h1",
+    "content": "Headline: \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h1",
+    "question": "For the headline \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h1",
+    "question": "For the headline \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\": The headline is trying to be manipulative.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h1",
+    "question": "For the headline \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h1",
+    "question": "For the headline \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h1",
+    "question": "For the headline \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\": The headline is being too pushy.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h1",
+    "question": "For the headline \"Congress Reeks of Chaos and Contempt as Budget Scrapes By Amid Rage\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h2",
+    "content": "Headline: \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h2",
+    "question": "For the headline \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h2",
+    "question": "For the headline \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\": The headline is trying to be manipulative.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h2",
+    "question": "For the headline \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h2",
+    "question": "For the headline \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h2",
+    "question": "For the headline \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\": The headline is being too pushy.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h2",
+    "question": "For the headline \"Frustration Grows Over Local Library’s Underwhelming Summer Initiative\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h3",
+    "content": "Headline: \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h3",
+    "question": "For the headline \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h3",
+    "question": "For the headline \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\": The headline is trying to be manipulative.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h3",
+    "question": "For the headline \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h3",
+    "question": "For the headline \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h3",
+    "question": "For the headline \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\": The headline is being too pushy.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h3",
+    "question": "For the headline \"Lawmakers Brawl in Another Dysfunctional Display as Budget Squeezes Through Congress\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h4",
+    "content": "Headline: \"Library Struggles to Attract Attention with New Kids’ Reading Program\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h4",
+    "question": "For the headline \"Library Struggles to Attract Attention with New Kids’ Reading Program\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h4",
+    "question": "For the headline \"Library Struggles to Attract Attention with New Kids’ Reading Program\": The headline is trying to be manipulative.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h4",
+    "question": "For the headline \"Library Struggles to Attract Attention with New Kids’ Reading Program\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h4",
+    "question": "For the headline \"Library Struggles to Attract Attention with New Kids’ Reading Program\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h4",
+    "question": "For the headline \"Library Struggles to Attract Attention with New Kids’ Reading Program\": The headline is being too pushy.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h4",
+    "question": "For the headline \"Library Struggles to Attract Attention with New Kids’ Reading Program\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h5",
+    "content": "Headline: \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h5",
+    "question": "For the headline \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h5",
+    "question": "For the headline \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\": The headline is trying to be manipulative.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h5",
+    "question": "For the headline \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h5",
+    "question": "For the headline \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h5",
+    "question": "For the headline \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\": The headline is being too pushy.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h5",
+    "question": "For the headline \"Tense and Emotional Vote Leaves Lawmakers Exhausted as Budget Passes\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h6",
+    "content": "Headline: \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h6",
+    "question": "For the headline \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h6",
+    "question": "For the headline \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\": The headline is trying to be manipulative.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h6",
+    "question": "For the headline \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h6",
+    "question": "For the headline \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h6",
+    "question": "For the headline \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\": The headline is being too pushy.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h6",
+    "question": "For the headline \"Parents Express Frustration Over Accessibility of Local Library's Reading Program\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h7",
+    "content": "Headline: \"Congress Passes Budget in Close Vote After Intense Discussions\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h7",
+    "question": "For the headline \"Congress Passes Budget in Close Vote After Intense Discussions\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h7",
+    "question": "For the headline \"Congress Passes Budget in Close Vote After Intense Discussions\": The headline is trying to be manipulative.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h7",
+    "question": "For the headline \"Congress Passes Budget in Close Vote After Intense Discussions\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h7",
+    "question": "For the headline \"Congress Passes Budget in Close Vote After Intense Discussions\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h7",
+    "question": "For the headline \"Congress Passes Budget in Close Vote After Intense Discussions\": The headline is being too pushy.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h7",
+    "question": "For the headline \"Congress Passes Budget in Close Vote After Intense Discussions\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h8",
+    "content": "Headline: \"Local Library Starts Free Summer Reading Program for Local Kids\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h8",
+    "question": "For the headline \"Local Library Starts Free Summer Reading Program for Local Kids\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h8",
+    "question": "For the headline \"Local Library Starts Free Summer Reading Program for Local Kids\": The headline is trying to be manipulative.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h8",
+    "question": "For the headline \"Local Library Starts Free Summer Reading Program for Local Kids\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h8",
+    "question": "For the headline \"Local Library Starts Free Summer Reading Program for Local Kids\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h8",
+    "question": "For the headline \"Local Library Starts Free Summer Reading Program for Local Kids\": The headline is being too pushy.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h8",
+    "question": "For the headline \"Local Library Starts Free Summer Reading Program for Local Kids\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   }
+  ],
+  [
+   {
+    "type": "stimuli",
+    "variable-name": "mindset_framing",
+    "content": "Imagine that you’re online with a purpose: you want to find credible, trustworthy news. You’re looking for facts, clarity, and reliable reporting.\n\nYou’re carefully scanning websites, seeking out sources you can depend on. In the next few pages, you’ll see a few headlines—imagine you’re encountering them as part of your search for credible news. Think about them while in this mindset, that is, looking for real and reliable information.",
+    "condition": "credibility",
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h1",
+    "content": "Headline: \"Tensions Explode as City Pushes Divisive Policing Reform\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h1",
+    "question": "For the headline \"Tensions Explode as City Pushes Divisive Policing Reform\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h1",
+    "question": "For the headline \"Tensions Explode as City Pushes Divisive Policing Reform\": The headline is trying to be manipulative.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h1",
+    "question": "For the headline \"Tensions Explode as City Pushes Divisive Policing Reform\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h1",
+    "question": "For the headline \"Tensions Explode as City Pushes Divisive Policing Reform\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h1",
+    "question": "For the headline \"Tensions Explode as City Pushes Divisive Policing Reform\": The headline is being too pushy.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h1",
+    "question": "For the headline \"Tensions Explode as City Pushes Divisive Policing Reform\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h2",
+    "content": "Headline: \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h2",
+    "question": "For the headline \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h2",
+    "question": "For the headline \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\": The headline is trying to be manipulative.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h2",
+    "question": "For the headline \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h2",
+    "question": "For the headline \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h2",
+    "question": "For the headline \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\": The headline is being too pushy.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h2",
+    "question": "For the headline \"Critics Slam NASA’s Reckless Mars Plan Amid Public Anxiety\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h3",
+    "content": "Headline: \"City Council Forces Through Policing Reform Despite Local Backlash\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h3",
+    "question": "For the headline \"City Council Forces Through Policing Reform Despite Local Backlash\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h3",
+    "question": "For the headline \"City Council Forces Through Policing Reform Despite Local Backlash\": The headline is trying to be manipulative.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h3",
+    "question": "For the headline \"City Council Forces Through Policing Reform Despite Local Backlash\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h3",
+    "question": "For the headline \"City Council Forces Through Policing Reform Despite Local Backlash\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h3",
+    "question": "For the headline \"City Council Forces Through Policing Reform Despite Local Backlash\": The headline is being too pushy.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h3",
+    "question": "For the headline \"City Council Forces Through Policing Reform Despite Local Backlash\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h4",
+    "content": "Headline: \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "high_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h4",
+    "question": "For the headline \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h4",
+    "question": "For the headline \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\": The headline is trying to be manipulative.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h4",
+    "question": "For the headline \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h4",
+    "question": "For the headline \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\": The headline seems like a trick to get people to click.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h4",
+    "question": "For the headline \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\": The headline is being too pushy.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h4",
+    "question": "For the headline \"NASA’s Costly Mars Gamble Raises Eyebrows Across Nation\": The headline is trying to unfairly influence readers.",
+    "condition": "high_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h5",
+    "content": "Headline: \"Stress and Tension Run High as City Council Votes on Policing Changes\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h5",
+    "question": "For the headline \"Stress and Tension Run High as City Council Votes on Policing Changes\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h5",
+    "question": "For the headline \"Stress and Tension Run High as City Council Votes on Policing Changes\": The headline is trying to be manipulative.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h5",
+    "question": "For the headline \"Stress and Tension Run High as City Council Votes on Policing Changes\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h5",
+    "question": "For the headline \"Stress and Tension Run High as City Council Votes on Policing Changes\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h5",
+    "question": "For the headline \"Stress and Tension Run High as City Council Votes on Policing Changes\": The headline is being too pushy.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h5",
+    "question": "For the headline \"Stress and Tension Run High as City Council Votes on Policing Changes\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h6",
+    "content": "Headline: \"Anxiety Stirs as Americans React to Risky Mars Mission\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_high_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h6",
+    "question": "For the headline \"Anxiety Stirs as Americans React to Risky Mars Mission\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h6",
+    "question": "For the headline \"Anxiety Stirs as Americans React to Risky Mars Mission\": The headline is trying to be manipulative.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h6",
+    "question": "For the headline \"Anxiety Stirs as Americans React to Risky Mars Mission\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h6",
+    "question": "For the headline \"Anxiety Stirs as Americans React to Risky Mars Mission\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h6",
+    "question": "For the headline \"Anxiety Stirs as Americans React to Risky Mars Mission\": The headline is being too pushy.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h6",
+    "question": "For the headline \"Anxiety Stirs as Americans React to Risky Mars Mission\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_high_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h7",
+    "content": "Headline: \"City Council Approves New Policing Measures After Deliberation\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h7",
+    "question": "For the headline \"City Council Approves New Policing Measures After Deliberation\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h7",
+    "question": "For the headline \"City Council Approves New Policing Measures After Deliberation\": The headline is trying to be manipulative.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h7",
+    "question": "For the headline \"City Council Approves New Policing Measures After Deliberation\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h7",
+    "question": "For the headline \"City Council Approves New Policing Measures After Deliberation\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h7",
+    "question": "For the headline \"City Council Approves New Policing Measures After Deliberation\": The headline is being too pushy.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h7",
+    "question": "For the headline \"City Council Approves New Policing Measures After Deliberation\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "imi_instructions_h8",
+    "content": "Headline: \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\"\n\nFor the headline shown, indicate the extent to which you agree or disagree with each of the following statements.",
+    "condition": "low_tone_low_emotion",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_1_h8",
+    "question": "For the headline \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\": The headline is trying to manipulate the audience in an inappropriate way.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_2_h8",
+    "question": "For the headline \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\": The headline is trying to be manipulative.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_3_h8",
+    "question": "For the headline \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\": The headline is attempting to unfairly persuade the audience.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_4_h8",
+    "question": "For the headline \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\": The headline seems like a trick to get people to click.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_5_h8",
+    "question": "For the headline \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\": The headline is being too pushy.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "IMI_6_h8",
+    "question": "For the headline \"NASA Details Upcoming 2028 Mission to Mars in Public Briefing\": The headline is trying to unfairly influence readers.",
+    "condition": "low_tone_low_emotion",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Completely Disagree",
+     "scale-max-desc": "Completely Agree"
+    },
+    "text_source": "extracted"
+   }
+  ]
+ ],
+ "prescreen": {
+  "countries": [
+   "United States"
+  ],
+  "min_age": 18,
+  "other": [
+   "fluent English"
+  ],
+  "exclude_prior_listings": true
+ },
+ "reward_usd": 1.83,
+ "consent_sections": [
+  [
+   "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
+   [
+    "Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400."
+   ]
+  ],
+  [
+   "DESCRIPTION:",
+   [
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read eight news headlines and answer six questions about each. There are no right or wrong answers and we are interested in your own view.",
+    "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
+    "You must be 18 or older to take part in this study."
+   ]
+  ],
+  [
+   null,
+   [
+    "Participation in this research is voluntary, and you are free to withdraw your consent at any time."
+   ]
+  ],
+  [
+   "TIME INVOLVEMENT:",
+   [
+    "Your participation will take approximately 9 minutes."
+   ]
+  ],
+  [
+   "PAYMENTS:",
+   [
+    "You will receive $1.83, paid through Prolific, as payment for your participation."
+   ]
+  ],
+  [
+   "PRIVACY AND CONFIDENTIALITY:",
+   [
+    "The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.",
+    "Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study."
+   ]
+  ],
+  [
+   "CONTACT INFORMATION:",
+   [
+    "<b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.",
+    "<b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu."
+   ]
+  ],
+  [
+   null,
+   [
+    "Save or print a copy of this page for your records."
+   ]
+  ],
+  [
+   null,
+   [
+    "<b>If you agree to participate in this research, click the Continue button below.</b>"
+   ]
+  ]
+ ],
+ "gdpr_attestation": null,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read eight news headlines and answer six questions about each. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 9 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.83, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 9.2,
+ "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/fxp7g/"
+}

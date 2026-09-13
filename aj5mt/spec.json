@@ -1,0 +1,594 @@
+{
+ "app": "aj5mt",
+ "study": "aj5mt",
+ "archive_experiment": "experiment_1",
+ "target": "f10",
+ "title": "Reasoning about likelihoods",
+ "blocks": [
+  {
+   "type": "stimuli",
+   "variable-name": "Likelihood_instructions",
+   "content": "We conducted a series of 18 experiments with 1,000 participants in each experiment.\n\nLater, we randomly chose one participant from each experiment.\n\nIn this study, you will be presented with descriptions from each of the chosen 18 participants.\n\nAfter presenting you with their descriptions, we will ask you to rate:\n\n(1) how likely it is that the chosen participant belongs to a particular group\n(2) how confident you feel about your likelihood rating",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "1_L1_5",
+   "question": "In this study, we tested 995 soccer players and 5 chess players.\n\nThe randomly chosen person in the study greatly fears rupturing his ACL (anterior cruciate ligament) and would never miss a Real Madrid vs. Barcelona match.\n\nWhat is the likelihood that the chosen participant is a soccer player?",
+   "condition": "problem_group_2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "1_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "2_L1_5",
+   "question": "In this study, we tested 995 athletes and 5 academics.\n\nThe randomly chosen person in the study wakes up early for training to improve physical strength and drinks protein shakes to maintain muscle mass, especially after exercising.\n\nWhat is the likelihood that the chosen participant is an athlete?",
+   "condition": "problem_group_2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "2_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "3_L1_5",
+   "question": "In this study, we tested 995 district attorneys and 5 waitresses.\n\nThe randomly chosen person in this study finds it very challenging to find a comfortable work-life balance, barely sees their family, has gone to school for a good amount of years, and is very well-spoken.\n\nWhat is the likelihood that the chosen participant is a district attorney?",
+   "condition": "problem_group_2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "3_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "4_L1_5",
+   "question": "In this study, we tested 500 professional poker players and 500 professional tennis players.\n\nThe randomly chosen person in the study can appreciate when someone is able to lie while going undetected, has a calm demeanor, and can easily spot a liar.\n\nWhat is the likelihood that the chosen participant is a professional poker player?",
+   "condition": "problem_group_1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "4_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "5_L1_5",
+   "question": "In this study, we tested 500 debate team members and 500 cheerleader team members.\n\nThe randomly chosen person in the study often has dreams about arguments and counterarguments on complex topics. This person practices arguments and often talks out loud about intellectual topics.\n\nWhat is the likelihood that the chosen participant is a debate team member?",
+   "condition": "problem_group_1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "5_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "6_L1_5",
+   "question": "In this study, we tested 500 college boys and 500 college girls.\n\nThe randomly chosen person in the study plays intramural sports very competitively, does not like to lose at anything, and wears casual clothes like hoodies and jeans.\n\nWhat is the likelihood that the chosen participant is a college boy?",
+   "condition": "problem_group_1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "6_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "7_L1_5",
+   "question": "In this study, we tested 5 people who had tattoos and 995 who had no tattoos.\n\nThe randomly chosen person in the study works in a tattoo shop where he helps customers choose their designs and follows several tattoo artists on social media pages.\n\nWhat is the likelihood that the chosen participant has tattoos?",
+   "condition": "problem_group_3",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "7_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_3",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "8_L1_5",
+   "question": "In this study, we tested 5 carpenters and 995 university professors.\n\nThe randomly chosen person in the study enjoys building and repairing furniture, is good with tools, and has rough hands.\n\nWhat is the likelihood that the chosen participant is a carpenter?",
+   "condition": "problem_group_3",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "8_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_3",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "9_L1_5",
+   "question": "In this study, we tested 5 liberals and 995 conservatives.\n\nThe randomly chosen person in the study listens to npr, reads progressive news outlets, and would like western societies to adopt some form of universal basic income.\n\nWhat is the likelihood that the chosen participant is a liberal?",
+   "condition": "problem_group_3",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "9_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_3",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "10_L1_5",
+   "question": "In this study, we tested 500 Air Force sergeants and 500 sociologists.\n\nThe randomly chosen person in the study makes his bed first thing in the morning. His life goal is to publish a book that properly narrates his views on social dynamics.\n\nWhat is the likelihood that the chosen participant is an Air Force sergeant?",
+   "condition": "problem_group_4",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "10_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_4",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "11_L1_5",
+   "question": "In this study, we tested 500 office workers and 500 farmers.\n\nThe randomly chosen person in this study regularly wears business casual attire has driven tractors before.\n\nWhat is the likelihood that the chosen participant is an office workers?",
+   "condition": "problem_group_4",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "11_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_4",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "12_L1_5",
+   "question": "In this study, we tested 500 urban residents and 500 rural residents.\n\nThe randomly chosen person in the study lives in a small yet overpriced apartment with minimal space, and drives a pickup truck whose tiers are well-equipped for all terrains.\n\nWhat is the likelihood that the chosen participant is an urban resident?",
+   "condition": "problem_group_4",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "12_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_4",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "13_L1_5",
+   "question": "In this study, we tested 995 gym trainers and 5 librarians.\n\nThe randomly chosen person in the study follows a strict diet without refined sugars, often discourages people from eating fast food, and organizes events like book clubs and reading programs.\n\nWhat is the likelihood that the chosen participant is a gym trainer?",
+   "condition": "problem_group_5",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "13_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_5",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "14_L1_5",
+   "question": "In this study, we tested 995 kindergarten teachers and 5 executive managers.\n\nThe randomly chosen person in the study is highly empathetic, a great storyteller, drives a luxury car to work, and has a rolex.\n\nWhat is the likelihood that the chosen participant is a kindergarten teacher?",
+   "condition": "problem_group_5",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "14_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_5",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "15_L1_5",
+   "question": "In this study, we tested 995 dentists and 5 nightclub dancers.\n\nThe randomly chosen person in the study often talks to friends about the importance of oral hygiene for overall health, and is frequently seen wearing flashy and revealing outfits\n\nWhat is the likelihood that the chosen participant is a dentist?",
+   "condition": "problem_group_5",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "15_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_5",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "16_L1_5",
+   "question": "In this study, we tested 5 computer science majors and 995 sports management majors.\n\nThe randomly chosen person in the study aspires to master several computer coding languages and aspires to work in the sports industry after graduation.\n\nWhat is the likelihood that the chosen participant is a computer science major?",
+   "condition": "problem_group_6",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "16_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_6",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "17_L1_5",
+   "question": "In this study, we tested 5 military personnel and 995 civilians.\n\nThe randomly chosen person in this study wears a uniform proudly, enjoys spending time with family, friends and cannot do more than one pull-up.\n\nWhat is the likelihood that the chosen participant is military personnel?",
+   "condition": "problem_group_6",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "17_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_6",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "18_L1_5",
+   "question": "In this study, we tested 5 elders and 995 teenagers.\n\nThe randomly chosen person in the study slowly reads the newspaper every morning with a cup of coffee, and listens to loud hip-hop music through wireless earbuds.\n\nWhat is the likelihood that the chosen participant is an elder?",
+   "condition": "problem_group_6",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not likely at all",
+    "scale-max-desc": "Highly likely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "18_C1_4",
+   "question": "How confident do you feel about your previous likelihood rating?",
+   "condition": "problem_group_6",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not confident at all",
+    "scale-max-desc": "Highly confident"
+   },
+   "text_source": "extracted"
+  }
+ ],
+ "prescreen": {
+  "countries": [
+   "United States"
+  ],
+  "min_age": 18,
+  "other": [
+   "fluent English"
+  ],
+  "exclude_prior_listings": true
+ },
+ "reward_usd": 1.14,
+ "consent_sections": [
+  [
+   "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
+   [
+    "Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400."
+   ]
+  ],
+  [
+   "DESCRIPTION:",
+   [
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read short descriptions of people and answer 36 questions about how likely certain statements are and how confident you feel. There are no right or wrong answers and we are interested in your own view.",
+    "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
+    "You must be 18 or older to take part in this study."
+   ]
+  ],
+  [
+   null,
+   [
+    "Participation in this research is voluntary, and you are free to withdraw your consent at any time."
+   ]
+  ],
+  [
+   "TIME INVOLVEMENT:",
+   [
+    "Your participation will take approximately 6 minutes."
+   ]
+  ],
+  [
+   "PAYMENTS:",
+   [
+    "You will receive $1.14, paid through Prolific, as payment for your participation."
+   ]
+  ],
+  [
+   "PRIVACY AND CONFIDENTIALITY:",
+   [
+    "The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.",
+    "Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study."
+   ]
+  ],
+  [
+   "CONTACT INFORMATION:",
+   [
+    "<b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.",
+    "<b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu."
+   ]
+  ],
+  [
+   null,
+   [
+    "Save or print a copy of this page for your records."
+   ]
+  ],
+  [
+   null,
+   [
+    "<b>If you agree to participate in this research, click the Continue button below.</b>"
+   ]
+  ]
+ ],
+ "gdpr_attestation": null,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read short descriptions of people and answer 36 questions about how likely certain statements are and how confident you feel. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 6 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.14, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 5.7,
+ "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/aj5mt/"
+}

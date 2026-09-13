@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Views about Britain and world affairs</title>
+<link rel="stylesheet" href="../lib/app.css">
+<script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
+<script src="../lib/render.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+fetch('spec.json')
+  .then(r => r.json())
+  .then(runSpec)
+  .catch(e => { document.getElementById('app').innerHTML =
+    '<div class="card"><pre style="color:#b00">' + e + '</pre></div>'; });
+</script>
+</body>
+</html>

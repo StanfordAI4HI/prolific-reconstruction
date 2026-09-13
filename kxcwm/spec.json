@@ -1,0 +1,1288 @@
+{
+ "app": "kxcwm",
+ "study": "kxcwm",
+ "archive_experiment": "experiment_1",
+ "target": "f65",
+ "title": "Creativity exercises and ways of thinking",
+ "blocks": [
+  {
+   "type": "stimuli",
+   "variable-name": "instructions_aut",
+   "content": "INSTRUCTIONS In the following creativity task... You will be asked to come up with as many creative uses for two objects as you can. It may seem strange or bizarre to you, but we ask that you participate as best you can. Creative ideas strike people as clever, unusual, interesting, uncommon, humorous, innovative or different.",
+   "condition": "aut",
+   "text_source": "extracted"
+  },
+  {
+   "type": "group",
+   "shuffle": true,
+   "pick": 2,
+   "items": [
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_book",
+       "question": "Think of as many creative and original uses as you can for the following object: book.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_book",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_bottle",
+       "question": "Think of as many creative and original uses as you can for the following object: bottle.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_bottle",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_brick",
+       "question": "Think of as many creative and original uses as you can for the following object: brick.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_brick",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_fork",
+       "question": "Think of as many creative and original uses as you can for the following object: fork.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_fork",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_pants",
+       "question": "Think of as many creative and original uses as you can for the following object: pants.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_pants",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_shoe",
+       "question": "Think of as many creative and original uses as you can for the following object: shoe.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_shoe",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_table",
+       "question": "Think of as many creative and original uses as you can for the following object: table.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_table",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_aut_tire",
+       "question": "Think of as many creative and original uses as you can for the following object: tire.",
+       "condition": "aut",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_aut_tire",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "aut",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "instructions_ct",
+   "content": "INSTRUCTIONS In the following creativity task... You will be asked to come up with as many consequences or possible results for two unusual situations as you can. It may seem strange or bizarre to you, but we ask that you participate as best you can. Creative ideas strike people as clever, unusual, interesting, uncommon, humorous, innovative or different.",
+   "condition": "ct",
+   "text_source": "extracted"
+  },
+  {
+   "type": "group",
+   "shuffle": true,
+   "pick": 2,
+   "items": [
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_cut_gravity",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if the force of gravity was cut in half?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_cut_gravity",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_height_shrank",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_height_shrank",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_live_alone",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if humans all preferred to live alone?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_live_alone",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_lost_read_write",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone lost the ability to read and write?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_lost_read_write",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_need_food",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if people no longer needed food to live?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_need_food",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_need_sleep",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if people didn't need or want to sleep anymore?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_need_sleep",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_unable_arms_hands",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if no one could use their arms or hands?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_unable_arms_hands",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "timed-ideas",
+       "variable-name": "idea_ct_unable_stay_upright",
+       "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone was unable to stay upright for more than a moment?",
+       "condition": "ct",
+       "n_fields": 15,
+       "duration_ms": 120000
+      },
+      {
+       "type": "question",
+       "variable-name": "selfeval_ct_unable_stay_upright",
+       "question": "Overall, how would you rate the originality of the ideas you just produced?",
+       "condition": "ct",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 1,
+        "scale-max": 7,
+        "scale-min-desc": "Really not original",
+        "scale-max-desc": "Highly original"
+       },
+       "text_source": "extracted"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "hps_instructions",
+   "content": "Please indicate whether each of the following statements applies to you by choosing \"true\" or \"false\".",
+   "condition": "hps",
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_1",
+   "question": "I consider myself to be pretty much an average kind of person.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_2",
+   "question": "It would make me nervous to play the clown in front of other people.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_3",
+   "question": "I am frequently so “hyper” that my friends kiddingly ask me what drug I’m taking.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_4",
+   "question": "I think I would make a good nightclub comedian.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_5",
+   "question": "Sometimes ideas and insights come to me so fast that I cannot express them all.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_6",
+   "question": "When with groups of people, I usually prefer to let someone else be the center of attention.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_7",
+   "question": "In unfamiliar surroundings, I am often so assertive and sociable that I surprise myself.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_8",
+   "question": "There are often times when I am so restless that it is impossible for me to sit still.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_9",
+   "question": "Many people consider me to be amusing but kind of eccentric.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_10",
+   "question": "When I feel an emotion, I usually feel it with extreme intensity.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_11",
+   "question": "I am frequently in such high spirits that I can’t concentrate on any one thing for too long.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_12",
+   "question": "I sometimes have felt that nothing can happen to me until I do what I am meant to do in life.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_13",
+   "question": "People often come to me when they need a clever idea.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_14",
+   "question": "I am no more self-aware than the majority of people.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_15",
+   "question": "I often feel excited and happy for no apparent reason.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_16",
+   "question": "I can’t imagine that anyone would ever write a book about my life.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_17",
+   "question": "I am usually in an average sort of mood, not too high and not too low.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_18",
+   "question": "I often have moods where I feel so energetic and optimistic that I feel I could outperform almost anyone at anything.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_19",
+   "question": "I have such a wide range of interests that I often don’t know what to do next.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_20",
+   "question": "There have often been times when I had such an excess of energy that I felt little need to sleep at night.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_21",
+   "question": "My moods do not seem to fluctuate any more than most people’s do.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_22",
+   "question": "I very frequently get into moods where I wish I could be everywhere and do everything at once.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_23",
+   "question": "I expect that someday I will succeed in several different professions.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_24",
+   "question": "When I feel very excited and happy, I almost always know the reason why.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_25",
+   "question": "When I go to a gathering where I don’t know anyone, it usually takes me a while to feel comfortable.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_26",
+   "question": "I think I would make a good actor, because I can play many roles convincingly.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_27",
+   "question": "I like to have others think of me as a normal kind of person.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_28",
+   "question": "I frequently write down the thoughts and insights that come to me when I am thinking especially creatively.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_29",
+   "question": "I have often persuaded groups of friends to do something really adventurous or crazy.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_30",
+   "question": "I would really enjoy being a politician and hitting the campaign trail.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_31",
+   "question": "I can usually slow myself down when I want to.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_32",
+   "question": "I am considered to be kind of a “hyper” person.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_33",
+   "question": "I often get so happy and energetic that I am almost giddy.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_34",
+   "question": "There are so many fields I could succeed in that it seems a shame to have to pick one.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_35",
+   "question": "I often get into moods where I feel like many of the rules of life don’t apply to me.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_36",
+   "question": "I find it easy to get others to become sexually interested in me.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_37",
+   "question": "I seem to be a person whose mood goes up and down easily.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_38",
+   "question": "I frequently find that my thoughts are racing.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_39",
+   "question": "I am so good at controlling others that it sometimes scares me.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_40",
+   "question": "At social gatherings, I am usually the “life of the party”.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_41",
+   "question": "I do most of my best work during brief periods of intense inspiration.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_42",
+   "question": "I seem to have an uncommon ability to persuade and inspire others.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_43",
+   "question": "I have often been so excited about an involving project that I didn’t care about eating or sleeping.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_44",
+   "question": "I frequently get into moods where I feel very speeded-up and irritable.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_45",
+   "question": "I have often felt happy and irritable at the same time.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_46",
+   "question": "I often get into excited moods where it’s almost impossible for me to stop talking.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_47",
+   "question": "I would rather be an ordinary success in life than a spectacular failure.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "idiff_hps_48",
+   "question": "A hundred years after I’m dead, my achievements will probably have been forgotten.",
+   "condition": "hps",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "true",
+     "false"
+    ],
+    "max-choices": 1
+   },
+   "text_source": "extracted"
+  }
+ ],
+ "prescreen": {
+  "countries": [
+   "United States"
+  ],
+  "min_age": 18,
+  "other": [
+   "fluent English"
+  ],
+  "exclude_prior_listings": true
+ },
+ "reward_usd": 3.38,
+ "consent_sections": [
+  [
+   "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
+   [
+    "Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400."
+   ]
+  ],
+  [
+   "DESCRIPTION:",
+   [
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.",
+    "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
+    "Some questions ask about your mood, your energy levels, and how you see yourself.",
+    "You must be 18 or older to take part in this study."
+   ]
+  ],
+  [
+   null,
+   [
+    "Participation in this research is voluntary, and you are free to withdraw your consent at any time."
+   ]
+  ],
+  [
+   "TIME INVOLVEMENT:",
+   [
+    "Your participation will take approximately 17 minutes."
+   ]
+  ],
+  [
+   "PAYMENTS:",
+   [
+    "You will receive $3.38, paid through Prolific, as payment for your participation."
+   ]
+  ],
+  [
+   "PRIVACY AND CONFIDENTIALITY:",
+   [
+    "The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.",
+    "Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study."
+   ]
+  ],
+  [
+   "CONTACT INFORMATION:",
+   [
+    "<b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.",
+    "<b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu."
+   ]
+  ],
+  [
+   null,
+   [
+    "Save or print a copy of this page for your records."
+   ]
+  ],
+  [
+   null,
+   [
+    "<b>If you agree to participate in this research, click the Continue button below.</b>"
+   ]
+  ]
+ ],
+ "gdpr_attestation": null,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 17 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $3.38, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 16.9,
+ "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/kxcwm/"
+}
