@@ -157,3 +157,7 @@ button {
   .likgrid { flex-wrap: wrap; }
   .lik { flex: 0 0 calc(25% - .4em); }
 }
+
+/* several items on one page (a vignette with its rating, a matrix) */
+.q + .q { margin-top: 1.6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+.freetext.line { width: 100%; box-sizing: border-box; min-height: 0; }

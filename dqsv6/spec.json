@@ -12,43 +12,49 @@
    "text_source": "extracted"
   },
   {
-   "type": "question",
-   "variable-name": "ID1",
-   "question": "I have a lot in common with other British people.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "ID2",
-   "question": "In general, being British is an important part of my self-image.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "ID3",
-   "question": "Generally, I feel good when I think about myself as British.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "ID1",
+     "question": "I have a lot in common with other British people.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "ID2",
+     "question": "In general, being British is an important part of my self-image.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "ID3",
+     "question": "Generally, I feel good when I think about myself as British.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "stimuli",
@@ -57,69 +63,75 @@
    "text_source": "extracted"
   },
   {
-   "type": "question",
-   "variable-name": "CN1",
-   "question": "British people deserve special treatment.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "CN2",
-   "question": "I will never be satisfied until British people get the recognition they deserve.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "CN3",
-   "question": "It really makes me angry when others criticize British people.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "CN4",
-   "question": "If British people had a major say in the world, the world would be a much better place.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "CN5",
-   "question": "Not many people seem to fully understand the importance of British people.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "CN1",
+     "question": "British people deserve special treatment.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "CN2",
+     "question": "I will never be satisfied until British people get the recognition they deserve.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "CN3",
+     "question": "It really makes me angry when others criticize British people.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "CN4",
+     "question": "If British people had a major say in the world, the world would be a much better place.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "CN5",
+     "question": "Not many people seem to fully understand the importance of British people.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "stimuli",
@@ -128,108 +140,114 @@
    "text_source": "extracted"
   },
   {
-   "type": "question",
-   "variable-name": "Anarch1",
-   "question": "The institution of the state is unnecessary/harmful and should be abolished.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Anarch2",
-   "question": "I am not partial to any form of exercising power (e.g. by the president/parliament/government, etc.).",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Anarch3",
-   "question": "The economic system should be based on a complete absence of specific norms/applicable laws.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Anarch4",
-   "question": "I believe that people know what is good for them and are able to organize themselves without any authorities.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Pacyf1",
-   "question": "I am in favor of establishing lasting peace between all countries.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Pacyf2",
-   "question": "We should strive to exercise power based on peaceful talks without the use of armed forces.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Pacyf3",
-   "question": "I am against all military activities.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Pacyf4",
-   "question": "We should strive to create an international legal, political and economic order that will ensure the equality of all earthly beings.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "Anarch1",
+     "question": "The institution of the state is unnecessary/harmful and should be abolished.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Anarch2",
+     "question": "I am not partial to any form of exercising power (e.g. by the president/parliament/government, etc.).",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Anarch3",
+     "question": "The economic system should be based on a complete absence of specific norms/applicable laws.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Anarch4",
+     "question": "I believe that people know what is good for them and are able to organize themselves without any authorities.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Pacyf1",
+     "question": "I am in favor of establishing lasting peace between all countries.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Pacyf2",
+     "question": "We should strive to exercise power based on peaceful talks without the use of armed forces.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Pacyf3",
+     "question": "I am against all military activities.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Pacyf4",
+     "question": "We should strive to create an international legal, political and economic order that will ensure the equality of all earthly beings.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "stimuli",
@@ -238,56 +256,62 @@
    "text_source": "synthesized"
   },
   {
-   "type": "question",
-   "variable-name": "Glob1",
-   "question": "I am in favor of creating one world state.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Glob2",
-   "question": "The world should be ruled by one political power (e.g. one world government).",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Glob3",
-   "question": "I support dynamic development aimed at creating a globally unified economic system.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Glob4",
-   "question": "I believe that since we are living together on one planet, we should strive for mutual respect for all people.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "Glob1",
+     "question": "I am in favor of creating one world state.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Glob2",
+     "question": "The world should be ruled by one political power (e.g. one world government).",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Glob3",
+     "question": "I support dynamic development aimed at creating a globally unified economic system.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Glob4",
+     "question": "I believe that since we are living together on one planet, we should strive for mutual respect for all people.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "stimuli",
@@ -296,82 +320,88 @@
    "text_source": "synthesized"
   },
   {
-   "type": "question",
-   "variable-name": "RWA1",
-   "question": "What our country really needs instead of more “civil rights” is a good stiff dose of law and order.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "RWA2",
-   "question": "The withdrawal from tradition will turn out to be a fatal fault one day.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "RWA3",
-   "question": "Obedience and respect for authority are the most important values children should learn.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "RWA4",
-   "question": "What our country really needs is a strong, determined Chancellor which will crush the evil and set us on our right way again.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "RWA5",
-   "question": "Being virtuous and law-abiding is in the long run better for us than permanently challenging the foundation of our society.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "RWA6",
-   "question": "The real keys to the “good life” are obedience, discipline, and virtue.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "RWA1",
+     "question": "What our country really needs instead of more “civil rights” is a good stiff dose of law and order.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "RWA2",
+     "question": "The withdrawal from tradition will turn out to be a fatal fault one day.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "RWA3",
+     "question": "Obedience and respect for authority are the most important values children should learn.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "RWA4",
+     "question": "What our country really needs is a strong, determined Chancellor which will crush the evil and set us on our right way again.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "RWA5",
+     "question": "Being virtuous and law-abiding is in the long run better for us than permanently challenging the foundation of our society.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "RWA6",
+     "question": "The real keys to the “good life” are obedience, discipline, and virtue.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "stimuli",
@@ -380,56 +410,62 @@
    "text_source": "synthesized"
   },
   {
-   "type": "question",
-   "variable-name": "SDO1",
-   "question": "In setting priorities, we must consider all groups.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "SDO2",
-   "question": "We should not push for group equality.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "SDO3",
-   "question": "Group equality should be our ideal.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "SDO4",
-   "question": "Superior groups should dominate inferior groups.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "strongly disagree",
-    "scale-max-desc": "strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "SDO1",
+     "question": "In setting priorities, we must consider all groups.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "SDO2",
+     "question": "We should not push for group equality.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "SDO3",
+     "question": "Group equality should be our ideal.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "SDO4",
+     "question": "Superior groups should dominate inferior groups.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "strongly disagree",
+      "scale-max-desc": "strongly agree"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "question",

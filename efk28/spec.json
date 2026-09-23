@@ -41,21 +41,314 @@
     "type": "stimuli",
     "variable-name": "L1",
     "content": "Please, read the following text carefully. We will ask you questions about it:\nPeter is a philosophy professor who is passionate about philosophy. He devotes his life to teaching philosophy and transmitting his love of his discipline. Overall, the various events that occur in his life are stable and predictable, allowing him to make sense of his life and giving him the impression that the world is understandable. His surrounding makes him feel that his life is significant and full of value. He works hard, has a wife and two kids. He lives peacefully, working and spending time with his family until his death at age 75.",
-    "condition": "no positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
    },
    {
     "type": "stimuli",
     "variable-name": "L1-",
     "content": "After his death, none of his former students remember his teaching because at the time they were not interested nor captivated by its lessons.",
-    "condition": "no positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_1",
+    "question": "He had a positive impact on people around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_2",
+    "question": "He has made a positive contribution to society in his own way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_3",
+    "question": "His existence positively affected people he met.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_4",
+    "question": "He made a difference in a positive way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_5",
+    "question": "His life as a whole had meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_6",
+    "question": "His entire existence was full of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_7",
+    "question": "His life was meaningless.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_8",
+    "question": "His existence was empty of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_9",
+    "question": "Most things that happened in his life made sense.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_10",
+    "question": "By and large, he was able to understand the world around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_11",
+    "question": "He could comprehend what his life was all about.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_12",
+    "question": "He could easily make sense of his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_13",
+    "question": "He has pursued one or more big purposes in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_14",
+    "question": "He was highly committed to certain core goals in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_15",
+    "question": "He had a set of core goals that gave his life a sense of direction.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_16",
+    "question": "His daily activities were consistent with a broader life purpose.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_17",
+    "question": "His life was full of value.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_18",
+    "question": "His personal existence was significant.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_19",
+    "question": "Every day he experienced the sense that life was worth living.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_21",
+    "question": "He was not a morally good person.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_22",
+    "question": "He had a good moral character.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
    },
    {
     "type": "question",
     "variable-name": "MQ1",
     "question": "To which extent was Peter's life meaningful?",
-    "condition": "no positive impact",
     "response-constraints": {
      "type": "scalar",
      "scale-min": 0,
@@ -63,7 +356,8 @@
      "scale-min-desc": "Very negative",
      "scale-max-desc": "Very positive"
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
    }
   ],
   [
@@ -71,21 +365,314 @@
     "type": "stimuli",
     "variable-name": "L1",
     "content": "Please, read the following text carefully. We will ask you questions about it:\nPeter is a philosophy professor who is passionate about philosophy. He devotes his life to teaching philosophy and transmitting his love of his discipline. Overall, the various events that occur in his life are stable and predictable, allowing him to make sense of his life and giving him the impression that the world is understandable. His surrounding makes him feel that his life is significant and full of value. He works hard, has a wife and two kids. He lives peacefully, working and spending time with his family until his death at age 75.",
-    "condition": "positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
    },
    {
     "type": "stimuli",
     "variable-name": "L1+",
     "content": "After his death, many of these former students gather to share how grateful they are to have known Peter, sharing moments about what a good and inspiring teacher he was.",
-    "condition": "positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_1",
+    "question": "He had a positive impact on people around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_2",
+    "question": "He has made a positive contribution to society in his own way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_3",
+    "question": "His existence positively affected people he met.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_4",
+    "question": "He made a difference in a positive way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_5",
+    "question": "His life as a whole had meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_6",
+    "question": "His entire existence was full of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_7",
+    "question": "His life was meaningless.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_8",
+    "question": "His existence was empty of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_9",
+    "question": "Most things that happened in his life made sense.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_10",
+    "question": "By and large, he was able to understand the world around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_11",
+    "question": "He could comprehend what his life was all about.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_12",
+    "question": "He could easily make sense of his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_13",
+    "question": "He has pursued one or more big purposes in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_14",
+    "question": "He was highly committed to certain core goals in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_15",
+    "question": "He had a set of core goals that gave his life a sense of direction.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_16",
+    "question": "His daily activities were consistent with a broader life purpose.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_17",
+    "question": "His life was full of value.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_18",
+    "question": "His personal existence was significant.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_19",
+    "question": "Every day he experienced the sense that life was worth living.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_21",
+    "question": "He was not a morally good person.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q1_22",
+    "question": "He had a good moral character.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
    },
    {
     "type": "question",
     "variable-name": "MQ1",
     "question": "To which extent was Peter's life meaningful?",
-    "condition": "positive impact",
     "response-constraints": {
      "type": "scalar",
      "scale-min": 0,
@@ -93,7 +680,8 @@
      "scale-min-desc": "Very negative",
      "scale-max-desc": "Very positive"
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
    }
   ],
   [
@@ -101,21 +689,314 @@
     "type": "stimuli",
     "variable-name": "L2",
     "content": "Please, read the following text carefully. We will ask you questions about it:\nAlexandra is a scientist who devotes her life to finding cures for deadly diseases. What happens in her life is stable and predictable, giving her the feeling that she can easily make sense of her past and present. Those who surround her make her feel that her life has value and is worth living. She works hard, has a husband and two kids. At age 35, she discovers a drug that cures a painful disease and is praised by the world until her death at age 75.",
-    "condition": "no positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
    },
    {
     "type": "stimuli",
     "variable-name": "L2-",
     "content": "After her death, it was discovered that the drug caused severe birth defects in babies conceived by people taking the drug. It is known that this was unintentional, that she conducted several scientific studies to ensure the safety of the drug, and that Alexandra truly believed that the drug would cure the disease. Her drug is said to have caused more harm than good and Alexandra's work is discredited.",
-    "condition": "no positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_1",
+    "question": "She had a positive impact on people around her.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_2",
+    "question": "She has made a positive contribution to society in her own way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_3",
+    "question": "She existence positively affected people she met.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_4",
+    "question": "She made a difference in a positive way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_5",
+    "question": "She life as a whole had meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_6",
+    "question": "She entire existence was full of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_7",
+    "question": "She life was meaningless.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_8",
+    "question": "She existence was empty of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_9",
+    "question": "Most things that happened in her life made sense.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_10",
+    "question": "By and large, she was able to understand the world around her.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_11",
+    "question": "She could comprehend what her life was all about.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_12",
+    "question": "She could easily make sense of her life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_13",
+    "question": "She has pursued one or more big purposes in her life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_14",
+    "question": "She was highly committed to certain core goals in her life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_15",
+    "question": "She had a set of core goals that gave her life a sense of direction.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_16",
+    "question": "She daily activities were consistent with a broader life purpose.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_17",
+    "question": "She life was full of value.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_18",
+    "question": "She personal existence was significant.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_19",
+    "question": "Every day she experienced the sense that life was worth living.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_21",
+    "question": "She was not a morally good person.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_22",
+    "question": "She had a good moral character.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
    },
    {
     "type": "question",
     "variable-name": "MQ2",
     "question": "To which extent was Alexandra's life meaningful?",
-    "condition": "no positive impact",
     "response-constraints": {
      "type": "scalar",
      "scale-min": 0,
@@ -123,7 +1004,8 @@
      "scale-min-desc": "Very negative",
      "scale-max-desc": "Very positive"
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
    }
   ],
   [
@@ -131,21 +1013,314 @@
     "type": "stimuli",
     "variable-name": "L2",
     "content": "Please, read the following text carefully. We will ask you questions about it:\nAlexandra is a scientist who devotes her life to finding cures for deadly diseases. What happens in her life is stable and predictable, giving her the feeling that she can easily make sense of her past and present. Those who surround her make her feel that her life has value and is worth living. She works hard, has a husband and two kids. At age 35, she discovers a drug that cures a painful disease and is praised by the world until her death at age 75.",
-    "condition": "positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
    },
    {
     "type": "stimuli",
     "variable-name": "L2+",
     "content": "After her death, it turns out that her research led to many discoveries and that her medicines helped save thousands of lives. It is known that she intentionally directed her research to save people, that she conducted several scientific studies to ensure the safety of the drug, and that Alexandra truly believed that the drug would cure the disease.",
-    "condition": "positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_1",
+    "question": "She had a positive impact on people around her.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_2",
+    "question": "She has made a positive contribution to society in her own way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_3",
+    "question": "She existence positively affected people she met.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_4",
+    "question": "She made a difference in a positive way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_5",
+    "question": "She life as a whole had meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_6",
+    "question": "She entire existence was full of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_7",
+    "question": "She life was meaningless.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_8",
+    "question": "She existence was empty of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_9",
+    "question": "Most things that happened in her life made sense.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_10",
+    "question": "By and large, she was able to understand the world around her.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_11",
+    "question": "She could comprehend what her life was all about.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_12",
+    "question": "She could easily make sense of her life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_13",
+    "question": "She has pursued one or more big purposes in her life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_14",
+    "question": "She was highly committed to certain core goals in her life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_15",
+    "question": "She had a set of core goals that gave her life a sense of direction.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_16",
+    "question": "She daily activities were consistent with a broader life purpose.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_17",
+    "question": "She life was full of value.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_18",
+    "question": "She personal existence was significant.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_19",
+    "question": "Every day she experienced the sense that life was worth living.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_21",
+    "question": "She was not a morally good person.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q2_22",
+    "question": "She had a good moral character.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
    },
    {
     "type": "question",
     "variable-name": "MQ2",
     "question": "To which extent was Alexandra's life meaningful?",
-    "condition": "positive impact",
     "response-constraints": {
      "type": "scalar",
      "scale-min": 0,
@@ -153,7 +1328,8 @@
      "scale-min-desc": "Very negative",
      "scale-max-desc": "Very positive"
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
    }
   ],
   [
@@ -161,21 +1337,314 @@
     "type": "stimuli",
     "variable-name": "L3",
     "content": "Please, read the following text carefully. We will ask you questions about it:\nJose devotes his life to being a political activist. Overall, the various events that occur in his life are stable and predictable, allowing him to make sense of his life and giving him the impression that the world is understandable. His surrounding makes him feel that his life is significant and full of value. He works hard, has a wife and two kids. At the age of 35, he is killed by extremist political opponents.",
-    "condition": "no positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
    },
    {
     "type": "stimuli",
     "variable-name": "L3-",
     "content": "After his death, it is discovered that, although his intentions were good and he really wanted to improve society, the political movement he supported all his life failed to have any positive influence on society.",
-    "condition": "no positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_1",
+    "question": "He had a positive impact on people around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_2",
+    "question": "He has made a positive contribution to society in his own way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_3",
+    "question": "His existence positively affected people he met.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_4",
+    "question": "He made a difference in a positive way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_5",
+    "question": "His life as a whole had meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_6",
+    "question": "His entire existence was full of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_7",
+    "question": "His life was meaningless.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_8",
+    "question": "His existence was empty of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_9",
+    "question": "Most things that happened in his life made sense.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_10",
+    "question": "By and large, he was able to understand the world around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_11",
+    "question": "He could comprehend what his life was all about.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_12",
+    "question": "He could easily make sense of his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_13",
+    "question": "He has pursued one or more big purposes in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_14",
+    "question": "He was highly committed to certain core goals in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_15",
+    "question": "He had a set of core goals that gave his life a sense of direction.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_16",
+    "question": "His daily activities were consistent with a broader life purpose.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_17",
+    "question": "His life was full of value.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_18",
+    "question": "His personal existence was significant.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_19",
+    "question": "Every day he experienced the sense that life was worth living.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_21",
+    "question": "He was not a morally good person.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_22",
+    "question": "He had a good moral character.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "no positive impact"
    },
    {
     "type": "question",
     "variable-name": "MQ3",
     "question": "To which extent was Jose's life meaningful?",
-    "condition": "no positive impact",
     "response-constraints": {
      "type": "scalar",
      "scale-min": 0,
@@ -183,7 +1652,8 @@
      "scale-min-desc": "Very negative",
      "scale-max-desc": "Very positive"
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "no positive impact"
    }
   ],
   [
@@ -191,21 +1661,314 @@
     "type": "stimuli",
     "variable-name": "L3",
     "content": "Please, read the following text carefully. We will ask you questions about it:\nJose devotes his life to being a political activist. Overall, the various events that occur in his life are stable and predictable, allowing him to make sense of his life and giving him the impression that the world is understandable. His surrounding makes him feel that his life is significant and full of value. He works hard, has a wife and two kids. At the age of 35, he is killed by extremist political opponents.",
-    "condition": "positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
    },
    {
     "type": "stimuli",
     "variable-name": "L3+",
     "content": "After his death, he was finally recognized as having had a positive influence on society and became a hero and martyr for his country.",
-    "condition": "positive impact",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_1",
+    "question": "He had a positive impact on people around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_2",
+    "question": "He has made a positive contribution to society in his own way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_3",
+    "question": "His existence positively affected people he met.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_4",
+    "question": "He made a difference in a positive way.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_5",
+    "question": "His life as a whole had meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_6",
+    "question": "His entire existence was full of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_7",
+    "question": "His life was meaningless.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_8",
+    "question": "His existence was empty of meaning.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_9",
+    "question": "Most things that happened in his life made sense.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_10",
+    "question": "By and large, he was able to understand the world around his.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_11",
+    "question": "He could comprehend what his life was all about.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_12",
+    "question": "He could easily make sense of his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_13",
+    "question": "He has pursued one or more big purposes in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_14",
+    "question": "He was highly committed to certain core goals in his life.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_15",
+    "question": "He had a set of core goals that gave his life a sense of direction.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_16",
+    "question": "His daily activities were consistent with a broader life purpose.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_17",
+    "question": "His life was full of value.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_18",
+    "question": "His personal existence was significant.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_19",
+    "question": "Every day he experienced the sense that life was worth living.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_21",
+    "question": "He was not a morally good person.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q3_22",
+    "question": "He had a good moral character.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 6,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted",
+    "condition": "positive impact"
    },
    {
     "type": "question",
     "variable-name": "MQ3",
     "question": "To which extent was Jose's life meaningful?",
-    "condition": "positive impact",
     "response-constraints": {
      "type": "scalar",
      "scale-min": 0,
@@ -213,7 +1976,8 @@
      "scale-min-desc": "Very negative",
      "scale-max-desc": "Very positive"
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "positive impact"
    }
   ]
  ],
@@ -227,7 +1991,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 0.6,
+ "reward_usd": 0.84,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -290,6 +2054,6 @@
  ],
  "gdpr_attestation": null,
  "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read a short story about a person's life and answer one question about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately one minute.</p><h4>PAYMENTS:</h4><p>You will receive $0.60, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 0.6,
+ "estimated_minutes": 4.2,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/efk28/"
 }
