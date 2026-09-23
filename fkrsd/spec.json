@@ -12,169 +12,855 @@
    "text_source": "extracted"
   },
   {
+   "type": "page",
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "habit_good_listing",
+     "content": "Please list 4 good habits that you have (2 that are good for the environment, and 2 that are good for your health).",
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_env_good_1",
+     "question": "Environment good habit 1",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_env_good_2",
+     "question": "Environment good habit 2",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_health_good_1",
+     "question": "Health good habit 1",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_health_good_2",
+     "question": "Health good habit 2",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_good env habits_1",
+   "question": "How strong is Environment good habit 1?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good habit 1": "habit_env_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_good env habits_2",
+   "question": "How strong is Environment good habit 2?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good habit 2": "habit_env_good_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_good health habits_1",
+   "question": "How strong is Health good habit 1?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good habit 1": "habit_health_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_good health habits_2",
+   "question": "How strong is Health good habit 2?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good habit 2": "habit_health_good_2"
+   }
+  },
+  {
+   "type": "page",
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "good_nonhabit_listing",
+     "content": "Please now list 4 good behaviours that are not a habit for you (2 that would be good for the environment, and 2 that would be good for your health).",
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "nonhabit_env_good_1",
+     "question": "Environment good non-habit 1",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "nonhabit_env_good_2",
+     "question": "Environment good non-habit 2",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "nonhabit_health_good_1",
+     "question": "Health good non-habit 1",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "nonhabit_health_good_2",
+     "question": "Health good non-habit 2",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "variable-name": "pos non habit_inten create_env_1",
+   "question": "Would you like Environment good non-habit 1 to become a habit?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good non-habit 1": "nonhabit_env_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "pos non habit_inten create_env_2",
+   "question": "Would you like Environment good non-habit 2 to become a habit?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good non-habit 2": "nonhabit_env_good_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "pos non habit_inten create_health_1",
+   "question": "Would you like Health good non-habit 1 to become a habit?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good non-habit 1": "nonhabit_health_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "pos non habit_inten create_health_2",
+   "question": "Would you like Health good non-habit 2 to become a habit?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good non-habit 2": "nonhabit_health_good_2"
+   }
+  },
+  {
+   "type": "page",
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "habit_bad_intro",
+     "content": "Now, we will focus on bad habits. This could be for example habits that you consider bad for your health or for the environment.",
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_env_bad_1",
+     "question": "Environment bad habit 1",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_env_bad_2",
+     "question": "Environment bad habit 2",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_health_bad_1",
+     "question": "Health bad habit 1",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    },
+    {
+     "type": "question",
+     "variable-name": "habit_health_bad_2",
+     "question": "Health bad habit 2",
+     "response-constraints": {
+      "type": "free-response",
+      "single-line": true
+     },
+     "text_source": "authored",
+     "note": "Entry field for the slot the reconstruction's later items name by this label."
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_bad env habits_1",
+   "question": "How strong is Environment bad habit 1?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 1": "habit_env_bad_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_bad  env habits_2",
+   "question": "How strong is Environment bad habit 2?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 2": "habit_env_bad_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_bad  health habits_1",
+   "question": "How strong is Health bad habit 1?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 1": "habit_health_bad_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "strength_bad  health habits_2",
+   "question": "How strong is Health bad habit 2?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Very weak habit",
+    "scale-max-desc": "Very strong habit"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 2": "habit_health_bad_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "change_neghab_intent_1",
+   "question": "Would you like to change Environment bad habit 1?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 1": "habit_env_bad_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "change_neghab_intent_2",
+   "question": "Would you like to change Environment bad habit 2?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 2": "habit_env_bad_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "change_neghab_intent_3",
+   "question": "Would you like to change Health bad habit 1?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 1": "habit_health_bad_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "change_neghab_intent_4",
+   "question": "Would you like to change Health bad habit 2?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "No, not at all",
+    "scale-max-desc": "Yes, very much"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 2": "habit_health_bad_2"
+   }
+  },
+  {
    "type": "stimuli",
-   "variable-name": "habit_good_listing",
-   "content": "Please list 4 good habits that you have (2 that are good for the environment, and 2 that are good for your health).",
+   "variable-name": "vacation_intro",
+   "content": "Now, please think of a typical 2 week vacation.",
    "text_source": "extracted"
   },
   {
-   "type": "group",
-   "shuffle": true,
-   "pick": 4,
-   "items": [
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_good_4",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Health good habit 2",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_bad_3",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Health bad habit 1",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_bad_4",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Health bad habit 2",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_good_1",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Environment good habit 1",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_good_3",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Health good habit 1",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_bad_2",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Environment bad habit 2",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_good_2",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Environment good habit 2",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "return_home_bad_1",
-       "question": "How likely are you to return to this habit after returning home from your vacation? Environment bad habit 1",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "Not at all likely",
-        "scale-max-desc": "Extremely likely"
-       },
-       "text_source": "paraphrased"
-      }
-     ]
-    }
-   ]
+   "type": "stimuli",
+   "variable-name": "habits_break_intro",
+   "content": "Sometimes we break our habits when we are on vacation. Below you see the everyday life habits (good and bad) that you selected previously.",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_good_1",
+   "question": "How likely are you to stop this habit on vacation? Environment good habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good habit 1": "habit_env_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_good_2",
+   "question": "How likely are you to stop this habit on vacation? Environment good habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good habit 2": "habit_env_good_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_good_3",
+   "question": "How likely are you to stop this habit on vacation? Health good habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good habit 1": "habit_health_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_good_4",
+   "question": "How likely are you to stop this habit on vacation? Health good habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good habit 2": "habit_health_good_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_bad_1",
+   "question": "How likely are you to stop this habit on vacation? Environment bad habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 1": "habit_env_bad_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_bad_2",
+   "question": "How likely are you to stop this habit on vacation? Environment bad habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 2": "habit_env_bad_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_bad_3",
+   "question": "How likely are you to stop this habit on vacation? Health bad habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 1": "habit_health_bad_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "drop_habit_bad_4",
+   "question": "How likely are you to stop this habit on vacation? Health bad habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 2": "habit_health_bad_2"
+   }
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "habit_build_intro",
+   "content": "Sometimes we build new habits on vacation. Below you see the behaviours which you selected as not currently being a habit.",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "good habit_start_1",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Environment good non-habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good non-habit 1": "nonhabit_env_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "good habit_start_2",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Environment good non-habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good non-habit 2": "nonhabit_env_good_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "good habit_start_3",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Health good non-habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good non-habit 1": "nonhabit_health_good_1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "good habit_start_4",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Health good non-habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good non-habit 2": "nonhabit_health_good_2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "bad habit_start_1",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Environment bad non-habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "bad habit_start_2",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Environment bad non-habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "bad habit_start_3",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Health bad non-habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "bad habit_start_4",
+   "question": "How likely are you to turn this behaviour into a habit on vacation? Health bad non-habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_good_1",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Environment good habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good habit 1": "habit_env_good_1"
+   },
+   "show_if": {
+    "variable": "drop_habit_good_1",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_good_2",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Environment good habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment good habit 2": "habit_env_good_2"
+   },
+   "show_if": {
+    "variable": "drop_habit_good_2",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_good_3",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Health good habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good habit 1": "habit_health_good_1"
+   },
+   "show_if": {
+    "variable": "drop_habit_good_3",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_good_4",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Health good habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health good habit 2": "habit_health_good_2"
+   },
+   "show_if": {
+    "variable": "drop_habit_good_4",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_bad_1",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Environment bad habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 1": "habit_env_bad_1"
+   },
+   "show_if": {
+    "variable": "drop_habit_bad_1",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_bad_2",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Environment bad habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Environment bad habit 2": "habit_env_bad_2"
+   },
+   "show_if": {
+    "variable": "drop_habit_bad_2",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_bad_3",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Health bad habit 1",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 1": "habit_health_bad_1"
+   },
+   "show_if": {
+    "variable": "drop_habit_bad_3",
+    "op": ">",
+    "value": 50
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "return_home_bad_4",
+   "question": "How likely are you to return to this habit after returning home from your vacation? Health bad habit 2",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 0,
+    "scale-max": 100,
+    "scale-min-desc": "Not at all likely",
+    "scale-max-desc": "Extremely likely"
+   },
+   "text_source": "paraphrased",
+   "pipe": {
+    "Health bad habit 2": "habit_health_bad_2"
+   },
+   "show_if": {
+    "variable": "drop_habit_bad_4",
+    "op": ">",
+    "value": 50
+   }
   }
  ],
  "prescreen": {
@@ -191,7 +877,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 0.6,
+ "reward_usd": 1.98,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -269,6 +955,6 @@
  ],
  "gdpr_attestation": "You consent to the collection, use and transfer of Your Study Data, which includes other sensitive personal data, for the purpose of carrying out the research study, and know that you can withdraw your consent at any time, and we will stop processing your personal data, except as described above.",
  "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to name a few of your own habits and answer four questions about how likely you are to keep or return to them after a holiday. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 20 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately one minute.</p><h4>PAYMENTS:</h4><p>You will receive $0.60, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 1.0,
+ "estimated_minutes": 9.9,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/fkrsd/"
 }

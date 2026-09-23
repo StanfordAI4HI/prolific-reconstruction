@@ -36,23 +36,28 @@
     "text_source": "extracted"
    },
    {
-    "type": "stimuli",
-    "variable-name": "C_A_vignette",
-    "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he both has an\nOmniFlow account and is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, but he is not subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is not subscribed, so he subscribes\nto VibeVault.\nOn March 1, Louie's InfinityPlay account activated.",
-    "text_source": "extracted"
-   },
-   {
-    "type": "question",
-    "variable-name": "C_A_1",
-    "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie subscribing to VibeVault caused his InfinityPlay account to activate.",
-    "response-constraints": {
-     "type": "scalar",
-     "scale-min": -3,
-     "scale-max": 3,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
-    },
-    "text_source": "extracted"
+    "type": "page",
+    "items": [
+     {
+      "type": "stimuli",
+      "variable-name": "C_A_vignette",
+      "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he both has an\nOmniFlow account and is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, but he is not subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is not subscribed, so he subscribes\nto VibeVault.\nOn March 1, Louie's InfinityPlay account activated.",
+      "text_source": "extracted"
+     },
+     {
+      "type": "question",
+      "variable-name": "C_A_1",
+      "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie subscribing to VibeVault caused his InfinityPlay account to activate.",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": -3,
+       "scale-max": 3,
+       "scale-min-desc": "strongly disagree",
+       "scale-max-desc": "strongly agree"
+      },
+      "text_source": "extracted"
+     }
+    ]
    }
   ],
   [
@@ -63,23 +68,28 @@
     "text_source": "extracted"
    },
    {
-    "type": "stimuli",
-    "variable-name": "C_I_vignette",
-    "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he both has an\nOmniFlow account and is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, and he is subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is subscribed, so he does not\nchange anything at all.\nOn March 1, Louie's InfinityPlay account activated.",
-    "text_source": "extracted"
-   },
-   {
-    "type": "question",
-    "variable-name": "C_I_1",
-    "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie not changing his VibeVault subscription caused his InfinityPlay account to activate.",
-    "response-constraints": {
-     "type": "scalar",
-     "scale-min": -3,
-     "scale-max": 3,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
-    },
-    "text_source": "extracted"
+    "type": "page",
+    "items": [
+     {
+      "type": "stimuli",
+      "variable-name": "C_I_vignette",
+      "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he both has an\nOmniFlow account and is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, and he is subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is subscribed, so he does not\nchange anything at all.\nOn March 1, Louie's InfinityPlay account activated.",
+      "text_source": "extracted"
+     },
+     {
+      "type": "question",
+      "variable-name": "C_I_1",
+      "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie not changing his VibeVault subscription caused his InfinityPlay account to activate.",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": -3,
+       "scale-max": 3,
+       "scale-min-desc": "strongly disagree",
+       "scale-max-desc": "strongly agree"
+      },
+      "text_source": "extracted"
+     }
+    ]
    }
   ],
   [
@@ -90,23 +100,28 @@
     "text_source": "extracted"
    },
    {
-    "type": "stimuli",
-    "variable-name": "D_A_vignette",
-    "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he either has an\nOmniFlow account or is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, but he is not subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is not subscribed, so he subscribes\nto VibeVault.\nOn March 1, Louie's InfinityPlay account activated.",
-    "text_source": "extracted"
-   },
-   {
-    "type": "question",
-    "variable-name": "D_A_1",
-    "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie subscribing to VibeVault caused his InfinityPlay account to activate.",
-    "response-constraints": {
-     "type": "scalar",
-     "scale-min": -3,
-     "scale-max": 3,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
-    },
-    "text_source": "extracted"
+    "type": "page",
+    "items": [
+     {
+      "type": "stimuli",
+      "variable-name": "D_A_vignette",
+      "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he either has an\nOmniFlow account or is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, but he is not subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is not subscribed, so he subscribes\nto VibeVault.\nOn March 1, Louie's InfinityPlay account activated.",
+      "text_source": "extracted"
+     },
+     {
+      "type": "question",
+      "variable-name": "D_A_1",
+      "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie subscribing to VibeVault caused his InfinityPlay account to activate.",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": -3,
+       "scale-max": 3,
+       "scale-min-desc": "strongly disagree",
+       "scale-max-desc": "strongly agree"
+      },
+      "text_source": "extracted"
+     }
+    ]
    }
   ],
   [
@@ -117,23 +132,28 @@
     "text_source": "extracted"
    },
    {
-    "type": "stimuli",
-    "variable-name": "D_I_vignette",
-    "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he either has an\nOmniFlow account or is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, and he is subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is subscribed, so he does not\nchange anything at all.\nOn March 1, Louie's InfinityPlay account activated.",
-    "text_source": "extracted"
-   },
-   {
-    "type": "question",
-    "variable-name": "D_I_1",
-    "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie not changing his VibeVault subscription caused his InfinityPlay account to activate.",
-    "response-constraints": {
-     "type": "scalar",
-     "scale-min": -3,
-     "scale-max": 3,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
-    },
-    "text_source": "extracted"
+    "type": "page",
+    "items": [
+     {
+      "type": "stimuli",
+      "variable-name": "D_I_vignette",
+      "content": "Louie learns that InfinityPlay, a free streaming service, has updated its policies.\nAccording to the new policy, his free account will activate on March 1 if he either has an\nOmniFlow account or is subscribed to VibeVault, a newsletter.\nLouie already has a lifetime OmniFlow account, and he is subscribed to VibeVault.\nLouie checks his VibeVault subscription and sees that he is subscribed, so he does not\nchange anything at all.\nOn March 1, Louie's InfinityPlay account activated.",
+      "text_source": "extracted"
+     },
+     {
+      "type": "question",
+      "variable-name": "D_I_1",
+      "question": "To what extent do you agree with the following statement about the passage you just read?\n\nLouie not changing his VibeVault subscription caused his InfinityPlay account to activate.",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": -3,
+       "scale-max": 3,
+       "scale-min-desc": "strongly disagree",
+       "scale-max-desc": "strongly agree"
+      },
+      "text_source": "extracted"
+     }
+    ]
    }
   ]
  ],

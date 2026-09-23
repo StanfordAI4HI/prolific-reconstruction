@@ -12,505 +12,407 @@
    "text_source": "extracted"
   },
   {
-   "type": "group",
-   "shuffle": true,
-   "pick": 26,
-   "items": [
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.1",
-       "question": "We feel like we are right for each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.2",
-       "question": "It feels like we are better together than individually.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.3",
-       "question": "We are compatible with each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.4",
-       "question": "We are on the same page about what we want out of life.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.27",
-       "question": "We are \"in sync\" with each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.6",
-       "question": "We feel comfortable opening up to each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.7",
-       "question": "We can communicate easily with each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.8",
-       "question": "We can be ourselves around each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.9",
-       "question": "We have deep conversations.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.10",
-       "question": "We can share our dreams, goals, ambitions, and desires with each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.11",
-       "question": "It feels like we have a magnetic pull toward each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.12",
-       "question": "We feel an unexplainable \"spark\" when we are together.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.13",
-       "question": "When we are together it feels like nobody else is around.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.14",
-       "question": "We have a special connection compared to other relationships.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.15",
-       "question": "We are drawn to each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.16",
-       "question": "We have playful banter.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.17",
-       "question": "We smile often when we are together.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.18",
-       "question": "We genuinely make each other laugh.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.19",
-       "question": "We have a lot of fun together.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.20",
-       "question": "We enjoy each other's company.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.21",
-       "question": "We feel a sexual connection.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.22",
-       "question": "We are sexually attracted to each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.23",
-       "question": "We have an intense desire for each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.24",
-       "question": "We have a strong physical connection.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "RoCh.25",
-       "question": "We have an intense attraction toward each other.",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "Not at all",
-        "scale-max-desc": "Completely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    },
-    {
-     "type": "group",
-     "shuffle": false,
-     "items": [
-      {
-       "type": "question",
-       "variable-name": "PRQC.1",
-       "question": "How satisfied are you with your relationship?",
-       "response-constraints": {
-        "type": "scalar",
-        "scale-min": 1,
-        "scale-max": 7,
-        "scale-min-desc": "not at all",
-        "scale-max-desc": "extremely"
-       },
-       "text_source": "extracted"
-      }
-     ]
-    }
-   ]
+   "type": "question",
+   "variable-name": "RoCh.1",
+   "question": "We feel like we are right for each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.2",
+   "question": "It feels like we are better together than individually.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.3",
+   "question": "We are compatible with each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.4",
+   "question": "We are on the same page about what we want out of life.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.27",
+   "question": "We are \"in sync\" with each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.6",
+   "question": "We feel comfortable opening up to each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.7",
+   "question": "We can communicate easily with each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.8",
+   "question": "We can be ourselves around each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.9",
+   "question": "We have deep conversations.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.10",
+   "question": "We can share our dreams, goals, ambitions, and desires with each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.11",
+   "question": "It feels like we have a magnetic pull toward each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.12",
+   "question": "We feel an unexplainable \"spark\" when we are together.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.13",
+   "question": "When we are together it feels like nobody else is around.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.14",
+   "question": "We have a special connection compared to other relationships.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.15",
+   "question": "We are drawn to each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.16",
+   "question": "We have playful banter.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.17",
+   "question": "We smile often when we are together.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.18",
+   "question": "We genuinely make each other laugh.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.19",
+   "question": "We have a lot of fun together.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.20",
+   "question": "We enjoy each other's company.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.21",
+   "question": "We feel a sexual connection.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.22",
+   "question": "We are sexually attracted to each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.23",
+   "question": "We have an intense desire for each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.24",
+   "question": "We have a strong physical connection.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.25",
+   "question": "We have an intense attraction toward each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.26",
+   "question": "We bring out the best in each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.5",
+   "question": "We fit together.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.28",
+   "question": "We just \"click\" with each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.29",
+   "question": "We share a lot in common.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.30",
+   "question": "Our conversations flow easily.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "RoCh.31",
+   "question": "It is easy to be around each other.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all",
+    "scale-max-desc": "Completely"
+   },
+   "text_source": "extracted"
   },
   {
    "type": "question",
@@ -525,7 +427,79 @@
     ]
    },
    "text_source": "authored",
-   "note": "Authored. The shipped measure filters on participant-meta.analysis_relationship_group and no archive item determines it."
+   "note": "Authored. The reconstruction branches on participant-meta.analysis_relationship_group, which no archive item asks; this question stands in for it so the branch can be taken."
+  },
+  {
+   "type": "question",
+   "variable-name": "PRQC.1",
+   "question": "How satisfied are you with your relationship?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "extremely"
+   },
+   "text_source": "extracted",
+   "show_if": {
+    "variable": "relationship_status",
+    "op": "==",
+    "value": "Yes"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "liking.1",
+   "question": "How much do you like <initials>?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted",
+   "show_if": {
+    "variable": "relationship_status",
+    "op": "==",
+    "value": "No"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "liking.2",
+   "question": "How interested are you in getting to know <initials> better?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted",
+   "show_if": {
+    "variable": "relationship_status",
+    "op": "==",
+    "value": "No"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "liking.3",
+   "question": "How comfortable do you feel being around <initials>?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted",
+   "show_if": {
+    "variable": "relationship_status",
+    "op": "==",
+    "value": "No"
+   }
   }
  ],
  "prescreen": {
@@ -540,7 +514,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 0.87,
+ "reward_usd": 1.34,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -619,6 +593,6 @@
  ],
  "gdpr_attestation": "You consent to the collection, use and transfer of Your Study Data, which includes other sensitive personal data, for the purpose of carrying out the research study, and know that you can withdraw your consent at any time, and we will stop processing your personal data, except as described above.",
  "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 27 questions about a current or recent romantic relationship. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>The questions ask about closeness and intimacy in your relationship.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 4 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $0.87, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 4.3,
+ "estimated_minutes": 6.7,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/6cxdn/"
 }

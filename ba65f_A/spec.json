@@ -12,1464 +12,1710 @@
    "text_source": "paraphrased"
   },
   {
-   "type": "stimuli",
-   "variable-name": "Dog_situation",
-   "content": "John's dog gets hit by a car.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Dog",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Dog_High_action",
-   "content": "His friend Bob takes time off to help care for the dog while John is at work during the day.",
-   "condition": "Dog_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Dog_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Dog_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Dog_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Dog_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Dog_Low_action",
-   "content": "His friend Bob donates $20 to their GoFundMe page to help cover vet bills.",
-   "condition": "Dog_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Dog_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Dog_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Dog_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Dog_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Dog_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Research_situation",
-   "content": "John is up late at night working on a big research presentation for work.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Research",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Research_High_action",
-   "content": "His friend Bob listens to a practice run of his presentation and provides tips and feedback.",
-   "condition": "Research_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Research_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Research_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Research_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Research_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Research_Low_action",
-   "content": "His friend Bob brings him a cup of coffee or tea as they prepare.",
-   "condition": "Research_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Research_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Research_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Research_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Research_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Research_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Divorce_situation",
-   "content": "John is going through a divorce.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Divorce",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Divorce_High_action",
-   "content": "His friend Bob accompanies him to divorce attorney consultation appointments.",
-   "condition": "Divorce_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Divorce_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Divorce_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Divorce_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Divorce_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Divorce_Low_action",
-   "content": "His friend Bob sends a sympathy card expressing that he is there if John needs anything.",
-   "condition": "Divorce_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Divorce_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Divorce_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Divorce_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Divorce_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Divorce_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Exam_situation",
-   "content": "John fails a big exam and must retake it.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Exam",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Exam_High_action",
-   "content": "His friend Bob helps him study for retaking the exam by organizing study sessions to review concepts and course material.",
-   "condition": "Exam_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Exam_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Exam_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Exam_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Exam_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Exam_Low_action",
-   "content": "His friend Bob sends a supportive text message.",
-   "condition": "Exam_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Exam_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Exam_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Exam_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Exam_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Exam_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Job_situation",
-   "content": "John loses his job.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Job",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Job_High_action",
-   "content": "His friend Bob helps him look online for job advertisements and helps him update his CV.",
-   "condition": "Job_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Job_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Job_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Job_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Job_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Job_Low_action",
-   "content": "His friend Bob takes him on a long walk to provide him with a healthy distraction.",
-   "condition": "Job_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Job_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Job_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Job_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Job_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Job_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Laptop_situation",
-   "content": "John has their laptop stolen.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Laptop",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Laptop_High_action",
-   "content": "His friend Bob lends him his laptop while John waits to get a new one.",
-   "condition": "Laptop_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Laptop_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Laptop_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Laptop_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Laptop_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Laptop_Low_action",
-   "content": "His friend Bob lends him his library card so John can use the computers there.",
-   "condition": "Laptop_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Laptop_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Laptop_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Laptop_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Laptop_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Laptop_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Death_situation",
-   "content": "John's mom dies unexpectedly.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Death",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Death_High_action",
-   "content": "His friend Bob handles calling and sorting out his mother's life insurance policy paperwork.",
-   "condition": "Death_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Death_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Death_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Death_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Death_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Death_Low_action",
-   "content": "His friend Bob sends a condolence card and flowers.",
-   "condition": "Death_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Death_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Death_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Death_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Death_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Death_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Car_situation",
-   "content": "John is in a fender-bender and his car needs to be repaired.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Car",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Car_High_action",
-   "content": "His friend Bob drives him around while his car is being fixed.",
-   "condition": "Car_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Car_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Car_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Car_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Car_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Car_Low_action",
-   "content": "His friend Bob recommended an autobody shop to repair the damage to his car.",
-   "condition": "Car_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Car_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Car_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Car_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Car_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Car_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Sick_situation",
-   "content": "John is out sick from work with a sudden stomach-bug.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Sick",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Sick_High_action",
-   "content": "His work friend Bob covers his workload so he doesn't miss anything while he's gone.",
-   "condition": "Sick_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Sick_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Sick_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Sick_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Sick_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Sick_Low_action",
-   "content": "His work friend Bob texts to ask if there's anything he can do.",
-   "condition": "Sick_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Sick_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Sick_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Sick_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Sick_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Sick_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Flood_situation",
-   "content": "John's room flooded after a pipe burst.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_Prior",
-   "question": "How likely is it that a person feels empathy for their friend in this situation?",
-   "condition": "Flood",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "not likely at all",
-    "scale-max-desc": "extremely likely"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Flood_High_action",
-   "content": "His friend Bob helped him clean up the room in the aftermath of the flood.",
-   "condition": "Flood_High",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_High_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Flood_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_High_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Flood_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_High_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Flood_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_High_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Flood_High",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "Flood_Low_action",
-   "content": "His friend Bob has a garage that he let John store his belongings in.",
-   "condition": "Flood_Low",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_Low_Effort",
-   "question": "How much effort do you think this action requires?",
-   "condition": "Flood_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_Low_Inconvenience",
-   "question": "How much of an inconvenience do you think this action would be?",
-   "condition": "Flood_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_Low_Practical",
-   "question": "How practically beneficial do you think this action would be to the recipient?",
-   "condition": "Flood_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Flood_Low_Emotional",
-   "question": "How emotionally beneficial do you think this action would be to the recipient?",
-   "condition": "Flood_Low",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "none at all",
-    "scale-max-desc": "a great deal"
-   },
-   "text_source": "extracted"
+   "type": "group",
+   "shuffle": true,
+   "items": [
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Dog_situation",
+       "content": "John's dog gets hit by a car.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Dog_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Dog"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Dog_High_action",
+           "content": "His friend Bob takes time off to help care for the dog while John is at work during the day.",
+           "text_source": "extracted",
+           "condition": "Dog_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Dog_Low_action",
+           "content": "His friend Bob donates $20 to their GoFundMe page to help cover vet bills.",
+           "text_source": "extracted",
+           "condition": "Dog_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Dog_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Dog_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Research_situation",
+       "content": "John is up late at night working on a big research presentation for work.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Research_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Research"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Research_High_action",
+           "content": "His friend Bob listens to a practice run of his presentation and provides tips and feedback.",
+           "text_source": "extracted",
+           "condition": "Research_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Research_Low_action",
+           "content": "His friend Bob brings him a cup of coffee or tea as they prepare.",
+           "text_source": "extracted",
+           "condition": "Research_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Research_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Research_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Divorce_situation",
+       "content": "John is going through a divorce.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Divorce_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Divorce"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Divorce_High_action",
+           "content": "His friend Bob accompanies him to divorce attorney consultation appointments.",
+           "text_source": "extracted",
+           "condition": "Divorce_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Divorce_Low_action",
+           "content": "His friend Bob sends a sympathy card expressing that he is there if John needs anything.",
+           "text_source": "extracted",
+           "condition": "Divorce_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Divorce_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Divorce_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Exam_situation",
+       "content": "John fails a big exam and must retake it.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Exam_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Exam"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Exam_High_action",
+           "content": "His friend Bob helps him study for retaking the exam by organizing study sessions to review concepts and course material.",
+           "text_source": "extracted",
+           "condition": "Exam_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Exam_Low_action",
+           "content": "His friend Bob sends a supportive text message.",
+           "text_source": "extracted",
+           "condition": "Exam_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Exam_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Exam_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Job_situation",
+       "content": "John loses his job.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Job_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Job"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Job_High_action",
+           "content": "His friend Bob helps him look online for job advertisements and helps him update his CV.",
+           "text_source": "extracted",
+           "condition": "Job_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Job_Low_action",
+           "content": "His friend Bob takes him on a long walk to provide him with a healthy distraction.",
+           "text_source": "extracted",
+           "condition": "Job_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Job_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Job_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Laptop_situation",
+       "content": "John has their laptop stolen.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Laptop_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Laptop"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Laptop_High_action",
+           "content": "His friend Bob lends him his laptop while John waits to get a new one.",
+           "text_source": "extracted",
+           "condition": "Laptop_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Laptop_Low_action",
+           "content": "His friend Bob lends him his library card so John can use the computers there.",
+           "text_source": "extracted",
+           "condition": "Laptop_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Laptop_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Laptop_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Death_situation",
+       "content": "John's mom dies unexpectedly.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Death_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Death"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Death_High_action",
+           "content": "His friend Bob handles calling and sorting out his mother's life insurance policy paperwork.",
+           "text_source": "extracted",
+           "condition": "Death_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Death_Low_action",
+           "content": "His friend Bob sends a condolence card and flowers.",
+           "text_source": "extracted",
+           "condition": "Death_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Death_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Death_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Car_situation",
+       "content": "John is in a fender-bender and his car needs to be repaired.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Car_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Car"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Car_High_action",
+           "content": "His friend Bob drives him around while his car is being fixed.",
+           "text_source": "extracted",
+           "condition": "Car_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Car_Low_action",
+           "content": "His friend Bob recommended an autobody shop to repair the damage to his car.",
+           "text_source": "extracted",
+           "condition": "Car_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Car_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Car_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Sick_situation",
+       "content": "John is out sick from work with a sudden stomach-bug.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Sick_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Sick"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Sick_High_action",
+           "content": "His work friend Bob covers his workload so he doesn't miss anything while he's gone.",
+           "text_source": "extracted",
+           "condition": "Sick_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Sick_Low_action",
+           "content": "His work friend Bob texts to ask if there's anything he can do.",
+           "text_source": "extracted",
+           "condition": "Sick_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Sick_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Sick_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "group",
+     "shuffle": false,
+     "items": [
+      {
+       "type": "stimuli",
+       "variable-name": "Flood_situation",
+       "content": "John's room flooded after a pipe burst.",
+       "text_source": "extracted"
+      },
+      {
+       "type": "question",
+       "variable-name": "Flood_Prior",
+       "question": "How likely is it that a person feels empathy for their friend in this situation?",
+       "response-constraints": {
+        "type": "scalar",
+        "scale-min": 0,
+        "scale-max": 100,
+        "scale-min-desc": "not likely at all",
+        "scale-max-desc": "extremely likely"
+       },
+       "text_source": "extracted",
+       "condition": "Flood"
+      },
+      {
+       "type": "group",
+       "shuffle": true,
+       "items": [
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Flood_High_action",
+           "content": "His friend Bob helped him clean up the room in the aftermath of the flood.",
+           "text_source": "extracted",
+           "condition": "Flood_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_High_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_High_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_High_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_High"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_High_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_High"
+          }
+         ]
+        },
+        {
+         "type": "group",
+         "shuffle": false,
+         "items": [
+          {
+           "type": "stimuli",
+           "variable-name": "Flood_Low_action",
+           "content": "His friend Bob has a garage that he let John store his belongings in.",
+           "text_source": "extracted",
+           "condition": "Flood_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_Low_Effort",
+           "question": "How much effort do you think this action requires?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_Low_Inconvenience",
+           "question": "How much of an inconvenience do you think this action would be?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_Low_Practical",
+           "question": "How practically beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_Low"
+          },
+          {
+           "type": "question",
+           "variable-name": "Flood_Low_Emotional",
+           "question": "How emotionally beneficial do you think this action would be to the recipient?",
+           "response-constraints": {
+            "type": "scalar",
+            "scale-min": 1,
+            "scale-max": 7,
+            "scale-min-desc": "none at all",
+            "scale-max-desc": "a great deal"
+           },
+           "text_source": "extracted",
+           "condition": "Flood_Low"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "prescreen": {
