@@ -416,6 +416,675 @@
   },
   {
    "type": "question",
+   "variable-name": "PRQC.1",
+   "question": "How satisfied are you with your relationship?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "extremely"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "GMSEX.1",
+   "question": "Please rate your sexual relationship on this bipolar scale: Good - Bad.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "negative endpoint",
+    "scale-max-desc": "positive endpoint"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "GMSEX.2",
+   "question": "Please rate your sexual relationship on this bipolar scale: Pleasant - Unpleasant.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "negative endpoint",
+    "scale-max-desc": "positive endpoint"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "GMSEX.3",
+   "question": "Please rate your sexual relationship on this bipolar scale: Positive - Negative.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "negative endpoint",
+    "scale-max-desc": "positive endpoint"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "GMSEX.4",
+   "question": "Please rate your sexual relationship on this bipolar scale: Satisfying - Unsatisfying.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "negative endpoint",
+    "scale-max-desc": "positive endpoint"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "GMSEX.5",
+   "question": "Please rate your sexual relationship on this bipolar scale: Valuable - Worthless.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "negative endpoint",
+    "scale-max-desc": "positive endpoint"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "SexDes.1",
+   "question": "Over the past 4 weeks, how often did you feel sexual desire or interest for your partner?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Almost never or never",
+    "scale-max-desc": "Almost always or always"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "PhysAttr.1",
+   "question": "How physically attractive is <initials>?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "Not at all attractive",
+    "scale-max-desc": "Very attractive"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "HQC.1",
+   "question": "<initials> and I share a common vision.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "HQC.2",
+   "question": "<initials> and I act toward common goals.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "HQC.3.r",
+   "question": "<initials> and I act without having a clear direction.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.1",
+   "question": "I feel like <initials> really understands me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.2",
+   "question": "I feel I can tell <initials> anything.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.3",
+   "question": "I feel like I really understand <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.4",
+   "question": "<initials> feels like he/she can tell me anything.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.5",
+   "question": "The communication between <initials> and I is easy and effortless.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.6",
+   "question": "<initials> feels that he/she can trust me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.7",
+   "question": "I feel like I can trust <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.8",
+   "question": "<initials> and I had an instant connection.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.9",
+   "question": "<initials> finds me funny.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.10",
+   "question": "I find <initials> funny.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.11",
+   "question": "I find <initials> interesting.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.12",
+   "question": "<initials> and I find the same things funny.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.13",
+   "question": "I feel good when I am around <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.14",
+   "question": "<initials> finds me interesting.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.15",
+   "question": "I get excited to talk to or see <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.16",
+   "question": "<initials> and I share the same interests.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.17",
+   "question": "I care about the general well-being of other people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.18",
+   "question": "I am a warm and caring person.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.19",
+   "question": "I am a down-to-earth, genuine person.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.20",
+   "question": "<initials> is a warm and caring person.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.21",
+   "question": "<initials> cares about the general well-being of other people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.22",
+   "question": "<initials> is a down-to-earth, genuine person.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.23",
+   "question": "I like <initials> because he/she likes me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.24",
+   "question": "<initials> and I have similar values.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.25",
+   "question": "<initials> and I have similar morals.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.26",
+   "question": "<initials> and I have similar beliefs about life.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.27",
+   "question": "<initials> and I have the same life goals.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.28",
+   "question": "<initials> and I have a similar level of education.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.29",
+   "question": "I find <initials> physically attractive.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FCQ.30",
+   "question": "<initials> finds me physically attractive.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "Strongly disagree",
+    "scale-max-desc": "Strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "pseudo_instructions",
+   "content": "These next questions may seem a bit strange. It is okay if you are not sure what they mean. Please answer them anyway to the best of your ability.",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.1",
+   "question": "My relationship with <initials> has very good Saturn.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.2",
+   "question": "The daffodil in my relationship with <initials> is close to ideal.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.3",
+   "question": "The midnight in my relationship with <initials> continues to improve over time.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.4",
+   "question": "I love the snowdrop that I get from my relationship with <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.5",
+   "question": "I enjoy the dolomite that I share with <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.6",
+   "question": "<initials> and I have excellent taro.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.7",
+   "question": "I appreciate the umbra that my relationship with <initials> brings.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.8",
+   "question": "I love the fuchsine that <initials> gives me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.9",
+   "question": "I treasure the reseda in my relationship with <initials>.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pseudo.10",
+   "question": "<initials> and I share incredible terra.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
    "variable-name": "relationship_status",
    "question": "Are you currently in a romantic relationship?",
    "response-constraints": {
@@ -514,7 +1183,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 1.34,
+ "reward_usd": 3.24,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -540,13 +1209,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 4 minutes."
+    "Your participation will take approximately 16 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $0.87, paid through Prolific, as payment for your participation."
+    "You will receive $3.24, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -592,7 +1261,7 @@
   ]
  ],
  "gdpr_attestation": "You consent to the collection, use and transfer of Your Study Data, which includes other sensitive personal data, for the purpose of carrying out the research study, and know that you can withdraw your consent at any time, and we will stop processing your personal data, except as described above.",
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 27 questions about a current or recent romantic relationship. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>The questions ask about closeness and intimacy in your relationship.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 4 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $0.87, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 6.7,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 27 questions about a current or recent romantic relationship. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>The questions ask about closeness and intimacy in your relationship.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 16 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $3.24, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 16.2,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/6cxdn/"
 }

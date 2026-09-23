@@ -83,7 +83,16 @@ def clean(it):
     return {k: copy.deepcopy(it[k]) for k in KEEP if it.get(k) is not None}
 
 
+#: --full fields the whole arm instead of stopping at the outcome item. The default
+#: (False) keeps the original behaviour: what followed the outcome cannot have shaped
+#: it, so it is left out. Full scope administers the study as the archive records it
+#: end to end, which is what a complete replication means.
+FULL = False
+
+
 def upto(items, last):
+    if FULL:
+        return items
     names = [it['variable-name'] for it in items]
     return items[:names.index(last) + 1]
 
@@ -367,8 +376,22 @@ def _items(b, out=None):
     return out
 
 
+def kfrux(spec):
+    """Three scenario conditions; one rating to the outcome, five items in full."""
+    r = Recon('kfrux', 'experiment_1')
+    labs = [l['condition'] for l in spec['arm_labels']]
+    return {'arm_blocks': [upto(r.sequence(condition=c), 'creativity') for c in labs]}
+
+
+def cse5r(spec):
+    """Representation-goals vs control; the nomination task then its ratings."""
+    r = Recon('cse5r', 'experiment_1')
+    labs = [l['condition'] for l in spec['arm_labels']]
+    return {'arm_blocks': [upto(r.sequence(condition=c), 'asn_womn') for c in labs]}
+
+
 LISTINGS = {
-    'efk28': efk28, 'fkrsd': fkrsd, '6fjdr': sixfjdr, '6cxdn': sixcxdn,
+    'kfrux': kfrux, 'cse5r': cse5r, 'efk28': efk28, 'fkrsd': fkrsd, '6fjdr': sixfjdr, '6cxdn': sixcxdn,
     '9ebhq_S1': ninebhq_s1, '9ebhq_S2': ninebhq_s2, 'hvdwk_S2': hvdwk_s2,
     'hvdwk_S3': hvdwk_s3, 'aj5mt': aj5mt, 'ba65f_A': ba65f_a, 'dqsv6': dqsv6,
     'ky9u6': ky9u6, 'kf4e6': kf4e6, 'fxp7g': fxp7g, 'kxcwm': kxcwm,
@@ -415,8 +438,37 @@ def _shown(b):
 MIN_PER_WORD, MIN_PER_QUESTION, MIN_PER_TIMED_SECOND = 0.00057, 0.1817, 0.0144
 
 
+def refresh_consent(spec):
+    """Keep the in-study consent text in step with the recomputed time and pay.
+
+    respec carries `consent` over from the previous spec, so a listing whose
+    instrument grew would otherwise promise the old duration and the old payment on
+    the first screen a participant sees. Only those two sentences are rewritten; the
+    rest of the form, including the GDPR block, is untouched.
+    """
+    mins = spec['estimated_minutes']
+    phrase = 'one minute' if mins < 1.5 else f'{int(round(mins))} minutes'
+    time_txt = f'Your participation will take approximately {phrase}.'
+    pay_txt = (f'You will receive ${spec["reward_usd"]:.2f}, paid through Prolific, '
+               f'as payment for your participation.')
+    out = []
+    for head, paras in spec.get('consent_sections') or []:
+        if head == 'TIME INVOLVEMENT:':
+            paras = [time_txt]
+        elif head == 'PAYMENTS:':
+            paras = [pay_txt]
+        out.append([head, paras])
+    spec['consent_sections'] = out
+    spec['consent'] = ''.join(
+        (f'<h4>{h}</h4>' if h else '') + ''.join(f'<p>{p}</p>' for p in ps)
+        for h, ps in out)
+    return spec
+
+
 def main():
+    global FULL
     check = '--check' in sys.argv
+    FULL = '--full' in sys.argv
     for name, build in LISTINGS.items():
         old = _load(name)
         new = copy.deepcopy(old)
@@ -435,6 +487,7 @@ def main():
         new['estimated_minutes'] = minutes
         new['reward_usd'] = (old['reward_usd'] if minutes == old['estimated_minutes']
                              else max(old['reward_usd'], round(max(0.6, 0.2 * minutes), 2)))
+        refresh_consent(new)
         order = ['app', 'study', 'archive_experiment', 'target', 'title', 'arms',
                  'arm_keys', 'arm_labels', 'arm_blocks', 'blocks']
         new = {**{k: new[k] for k in order if k in new},

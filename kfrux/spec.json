@@ -25,8 +25,8 @@
     "type": "stimuli",
     "variable-name": "scenario",
     "content": "Alex Chen is a fashion designer at a premium clothing brand. He has extensive experience designing clothing lines. While developing a new line of designer shirts, Alex decided to integrate recommendations from an AI-powered tool in the fashion development process.",
-    "condition": "control",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "control"
    },
    {
     "type": "question",
@@ -38,6 +38,55 @@
      "scale-max": 7,
      "scale-min-desc": "not at all creative",
      "scale-max-desc": "very creative"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "effort",
+    "question": "How much effort do you think Alex has put into designing this new line of designer shirts?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "not at all",
+     "scale-max-desc": "very much"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "con1",
+    "question": "As a potential consumer, how likely do you think this new line of designer shirts will be special?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "likely to be nothing special",
+     "scale-max-desc": "likely to be very special"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "con2",
+    "question": "How likely would you be to recommend this new line of shirts to other fashion enthusiasts in your social circle?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "not at all likely",
+     "scale-max-desc": "very much likely"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "price",
+    "question": "As a potential consumer for this new line of designer shirts, what is the appropriate amount (in USD) you would be willing to pay for one shirt: Insert a number only.",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
     },
     "text_source": "extracted"
    }
@@ -47,8 +96,8 @@
     "type": "stimuli",
     "variable-name": "scenario",
     "content": "Alex Chen is a fashion designer at a premium clothing brand. He has extensive experience designing clothing lines. While developing a new line of designer shirts, Alex decided to integrate recommendations from an AI-powered tool at the beginning of the fashion development process. Alex used the AI's recommendations to generate initial sketches, propose different color palettes, and suggest different fabric patterns.",
-    "condition": "early",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "early"
    },
    {
     "type": "question",
@@ -62,6 +111,55 @@
      "scale-max-desc": "very creative"
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "effort",
+    "question": "How much effort do you think Alex has put into designing this new line of designer shirts?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "not at all",
+     "scale-max-desc": "very much"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "con1",
+    "question": "As a potential consumer, how likely do you think this new line of designer shirts will be special?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "likely to be nothing special",
+     "scale-max-desc": "likely to be very special"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "con2",
+    "question": "How likely would you be to recommend this new line of shirts to other fashion enthusiasts in your social circle?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "not at all likely",
+     "scale-max-desc": "very much likely"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "price",
+    "question": "As a potential consumer for this new line of designer shirts, what is the appropriate amount (in USD) you would be willing to pay for one shirt: Insert a number only.",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "text_source": "extracted"
    }
   ],
   [
@@ -69,8 +167,8 @@
     "type": "stimuli",
     "variable-name": "scenario",
     "content": "Alex Chen is a fashion designer at a premium clothing brand. He has extensive experience designing clothing lines. While developing a new line of designer shirts, Alex decided to integrate recommendations from an AI-powered tool at the end of the fashion development process. Alex used the AI's recommendations to finalize the design layouts, refine the color effects, and optimize the fabric specifications.",
-    "condition": "late",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "condition": "late"
    },
    {
     "type": "question",
@@ -82,6 +180,55 @@
      "scale-max": 7,
      "scale-min-desc": "not at all creative",
      "scale-max-desc": "very creative"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "effort",
+    "question": "How much effort do you think Alex has put into designing this new line of designer shirts?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "not at all",
+     "scale-max-desc": "very much"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "con1",
+    "question": "As a potential consumer, how likely do you think this new line of designer shirts will be special?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "likely to be nothing special",
+     "scale-max-desc": "likely to be very special"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "con2",
+    "question": "How likely would you be to recommend this new line of shirts to other fashion enthusiasts in your social circle?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "not at all likely",
+     "scale-max-desc": "very much likely"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "price",
+    "question": "As a potential consumer for this new line of designer shirts, what is the appropriate amount (in USD) you would be willing to pay for one shirt: Insert a number only.",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
     },
     "text_source": "extracted"
    }
@@ -160,6 +307,6 @@
  ],
  "gdpr_attestation": null,
  "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read a short scenario about a fashion designer and answer one question about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately one minute.</p><h4>PAYMENTS:</h4><p>You will receive $0.60, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 0.4,
+ "estimated_minutes": 1.0,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/kfrux/"
 }

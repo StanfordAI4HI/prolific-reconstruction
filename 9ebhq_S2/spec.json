@@ -360,6 +360,340 @@
     "scale-max-desc": "extremely informed"
    },
    "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "narcissism_instructions",
+   "content": "Please indicate how much you agree or disagree with each of the following statements.",
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N1.",
+   "question": "People see me as a natural leader.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N2R.",
+   "question": "I hate being the center of attention.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N3.",
+   "question": "Many group activities tend to be dull without me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N4.",
+   "question": "I know that I am special because everyone keeps telling me so.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N5.",
+   "question": "I like to get acquainted with important people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N6R.",
+   "question": "I feel embarrassed if someone compliments me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N7.",
+   "question": "I have been compared to famous people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N8R.",
+   "question": "I am an average person.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "N.N9.",
+   "question": "I insist on getting the respect I deserve.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "faith_in_intuition_instructions",
+   "content": "Please indicate how much you agree or disagree with each of the following statements.",
+   "text_source": "paraphrased"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI1.",
+   "question": "When I need to form an opinion about an issue, I completely rely on my intuition.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI2.",
+   "question": "For most decisions, it is reasonable to rely on one's hunches.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI3.",
+   "question": "I am a very intuitive person.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI4.",
+   "question": "When it comes to people, I can trust my first impressions.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI5.",
+   "question": "I trust my initial feelings about people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI6.",
+   "question": "I believe in trusting my hunches.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI7.",
+   "question": "The first idea is often the best one.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI8.",
+   "question": "When it comes to trusting people, I usually rely on my gut feelings.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI9.",
+   "question": "I can usually feel when a person is right or wrong even if I can't explain how I know.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI10.",
+   "question": "My initial impressions of people are almost always right.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI11.",
+   "question": "I am quick to form impressions about people.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI12.",
+   "question": "When it comes to buying decisions, I often follow my gut feelings.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI13.",
+   "question": "I can typically sense right away when a person is lying.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI14.",
+   "question": "If I get lost while driving or cycling, I typically decide spontaneously which direction to take.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "FI15.FI15.",
+   "question": "I believe I can judge character pretty well from a person's appearance.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "strongly disagree",
+    "scale-max-desc": "strongly agree"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "opencomment",
+   "question": "Do you have any questions or comments about this study?",
+   "response-constraints": {
+    "type": "free-response",
+    "response-limit": null
+   },
+   "text_source": "paraphrased"
   }
  ],
  "prescreen": {
@@ -372,7 +706,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 1.04,
+ "reward_usd": 1.98,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -398,13 +732,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 4 minutes."
+    "Your participation will take approximately 10 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $0.73, paid through Prolific, as payment for your participation."
+    "You will receive $1.98, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -435,7 +769,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read ten widely discussed claims and answer two questions about each: how much you agree with it, and how much you feel you know about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Nothing in this study is presented to you as true or false; we are interested only in your own view.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 4 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $0.73, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 5.2,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read ten widely discussed claims and answer two questions about each: how much you agree with it, and how much you feel you know about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Nothing in this study is presented to you as true or false; we are interested only in your own view.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 10 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.98, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 9.9,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/9ebhq_S2/"
 }

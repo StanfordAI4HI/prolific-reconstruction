@@ -28,8 +28,8 @@
     "type": "stimuli",
     "variable-name": "manipulation",
     "content": "Imagine that you are forming a committee that will represent your work group (or department / unit) at a company-wide event.\n\nYou have a broad range of different employees to choose from. However, all of the women in your work group currently have full workloads, and sitting on the committee would entail an additional 5-10 hours of work each week. The women in your work group also do not have all of the primary qualifications and skills needed to do well on the committee, so the committee work would be outside their specializations. There are several men who have the required specializations and who also have enough available time to serve on the committee.",
-    "condition": "control",
-    "text_source": "paraphrased"
+    "text_source": "paraphrased",
+    "condition": "control"
    },
    {
     "type": "question",
@@ -42,6 +42,616 @@
       "I would assign at least one of the women"
      ],
      "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_1",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidates' qualifications",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_2",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidates' skills",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_3",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidates' fit with the committee's needs",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_4",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - Diversity",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_5",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - Gender",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_6",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidate's workloads",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "gl_rank_0_1_RANK",
+    "question": "Please rank the following goals in order of their importance in determining your decision: - Ranks - &nbsp; - Choosing candidates that have enough available hours each week - Rank",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "gl_rank_0_2_RANK",
+    "question": "Please rank the following goals in order of their importance in determining your decision: - Ranks - &nbsp; - Choosing the most qualified candidates - Rank",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "gl_rank_0_3_RANK",
+    "question": "Please rank the following goals in order of their importance in determining your decision: - Ranks - &nbsp; - Choosing at least one woman candidate - Rank",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_val_1",
+    "question": "The information above sends a signal that: - This organization cares about progress toward achieving gender diversity.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_val_2",
+    "question": "The information above sends a signal that: - Gender diversity is an important goal in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_val_3",
+    "question": "The information above sends a signal that: - Gender diversity is valued in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_1",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care about it for appearance's sake.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_2",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care about it because they have to.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_3",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care more about the metrics than about the actual experiences of women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_4",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care about gender diversity only because it affects the bottom line.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_help_1",
+    "question": "The information above sends a signal that: - Women need help to get ahead.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_help_2",
+    "question": "The information above sends a signal that: - Women can't achieve powerful roles without affirmative action.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_help_3",
+    "question": "The information above sends a signal that: - Women can't succeed without a policy that can help them.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_1",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are better able to work independently than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_2",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are better able to work cooperatively than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_3",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are better able to solve problems than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_4",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are more motivated to work hard than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_5",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization perform better overall than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_perf_1",
+    "question": "The information described above sends a signal that: - Women are likely to succeed in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_perf_2",
+    "question": "The information described above sends a signal that: - This organization is a great place for women to get ahead.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_perf_3",
+    "question": "The information described above sends a signal that: - The organization takes steps to ensure that women succeed.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_treat_1",
+    "question": "The information described above makes me expect that: - Women will be treated better than men when it comes to promotions in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_treat_2",
+    "question": "The information described above makes me expect that: - Women will be treated better than men when it comes to hiring in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_treat_3",
+    "question": "The information described above makes me expect that: - Women will be treated better than men when it comes to receiving tenure, partnership or the equivalent.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "mor_eth_1",
+    "question": "The information described above sends a signal that: - Morality is valued in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "mor_eth_2",
+    "question": "The information described above sends a signal that: - Ethics are valued in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "mor_eth_3",
+    "question": "The information described above sends a signal that: - This organization places a premium on behaving ethically.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_1",
+    "question": "The information described above sends a signal that: - People around here are likely to be aware of ethical issues.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_2",
+    "question": "The information described above sends a signal that: - People are likely to recognize a moral dilemma right away.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_3",
+    "question": "The information described above sends a signal that: - If a rule or law is broken, people will be quick to notice.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_4",
+    "question": "The information described above sends a signal that: - People will be very sensitive to ethical problems.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_5",
+    "question": "The information described above sends a signal that: - People will pay attention to ethical issues.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "zero_sum_1",
+    "question": "Please indicate your agreement with the following statements: - When men speak out about gender diversity, it takes away from women’s voices.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "zero_sum_2",
+    "question": "Please indicate your agreement with the following statements: - Men's involvement in gender diversity issues takes away from women's influence.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "zero_sum_3",
+    "question": "Please indicate your agreement with the following statements: - Men who advocate for gender diversity are probably doing so at the expense of a woman who wants to speak up.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "power",
+    "question": "In your current job, do you have any decision-making power or control over any hiring or work assignment decisions for which gender diversity issues have to be considered?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "No",
+      "Yes"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "initiative",
+    "question": "Some organizations have implemented gender diversity initiatives. \nA gender diversity initiative is a set of actions or expectations aiming to improve gender equity in an organization. \nIs there a gender diversity initiative in your organization?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "full_time_pt",
+    "question": "Do you work full-time or part-time?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "Full-Time",
+      "Part-Time"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_desc",
+    "question": "Which of the following best describes your organization?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "For-profit",
+      "Non-profit",
+      "Government",
+      "Other"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "formal_rank_1",
+    "question": "We'd like to get a sense of your formal rank in your organization. Please use the sliding scale below, with the far left indicating the lowest rank your organization's hierarchy and the far right indicating the highest rank. Where would you place your formal rank on this scale?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 100,
+     "scale-min-desc": "lowest rank",
+     "scale-max-desc": "highest rank"
     },
     "text_source": "extracted"
    }
@@ -57,8 +667,8 @@
     "type": "stimuli",
     "variable-name": "manipulation",
     "content": "Imagine that you are forming a committee that will represent your work group (or department / unit) at a company-wide event, and your supervisors have indicated that it is important that the committee be diverse with respect to gender.\n\nYou have a broad range of different employees to choose from. However, all of the women in your work group currently have full workloads, and sitting on the committee would entail an additional 5-10 hours of work each week. The women in your work group also do not have all of the primary qualifications and skills needed to do well on the committee, so the committee work would be outside their specializations. There are several men who have the required specializations and who also have enough available time to serve on the committee.",
-    "condition": "representation goals",
-    "text_source": "paraphrased"
+    "text_source": "paraphrased",
+    "condition": "representation goals"
    },
    {
     "type": "question",
@@ -71,6 +681,616 @@
       "I would assign at least one of the women"
      ],
      "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_1",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidates' qualifications",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_2",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidates' skills",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_3",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidates' fit with the committee's needs",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_4",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - Diversity",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_5",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - Gender",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "considerations_6",
+    "question": "To what extent would the following considerations factor into your decision in this situation? - The candidate's workloads",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "gl_rank_0_1_RANK",
+    "question": "Please rank the following goals in order of their importance in determining your decision: - Ranks - &nbsp; - Choosing candidates that have enough available hours each week - Rank",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "gl_rank_0_2_RANK",
+    "question": "Please rank the following goals in order of their importance in determining your decision: - Ranks - &nbsp; - Choosing the most qualified candidates - Rank",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "gl_rank_0_3_RANK",
+    "question": "Please rank the following goals in order of their importance in determining your decision: - Ranks - &nbsp; - Choosing at least one woman candidate - Rank",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_val_1",
+    "question": "The information above sends a signal that: - This organization cares about progress toward achieving gender diversity.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_val_2",
+    "question": "The information above sends a signal that: - Gender diversity is an important goal in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_val_3",
+    "question": "The information above sends a signal that: - Gender diversity is valued in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_1",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care about it for appearance's sake.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_2",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care about it because they have to.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_3",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care more about the metrics than about the actual experiences of women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "man_virt_4",
+    "question": "The information above makes me think that, to the extent that this organization cares about gender diversity... - Managers care about gender diversity only because it affects the bottom line.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_help_1",
+    "question": "The information above sends a signal that: - Women need help to get ahead.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_help_2",
+    "question": "The information above sends a signal that: - Women can't achieve powerful roles without affirmative action.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_help_3",
+    "question": "The information above sends a signal that: - Women can't succeed without a policy that can help them.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_1",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are better able to work independently than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_2",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are better able to work cooperatively than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_3",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are better able to solve problems than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_4",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization are more motivated to work hard than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comp_men_5",
+    "question": "The information described above makes me think that, generally speaking: - Men in this organization perform better overall than women.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_perf_1",
+    "question": "The information described above sends a signal that: - Women are likely to succeed in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_perf_2",
+    "question": "The information described above sends a signal that: - This organization is a great place for women to get ahead.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_perf_3",
+    "question": "The information described above sends a signal that: - The organization takes steps to ensure that women succeed.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_treat_1",
+    "question": "The information described above makes me expect that: - Women will be treated better than men when it comes to promotions in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_treat_2",
+    "question": "The information described above makes me expect that: - Women will be treated better than men when it comes to hiring in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "wo_treat_3",
+    "question": "The information described above makes me expect that: - Women will be treated better than men when it comes to receiving tenure, partnership or the equivalent.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "mor_eth_1",
+    "question": "The information described above sends a signal that: - Morality is valued in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "mor_eth_2",
+    "question": "The information described above sends a signal that: - Ethics are valued in this organization.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "mor_eth_3",
+    "question": "The information described above sends a signal that: - This organization places a premium on behaving ethically.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_1",
+    "question": "The information described above sends a signal that: - People around here are likely to be aware of ethical issues.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_2",
+    "question": "The information described above sends a signal that: - People are likely to recognize a moral dilemma right away.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_3",
+    "question": "The information described above sends a signal that: - If a rule or law is broken, people will be quick to notice.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_4",
+    "question": "The information described above sends a signal that: - People will be very sensitive to ethical problems.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "eth_clim_5",
+    "question": "The information described above sends a signal that: - People will pay attention to ethical issues.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Not at all",
+     "scale-max-desc": "Very much so"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "zero_sum_1",
+    "question": "Please indicate your agreement with the following statements: - When men speak out about gender diversity, it takes away from women’s voices.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "zero_sum_2",
+    "question": "Please indicate your agreement with the following statements: - Men's involvement in gender diversity issues takes away from women's influence.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "zero_sum_3",
+    "question": "Please indicate your agreement with the following statements: - Men who advocate for gender diversity are probably doing so at the expense of a woman who wants to speak up.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 7,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "power",
+    "question": "In your current job, do you have any decision-making power or control over any hiring or work assignment decisions for which gender diversity issues have to be considered?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "No",
+      "Yes"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "initiative",
+    "question": "Some organizations have implemented gender diversity initiatives. \nA gender diversity initiative is a set of actions or expectations aiming to improve gender equity in an organization. \nIs there a gender diversity initiative in your organization?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "full_time_pt",
+    "question": "Do you work full-time or part-time?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "Full-Time",
+      "Part-Time"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "org_desc",
+    "question": "Which of the following best describes your organization?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "For-profit",
+      "Non-profit",
+      "Government",
+      "Other"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "formal_rank_1",
+    "question": "We'd like to get a sense of your formal rank in your organization. Please use the sliding scale below, with the far left indicating the lowest rank your organization's hierarchy and the far right indicating the highest rank. Where would you place your formal rank on this scale?",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 0,
+     "scale-max": 100,
+     "scale-min-desc": "lowest rank",
+     "scale-max-desc": "highest rank"
     },
     "text_source": "extracted"
    }
@@ -86,7 +1306,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 0.6,
+ "reward_usd": 1.84,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -111,13 +1331,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately one minute."
+    "Your participation will take approximately 9 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $0.60, paid through Prolific, as payment for your participation."
+    "You will receive $1.84, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -148,7 +1368,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read a short workplace scenario and answer one question about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately one minute.</p><h4>PAYMENTS:</h4><p>You will receive $0.60, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 0.6,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read a short workplace scenario and answer one question about it. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 9 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.84, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 9.2,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/cse5r/"
 }
