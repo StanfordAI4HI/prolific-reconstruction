@@ -644,58 +644,6 @@
   },
   {
    "type": "question",
-   "variable-name": "bad habit_start_1",
-   "question": "How likely are you to turn this behaviour into a habit on vacation? Environment bad non-habit 1",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
-   "variable-name": "bad habit_start_2",
-   "question": "How likely are you to turn this behaviour into a habit on vacation? Environment bad non-habit 2",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
-   "variable-name": "bad habit_start_3",
-   "question": "How likely are you to turn this behaviour into a habit on vacation? Health bad non-habit 1",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
-   "variable-name": "bad habit_start_4",
-   "question": "How likely are you to turn this behaviour into a habit on vacation? Health bad non-habit 2",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
    "variable-name": "return_home_good_1",
    "question": "How likely are you to return to this habit after returning home from your vacation? Environment good habit 1",
    "response-constraints": {
@@ -925,58 +873,6 @@
    "pipe": {
     "Health good non-habit 2": "nonhabit_health_good_2"
    }
-  },
-  {
-   "type": "question",
-   "variable-name": "keep_newh_bad_1",
-   "question": "How likely are you to keep this new habit after returning home from your vacation? Environment bad non-habit 1",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
-   "variable-name": "keep_newh_bad_2",
-   "question": "How likely are you to keep this new habit after returning home from your vacation? Environment bad non-habit 2",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
-   "variable-name": "keep_newh_bad_3",
-   "question": "How likely are you to keep this new habit after returning home from your vacation? Health bad non-habit 1",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
-  },
-  {
-   "type": "question",
-   "variable-name": "keep_newh_bad_4",
-   "question": "How likely are you to keep this new habit after returning home from your vacation? Health bad non-habit 2",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 0,
-    "scale-max": 100,
-    "scale-min-desc": "Not at all likely",
-    "scale-max-desc": "Extremely likely"
-   },
-   "text_source": "paraphrased"
   },
   {
    "type": "question",

@@ -194,7 +194,45 @@ def fkrsd(spec):
         if it.get('variable-name', '').startswith('return_home_'):
             gate = by_label[it['question'].split('? ', 1)[1]]
             it['show_if'] = {'variable': gate, 'op': '>', 'value': 50}
+    # The reconstruction is internally inconsistent: it records a listing prompt for
+    # good non-habits but none for BAD non-habits, while still carrying eight items
+    # ("bad habit_start_*", "keep_newh_bad_*") that name bad-non-habit slots. Those
+    # slots are never collected, so those items would show a participant the raw
+    # label "Environment bad non-habit 1" and ask them to rate a behaviour they were
+    # never asked to name. Neither item feeds the target (f67 reads return_home_*).
+    # Dropping them records the gap; inventing a fourth listing page would not.
+    out = drop_orphan_slots(out, labels)
     return {'blocks': out}
+
+
+SLOT_LABEL = re.compile(
+    r'(Environment|Health)\s+(good|bad)\s+(non-)?habit\s*\d', re.I)
+
+
+def drop_orphan_slots(blocks, labels):
+    """Remove items naming a slot label that no entry field collects.
+
+    An item whose text refers to "Environment bad non-habit 1" is only answerable if
+    something earlier asked the participant to name it. Where it did not, the item
+    reaches the participant as a raw slot label. Raises if an item is piped but its
+    source is missing, which would be a different bug.
+    """
+    kept, dropped = [], []
+    for b in blocks:
+        text = b.get('question') or ''
+        m = SLOT_LABEL.search(text)
+        if (m and m.group(0) not in labels
+                and (b.get('response-constraints') or {}).get('type')
+                != 'free-response'):
+            assert not b.get('pipe'), f"{b.get('variable-name')}: piped but unsourced"
+            dropped.append(b['variable-name'])
+            continue
+        kept.append(b)
+    if dropped:
+        print(f"           dropped {len(dropped)} item(s) naming an uncollected "
+              f"slot: {', '.join(dropped[:4])}"
+              + (' ...' if len(dropped) > 4 else ''))
+    return kept
 
 
 def sixfjdr(spec):
