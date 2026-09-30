@@ -6,7 +6,7 @@
 // 1. every listing runs to a submitted payload for a spread of participant ids;
 // 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, kf4e6);
 // 3. each conversion fix holds: site items, 6cxdn branch order and initials, fkrsd bad
-//    non-habits, cse5r follow-ups, fxp7g framings, 6fjdr matrix, kxcwm lock, ba65f_B order.
+//    non-habit items dropped, cse5r follow-ups, fxp7g framings, 6fjdr matrix, kxcwm lock, ba65f_B order.
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
@@ -180,18 +180,16 @@ console.log('ok  all listings: attention check and demographics submitted');
   console.log('ok  6cxdn: a blank slot shows its label instead of vanishing; PRQC.1 once');
 }
 
-// ---------- fkrsd: bad non-habits are named, piped, and keep_newh_* is gated
+// ---------- fkrsd: keep_newh_* is gated; items naming an uncollected slot are dropped
 {
   const s = boot('fkrsd', 't3');
   s.next();
-  const vals = { good_habit_start_2: 90, bad_habit_start_1: 20 }; // slider ids sanitise spaces
-  assert(runTo(s, () => s.onScreen().includes('nonhabit_env_bad_1'), vals), 'bad entry page');
-  s.answer({ nonhabit_env_bad_1: 'fast fashion' }); s.next();
-  assert(runTo(s, () => s.text().includes('into a habit on vacation? fast fashion'), vals),
-    'bad non-habit piped');
+  const vals = { good_habit_start_2: 90 }; // slider ids sanitise spaces
   const got = finish(s, vals);
   assert.deepStrictEqual([...got.filter(n => n.startsWith('keep_newh_'))], ['keep_newh_good_2']);
-  console.log('ok  fkrsd: bad non-habits entered and piped; keep_newh_* only after >50');
+  assert(!got.some(n => n.startsWith('bad habit_start_') || n.startsWith('keep_newh_bad_')),
+    'item naming the never-collected bad non-habit slot reached a participant');
+  console.log('ok  fkrsd: keep_newh_* only after >50; uncollected bad non-habit items dropped');
 }
 
 // ---------- cse5r: initiative follow-ups only after "Yes"

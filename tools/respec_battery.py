@@ -178,21 +178,7 @@ def fkrsd(spec):
         'habit_good_listing': ('habit', 'good', 'habit'),
         'good_nonhabit_listing': ('nonhabit', 'good', 'non-habit'),
         'habit_bad_intro': ('habit', 'bad', 'habit'),
-        'bad_nonhabit_listing': ('nonhabit', 'bad', 'non-habit'),
     }
-    # Later items rate "Environment bad non-habit 1" etc., but the reconstruction
-    # has no step where they are named. Its prompt is authored after the good
-    # non-habit prompt it parallels, and asked where that block ends.
-    at = next(i for i, it in enumerate(items)
-              if it['variable-name'] == 'change_neghab_intent_4') + 1
-    items.insert(at, {
-        'type': 'stimuli', 'variable-name': 'bad_nonhabit_listing',
-        'content': 'Please now list 4 bad behaviours that are not a habit for you (2 '
-                   'that would be bad for the environment, and 2 that would be bad for '
-                   'your health).',
-        'text_source': 'authored',
-        'note': 'Mirrors good_nonhabit_listing; the reconstruction rates these '
-                'entries without the step that collects them.'})
     labels = {}
     out = []
     for it in items:
@@ -230,7 +216,45 @@ def fkrsd(spec):
         if it.get('variable-name', '').startswith(('return_home_', 'keep_newh_')):
             gate = by_label[it['question'].split('? ', 1)[1]]
             it['show_if'] = {'variable': gate, 'op': '>', 'value': 50}
+    # The reconstruction is internally inconsistent: it records a listing prompt for
+    # good non-habits but none for BAD non-habits, while still carrying eight items
+    # ("bad habit_start_*", "keep_newh_bad_*") that name bad-non-habit slots. Those
+    # slots are never collected, so those items would show a participant the raw
+    # label "Environment bad non-habit 1" and ask them to rate a behaviour they were
+    # never asked to name. Neither item feeds the target (f67 reads return_home_*).
+    # Dropping them records the gap; inventing a fourth listing page would not.
+    out = drop_orphan_slots(out, labels)
     return {'blocks': out}
+
+
+SLOT_LABEL = re.compile(
+    r'(Environment|Health)\s+(good|bad)\s+(non-)?habit\s*\d', re.I)
+
+
+def drop_orphan_slots(blocks, labels):
+    """Remove items naming a slot label that no entry field collects.
+
+    An item whose text refers to "Environment bad non-habit 1" is only answerable if
+    something earlier asked the participant to name it. Where it did not, the item
+    reaches the participant as a raw slot label. Raises if an item is piped but its
+    source is missing, which would be a different bug.
+    """
+    kept, dropped = [], []
+    for b in blocks:
+        text = b.get('question') or ''
+        m = SLOT_LABEL.search(text)
+        if (m and m.group(0) not in labels
+                and (b.get('response-constraints') or {}).get('type')
+                != 'free-response'):
+            assert not b.get('pipe'), f"{b.get('variable-name')}: piped but unsourced"
+            dropped.append(b['variable-name'])
+            continue
+        kept.append(b)
+    if dropped:
+        print(f"           dropped {len(dropped)} item(s) naming an uncollected "
+              f"slot: {', '.join(dropped[:4])}"
+              + (' ...' if len(dropped) > 4 else ''))
+    return kept
 
 
 def matrix_pages(items):

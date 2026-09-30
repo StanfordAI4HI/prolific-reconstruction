@@ -55,8 +55,8 @@ Every listing: completion URL from proliferate, "exclude participants from previ
 ## `fkrsd` — Habits and holidays
 
 - **Places:** 80
-- **Completion time:** 13 min (estimate 12.9)
-- **Reward:** $2.58
+- **Completion time:** 12 min (estimate 11.6)
+- **Reward:** $2.32
 - **Study URL:** `https://stanfordai4hi.github.io/prolific-reconstruction/fkrsd/?PROLIFIC_PID={%PROLIFIC_PID%}&STUDY_ID={%STUDY_ID%}&SESSION_ID={%SESSION_ID%}`
 - **Filters:** Country of residence: United States, United Kingdom, Australia, Canada, New Zealand; Age: 18+
 - **Also:** fluent English

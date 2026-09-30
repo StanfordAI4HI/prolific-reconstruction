@@ -69,7 +69,7 @@ re-checked at ingest by hashing the same id.
 | 03 | `efk28` | Judging a life story | 230 | 5 |
 | 04 | `cse5r` | Forming a workplace committee | 360 | 11 |
 | 05 | `6fjdr` | The impact of everyday climate actions | 430 | 10 |
-| 06 | `fkrsd` | Habits and holidays | 80 | 13 |
+| 06 | `fkrsd` | Habits and holidays | 80 | 12 |
 | 07 | `6cxdn` | Your romantic relationship | 130 | 17 |
 | 08 | `ba65f_A` | Short scenarios about two friends | 27 | 20 |
 | 09 | `ba65f_B` | Short scenarios about two friends | 53 | 7 |
