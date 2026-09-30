@@ -17,8 +17,10 @@ script re-derives the affected listings from final/experiment_N.json and nothing
 4. No item text or scale is changed; an error there is the reconstruction's and is
    what the re-run measures.
 
-Listings not rebuilt here (cse5r, kfrux, ba65f_B) had no conversion error that the
-reconstruction alone can correct.
+The one listing not rebuilt here, ba65f_B, is left alone deliberately: its `balanced`
+block is what forces each participant through exactly five high-cost and five low-cost
+scenarios out of the ten, and regenerating it generically would replace that with
+independent draws and distort the estimand.
 
 The reconstructions are read from a behavioral_archive checkout: --archive PATH, or
 $BA_ARCHIVE, or ../behavioral_archive beside this repository.
@@ -415,17 +417,41 @@ def _items(b, out=None):
 
 
 def kfrux(spec):
-    """Three scenario conditions; one rating to the outcome, five items in full."""
+    """Three scenario conditions; one rating to the outcome, six items in full.
+
+    The sixth, `feedback`, is an optional free-response box, so only the 19 of 240
+    participants who wrote something have it on their path and the modal path is five
+    items long. Full scope takes the longest path instead; the renderer already treats
+    free text as optional, so a participant who has nothing to add passes straight
+    through."""
     r = Recon('kfrux', 'experiment_1')
     labs = [l['condition'] for l in spec['arm_labels']]
-    return {'arm_blocks': [upto(r.sequence(condition=c), 'creativity') for c in labs]}
+    return {'arm_blocks': [upto(r.sequence(condition=c, longest=FULL), 'creativity')
+                           for c in labs]}
+
+
+#: Asked only of participants whose organisation has a gender diversity initiative.
+#: In the reconstruction `initiative` == "Yes" (458 of 985) and == "No" (527) partition
+#: the sample exactly, and the five items appear on every Yes path and no No path.
+CSE5R_GATED = ('org_goals', 'goals', 'endorse_sup', 'endorse_org', 'endorse_personally')
 
 
 def cse5r(spec):
-    """Representation-goals vs control; the nomination task then its ratings."""
+    """Representation-goals vs control; the nomination task then its ratings.
+
+    Five items hang off `initiative`, so the modal path is the 47-item No branch and
+    the longest is the 52-item Yes branch. Full scope fields all 52 and restores the
+    gate, rather than fielding either branch unconditionally."""
     r = Recon('cse5r', 'experiment_1')
     labs = [l['condition'] for l in spec['arm_labels']]
-    return {'arm_blocks': [upto(r.sequence(condition=c), 'asn_womn') for c in labs]}
+    arms = []
+    for c in labs:
+        items = upto(r.sequence(condition=c, longest=FULL), 'asn_womn')
+        for it in items:
+            if it['variable-name'] in CSE5R_GATED:
+                it['show_if'] = {'variable': 'initiative', 'op': '==', 'value': 'Yes'}
+        arms.append(items)
+    return {'arm_blocks': arms}
 
 
 LISTINGS = {
