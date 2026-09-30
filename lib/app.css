@@ -44,6 +44,10 @@ body {
   padding-top: 1.2em;
   border-top: 1px solid var(--line);
 }
+/* render.js hides controls with the hidden attribute (a locked timed page has no
+   early exit); keep any later display rule from showing them again */
+[hidden] { display: none !important; }
+
 button {
   font: inherit;
   padding: .55em 1.3em;
