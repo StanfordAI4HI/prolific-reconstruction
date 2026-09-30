@@ -4,7 +4,9 @@
 //   node tools/test_render.js
 //
 // 1. every listing runs to a submitted payload for a spread of participant ids;
-// 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, kf4e6).
+// 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, kf4e6);
+// 3. each conversion fix holds: site items, 6cxdn branch order and initials, fkrsd bad
+//    non-habits, cse5r follow-ups, fxp7g framings, 6fjdr matrix, kxcwm lock, ba65f_B order.
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
@@ -139,5 +141,111 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   assert.strictEqual(s.d.querySelectorAll('.stim').length, 1);
   assert.strictEqual(s.d.querySelectorAll('.qtext').length, 1);
   console.log('ok  kf4e6: vignette and its rating share one page');
+}
+
+// ---------- every listing closes with the site's attention check and demographics
+for (const listing of fs.readdirSync(SITE).sort()) {
+  if (!fs.existsSync(path.join(SITE, listing, 'spec.json'))) continue;
+  const got = finish(boot(listing, 'site1'));
+  assert(got.includes('site_attention_check'), `${listing}: no attention check`);
+  assert(got.includes('participant-info.age') && got.includes('participant-info.gender'),
+    `${listing}: no demographics`);
+}
+console.log('ok  all listings: attention check and demographics submitted');
+
+// ---------- 6cxdn: status asked first, initials piped, singles skip partner items
+{
+  const s = boot('6cxdn', 'c1');
+  s.next(); // consent
+  assert.deepStrictEqual([...new Set(s.onScreen())], ['relationship_status'],
+    'status is the first question');
+  s.answer({ relationship_status: 'No' }); s.next();
+  assert(s.onScreen().includes('partner_initials'), 'initials asked second');
+  s.answer({ partner_initials: 'J.K.' }); s.next();
+  assert(runTo(s, () => s.text().includes('How physically attractive is J.K.?'),
+    { relationship_status: 'No' }), 'initials piped');
+  const got = finish(s, { relationship_status: 'No' });
+  for (const n of ['PRQC.1', 'GMSEX.1', 'SexDes.1']) assert(!got.includes(n), `single saw ${n}`);
+  assert.strictEqual(got.filter(n => n === 'PRQC.1').length, 0);
+  console.log('ok  6cxdn: status first, initials piped, singles never see partner items');
+}
+{
+  const s = boot('6cxdn', 'c2');
+  s.next(); s.answer({ relationship_status: 'Yes' }); s.next();
+  s.answer({ partner_initials: '' }); s.next(); s.next(); // blank: confirm the skip
+  assert(runTo(s, () => s.text().includes('How physically attractive is <initials>?'),
+    { relationship_status: 'Yes', partner_initials: '' }), 'blank slot stays visible');
+  const got = finish(s, { relationship_status: 'Yes', partner_initials: '' });
+  assert.strictEqual(got.filter(n => n === 'PRQC.1').length, 1, 'PRQC.1 asked once');
+  console.log('ok  6cxdn: a blank slot shows its label instead of vanishing; PRQC.1 once');
+}
+
+// ---------- fkrsd: bad non-habits are named, piped, and keep_newh_* is gated
+{
+  const s = boot('fkrsd', 't3');
+  s.next();
+  const vals = { good_habit_start_2: 90, bad_habit_start_1: 20 }; // slider ids sanitise spaces
+  assert(runTo(s, () => s.onScreen().includes('nonhabit_env_bad_1'), vals), 'bad entry page');
+  s.answer({ nonhabit_env_bad_1: 'fast fashion' }); s.next();
+  assert(runTo(s, () => s.text().includes('into a habit on vacation? fast fashion'), vals),
+    'bad non-habit piped');
+  const got = finish(s, vals);
+  assert.deepStrictEqual([...got.filter(n => n.startsWith('keep_newh_'))], ['keep_newh_good_2']);
+  console.log('ok  fkrsd: bad non-habits entered and piped; keep_newh_* only after >50');
+}
+
+// ---------- cse5r: initiative follow-ups only after "Yes"
+for (const [ans, want] of [['Yes', true], ['No', false]]) {
+  const got = finish(boot('cse5r', 'i' + ans), { initiative: ans });
+  assert.strictEqual(got.includes('org_goals') && got.includes('endorse_personally'), want);
+}
+console.log('ok  cse5r: org_goals/goals/endorse_* follow a "Yes" to initiative only');
+
+// ---------- fxp7g: both framings of the manipulated goal are fielded
+{
+  const seen = new Set();
+  for (let k = 0; k < 80 && seen.size < 2; k++) {
+    const s = boot('fxp7g', 'g' + k);
+    for (let p = 0; p < 4; p++) {
+      s.next();
+      const t = s.text();
+      if (t.includes('find credible')) seen.add('credibility');
+      if (t.includes('find entertaining')) seen.add('enjoyment');
+    }
+  }
+  assert.strictEqual(seen.size, 2, 'enjoyment framing never shown');
+  console.log('ok  fxp7g: credibility and enjoyment framings both shown');
+}
+
+// ---------- 6fjdr: the recorded 14-row impact matrix is one screen
+{
+  const s = boot('6fjdr', 'm1');
+  s.next();
+  assert(runTo(s, () => s.onScreen().includes('Impact_buyless')), 'impact page');
+  assert.strictEqual(new Set(s.onScreen().filter(n => n.startsWith('Impact_'))).size, 14);
+  console.log('ok  6fjdr: impact matrix on one page');
+}
+
+// ---------- kxcwm: timed idea pages cannot be left early
+{
+  const s = boot('kxcwm', 'x1');
+  s.next();
+  assert(runTo(s, () => !!s.d.getElementById('ti-clock')), 'timed page');
+  assert(s.d.getElementById('next').hidden, 'early exit offered');
+  const back = s.d.getElementById('back');
+  assert(!back || back.hidden, 'back offered on a locked timed page');
+  console.log('ok  kxcwm: timed pages run their full time');
+}
+
+// ---------- ba65f_B: level order is not a fixed alternation
+{
+  const firsts = new Set();
+  for (let k = 0; k < 16; k++) {
+    const got = finish(boot('ba65f_B', 'b' + k));
+    const lv = got.map(n => (n.match(/_([hl])_/) || [])[1]).filter(Boolean);
+    firsts.add(lv.join(''));
+  }
+  assert(firsts.size > 2, 'every participant got the same level order');
+  console.log(`ok  ba65f_B: ${firsts.size} distinct high/low orders over 16 participants`);
 }
 console.log('all passed');

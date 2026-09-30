@@ -28,6 +28,7 @@ $BA_ARCHIVE, or ../behavioral_archive beside this repository.
 """
 import collections
 import copy
+import difflib
 import json
 import os
 import re
@@ -43,7 +44,16 @@ def _archive():
     return Path(os.environ.get('BA_ARCHIVE', SITE.parent / 'behavioral_archive'))
 
 
-STUDIES = _archive() / 'runs/replication/prolific_battery_v1/studies'
+def _studies():
+    # an unpacked prolific_battery_v1 beside the site (as downloaded) is used when
+    # no archive checkout is given
+    if '--archive' not in sys.argv and 'BA_ARCHIVE' not in os.environ \
+            and (SITE / 'prolific_battery_v1/studies').is_dir():
+        return SITE / 'prolific_battery_v1/studies'
+    return _archive() / 'runs/replication/prolific_battery_v1/studies'
+
+
+STUDIES = _studies()
 
 KEEP = ('type', 'variable-name', 'question', 'content', 'response-constraints',
         'text_source', 'condition')
@@ -59,16 +69,26 @@ class Recon:
             for it in p['study-content']:
                 self.items.setdefault(it['variable-name'], it)
 
-    def people(self, **meta):
-        return [p for p in self.ex['data']
-                if all(p['participant-meta'].get(k) == v for k, v in meta.items())]
+    def people(self, shown=None, **meta):
+        """Participants matching `meta`; `shown=(name, prefix)` further keeps those
+        whose item `name` began with `prefix`, for a factor the reconstruction
+        records only in what was displayed."""
+        def saw(p):
+            if not shown:
+                return True
+            name, prefix = shown
+            return any(it['variable-name'] == name and
+                       (it.get('content') or it.get('question') or '').startswith(prefix)
+                       for it in p['study-content'])
+        return [p for p in self.ex['data'] if saw(p)
+                and all(p['participant-meta'].get(k) == v for k, v in meta.items())]
 
-    def sequence(self, longest=False, **meta):
+    def sequence(self, longest=False, shown=None, **meta):
         """The modal presentation order of the matching participants, as their items.
 
         `longest` takes the fullest path instead, for studies whose orders differ
         only because answers hid items."""
-        people = self.people(**meta)
+        people = self.people(shown=shown, **meta)
         seqs = collections.Counter(
             tuple(it['variable-name'] for it in p['study-content']) for p in people)
         seq = (max(seqs, key=len) if longest else seqs.most_common(1)[0][0])
@@ -158,7 +178,21 @@ def fkrsd(spec):
         'habit_good_listing': ('habit', 'good', 'habit'),
         'good_nonhabit_listing': ('nonhabit', 'good', 'non-habit'),
         'habit_bad_intro': ('habit', 'bad', 'habit'),
+        'bad_nonhabit_listing': ('nonhabit', 'bad', 'non-habit'),
     }
+    # Later items rate "Environment bad non-habit 1" etc., but the reconstruction
+    # has no step where they are named. Its prompt is authored after the good
+    # non-habit prompt it parallels, and asked where that block ends.
+    at = next(i for i, it in enumerate(items)
+              if it['variable-name'] == 'change_neghab_intent_4') + 1
+    items.insert(at, {
+        'type': 'stimuli', 'variable-name': 'bad_nonhabit_listing',
+        'content': 'Please now list 4 bad behaviours that are not a habit for you (2 '
+                   'that would be bad for the environment, and 2 that would be bad for '
+                   'your health).',
+        'text_source': 'authored',
+        'note': 'Mirrors good_nonhabit_listing; the reconstruction rates these '
+                'entries without the step that collects them.'})
     labels = {}
     out = []
     for it in items:
@@ -187,38 +221,97 @@ def fkrsd(spec):
         pipe = {lab: var for lab, var in labels.items() if lab in text}
         if pipe:
             it['pipe'] = pipe
-        if it.get('variable-name', '').startswith('drop_habit_'):
+        if it.get('variable-name', '').startswith(('drop_habit_', 'good habit_start_',
+                                                    'bad habit_start_')):
             by_label[text.split('? ', 1)[1]] = it['variable-name']
-    # "follow-up return/keep questions were shown only for likelihood ratings > 50"
+    # "follow-up return/keep questions were shown only for likelihood ratings > 50":
+    # return_home_* follows the stop rating, keep_newh_* the start rating
     for it in out:
-        if it.get('variable-name', '').startswith('return_home_'):
+        if it.get('variable-name', '').startswith(('return_home_', 'keep_newh_')):
             gate = by_label[it['question'].split('? ', 1)[1]]
             it['show_if'] = {'variable': gate, 'op': '>', 'value': 50}
     return {'blocks': out}
 
 
+def matrix_pages(items):
+    """Put a recorded matrix back on one screen.
+
+    The reconstruction records a matrix as an instructions screen followed by rows
+    whose question is "<shared stem> — <row label>". Three or more such rows after
+    their instructions become one page, as participants saw them."""
+    stem = lambda it: (re.match(r'(.{15,}?) — ', it.get('question') or '') or
+                       [None, None])[1]
+    out, i = [], 0
+    while i < len(items):
+        it = items[i]
+        j = i + 1
+        if it['type'] == 'stimuli' and j < len(items) and stem(items[j]):
+            while j < len(items) and stem(items[j]) == stem(items[i + 1]):
+                j += 1
+            if j - i - 1 >= 3:
+                out.append({'type': 'page', 'items': items[i:j]})
+                i = j
+                continue
+        out.append(it)
+        i += 1
+    return out
+
+
 def sixfjdr(spec):
     r = Recon('6fjdr', 'experiment_1')
-    return {'blocks': upto(r.sequence(), 'Impact_vegetarian')}
+    return {'blocks': matrix_pages(upto(r.sequence(), 'Impact_vegetarian'))}
+
+
+def branch_merge(paths, var):
+    """Align two branches' presentation orders into one gated sequence.
+
+    `paths` maps each of the two answers of `var` to that branch's item sequence.
+    Items both branches show, in the same place, are asked unconditionally; the runs
+    only one branch shows are gated on `var`. No item moves relative to its
+    neighbours on either path."""
+    (va, a), (vb, b) = paths.items()
+    names = lambda seq: [it['variable-name'] for it in seq]
+    gate = lambda val, it: dict(it, show_if={'variable': var, 'op': '==', 'value': val})
+    out = []
+    ops = difflib.SequenceMatcher(None, names(a), names(b), autojunk=False).get_opcodes()
+    for tag, i1, i2, j1, j2 in ops:
+        if tag == 'equal':
+            out += a[i1:i2]
+        else:
+            out += [gate(va, it) for it in a[i1:i2]] + [gate(vb, it) for it in b[j1:j2]]
+    return out
 
 
 def sixcxdn(spec):
     r = Recon('6cxdn', 'experiment_2')
     partnered = r.sequence(analysis_relationship_group='partnered')
-    single = by_name(r.sequence(analysis_relationship_group='single'))
-    head = upto(partnered, 'RoCh.31')
+    single = r.sequence(analysis_relationship_group='single')
     status = next(it for it in _items(spec['blocks'])
                   if it['variable-name'] == 'relationship_status')
-    status = dict(status, note=(
+    status = {k: v for k, v in status.items() if k != 'show_if'}
+    status['note'] = (
         'Authored. The reconstruction branches on participant-meta.'
         'analysis_relationship_group, which no archive item asks; this question '
-        'stands in for it so the branch can be taken.'))
-    prqc = dict(by_name(partnered)['PRQC.1'],
-                show_if={'variable': 'relationship_status', 'op': '==', 'value': 'Yes'})
-    liking = [dict(single[f'liking.{k}'],
-                   show_if={'variable': 'relationship_status', 'op': '==', 'value': 'No'})
-              for k in (1, 2, 3)]
-    return {'blocks': head + [status, prqc] + liking}
+        'stands in for it and is asked first, so each branch is taken before its '
+        'items (Yes = partnered, No = single).')
+    # The reconstruction's items name the person as "<initials>", the original
+    # survey's piped entry; nothing in the reconstruction collects it.
+    initials = {
+        'type': 'question', 'variable-name': 'partner_initials',
+        'question': 'Please type the initials of the person you will answer about: '
+                    'your current romantic partner or, if you are single, a person '
+                    'you have romantic interest in or have recently dated in person.',
+        'response-constraints': {'type': 'free-response', 'single-line': True,
+                                 'response-limit': 10},
+        'text_source': 'authored',
+        'note': 'Entry field for the "<initials>" slot the reconstruction\'s later '
+                'items refer to.'}
+    body = branch_merge({'Yes': upto(partnered, 'RoCh.31'),
+                         'No': upto(single, 'RoCh.31')}, 'relationship_status')
+    for it in body:
+        if '<initials>' in (it.get('question') or '') + (it.get('content') or ''):
+            it['pipe'] = {'<initials>': 'partner_initials'}
+    return {'blocks': [status, initials] + body}
 
 
 def ninebhq_s1(spec):
@@ -316,23 +409,35 @@ def kf4e6(spec):
     return {'arm_blocks': arms}
 
 
+#: The manipulated-goal arm's framing is recorded only as the text of
+#: `mindset_framing`; a modal path per arm kept the credibility framing alone.
+FXP7G_GOALS = {'credibility': 'Imagine that you’re online with a purpose: you want to '
+                              'find credible',
+               'enjoyment': 'Imagine you’re browsing the internet with a purpose: you '
+                            'want to find entertaining'}
+
+
 def fxp7g(spec):
     r = Recon('fxp7g', 'experiment_4')
-    conds = ['control', 'manipulated_goal', 'measured_goal', 'measured_site_preference']
+    cells = []
+    for c in ['control', 'manipulated_goal', 'measured_goal', 'measured_site_preference']:
+        for goal in (FXP7G_GOALS if c == 'manipulated_goal' else [None]):
+            cells.append((c, goal))
     labels, arms = [], []
-    for c in conds:
+    for c, goal in cells:
         for s in (1, 2):
-            items = r.sequence(condition=c, set=s)
+            shown = ('mindset_framing', FXP7G_GOALS[goal]) if goal else None
+            items = r.sequence(condition=c, set=s, shown=shown)
             first = next(i for i, it in enumerate(items)
                          if it['variable-name'].startswith('likelihood_sentiment_h'))
             runs = collections.OrderedDict()
             for it in items[first:]:
                 runs.setdefault(it['variable-name'].rsplit('_h', 1)[1], []).append(it)
-            labels.append({'condition': c, 'set': str(s)})
+            labels.append({'condition': c, 'set': str(s), 'goal': goal or ''})
             # "headline order randomized"
             arms.append(items[:first] + [shuffle([seq(*v) for v in runs.values()])])
-    return {'arms': len(arms), 'arm_keys': ['condition', 'set'], 'arm_labels': labels,
-            'arm_blocks': arms}
+    return {'arms': len(arms), 'arm_keys': ['condition', 'set', 'goal'],
+            'arm_labels': labels, 'arm_blocks': arms}
 
 
 def kxcwm(spec):
@@ -387,7 +492,248 @@ def cse5r(spec):
     """Representation-goals vs control; the nomination task then its ratings."""
     r = Recon('cse5r', 'experiment_1')
     labs = [l['condition'] for l in spec['arm_labels']]
-    return {'arm_blocks': [upto(r.sequence(condition=c), 'asn_womn') for c in labs]}
+    arms = []
+    for c in labs:
+        # the fullest path: org_goals, goals and endorse_* follow only a "Yes" to
+        # `initiative` (all 458 who saw them answered Yes, none of the 527 who did not)
+        items = upto(r.sequence(longest=True, condition=c), 'asn_womn')
+        for it in items:
+            if it['variable-name'] in CSE5R_FOLLOWUPS:
+                it['show_if'] = {'variable': 'initiative', 'op': '==', 'value': 'Yes'}
+        arms.append(items)
+    return {'arm_blocks': arms}
+
+
+CSE5R_FOLLOWUPS = {'org_goals', 'goals', 'endorse_sup', 'endorse_org', 'endorse_personally'}
+
+
+def ba65f_b(spec):
+    """Group B as built: every item already matches the reconstruction. Only the
+    site's own closing items are refreshed, as for every listing."""
+    return {'blocks': strip_site(spec['blocks'])}
+
+
+# ---------------------------------------------------------------- site additions
+#
+# Items the site adds after each listing's instrument. They come after every
+# reconstruction item, so they cannot shape an outcome, and each carries
+# `text_source: "site"` so a rebuild strips and re-adds them rather than stacking.
+
+ATTENTION = {
+    'type': 'question', 'variable-name': 'site_attention_check',
+    'question': 'It is important that you read each question carefully. To show that '
+                'you are reading, please select "Disagree" for this question.',
+    'response-constraints': {'type': 'mcq', 'options': [
+        'Strongly disagree', 'Disagree', 'Neither agree nor disagree', 'Agree',
+        'Strongly agree'], 'max-choices': 1},
+    'text_source': 'site',
+    'note': 'Instructed-response check. None of the reconstructions carries the '
+            'original checks, so the original exclusions cannot be reapplied; this '
+            'one is recorded, not used to screen out. Pass = "Disagree".'}
+
+DEMO_TEXT = {
+    'age': 'What is your age (in years)?',
+    'gender': 'What is your gender?',
+    'education': 'What is the highest level of education you have completed?',
+    'income': 'What is your annual household income?',
+    'household_income': 'What is your annual household income?',
+    'employment': 'What is your current employment status?',
+    'occupation': 'What is your current occupation?',
+    'political_orientation': 'How would you describe your political orientation?',
+}
+#: Numeric fields are fielded only where their scale is documented; an undocumented
+#: anchor could reverse the coding.
+DEMO_SCALES = {
+    ('hvdwk', 'political_orientation'): (1, 7, 'Left-wing', 'Right-wing'),
+    ('9ebhq', 'education'): (1, 5, 'No formal education',
+                             'College education, graduate degree'),
+}
+
+
+def demographics(study, experiment):
+    """The participant-info fields this study's findings or tests read, asked with
+    the archive's own answer categories so no recoding is needed. Age and gender
+    are always asked. Each item is named `participant-info.<field>`, the path the
+    findings use."""
+    d = STUDIES / study
+    used = set(re.findall(r'participant-info\.([A-Za-z_0-9]+)',
+                          (d / 'testcase/findings.json').read_text()))
+    used |= set(re.findall(r'participant[-_]info[\'"]?\]?\s*(?:\.get\(|\[)\s*'
+                           r'[\'"]([A-Za-z_0-9]+)',
+                           (d / 'testcase/reproduction_tests.py').read_text()))
+    ex = json.loads((d / 'final' / f'{experiment}.json').read_text())
+    values = collections.defaultdict(list)
+    for p in ex['data']:
+        for k, v in (p.get('participant-info') or {}).items():
+            values[k].append(v)
+    out = []
+    for key in ['age', 'gender'] + sorted(used - {'age', 'gender'}):
+        vals = [v for v in values.get(key, []) if v not in (None, '')]
+        if key == 'gender' and not vals:
+            vals = ['woman', 'man', 'non-binary', 'prefer not to say']
+        if key not in DEMO_TEXT or (not vals and key != 'age'):
+            continue
+        item = {'type': 'question', 'variable-name': f'participant-info.{key}',
+                'question': DEMO_TEXT[key], 'text_source': 'site'}
+        scale = DEMO_SCALES.get((study, key))
+        if key == 'age':
+            item['response-constraints'] = {'type': 'free-response',
+                                            'single-line': True, 'response-limit': 3}
+        elif scale:
+            lo, hi, lo_d, hi_d = scale
+            item['response-constraints'] = {'type': 'scalar', 'scale-min': lo,
+                                            'scale-max': hi, 'scale-min-desc': lo_d,
+                                            'scale-max-desc': hi_d}
+            item['note'] = 'Archive codes this field as its scale point.'
+        else:
+            flat = [x for v in vals for x in (v if isinstance(v, list) else [v])]
+            if any(not isinstance(x, str) for x in flat):
+                continue          # numeric with no documented scale
+            opts = list(collections.Counter(flat))
+            if len(opts) > 12:
+                continue          # free-text field in the archive; not a category
+            item['response-constraints'] = {
+                'type': 'mcq', 'options': opts,
+                'max-choices': len(opts) if any(isinstance(v, list) for v in vals) else 1}
+        out.append(item)
+    return out
+
+
+def strip_site(blocks):
+    if isinstance(blocks, list):
+        return [strip_site(b) for b in blocks
+                if not (isinstance(b, dict) and b.get('text_source') == 'site')]
+    if isinstance(blocks, dict) and 'items' in blocks:
+        return dict(blocks, items=strip_site(blocks['items']))
+    return blocks
+
+
+def add_site_items(spec):
+    tail = [ATTENTION] + demographics(spec['study'], spec['archive_experiment'])
+    if 'arm_blocks' in spec:
+        spec['arm_blocks'] = [strip_site(a) + copy.deepcopy(tail)
+                              for a in spec['arm_blocks']]
+    else:
+        spec['blocks'] = strip_site(spec['blocks']) + copy.deepcopy(tail)
+    return spec
+
+
+# ---------------------------------------------------------------- listing settings
+
+#: What the consent's DESCRIPTION says the participant will do; {q} is the number
+#: of questions on the longest path, counted from the built instrument.
+CONSENT_TASK = {
+    'kfrux': 'read a short scenario about a fashion designer and answer {q} questions',
+    'kf4e6': 'read a short passage about a streaming service\'s policy and answer {q} '
+             'questions',
+    'efk28': 'read a short story about a person\'s life and answer {q} questions',
+    'cse5r': 'read a short workplace scenario and answer up to {q} questions about it and '
+             'about your own workplace',
+    '6fjdr': 'answer {q} questions about climate change and about actions people take '
+             'to reduce their carbon footprint',
+    'fkrsd': 'name some of your own habits and behaviours and answer up to {q} '
+             'questions about how a holiday might change them',
+    '6cxdn': 'answer up to {q} questions about a current romantic partner or a person '
+             'you are romantically interested in',
+    'ba65f_A': 'read ten short scenarios about two friends and answer {q} questions '
+               'about them',
+    'ba65f_B': 'read ten short scenarios about two friends and answer {q} questions '
+               'about them',
+    'aj5mt': 'read short descriptions of people and answer {q} questions about how '
+             'likely certain statements are and how confident you feel',
+    'dqsv6': 'answer {q} questions about your views on Britain, on international '
+             'affairs, and on how a country should be governed',
+    '9ebhq_S1': 'read a number of widely discussed claims and answer {q} questions '
+                'about how much you agree with them, how much you know about them, '
+                'and whether they have been proven or disproven',
+    '9ebhq_S2': 'read a number of widely discussed claims and answer {q} questions '
+                'about them and about your personality and ways of thinking',
+    'fxp7g': 'read eight news headlines and answer {q} questions about them',
+    'ky9u6': 'answer {q} questions about your personality, your personal projects and '
+             'how you have been feeling',
+    'hvdwk_S2': 'answer {q} questions about environmental sustainability',
+    'hvdwk_S3': 'answer {q} questions about environmental sustainability',
+    'kxcwm': 'complete {t} two-minute timed tasks in which you type as many ideas as '
+             'you can, rate your own ideas, and answer {q} questions in total, '
+             'including true/false questions about yourself',
+}
+#: Content a participant should know about before consenting, beyond the task.
+CONSENT_NOTES = {
+    '6cxdn': ['The questions ask about closeness and intimacy in your relationship. '
+              'If you are in a relationship, some questions ask about your sexual '
+              'relationship and sexual satisfaction.'],
+}
+
+#: Prolific settings that differ from the built listing, taken from each study's
+#: recruitment as the archive describes it (testcase/study_context.md).
+PRESCREEN = {
+    'fkrsd': {'min_age': 18},       # "adults"; Studies 1-2 "aged 18 or older"
+    'kf4e6': {'approval_rate_min': 99, 'nationality': ['United States'],
+              'country_of_birth': ['United States'], 'first_language': ['English'],
+              'exclude_prior_listings': True},
+    'dqsv6': {'nationality': ['United Kingdom']},     # "British sample"
+    '6cxdn': {'quotas': [{'filter': 'Relationship status',
+                          'groups': {'single': 0.5, 'in a relationship': 0.5}}],
+              'other': ['fluent English']},
+    '9ebhq_S1': {'quotas': [{'filter': 'COVID-19 vaccination',
+                             'groups': {'not vaccinated (declined)': 0.5,
+                                        'no prescreen': 0.5}}]},
+    '9ebhq_S2': {'quotas': [{'filter': 'Sex', 'groups': {'female': 0.5, 'male': 0.5}},
+                            {'filter': 'Political affiliation (US)',
+                             'groups': {'Democrat': 0.34, 'Republican': 0.33,
+                                        'Independent': 0.33}}],
+                 'representative_on': ['gender', 'age', 'political partisanship']},
+    'cse5r': {'employment_status': ['Full-Time']},
+    '6fjdr': {'analysis_filter': 'climate_worry_1 >= 4 (the original screener; '
+                                 'worry < 4 is excluded at analysis, not screened out)'},
+}
+
+
+def count_questions(spec):
+    """(questions, timed tasks) on the longest arm, counting every gated item."""
+    best = (0, 0)
+    for blocks in spec.get('arm_blocks') or [spec['blocks']]:
+        shown = _shown(blocks)
+        best = max(best, (sum(it['type'] == 'question' for it in shown),
+                          sum(it['type'] == 'timed-ideas' for it in shown)))
+    return best
+
+
+def refresh_description(spec):
+    q, t = count_questions(spec)
+    words = {2: 'two', 3: 'three', 4: 'four'}
+    task = CONSENT_TASK[spec['app']].format(q=q, t=words.get(t, t))
+    out = []
+    for head, paras in spec.get('consent_sections') or []:
+        if head and 'DESCRIPTION' in head:
+            paras = list(paras)
+            paras[0] = re.sub(r'You will be asked to .*?\. There are no',
+                              f'You will be asked to {task}. There are no', paras[0])
+            paras = [p for p in paras if p not in CONSENT_NOTES.get(spec['app'], [])
+                     and not p.startswith('The questions ask about closeness')]
+            age = spec['prescreen'].get('min_age', 18)
+            paras = [re.sub(r'You must be \d+ or older', f'You must be {age} or older', p)
+                     for p in paras]
+            k = next((i for i, p in enumerate(paras) if p.startswith('You must be')),
+                     len(paras))
+            paras[k:k] = CONSENT_NOTES.get(spec['app'], [])
+        out.append([head, paras])
+    spec['consent_sections'] = out
+    return spec
+
+
+def apply_prescreen(spec):
+    spec['prescreen'] = {**spec.get('prescreen', {}), **PRESCREEN.get(spec['app'], {})}
+    return spec
+
+
+def mark_timed(spec):
+    """The original idea tasks ran for their full time ("participants could not
+    advance early"); the renderer honours `lock` by offering no early exit."""
+    for it in _items(spec.get('arm_blocks') or spec.get('blocks')):
+        if it['type'] == 'timed-ideas':
+            it['lock'] = True
+    return spec
 
 
 LISTINGS = {
@@ -395,6 +741,7 @@ LISTINGS = {
     '9ebhq_S1': ninebhq_s1, '9ebhq_S2': ninebhq_s2, 'hvdwk_S2': hvdwk_s2,
     'hvdwk_S3': hvdwk_s3, 'aj5mt': aj5mt, 'ba65f_A': ba65f_a, 'dqsv6': dqsv6,
     'ky9u6': ky9u6, 'kf4e6': kf4e6, 'fxp7g': fxp7g, 'kxcwm': kxcwm,
+    'ba65f_B': ba65f_b,
 }
 
 
@@ -465,10 +812,70 @@ def refresh_consent(spec):
     return spec
 
 
+URL = ('https://stanfordai4hi.github.io/prolific-reconstruction/{}/?PROLIFIC_PID='
+       '{{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}')
+
+
+def write_settings(specs):
+    """PROLIFIC_SETTINGS.md and the README table, both from the specs, so the
+    listing time and pay on Prolific cannot drift from what the consent promises."""
+    readme = (SITE / 'README.md').read_text()
+    rows = re.findall(r'^\| (\d+) \| `([^`]+)` \| ([^|]+?) \| (\d+) \| [\d.]+ \|$',
+                      readme, re.M)
+    places = {name: int(n) for _, name, _, n in rows}
+    for num, name, title, n in rows:
+        mins = int(round(specs[name]['estimated_minutes'])) if name in specs else None
+        if mins is not None:
+            readme = re.sub(rf'^\| {num} \| `{re.escape(name)}` \| .*$',
+                            f'| {num} | `{name}` | {title} | {n} | {max(mins, 1)} |',
+                            readme, flags=re.M)
+    (SITE / 'README.md').write_text(readme)
+
+    out = ['# Prolific settings', '',
+           'Generated by `tools/respec_battery.py` from each `spec.json`; do not edit by '
+           'hand. Completion time and reward must match the consent screen, which is '
+           'regenerated from the same numbers.', '',
+           'Every listing: completion URL from proliferate, "exclude participants from '
+           'previous listings" on for all eighteen (one Prolific participant group), '
+           'desktop and mobile allowed.', '']
+    for _, name, title, _ in rows:
+        sp = specs[name]
+        ps = sp.get('prescreen', {})
+        n = places[name]
+        out += [f'## `{name}` — {sp["title"]}', '',
+                f'- **Places:** {n}' + (f' ({sp["arms"]} arms, ~{n // sp["arms"]} per arm)'
+                                         if sp.get('arms') else ''),
+                f'- **Completion time:** {max(int(round(sp["estimated_minutes"])), 1)} min '
+                f'(estimate {sp["estimated_minutes"]})',
+                f'- **Reward:** ${sp["reward_usd"]:.2f}',
+                f'- **Study URL:** `{URL.format(name)}`']
+        filt = [f'Country of residence: {", ".join(ps["countries"])}' if ps.get('countries') else None,
+                f'Age: {ps.get("min_age", 18)}+',
+                f'Nationality: {", ".join(ps["nationality"])}' if ps.get('nationality') else None,
+                f'Country of birth: {", ".join(ps["country_of_birth"])}' if ps.get('country_of_birth') else None,
+                f'First language: {", ".join(ps["first_language"])}' if ps.get('first_language') else None,
+                f'Employment status: {", ".join(ps["employment_status"])}' if ps.get('employment_status') else None,
+                f'Approval rate: ≥ {ps["approval_rate_min"]}%' if ps.get('approval_rate_min') else None]
+        out.append('- **Filters:** ' + '; '.join(f for f in filt if f))
+        for q in ps.get('quotas', []):
+            out.append(f'- **Quota ({q["filter"]}):** ' + ', '.join(
+                f'{k} {round(v * n)}' for k, v in q['groups'].items()))
+        if ps.get('representative_on'):
+            out.append('- **Original sample was representative on:** '
+                       + ', '.join(ps['representative_on']))
+        for o in ps.get('other', []):
+            out.append(f'- **Also:** {o}')
+        if ps.get('analysis_filter'):
+            out.append(f'- **Analysis filter:** {ps["analysis_filter"]}')
+        out.append('')
+    (SITE / 'PROLIFIC_SETTINGS.md').write_text('\n'.join(out))
+
+
 def main():
     global FULL
     check = '--check' in sys.argv
     FULL = '--full' in sys.argv
+    built = {}
     for name, build in LISTINGS.items():
         old = _load(name)
         new = copy.deepcopy(old)
@@ -478,6 +885,10 @@ def main():
         if 'arm_blocks' in new and 'arms' not in new:
             new['arms'] = old['arms']
             new['arm_keys'], new['arm_labels'] = old['arm_keys'], old['arm_labels']
+        add_site_items(new)
+        mark_timed(new)
+        apply_prescreen(new)
+        refresh_description(new)
         w, q, t = _size(new)
         # never below what the listing already promised: pay is not cut for a
         # listing whose content did not shrink
@@ -498,9 +909,12 @@ def main():
               f"arms {old.get('arms', 1)}->{new.get('arms', 1)}  "
               f"min {old['estimated_minutes']}->{minutes}  "
               f"usd {old['reward_usd']}->{new['reward_usd']}")
+        built[name] = new
         if not check:
             (SITE / name / 'spec.json').write_text(
                 json.dumps(new, indent=1, ensure_ascii=False) + '\n')
+    if not check:
+        write_settings(built)
 
 
 if __name__ == '__main__':

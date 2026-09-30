@@ -1,0 +1,6 @@
+.DS_Store
+.env
+prolific_battery_v1/
+prolific_battery_v1.zip
+node_modules/
+__pycache__/

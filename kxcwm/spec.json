@@ -39,7 +39,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: book.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -81,7 +82,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: bottle.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -123,7 +125,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: brick.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -165,7 +168,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: fork.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -207,7 +211,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: pants.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -249,7 +254,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: shoe.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -291,7 +297,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: table.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -333,7 +340,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: tire.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -389,7 +397,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if the force of gravity was cut in half?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -431,7 +440,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -473,7 +483,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if humans all preferred to live alone?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -515,7 +526,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone lost the ability to read and write?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -557,7 +569,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if people no longer needed food to live?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -599,7 +612,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if people didn't need or want to sleep anymore?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -641,7 +655,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if no one could use their arms or hands?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -683,7 +698,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone was unable to stay upright for more than a moment?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1698,6 +1714,108 @@
     },
     "text_source": "paraphrased",
     "condition": "caq"
+   },
+   {
+    "type": "question",
+    "variable-name": "site_attention_check",
+    "question": "It is important that you read each question carefully. To show that you are reading, please select \"Disagree\" for this question.",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "Strongly disagree",
+      "Disagree",
+      "Neither agree nor disagree",
+      "Agree",
+      "Strongly agree"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "site",
+    "note": "Instructed-response check. None of the reconstructions carries the original checks, so the original exclusions cannot be reapplied; this one is recorded, not used to screen out. Pass = \"Disagree\"."
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.age",
+    "question": "What is your age (in years)?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "free-response",
+     "single-line": true,
+     "response-limit": 3
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.gender",
+    "question": "What is your gender?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "female",
+      "male",
+      "other / non-binary",
+      "prefer not to say"
+     ],
+     "max-choices": 1
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.education",
+    "question": "What is the highest level of education you have completed?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "associate's or technical degree",
+      "some college, but no degree",
+      "Bachelor's degree",
+      "graduate or professional degree",
+      "high school diploma or GED",
+      "prefer not to say",
+      "some high school or less"
+     ],
+     "max-choices": 1
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.employment",
+    "question": "What is your current employment status?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "working part-time",
+      "working full-time",
+      "unemployed or looking for work",
+      "prefer not to say",
+      "retired",
+      "student",
+      "homemaker or stay-at-home parent"
+     ],
+     "max-choices": 1
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.household_income",
+    "question": "What is your annual household income?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "less than $25,000",
+      "$100,000 - $149,000",
+      "$75,000 - $99,999",
+      "$50,000 - $74,000",
+      "$25,000 - $49,000",
+      "$150,000 or more",
+      "prefer not to say"
+     ],
+     "max-choices": 1
+    }
    }
   ],
   [
@@ -1722,7 +1840,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if the force of gravity was cut in half?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1764,7 +1883,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1806,7 +1926,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if humans all preferred to live alone?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1848,7 +1969,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone lost the ability to read and write?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1890,7 +2012,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if people no longer needed food to live?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1932,7 +2055,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if people didn't need or want to sleep anymore?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -1974,7 +2098,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if no one could use their arms or hands?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2016,7 +2141,8 @@
         "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone was unable to stay upright for more than a moment?",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2072,7 +2198,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: book.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2114,7 +2241,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: bottle.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2156,7 +2284,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: brick.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2198,7 +2327,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: fork.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2240,7 +2370,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: pants.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2282,7 +2413,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: shoe.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2324,7 +2456,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: table.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -2366,7 +2499,8 @@
         "question": "Think of as many creative and original uses as you can for the following object: tire.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "lock": true
        },
        {
         "type": "question",
@@ -3381,6 +3515,108 @@
     },
     "text_source": "paraphrased",
     "condition": "caq"
+   },
+   {
+    "type": "question",
+    "variable-name": "site_attention_check",
+    "question": "It is important that you read each question carefully. To show that you are reading, please select \"Disagree\" for this question.",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "Strongly disagree",
+      "Disagree",
+      "Neither agree nor disagree",
+      "Agree",
+      "Strongly agree"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "site",
+    "note": "Instructed-response check. None of the reconstructions carries the original checks, so the original exclusions cannot be reapplied; this one is recorded, not used to screen out. Pass = \"Disagree\"."
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.age",
+    "question": "What is your age (in years)?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "free-response",
+     "single-line": true,
+     "response-limit": 3
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.gender",
+    "question": "What is your gender?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "female",
+      "male",
+      "other / non-binary",
+      "prefer not to say"
+     ],
+     "max-choices": 1
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.education",
+    "question": "What is the highest level of education you have completed?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "associate's or technical degree",
+      "some college, but no degree",
+      "Bachelor's degree",
+      "graduate or professional degree",
+      "high school diploma or GED",
+      "prefer not to say",
+      "some high school or less"
+     ],
+     "max-choices": 1
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.employment",
+    "question": "What is your current employment status?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "working part-time",
+      "working full-time",
+      "unemployed or looking for work",
+      "prefer not to say",
+      "retired",
+      "student",
+      "homemaker or stay-at-home parent"
+     ],
+     "max-choices": 1
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "participant-info.household_income",
+    "question": "What is your annual household income?",
+    "text_source": "site",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "less than $25,000",
+      "$100,000 - $149,000",
+      "$75,000 - $99,999",
+      "$50,000 - $74,000",
+      "$25,000 - $49,000",
+      "$150,000 or more",
+      "prefer not to say"
+     ],
+     "max-choices": 1
+    }
    }
   ]
  ],
@@ -3394,7 +3630,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 4.14,
+ "reward_usd": 4.36,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -3405,7 +3641,7 @@
   [
    "DESCRIPTION:",
    [
-    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.",
+    "You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete four two-minute timed tasks in which you type as many ideas as you can, rate your own ideas, and answer 78 questions in total, including true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.",
     "The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.",
     "Some questions ask about your mood, your energy levels, and how you see yourself.",
     "You must be 18 or older to take part in this study."
@@ -3420,13 +3656,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 21 minutes."
+    "Your participation will take approximately 22 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $4.14, paid through Prolific, as payment for your participation."
+    "You will receive $4.36, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -3457,7 +3693,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 21 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $4.14, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 20.7,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete four two-minute timed tasks in which you type as many ideas as you can, rate your own ideas, and answer 78 questions in total, including true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 22 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $4.36, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 21.8,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/kxcwm/"
 }
