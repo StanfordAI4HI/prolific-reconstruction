@@ -55,23 +55,29 @@ listing.
 ## Prolific study URL
 
 Prolific's *Study URL* is the listing's **proliferate** entry link — its debug link in
-the table below with the trailing `/debug` removed:
+the table below with the trailing `/debug` removed — and Prolific appends its own
+placeholders, which is what you want:
 
 ```
-https://proliferate.alps.science/experiment/<experiment id>
+https://proliferate.alps.science/experiment/<experiment id>?PROLIFIC_PID={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}
 ```
+
+Keep `PROLIFIC_PID`. proliferate reads it off this URL and it is the only thing that
+fills the `prolific_participant_id` column of `<experiment>-workerids.csv`; drop it and
+every row reads `<no-id>`, leaving no way to tie a response to a Prolific submission for
+payment or deduplication.
 
 Do **not** put the GitHub Pages URL in Prolific. proliferate is the production entry
 point: it creates the participant record, then redirects to the Pages listing as
 `?participant_id=<uuid>&experiment_id=<uuid>`. Going straight to Pages skips that, so
 `proliferate.submit()` has no experiment to submit against and the response is lost.
 
-Do not append Prolific's `{%PROLIFIC_PID%}` placeholders either. proliferate does not
-forward them to the experiment page — it keeps the Prolific ID itself and hands it back
-only in the separate `<experiment>-workerids.csv`. So a stored response carries
-proliferate's `participant_id`, not a Prolific ID, and `prolific_pid` is null in
-production. Condition assignment hashes `participant_id` and is re-checked at ingest;
-the Prolific mapping is pulled separately and kept out of the response directory.
+What proliferate does *not* do is pass the Prolific ID on to the experiment page. It
+keeps it and hands it back only in the workerids CSV, so a stored response carries
+proliferate's `participant_id` and `prolific_pid` is null in production. Condition
+assignment therefore hashes `participant_id`, and is re-checked at ingest. The Prolific
+mapping is pulled separately and kept out of the response directory — it is the only
+identifying file in a collection.
 
 The renderer refuses to run without an id in the URL, so a bare Pages link cannot
 produce unattributable data — it shows "this link is missing its Prolific ID" instead.
