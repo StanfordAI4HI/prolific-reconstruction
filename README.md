@@ -70,19 +70,19 @@ Prolific ID and is re-checked at ingest.
 | 02 | `kf4e6` | Reading a short passage | 150 | 1 |
 | 03 | `efk28` | Judging a life story | 230 | 5 |
 | 04 | `cse5r` | Forming a workplace committee | 360 | 10 |
-| 05 | `6fjdr` | The impact of everyday climate actions | 430 | 10 |
+| 05 | `6fjdr` | The impact of everyday climate actions | 440 | 10 |
 | 06 | `fkrsd` | Habits and holidays | 80 | 12 |
-| 07 | `6cxdn` | Your romantic relationship | 130 | 16 |
-| 08 | `ba65f_A` | Short scenarios about two friends | 27 | 20 |
-| 09 | `ba65f_B` | Short scenarios about two friends | 53 | 7 |
+| 07 | `6cxdn` | Your romantic relationship | 80 | 16 |
+| 08 | `ba65f_A` | Short scenarios about two friends | 30 | 20 |
+| 09 | `ba65f_B` | Short scenarios about two friends | 50 | 7 |
 | 10 | `aj5mt` | Reasoning about likelihoods | 230 | 7 |
-| 11 | `dqsv6` | Views about Britain and world affairs | 170 | 6 |
-| 12 | `9ebhq_S1` | Beliefs about widely discussed claims | 110 | 6 |
-| 13 | `9ebhq_S2` | Beliefs about widely discussed claims | 150 | 10 |
-| 14 | `fxp7g` | Reading news headlines | 80 | 11 |
+| 11 | `dqsv6` | Views about Britain and world affairs | 180 | 6 |
+| 12 | `9ebhq_S1` | Beliefs about widely discussed claims | 180 | 6 |
+| 13 | `9ebhq_S2` | Beliefs about widely discussed claims | 180 | 10 |
+| 14 | `fxp7g` | Reading news headlines | 300 | 11 |
 | 15 | `ky9u6` | Personality and well-being | 80 | 38 |
-| 16 | `hvdwk_S2` | Views on environmental sustainability | 40 | 14 |
-| 17 | `hvdwk_S3` | Views on environmental sustainability | 40 | 12 |
+| 16 | `hvdwk_S2` | Views on environmental sustainability | 80 | 14 |
+| 17 | `hvdwk_S3` | Views on environmental sustainability | 80 | 12 |
 | 18 | `kxcwm` | Creativity exercises and ways of thinking | 80 | 21 |
 
 ## Note on visibility
