@@ -140,19 +140,34 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   assert.strictEqual(s.d.querySelectorAll('.qtext').length, 1);
   console.log('ok  kf4e6: vignette and its rating share one page');
 }
-// ---------- the renderer must not eat the instrument's own text
+// ---------- the <initials> slot: collected, piped, and never shown raw
 {
-  // 6cxdn's paper writes the item as "How physically attractive is <initials>?" and
-  // the reconstruction carries that placeholder. Rendered into innerHTML unescaped it
-  // was parsed as a tag and the word vanished.
+  // 44 of 6cxdn's items address the person as "<initials>" -- the placeholder the
+  // paper prints, because Qualtrics piped in initials the participant had typed.
+  // The conversion now collects it; the renderer substitutes it.
   const s = boot('6cxdn', 'cNo');
   s.next();
-  assert(runTo(s, () => s.text().includes('How much do you like'), { relationship_status: 'No' }),
-    'reach liking.1');
-  assert(s.text().includes('<initials>'),
-    'the <initials> placeholder was swallowed by the HTML parser');
+  assert(runTo(s, () => s.onScreen().includes('initials'), {}), 'reach the initials field');
+  s.answer({ initials: 'A.B.' });
+  s.next();
+  assert(runTo(s, () => s.text().includes('How much do you like'),
+    { relationship_status: 'No', initials: 'A.B.' }), 'reach liking.1');
+  assert(s.text().includes('How much do you like A.B.?'),
+    'the typed initials were not piped into the item');
+  assert(!s.text().includes('<initials>'), 'the raw placeholder was shown');
+  console.log('ok  6cxdn: typed initials are piped into the items that name them');
+}
+{
+  // Left blank there is nothing to substitute, and the placeholder must still be
+  // visible rather than parsed away as a tag -- "How much do you like ?" is what a
+  // participant saw before the renderer escaped item text.
+  const s = boot('6cxdn', 'cNo2');
+  s.next();
+  assert(runTo(s, () => s.text().includes('How much do you like'),
+    { relationship_status: 'No', initials: '' }), 'reach liking.1');
+  assert(s.text().includes('<initials>'), 'placeholder swallowed by the HTML parser');
   assert.strictEqual(s.d.querySelector('initials'), null, 'placeholder parsed as an element');
-  console.log('ok  6cxdn: <initials> survives to the screen instead of vanishing');
+  console.log('ok  6cxdn: left blank, the placeholder is visible rather than swallowed');
 }
 {
   // ...but an entity the reconstruction carries is still an entity. cse5r's rank
