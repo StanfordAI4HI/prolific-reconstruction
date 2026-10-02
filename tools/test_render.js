@@ -140,4 +140,78 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   assert.strictEqual(s.d.querySelectorAll('.qtext').length, 1);
   console.log('ok  kf4e6: vignette and its rating share one page');
 }
+// ---------- the renderer must not eat the instrument's own text
+{
+  // 6cxdn's paper writes the item as "How physically attractive is <initials>?" and
+  // the reconstruction carries that placeholder. Rendered into innerHTML unescaped it
+  // was parsed as a tag and the word vanished.
+  const s = boot('6cxdn', 'cNo');
+  s.next();
+  assert(runTo(s, () => s.text().includes('How much do you like'), { relationship_status: 'No' }),
+    'reach liking.1');
+  assert(s.text().includes('<initials>'),
+    'the <initials> placeholder was swallowed by the HTML parser');
+  assert.strictEqual(s.d.querySelector('initials'), null, 'placeholder parsed as an element');
+  console.log('ok  6cxdn: <initials> survives to the screen instead of vanishing');
+}
+{
+  // ...but an entity the reconstruction carries is still an entity. cse5r's rank
+  // stems hold `&nbsp;` from the SPSS label they were extracted from; escaping the
+  // ampersand as well would print it on the page.
+  const s = boot('cse5r', 'nbsp1');
+  s.next();
+  assert(runTo(s, () => s.text().includes('rank the following goals'), {}), 'reach the rank items');
+  assert(!s.text().includes('&nbsp;'), 'an HTML entity was printed literally');
+  console.log('ok  cse5r: &nbsp; in an extracted stem still renders as a space');
+}
+
+// ---------- a slider can record the value it starts on
+{
+  // The handle parks on the midpoint, so wanting the midpoint means clicking without
+  // changing anything: no `input` event, and the answer used to be stored blank.
+  const s = boot('aj5mt', 'slide1');
+  s.next();
+  assert(runTo(s, () => s.d.querySelector('input[type=range]') !== null, {}), 'reach a slider');
+  const w = s.d.defaultView;
+  for (const el of s.d.querySelectorAll('input[type=range]')) {
+    assert(el.classList.contains('unset'), 'slider should start unanswered');
+    el.dispatchEvent(new w.Event('pointerdown'));   // click, value unchanged
+    assert(!el.classList.contains('unset'), 'midpoint click did not count as an answer');
+  }
+  const mid = [...s.d.querySelectorAll('input[type=range]')].map(e => Number(e.value));
+  s.next();
+  const got = s.box.payload ? s.box.payload.trials : null;
+  console.log(`ok  aj5mt: a click on the midpoint (${mid[0]}) answers the slider`);
+}
+
+// ---------- kxcwm: the typed ideas reach the payload
+{
+  const s = boot('kxcwm', 'ideas1');
+  s.next();
+  assert(runTo(s, () => s.d.querySelector('input.idea-in') !== null, {}), 'reach a timed page');
+  const base = s.d.querySelector('input.idea-in').id.replace(/_\d+$/, '');
+  s.d.getElementById(`${base}_1`).value = 'a doorstop';
+  s.d.getElementById(`${base}_2`).value = 'a pressed-flower press';
+  s.next();                                   // "I'm done" ends the timed page
+  const got = finish(s);
+  assert(got.includes(`${base}_1`) && got.includes(`${base}_2`),
+    'typed ideas missing from the payload');
+  assert(got.includes(`${base}__n_submitted`), 'submitted count missing');
+  const rows = s.box.payload.trials.filter(t => t.variable_name === `${base}_1`);
+  assert.strictEqual(rows[0].answer, 'a doorstop', 'idea text not carried');
+  console.log('ok  kxcwm: typed ideas and their count reach the payload');
+}
+// ---------- a line break in a stem is the instrument's, and must survive
+{
+  // 108 of aj5mt's stems separate the base rate, the description and the question
+  // with blank lines. The text reaches the DOM intact; `white-space: pre-line` is
+  // what turns it back into lines, and `.qtext` did not have it.
+  const css = fs.readFileSync(path.join(SITE, 'lib/app.css'), 'utf8');
+  const rule = css.split('\n').find(l => l.trim().startsWith('.qtext {')) || '';
+  assert(rule.includes('pre-line'), '.qtext must keep the instrument\'s line breaks');
+  const s = boot('aj5mt', 'nl1');
+  s.next();
+  assert(runTo(s, () => s.text().includes('\n'), {}), 'a stem with a newline');
+  console.log('ok  aj5mt: stems keep their line breaks (.qtext is pre-line)');
+}
 console.log('all passed');
