@@ -1,0 +1,3 @@
+
+# npm install --no-save jsdom, for tools/test_render.js
+node_modules/
