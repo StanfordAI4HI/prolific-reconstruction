@@ -423,11 +423,54 @@ def kfrux(spec):
     participants who wrote something have it on their path and the modal path is five
     items long. Full scope takes the longest path instead; the renderer already treats
     free text as optional, so a participant who has nothing to add passes straight
-    through."""
+    through. Full scope is also laid out as the Qualtrics instrument was fielded — see
+    `kfrux_as_fielded`, the one listing that departs from rules 3 and 4."""
     r = Recon('kfrux', 'experiment_1')
     labs = [l['condition'] for l in spec['arm_labels']]
-    return {'arm_blocks': [upto(r.sequence(condition=c, longest=FULL), 'creativity')
+    if not FULL:
+        return {'arm_blocks': [upto(r.sequence(condition=c, longest=FULL), 'creativity')
+                               for c in labs]}
+    return {'arm_blocks': [kfrux_as_fielded(r.sequence(condition=c, longest=True))
                            for c in labs]}
+
+
+#: Exceptions to rules 3 and 4 for kfrux, each restoring what the original Qualtrics
+#: instrument shows (prolific_battery_v1/studies/kfrux/raw/data_a78gz/Study Materials/
+#: Qualtrics/Study 1A.docx) and the reconstruction lost:
+#:   - the timing words are capitalised there ("at the BEGINNING" / "at the END");
+#:   - each Qualtrics block is one page: scenario + creativity + effort (block
+#:     "creativity"), con1 + con2 + price (block "consequence"), and feedback + the
+#:     attention check (block "funnel");
+#:   - the funnel block ends with the attention check "Have you ever been on the planet
+#:     Jupiter?" (Yes/No), which the paper used to exclude participants (none failed).
+#:     It is recorded, not screened on, so exclusion stays an analysis decision.
+#: The authenticity block (auth_1, auth_2) is left out: the deposit has no responses
+#: to it for any of the 243 rows, and the paper does not report it.
+KFRUX_CAPS = (('at the beginning of', 'at the BEGINNING of'),
+              ('at the end of', 'at the END of'))
+KFRUX_PAGES = (('scenario', 'creativity', 'effort'), ('con1', 'con2', 'price'),
+               ('feedback', 'ac'))
+KFRUX_AC = {'type': 'question', 'variable-name': 'ac',
+            'question': 'Have you ever been on the planet Jupiter?',
+            'response-constraints': {'type': 'mcq', 'options': ['Yes', 'No'],
+                                     'max-choices': 1},
+            'text_source': 'qualtrics'}
+
+
+def kfrux_as_fielded(items):
+    items = copy.deepcopy(items)
+    for it in items:
+        if it['variable-name'] == 'scenario':
+            for old, new in KFRUX_CAPS:
+                it['content'] = it['content'].replace(old, new)
+    named = {**by_name(items), 'ac': copy.deepcopy(KFRUX_AC)}
+    paged = [n for page in KFRUX_PAGES for n in page]
+    missing = [n for n in paged if n not in named]
+    extra = [n for n in named if n not in paged]
+    if missing or extra:
+        raise SystemExit(f'kfrux: page layout out of step with the reconstruction '
+                         f'(missing {missing}, unplaced {extra})')
+    return [{'type': 'page', 'items': [named[n] for n in page]} for page in KFRUX_PAGES]
 
 
 #: Asked only of participants whose organisation has a gender diversity initiative.
