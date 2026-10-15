@@ -258,7 +258,35 @@ def sixcxdn(spec):
     liking = [dict(single[f'liking.{k}'],
                    show_if={'variable': 'relationship_status', 'op': '==', 'value': 'No'})
               for k in (1, 2, 3)]
-    return {'blocks': head + [status, prqc] + liking}
+    blocks = head + [status, prqc] + liking
+
+    # Half this arm addresses the person by name -- "How physically attractive is
+    # <initials>?" -- which is the placeholder the paper itself prints, because
+    # Qualtrics piped in initials the participant had typed. The deposit shares no
+    # free-text column, so the reconstruction has the prompts and not the field, the
+    # same shape as fkrsd's habit slots. Carried over untouched, every one of those
+    # items reaches the participant with a blank where the name belongs; the
+    # reconstruction is not wrong, the conversion is, so the conversion supplies the
+    # field and wires the pipe. This is the treatment `status` above already gets.
+    entry = {
+        'type': 'question', 'variable-name': 'initials',
+        'question': 'Thinking of that person, what are their initials?',
+        'response-constraints': {'type': 'free-response', 'single-line': True},
+        'text_source': 'authored',
+        'note': 'Entry field for the <initials> slot the reconstruction\'s later '
+                'items name but no archive item collects.'}
+    # After the instruction that introduces the person, before anything asks about them.
+    at = next(i for i, it in enumerate(blocks)
+              if it.get('variable-name') == 'RoCh_instructions')
+    blocks.insert(at + 1, entry)
+    piped = 0
+    for it in blocks:
+        if '<initials>' in (it.get('question') or '') + (it.get('content') or ''):
+            it['pipe'] = {'<initials>': 'initials'}
+            piped += 1
+    assert piped, '6cxdn: nothing to pipe -- has the placeholder changed?'
+    print(f"           authored one initials field; piped it into {piped} item(s)")
+    return {'blocks': blocks}
 
 
 def ninebhq_s1(spec):
