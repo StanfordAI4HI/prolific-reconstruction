@@ -31,6 +31,17 @@
  "arm_blocks": [
   [
    {
+    "type": "question",
+    "variable-name": "Attention_check1",
+    "question": "Kitten is to cat as puppy is to",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "check": "attention",
+    "text_source": "extracted"
+   },
+   {
     "type": "stimuli",
     "variable-name": "Likelihood_instructions",
     "content": "We conducted a series of 18 experiments with 1,000 participants in each experiment.\n\nLater, we randomly chose one participant from each experiment.\n\nIn this study, you will be presented with descriptions from each of the chosen 18 participants.\n\nAfter presenting you with their descriptions, we will ask you to rate:\n\n(1) how likely it is that the chosen participant belongs to a particular group\n(2) how confident you feel about your likelihood rating",
@@ -47,8 +58,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -61,8 +72,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -75,8 +86,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -89,8 +100,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -103,8 +114,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -117,8 +128,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -131,8 +142,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -145,8 +156,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -159,8 +170,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -173,8 +184,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -187,8 +198,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -201,8 +212,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -215,8 +226,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -229,8 +240,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -243,8 +254,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -257,8 +268,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -271,8 +282,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -285,8 +296,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -299,8 +310,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -313,8 +324,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -327,8 +338,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -341,8 +352,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -355,8 +366,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -369,8 +380,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -383,8 +394,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -397,8 +408,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -411,8 +422,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -425,8 +436,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -439,8 +450,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -453,8 +464,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -467,8 +478,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -481,8 +492,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -495,8 +506,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -509,8 +520,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -523,8 +534,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -537,8 +548,27 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q9",
+    "question": "We would like to get a sense of your general preferences.\n\nMost modern theories of decision making recognize that decisions do not take place in a vacuum. Individual preferences and knowledge, along with situational variables can greatly impact the decision process. To demonstrate that you've read this much, just go ahead and select both pink and green among the alternatives below, no matter what your favorite color is. Yes, ignore the question below and select both of those options.\n\nWhat is your favorite color?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "White",
+      "Black",
+      "Red",
+      "Pink",
+      "Green",
+      "Blue"
+     ],
+     "max-choices": 6
+    },
+    "check": "instructed",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -552,6 +582,17 @@
    }
   ],
   [
+   {
+    "type": "question",
+    "variable-name": "Attention_check1",
+    "question": "Kitten is to cat as puppy is to",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "check": "attention",
+    "text_source": "extracted"
+   },
    {
     "type": "stimuli",
     "variable-name": "Likelihood_instructions",
@@ -569,8 +610,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -583,8 +624,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -597,8 +638,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -611,8 +652,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -625,8 +666,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -639,8 +680,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -653,8 +694,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -667,8 +708,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -681,8 +722,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -695,8 +736,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -709,8 +750,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -723,8 +764,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -737,8 +778,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -751,8 +792,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -765,8 +806,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -779,8 +820,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -793,8 +834,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -807,8 +848,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -821,8 +862,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -835,8 +876,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -849,8 +890,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -863,8 +904,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -877,8 +918,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -891,8 +932,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -905,8 +946,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -919,8 +960,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -933,8 +974,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -947,8 +988,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -961,8 +1002,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -975,8 +1016,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -989,8 +1030,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1003,8 +1044,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1017,8 +1058,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1031,8 +1072,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1045,8 +1086,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1059,8 +1100,27 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q9",
+    "question": "We would like to get a sense of your general preferences.\n\nMost modern theories of decision making recognize that decisions do not take place in a vacuum. Individual preferences and knowledge, along with situational variables can greatly impact the decision process. To demonstrate that you've read this much, just go ahead and select both pink and green among the alternatives below, no matter what your favorite color is. Yes, ignore the question below and select both of those options.\n\nWhat is your favorite color?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "White",
+      "Black",
+      "Red",
+      "Pink",
+      "Green",
+      "Blue"
+     ],
+     "max-choices": 6
+    },
+    "check": "instructed",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1074,6 +1134,17 @@
    }
   ],
   [
+   {
+    "type": "question",
+    "variable-name": "Attention_check1",
+    "question": "Kitten is to cat as puppy is to",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "check": "attention",
+    "text_source": "extracted"
+   },
    {
     "type": "stimuli",
     "variable-name": "Likelihood_instructions",
@@ -1091,8 +1162,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1105,8 +1176,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1119,8 +1190,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1133,8 +1204,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1147,8 +1218,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1161,8 +1232,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1175,8 +1246,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1189,8 +1260,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1203,8 +1274,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1217,8 +1288,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1231,8 +1302,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1245,8 +1316,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1259,8 +1330,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1273,8 +1344,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1287,8 +1358,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1301,8 +1372,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1315,8 +1386,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1329,8 +1400,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1343,8 +1414,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1357,8 +1428,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1371,8 +1442,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1385,8 +1456,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1399,8 +1470,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1413,8 +1484,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1427,8 +1498,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1441,8 +1512,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1455,8 +1526,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1469,8 +1540,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1483,8 +1554,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1497,8 +1568,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1511,8 +1582,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1525,8 +1596,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1539,8 +1610,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1553,8 +1624,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1567,8 +1638,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1581,8 +1652,27 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q9",
+    "question": "We would like to get a sense of your general preferences.\n\nMost modern theories of decision making recognize that decisions do not take place in a vacuum. Individual preferences and knowledge, along with situational variables can greatly impact the decision process. To demonstrate that you've read this much, just go ahead and select both pink and green among the alternatives below, no matter what your favorite color is. Yes, ignore the question below and select both of those options.\n\nWhat is your favorite color?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "White",
+      "Black",
+      "Red",
+      "Pink",
+      "Green",
+      "Blue"
+     ],
+     "max-choices": 6
+    },
+    "check": "instructed",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1596,6 +1686,17 @@
    }
   ],
   [
+   {
+    "type": "question",
+    "variable-name": "Attention_check1",
+    "question": "Kitten is to cat as puppy is to",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "check": "attention",
+    "text_source": "extracted"
+   },
    {
     "type": "stimuli",
     "variable-name": "Likelihood_instructions",
@@ -1613,8 +1714,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1627,8 +1728,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1641,8 +1742,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1655,8 +1756,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1669,8 +1770,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1683,8 +1784,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1697,8 +1798,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1711,8 +1812,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1725,8 +1826,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1739,8 +1840,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1753,8 +1854,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1767,8 +1868,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1781,8 +1882,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1795,8 +1896,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1809,8 +1910,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1823,8 +1924,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1837,8 +1938,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1851,8 +1952,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1865,8 +1966,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1879,8 +1980,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1893,8 +1994,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1907,8 +2008,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1921,8 +2022,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1935,8 +2036,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1949,8 +2050,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1963,8 +2064,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1977,8 +2078,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1991,8 +2092,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2005,8 +2106,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2019,8 +2120,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2033,8 +2134,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2047,8 +2148,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2061,8 +2162,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2075,8 +2176,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2089,8 +2190,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2103,8 +2204,27 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q9",
+    "question": "We would like to get a sense of your general preferences.\n\nMost modern theories of decision making recognize that decisions do not take place in a vacuum. Individual preferences and knowledge, along with situational variables can greatly impact the decision process. To demonstrate that you've read this much, just go ahead and select both pink and green among the alternatives below, no matter what your favorite color is. Yes, ignore the question below and select both of those options.\n\nWhat is your favorite color?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "White",
+      "Black",
+      "Red",
+      "Pink",
+      "Green",
+      "Blue"
+     ],
+     "max-choices": 6
+    },
+    "check": "instructed",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2118,6 +2238,17 @@
    }
   ],
   [
+   {
+    "type": "question",
+    "variable-name": "Attention_check1",
+    "question": "Kitten is to cat as puppy is to",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "check": "attention",
+    "text_source": "extracted"
+   },
    {
     "type": "stimuli",
     "variable-name": "Likelihood_instructions",
@@ -2135,8 +2266,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2149,8 +2280,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2163,8 +2294,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2177,8 +2308,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2191,8 +2322,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2205,8 +2336,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2219,8 +2350,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2233,8 +2364,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2247,8 +2378,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2261,8 +2392,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2275,8 +2406,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2289,8 +2420,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2303,8 +2434,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2317,8 +2448,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2331,8 +2462,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2345,8 +2476,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2359,8 +2490,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2373,8 +2504,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2387,8 +2518,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2401,8 +2532,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2415,8 +2546,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2429,8 +2560,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2443,8 +2574,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2457,8 +2588,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2471,8 +2602,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2485,8 +2616,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2499,8 +2630,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2513,8 +2644,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2527,8 +2658,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2541,8 +2672,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2555,8 +2686,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2569,8 +2700,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2583,8 +2714,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2597,8 +2728,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2611,8 +2742,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2625,8 +2756,27 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q9",
+    "question": "We would like to get a sense of your general preferences.\n\nMost modern theories of decision making recognize that decisions do not take place in a vacuum. Individual preferences and knowledge, along with situational variables can greatly impact the decision process. To demonstrate that you've read this much, just go ahead and select both pink and green among the alternatives below, no matter what your favorite color is. Yes, ignore the question below and select both of those options.\n\nWhat is your favorite color?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "White",
+      "Black",
+      "Red",
+      "Pink",
+      "Green",
+      "Blue"
+     ],
+     "max-choices": 6
+    },
+    "check": "instructed",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2640,6 +2790,17 @@
    }
   ],
   [
+   {
+    "type": "question",
+    "variable-name": "Attention_check1",
+    "question": "Kitten is to cat as puppy is to",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "check": "attention",
+    "text_source": "extracted"
+   },
    {
     "type": "stimuli",
     "variable-name": "Likelihood_instructions",
@@ -2657,8 +2818,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2671,8 +2832,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2685,8 +2846,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2699,8 +2860,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2713,8 +2874,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2727,8 +2888,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_2"
+    "condition": "problem_group_2",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2741,8 +2902,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2755,8 +2916,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2769,8 +2930,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2783,8 +2944,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2797,8 +2958,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2811,8 +2972,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_1"
+    "condition": "problem_group_1",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2825,8 +2986,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2839,8 +3000,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2853,8 +3014,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2867,8 +3028,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2881,8 +3042,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2895,8 +3056,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_3"
+    "condition": "problem_group_3",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2909,8 +3070,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2923,8 +3084,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2937,8 +3098,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2951,8 +3112,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2965,8 +3126,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2979,8 +3140,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_4"
+    "condition": "problem_group_4",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2993,8 +3154,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3007,8 +3168,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3021,8 +3182,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3035,8 +3196,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3049,8 +3210,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3063,8 +3224,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_5"
+    "condition": "problem_group_5",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3077,8 +3238,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3091,8 +3252,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3105,8 +3266,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3119,8 +3280,8 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3133,8 +3294,8 @@
      "scale-min-desc": "Not likely at all",
      "scale-max-desc": "Highly likely"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3147,8 +3308,27 @@
      "scale-min-desc": "Not confident at all",
      "scale-max-desc": "Highly confident"
     },
-    "text_source": "extracted",
-    "condition": "problem_group_6"
+    "condition": "problem_group_6",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "Q9",
+    "question": "We would like to get a sense of your general preferences.\n\nMost modern theories of decision making recognize that decisions do not take place in a vacuum. Individual preferences and knowledge, along with situational variables can greatly impact the decision process. To demonstrate that you've read this much, just go ahead and select both pink and green among the alternatives below, no matter what your favorite color is. Yes, ignore the question below and select both of those options.\n\nWhat is your favorite color?",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "White",
+      "Black",
+      "Red",
+      "Pink",
+      "Green",
+      "Blue"
+     ],
+     "max-choices": 6
+    },
+    "check": "instructed",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3172,7 +3352,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 1.48,
+ "reward_usd": 1.56,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -3197,13 +3377,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 7 minutes."
+    "Your participation will take approximately 8 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $1.48, paid through Prolific, as payment for your participation."
+    "You will receive $1.56, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -3234,7 +3414,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read short descriptions of people and answer 36 questions about how likely certain statements are and how confident you feel. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 7 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.48, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 7.4,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read short descriptions of people and answer 36 questions about how likely certain statements are and how confident you feel. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 8 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.56, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 7.8,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/aj5mt/"
 }

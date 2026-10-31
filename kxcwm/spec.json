@@ -2,7 +2,7 @@
  "app": "kxcwm",
  "study": "kxcwm",
  "archive_experiment": "experiment_1",
- "target": "f65",
+ "target": "f85",
  "title": "Creativity exercises and ways of thinking",
  "arms": 2,
  "arm_keys": [
@@ -20,10 +20,15 @@
   [
    {
     "type": "stimuli",
+    "variable-name": "intro_creativity_tasks",
+    "content": "The entire experiment should take about 20 minutes. You will now have to complete 4 creativity tasks.",
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
     "variable-name": "instructions_aut",
-    "content": "INSTRUCTIONS In the following creativity task... You will be asked to come up with as many creative uses for two objects as you can. It may seem strange or bizarre to you, but we ask that you participate as best you can. Creative ideas strike people as clever, unusual, interesting, uncommon, humorous, innovative or different.",
-    "text_source": "extracted",
-    "condition": "aut"
+    "content": "INSTRUCTIONS In the next creativity exercise... You'll need to find as many creative uses as possible for 2 objects. This may be odd, but try to participate as best you can. Creative ideas are unusual, interesting, humorous or different.",
+    "text_source": "extracted"
    },
    {
     "type": "group",
@@ -36,10 +41,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_book",
-        "question": "Think of as many creative and original uses as you can for the following object: book.",
+        "question": "INSTRUCTIONS The next object is a book. How can we use a book? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_book",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_book",
+        "question": "How easy or difficult was it for you to find original uses for a book?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -52,22 +77,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_book",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -78,10 +88,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_bottle",
-        "question": "Think of as many creative and original uses as you can for the following object: bottle.",
+        "question": "INSTRUCTIONS The next object is a bottle. How can we use a bottle? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_bottle",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_bottle",
+        "question": "How easy or difficult was it for you to find original uses for a bottle?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -94,22 +124,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_bottle",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -120,10 +135,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_brick",
-        "question": "Think of as many creative and original uses as you can for the following object: brick.",
+        "question": "INSTRUCTIONS The next object is a brick. How can we use a brick? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_brick",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_brick",
+        "question": "How easy or difficult was it for you to find original uses for a brick?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -136,22 +171,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_brick",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -162,10 +182,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_fork",
-        "question": "Think of as many creative and original uses as you can for the following object: fork.",
+        "question": "INSTRUCTIONS The next object is a fork. How can we use a fork? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_fork",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_fork",
+        "question": "How easy or difficult was it for you to find original uses for a fork?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -178,22 +218,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_fork",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -204,10 +229,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_pants",
-        "question": "Think of as many creative and original uses as you can for the following object: pants.",
+        "question": "INSTRUCTIONS The next object is pants. How can we use pants? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_pants",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_pants",
+        "question": "How easy or difficult was it for you to find original uses for pants?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -220,22 +265,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_pants",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -246,10 +276,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_shoe",
-        "question": "Think of as many creative and original uses as you can for the following object: shoe.",
+        "question": "INSTRUCTIONS The next object is a shoe. How can we use a shoe? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_shoe",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_shoe",
+        "question": "How easy or difficult was it for you to find original uses for a shoe?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -262,22 +312,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_shoe",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -288,10 +323,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_table",
-        "question": "Think of as many creative and original uses as you can for the following object: table.",
+        "question": "INSTRUCTIONS The next object is a table. How can we use a table? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_table",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_table",
+        "question": "How easy or difficult was it for you to find original uses for a table?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -304,22 +359,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_table",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -330,10 +370,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_tire",
-        "question": "Think of as many creative and original uses as you can for the following object: tire.",
+        "question": "INSTRUCTIONS The next object is a tire. How can we use a tire? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_tire",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_tire",
+        "question": "How easy or difficult was it for you to find original uses for a tire?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -346,22 +406,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_tire",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      }
@@ -370,10 +415,15 @@
    },
    {
     "type": "stimuli",
+    "variable-name": "halfway_slide",
+    "content": "You are halfway through the creativity tasks, you have 2 left.",
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
     "variable-name": "instructions_ct",
-    "content": "INSTRUCTIONS In the following creativity task... You will be asked to come up with as many consequences or possible results for two unusual situations as you can. It may seem strange or bizarre to you, but we ask that you participate as best you can. Creative ideas strike people as clever, unusual, interesting, uncommon, humorous, innovative or different.",
-    "text_source": "extracted",
-    "condition": "ct"
+    "content": "INSTRUCTIONS In the next creativity exercise... You will have to find as many creative consequences as possible to 2 unusual situations. This may be odd, but try to participate as best you can. Creative ideas are unusual, interesting, humorous or different.",
+    "text_source": "extracted"
    },
    {
     "type": "group",
@@ -386,10 +436,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_cut_gravity",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if the force of gravity was cut in half?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if the force of gravity was cut in half? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_cut_gravity",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_cut_gravity",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if the force of gravity was cut in half?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -402,22 +472,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_cut_gravity",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -428,10 +483,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_height_shrank",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if everyone shrank to 30 centimeters (12 inches) in height? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_height_shrank",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_height_shrank",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -444,22 +519,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_height_shrank",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -470,10 +530,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_live_alone",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if humans all preferred to live alone?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if humans all preferred to live alone? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_live_alone",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_live_alone",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if humans all preferred to live alone?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -486,22 +566,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_live_alone",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -512,10 +577,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_lost_read_write",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone lost the ability to read and write?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if everyone lost the ability to read and write? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_lost_read_write",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_lost_read_write",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if everyone lost the ability to read and write?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -528,22 +613,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_lost_read_write",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -554,10 +624,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_need_food",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if people no longer needed food to live?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if people no longer needed food to live? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_need_food",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_need_food",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if people no longer needed food to live?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -570,22 +660,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_need_food",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -596,10 +671,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_need_sleep",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if people didn't need or want to sleep anymore?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if people didn't need or want to sleep anymore? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_need_sleep",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_need_sleep",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if people didn't need or want to sleep anymore?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -612,22 +707,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_need_sleep",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -638,10 +718,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_unable_arms_hands",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if no one could use their arms or hands?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if no one could use their arms or hands? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_unable_arms_hands",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_unable_arms_hands",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if no one could use their arms or hands?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -654,22 +754,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_unable_arms_hands",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -680,10 +765,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_unable_stay_upright",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone was unable to stay upright for more than a moment?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if everyone was unable to stay upright for more than a moment? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_unable_stay_upright",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_unable_stay_upright",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if everyone was unable to stay upright for more than a moment?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -696,22 +801,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_unable_stay_upright",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      }
@@ -721,9 +811,8 @@
    {
     "type": "stimuli",
     "variable-name": "csb_instructions",
-    "content": "Please indicate the extent to which you agree with each of the following statements, from 1 (strongly disagree) to 5 (strongly agree).",
-    "text_source": "extracted",
-    "condition": "csb"
+    "content": "INSTRUCTIONS In the following, you will see a series of statements about yourself. Read each one very carefully and decide how much you agree or disagree with that statement. Answer each statement, even if you are not completely sure of your answer.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -733,11 +822,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -747,11 +835,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -761,11 +848,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -775,11 +861,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -789,11 +874,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -803,18 +887,16 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "stimuli",
     "variable-name": "temps_instructions",
-    "content": "Please indicate the extent to which you agree with each of the following statements, from 1 (strongly disagree) to 5 (strongly agree).",
-    "text_source": "extracted",
-    "condition": "temps"
+    "content": "INSTRUCTIONS In the following, you will see a series of statements about yourself. Read each one very carefully and decide how much you agree or disagree with that statement. Answer each statement, even if you are not completely sure of your answer.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -824,11 +906,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -838,11 +919,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -852,11 +932,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -866,11 +945,25 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "temps_att_check",
+    "question": "I have to swim the Atlantic Ocean every morning to get to work.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "qsf",
+    "check": "instructed",
+    "note": "Wording from qualtrics_experiment.qsf, as the record cites it; only pass/fail flags were deposited."
    },
    {
     "type": "question",
@@ -880,11 +973,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -894,11 +986,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -908,11 +999,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -922,11 +1012,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -936,18 +1025,16 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "stimuli",
     "variable-name": "hps_instructions",
-    "content": "Please indicate whether each of the following statements applies to you by choosing \"true\" or \"false\".",
-    "text_source": "paraphrased",
-    "condition": "hps"
+    "content": "INSTRUCTIONS In the following, you will see a series of statements about yourself. Read each one very carefully and answer each statement true or false. It is important that you answer every statement, even if you are not quite certain which is the best answer. An occasional statement may refer to experiences that you have had only when taking drugs. Unless you have had the experience at other times (when not under the influence of drugs), mark it as if you have not had that experience (i.e., false). Some statements may sound like others, but all of them are slightly different. Answer each statement individually, and don't worry about how you answered a somewhat similar previous statement.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -956,13 +1043,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -971,13 +1057,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -986,13 +1071,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1001,13 +1085,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1016,13 +1099,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1031,13 +1113,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1046,13 +1127,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1061,13 +1141,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1076,13 +1155,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1091,13 +1169,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1106,13 +1183,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1121,13 +1197,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1136,13 +1211,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1151,13 +1225,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1166,13 +1239,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1181,13 +1253,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1196,13 +1267,28 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "hps_att_check_1",
+    "question": "I bought tickets for a trip to the moon this summer.",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "True",
+      "False"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "qsf",
+    "check": "instructed",
+    "note": "Wording from qualtrics_experiment.qsf, as the record cites it; only pass/fail flags were deposited."
    },
    {
     "type": "question",
@@ -1211,13 +1297,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1226,13 +1311,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1241,13 +1325,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1256,13 +1339,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1271,13 +1353,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1286,13 +1367,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1301,13 +1381,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1316,13 +1395,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1331,13 +1409,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1346,13 +1423,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1361,13 +1437,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1376,13 +1451,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1391,13 +1465,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1406,13 +1479,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1421,13 +1493,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1436,13 +1507,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1451,13 +1521,28 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "hps_att_check_2",
+    "question": "I have a dinosaur as a pet at home.",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "True",
+      "False"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "qsf",
+    "check": "instructed",
+    "note": "Wording from qualtrics_experiment.qsf, as the record cites it; only pass/fail flags were deposited."
    },
    {
     "type": "question",
@@ -1466,13 +1551,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1481,13 +1565,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1496,13 +1579,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1511,13 +1593,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1526,13 +1607,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1541,13 +1621,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1556,13 +1635,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1571,13 +1649,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1586,13 +1663,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1601,13 +1677,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1616,13 +1691,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1631,13 +1705,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1646,13 +1719,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -1661,28 +1733,27 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "stimuli",
     "variable-name": "caq_instructions",
-    "content": "The following questions concern your achievements in various creative domains. First, indicate the areas in which you have a particular talent or higher-than-average skills.",
-    "text_source": "paraphrased",
-    "condition": "caq"
+    "content": "INSTRUCTIONS Below you'll find several statements describing achievements in certain areas. First, please indicate the areas in which you feel you have more talent, skill or training than the average person . There are no right or wrong answers.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
     "variable-name": "idiff_caq_domains",
-    "question": "In which of the following areas do you consider that you have a particular talent or higher-than-average skills? (Select all that apply.)",
+    "question": "Please indicate the areas in which you feel you have more talent, skill or training than the average person.",
     "response-constraints": {
      "type": "mcq",
      "options": [
+      "I have no particular talent or skill in these areas.",
       "Visual arts (e.g. drawing, painting or sculpture)",
       "Music, including singing",
       "Dance",
@@ -1694,19 +1765,298 @@
       "Theater and film / acting",
       "Culinary arts"
      ],
-     "max-choices": 10
+     "max-choices": 11
     },
-    "text_source": "paraphrased",
-    "condition": "caq"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_invention_achievements",
+    "question": "Indicate all the statements that apply to you in the field of invention .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I regularly find new uses for household objects.",
+      "I designed an invention and worked on its design flaws.",
+      "I created an original software program for a computer.",
+      "I built a prototype of one of the inventions I'd imagined.",
+      "I sold one of my inventions to people I know.",
+      "I received a patent for one of my inventions.",
+      "I sold one of my inventions to a manufacturing company."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Inventions"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_arts_achievements",
+    "question": "Indicate all the statements that apply to you in the field of visual arts .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I've taken lessons in this field.",
+      "People have commented on my talent in this field.",
+      "I've won a prize or prizes in front of a jury at an art exhibition.",
+      "My work has been exhibited in a gallery.",
+      "I sold one of my works.",
+      "A local organization mentioned my work.",
+      "A national or international organization has mentioned my work."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Visual arts (e.g. drawing, painting or sculpture)"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_architect_achievements",
+    "question": "List all the statements that apply to you in the field of architecture .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I designed an original structure.",
+      "A structure I designed was built.",
+      "I sold an original architectural creation.",
+      "One structure I designed and sold was built by a professional.",
+      "My architectural creation has won one or more awards.",
+      "A local organization mentioned my architectural creation.",
+      "A national or international organization has mentioned my architectural creation."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Architectural design"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_music_achievements",
+    "question": "List all the statements that apply to you in the field of music, including singing .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I can play one or more musical instruments.",
+      "I played in a well-known orchestra or band.",
+      "I composed an original piece of music.",
+      "A local organization mentioned my musical talents.",
+      "My composition has been recorded.",
+      "I have publicly sold recordings of my own compositions.",
+      "A national or international organization has mentioned my musical compositions."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Music, including singing"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_dance_achievements",
+    "question": "Indicate all the statements that apply to you in the field of dance .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I danced in a company whose qualities are appreciated by the public.",
+      "I choreographed an original dance number.",
+      "My choreography was performed in public.",
+      "A local organization mentioned my dancing skills.",
+      "I choreographed a professional dance.",
+      "A local organization mentioned my choreography.",
+      "A national or international organization talked about my choreography."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Dance"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_write_achievements",
+    "question": "List all the statements that apply to you in the field of creative writing .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I wrote a short original work, like a poem or a short story.",
+      "My work has won an award or prize.",
+      "I wrote a long original work, like an epic, a novel or a play.",
+      "I sold my work to a publisher.",
+      "My literary work has been printed and/or sold publicly.",
+      "A local organization mentioned my literary work.",
+      "A national or international organization has mentioned my literary work."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Creative writing"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_humour_achievements",
+    "question": "List all the statements that apply to you in the field of humor .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "People have often commented on my original sense of humor.",
+      "I created jokes that are now regularly repeated by others.",
+      "I've written jokes for other people.",
+      "I wrote a joke or a cartoon that was published.",
+      "I worked as a professional comedian.",
+      "I worked as a professional comedian. (2)"
+     ],
+     "max-choices": 7
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Humor / comedy"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_cook_achievements",
+    "question": "Indicate all the statements that apply to you in the field of culinary arts .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I often experiment with recipes.",
+      "My recipes have been published in a local cookbook.",
+      "My recipes have been used in restaurants and other public places.",
+      "I've been asked to prepare food for celebrities and dignitaries.",
+      "My recipes have won prizes and awards.",
+      "I received a degree in culinary arts.",
+      "My recipes have been published nationally and internationally."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Culinary arts"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_science_achievements",
+    "question": "Indicate all the statements that apply to you in the field of scientific research .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I often think about how scientific problems can be solved.",
+      "I've won a prize at a science fair or local competition.",
+      "I received a scholarship based on my work in science or medicine.",
+      "I have authored or co-authored a study published in a scientific journal.",
+      "I have won a national or international prize in the field of science or medicine.",
+      "I have received funding (or a scholarship) to continue my work in science or medicine.",
+      "My work has been cited by other scientists in national publications."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Scientific research"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_acting_achievements",
+    "question": "List all the statements that apply to you in the field of theater and film / acting .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field",
+      "I've acted in plays and films.",
+      "A local organization mentioned my acting skills.",
+      "I've directed or produced a play or film.",
+      "I've won an award or prize for acting in a play or film.",
+      "I've been paid to act in theater or film.",
+      "I've been paid to direct a theater production or a film.",
+      "A national or international organization has mentioned my work in theater or film."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Theater and film / acting"
+    }
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "end_slide",
+    "content": "Thank you, the experiment is over. If you were in fullscreen move, press F11 to get out. Please answer these last demographic questions. Click VALIDATE to complete the experience and obtain your validation code.",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comment_distraction",
+    "question": "Do you have comments concerning elements that distracted you during the tasks (like friends, noisy place, and so on)?",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comment_general",
+    "question": "Do you have any general comments or issues that you want to report?",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "text_source": "extracted"
    }
   ],
   [
    {
     "type": "stimuli",
+    "variable-name": "intro_creativity_tasks",
+    "content": "The entire experiment should take about 20 minutes. You will now have to complete 4 creativity tasks.",
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
     "variable-name": "instructions_ct",
-    "content": "INSTRUCTIONS In the following creativity task... You will be asked to come up with as many consequences or possible results for two unusual situations as you can. It may seem strange or bizarre to you, but we ask that you participate as best you can. Creative ideas strike people as clever, unusual, interesting, uncommon, humorous, innovative or different.",
-    "text_source": "extracted",
-    "condition": "ct"
+    "content": "INSTRUCTIONS In the next creativity exercise... You will have to find as many creative consequences as possible to 2 unusual situations. This may be odd, but try to participate as best you can. Creative ideas are unusual, interesting, humorous or different.",
+    "text_source": "extracted"
    },
    {
     "type": "group",
@@ -1719,10 +2069,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_cut_gravity",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if the force of gravity was cut in half?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if the force of gravity was cut in half? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_cut_gravity",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_cut_gravity",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if the force of gravity was cut in half?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1735,22 +2105,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_cut_gravity",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -1761,10 +2116,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_height_shrank",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if everyone shrank to 30 centimeters (12 inches) in height? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_height_shrank",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_height_shrank",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if everyone shrank to 30 centimeters (12 inches) in height?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1777,22 +2152,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_height_shrank",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -1803,10 +2163,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_live_alone",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if humans all preferred to live alone?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if humans all preferred to live alone? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_live_alone",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_live_alone",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if humans all preferred to live alone?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1819,22 +2199,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_live_alone",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -1845,10 +2210,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_lost_read_write",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone lost the ability to read and write?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if everyone lost the ability to read and write? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_lost_read_write",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_lost_read_write",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if everyone lost the ability to read and write?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1861,22 +2246,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_lost_read_write",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -1887,10 +2257,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_need_food",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if people no longer needed food to live?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if people no longer needed food to live? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_need_food",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_need_food",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if people no longer needed food to live?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1903,22 +2293,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_need_food",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -1929,10 +2304,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_need_sleep",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if people didn't need or want to sleep anymore?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if people didn't need or want to sleep anymore? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_need_sleep",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_need_sleep",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if people didn't need or want to sleep anymore?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1945,22 +2340,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_need_sleep",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -1971,10 +2351,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_unable_arms_hands",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if no one could use their arms or hands?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if no one could use their arms or hands? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_unable_arms_hands",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_unable_arms_hands",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if no one could use their arms or hands?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -1987,22 +2387,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_unable_arms_hands",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2013,10 +2398,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_ct_unable_stay_upright",
-        "question": "Think of as many unusual consequences or results as you can for the following situation: what if everyone was unable to stay upright for more than a moment?",
+        "question": "INSTRUCTIONS The next unusual situation is: what if everyone was unable to stay upright for more than a moment? What would be the consequences to this situation? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "ct",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_ct_unable_stay_upright",
+        "content": "Time is up, or you have reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_ct_unable_stay_upright",
+        "question": "How easy was it for you to come up with original consequences to the situation: what if everyone was unable to stay upright for more than a moment?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2029,22 +2434,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "ct"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_ct_unable_stay_upright",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "ct"
+        "text_source": "extracted"
        }
       ]
      }
@@ -2053,10 +2443,15 @@
    },
    {
     "type": "stimuli",
+    "variable-name": "halfway_slide",
+    "content": "You are halfway through the creativity tasks, you have 2 left.",
+    "text_source": "extracted"
+   },
+   {
+    "type": "stimuli",
     "variable-name": "instructions_aut",
-    "content": "INSTRUCTIONS In the following creativity task... You will be asked to come up with as many creative uses for two objects as you can. It may seem strange or bizarre to you, but we ask that you participate as best you can. Creative ideas strike people as clever, unusual, interesting, uncommon, humorous, innovative or different.",
-    "text_source": "extracted",
-    "condition": "aut"
+    "content": "INSTRUCTIONS In the next creativity exercise... You'll need to find as many creative uses as possible for 2 objects. This may be odd, but try to participate as best you can. Creative ideas are unusual, interesting, humorous or different.",
+    "text_source": "extracted"
    },
    {
     "type": "group",
@@ -2069,10 +2464,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_book",
-        "question": "Think of as many creative and original uses as you can for the following object: book.",
+        "question": "INSTRUCTIONS The next object is a book. How can we use a book? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_book",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_book",
+        "question": "How easy or difficult was it for you to find original uses for a book?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2085,22 +2500,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_book",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2111,10 +2511,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_bottle",
-        "question": "Think of as many creative and original uses as you can for the following object: bottle.",
+        "question": "INSTRUCTIONS The next object is a bottle. How can we use a bottle? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_bottle",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_bottle",
+        "question": "How easy or difficult was it for you to find original uses for a bottle?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2127,22 +2547,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_bottle",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2153,10 +2558,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_brick",
-        "question": "Think of as many creative and original uses as you can for the following object: brick.",
+        "question": "INSTRUCTIONS The next object is a brick. How can we use a brick? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_brick",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_brick",
+        "question": "How easy or difficult was it for you to find original uses for a brick?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2169,22 +2594,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_brick",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2195,10 +2605,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_fork",
-        "question": "Think of as many creative and original uses as you can for the following object: fork.",
+        "question": "INSTRUCTIONS The next object is a fork. How can we use a fork? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_fork",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_fork",
+        "question": "How easy or difficult was it for you to find original uses for a fork?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2211,22 +2641,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_fork",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2237,10 +2652,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_pants",
-        "question": "Think of as many creative and original uses as you can for the following object: pants.",
+        "question": "INSTRUCTIONS The next object is pants. How can we use pants? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_pants",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_pants",
+        "question": "How easy or difficult was it for you to find original uses for pants?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2253,22 +2688,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_pants",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2279,10 +2699,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_shoe",
-        "question": "Think of as many creative and original uses as you can for the following object: shoe.",
+        "question": "INSTRUCTIONS The next object is a shoe. How can we use a shoe? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_shoe",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_shoe",
+        "question": "How easy or difficult was it for you to find original uses for a shoe?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2295,22 +2735,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_shoe",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2321,10 +2746,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_table",
-        "question": "Think of as many creative and original uses as you can for the following object: table.",
+        "question": "INSTRUCTIONS The next object is a table. How can we use a table? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_table",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_table",
+        "question": "How easy or difficult was it for you to find original uses for a table?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2337,22 +2782,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_table",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      },
@@ -2363,10 +2793,30 @@
        {
         "type": "timed-ideas",
         "variable-name": "idea_aut_tire",
-        "question": "Think of as many creative and original uses as you can for the following object: tire.",
+        "question": "INSTRUCTIONS The next object is a tire. How can we use a tire? You have a maximum of 2 minutes to write down ideas. If you run out of ideas, wait until the time is up.",
         "condition": "aut",
         "n_fields": 15,
-        "duration_ms": 120000
+        "duration_ms": 120000,
+        "text_source": "extracted"
+       },
+       {
+        "type": "stimuli",
+        "variable-name": "timeup_aut_tire",
+        "content": "Time's up, or you've reached the maximum number of ideas you can give.",
+        "text_source": "extracted"
+       },
+       {
+        "type": "question",
+        "variable-name": "cogload_aut_tire",
+        "question": "How easy or difficult was it for you to find original uses for a tire?",
+        "response-constraints": {
+         "type": "scalar",
+         "scale-min": 1,
+         "scale-max": 7,
+         "scale-min-desc": "Very easy",
+         "scale-max-desc": "Very difficult"
+        },
+        "text_source": "extracted"
        },
        {
         "type": "question",
@@ -2379,22 +2829,7 @@
          "scale-min-desc": "Really not original",
          "scale-max-desc": "Highly original"
         },
-        "text_source": "extracted",
-        "condition": "aut"
-       },
-       {
-        "type": "question",
-        "variable-name": "cogload_aut_tire",
-        "question": "How much mental effort did you invest in this task?",
-        "response-constraints": {
-         "type": "scalar",
-         "scale-min": 1,
-         "scale-max": 7,
-         "scale-min-desc": "very little mental effort",
-         "scale-max-desc": "very much mental effort"
-        },
-        "text_source": "paraphrased",
-        "condition": "aut"
+        "text_source": "extracted"
        }
       ]
      }
@@ -2404,9 +2839,8 @@
    {
     "type": "stimuli",
     "variable-name": "csb_instructions",
-    "content": "Please indicate the extent to which you agree with each of the following statements, from 1 (strongly disagree) to 5 (strongly agree).",
-    "text_source": "extracted",
-    "condition": "csb"
+    "content": "INSTRUCTIONS In the following, you will see a series of statements about yourself. Read each one very carefully and decide how much you agree or disagree with that statement. Answer each statement, even if you are not completely sure of your answer.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2416,11 +2850,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2430,11 +2863,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2444,11 +2876,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2458,11 +2889,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2472,11 +2902,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2486,18 +2915,16 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "csb"
+    "text_source": "extracted"
    },
    {
     "type": "stimuli",
     "variable-name": "temps_instructions",
-    "content": "Please indicate the extent to which you agree with each of the following statements, from 1 (strongly disagree) to 5 (strongly agree).",
-    "text_source": "extracted",
-    "condition": "temps"
+    "content": "INSTRUCTIONS In the following, you will see a series of statements about yourself. Read each one very carefully and decide how much you agree or disagree with that statement. Answer each statement, even if you are not completely sure of your answer.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2507,11 +2934,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2521,11 +2947,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2535,11 +2960,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2549,11 +2973,25 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "temps_att_check",
+    "question": "I have to swim the Atlantic Ocean every morning to get to work.",
+    "response-constraints": {
+     "type": "scalar",
+     "scale-min": 1,
+     "scale-max": 5,
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
+    },
+    "text_source": "qsf",
+    "check": "instructed",
+    "note": "Wording from qualtrics_experiment.qsf, as the record cites it; only pass/fail flags were deposited."
    },
    {
     "type": "question",
@@ -2563,11 +3001,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2577,11 +3014,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2591,11 +3027,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2605,11 +3040,10 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2619,18 +3053,16 @@
      "type": "scalar",
      "scale-min": 1,
      "scale-max": 5,
-     "scale-min-desc": "strongly disagree",
-     "scale-max-desc": "strongly agree"
+     "scale-min-desc": "Strongly disagree",
+     "scale-max-desc": "Strongly agree"
     },
-    "text_source": "extracted",
-    "condition": "temps"
+    "text_source": "extracted"
    },
    {
     "type": "stimuli",
     "variable-name": "hps_instructions",
-    "content": "Please indicate whether each of the following statements applies to you by choosing \"true\" or \"false\".",
-    "text_source": "paraphrased",
-    "condition": "hps"
+    "content": "INSTRUCTIONS In the following, you will see a series of statements about yourself. Read each one very carefully and answer each statement true or false. It is important that you answer every statement, even if you are not quite certain which is the best answer. An occasional statement may refer to experiences that you have had only when taking drugs. Unless you have had the experience at other times (when not under the influence of drugs), mark it as if you have not had that experience (i.e., false). Some statements may sound like others, but all of them are slightly different. Answer each statement individually, and don't worry about how you answered a somewhat similar previous statement.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2639,13 +3071,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2654,13 +3085,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2669,13 +3099,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2684,13 +3113,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2699,13 +3127,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2714,13 +3141,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2729,13 +3155,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2744,13 +3169,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2759,13 +3183,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2774,13 +3197,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2789,13 +3211,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2804,13 +3225,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2819,13 +3239,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2834,13 +3253,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2849,13 +3267,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2864,13 +3281,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2879,13 +3295,28 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "hps_att_check_1",
+    "question": "I bought tickets for a trip to the moon this summer.",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "True",
+      "False"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "qsf",
+    "check": "instructed",
+    "note": "Wording from qualtrics_experiment.qsf, as the record cites it; only pass/fail flags were deposited."
    },
    {
     "type": "question",
@@ -2894,13 +3325,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2909,13 +3339,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2924,13 +3353,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2939,13 +3367,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2954,13 +3381,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2969,13 +3395,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2984,13 +3409,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -2999,13 +3423,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3014,13 +3437,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3029,13 +3451,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3044,13 +3465,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3059,13 +3479,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3074,13 +3493,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3089,13 +3507,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3104,13 +3521,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3119,13 +3535,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3134,13 +3549,28 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "hps_att_check_2",
+    "question": "I have a dinosaur as a pet at home.",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "True",
+      "False"
+     ],
+     "max-choices": 1
+    },
+    "text_source": "qsf",
+    "check": "instructed",
+    "note": "Wording from qualtrics_experiment.qsf, as the record cites it; only pass/fail flags were deposited."
    },
    {
     "type": "question",
@@ -3149,13 +3579,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3164,13 +3593,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3179,13 +3607,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3194,13 +3621,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3209,13 +3635,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3224,13 +3649,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3239,13 +3663,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3254,13 +3677,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3269,13 +3691,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3284,13 +3705,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3299,13 +3719,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3314,13 +3733,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3329,13 +3747,12 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "question",
@@ -3344,28 +3761,27 @@
     "response-constraints": {
      "type": "mcq",
      "options": [
-      "true",
-      "false"
+      "True",
+      "False"
      ],
      "max-choices": 1
     },
-    "text_source": "extracted",
-    "condition": "hps"
+    "text_source": "extracted"
    },
    {
     "type": "stimuli",
     "variable-name": "caq_instructions",
-    "content": "The following questions concern your achievements in various creative domains. First, indicate the areas in which you have a particular talent or higher-than-average skills.",
-    "text_source": "paraphrased",
-    "condition": "caq"
+    "content": "INSTRUCTIONS Below you'll find several statements describing achievements in certain areas. First, please indicate the areas in which you feel you have more talent, skill or training than the average person . There are no right or wrong answers.",
+    "text_source": "extracted"
    },
    {
     "type": "question",
     "variable-name": "idiff_caq_domains",
-    "question": "In which of the following areas do you consider that you have a particular talent or higher-than-average skills? (Select all that apply.)",
+    "question": "Please indicate the areas in which you feel you have more talent, skill or training than the average person.",
     "response-constraints": {
      "type": "mcq",
      "options": [
+      "I have no particular talent or skill in these areas.",
       "Visual arts (e.g. drawing, painting or sculpture)",
       "Music, including singing",
       "Dance",
@@ -3377,10 +3793,284 @@
       "Theater and film / acting",
       "Culinary arts"
      ],
-     "max-choices": 10
+     "max-choices": 11
     },
-    "text_source": "paraphrased",
-    "condition": "caq"
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_invention_achievements",
+    "question": "Indicate all the statements that apply to you in the field of invention .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I regularly find new uses for household objects.",
+      "I designed an invention and worked on its design flaws.",
+      "I created an original software program for a computer.",
+      "I built a prototype of one of the inventions I'd imagined.",
+      "I sold one of my inventions to people I know.",
+      "I received a patent for one of my inventions.",
+      "I sold one of my inventions to a manufacturing company."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Inventions"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_science_achievements",
+    "question": "Indicate all the statements that apply to you in the field of scientific research .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I often think about how scientific problems can be solved.",
+      "I've won a prize at a science fair or local competition.",
+      "I received a scholarship based on my work in science or medicine.",
+      "I have authored or co-authored a study published in a scientific journal.",
+      "I have won a national or international prize in the field of science or medicine.",
+      "I have received funding (or a scholarship) to continue my work in science or medicine.",
+      "My work has been cited by other scientists in national publications."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Scientific research"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_write_achievements",
+    "question": "List all the statements that apply to you in the field of creative writing .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I wrote a short original work, like a poem or a short story.",
+      "My work has won an award or prize.",
+      "I wrote a long original work, like an epic, a novel or a play.",
+      "I sold my work to a publisher.",
+      "My literary work has been printed and/or sold publicly.",
+      "A local organization mentioned my literary work.",
+      "A national or international organization has mentioned my literary work."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Creative writing"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_arts_achievements",
+    "question": "Indicate all the statements that apply to you in the field of visual arts .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I've taken lessons in this field.",
+      "People have commented on my talent in this field.",
+      "I've won a prize or prizes in front of a jury at an art exhibition.",
+      "My work has been exhibited in a gallery.",
+      "I sold one of my works.",
+      "A local organization mentioned my work.",
+      "A national or international organization has mentioned my work."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Visual arts (e.g. drawing, painting or sculpture)"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_music_achievements",
+    "question": "List all the statements that apply to you in the field of music, including singing .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I can play one or more musical instruments.",
+      "I played in a well-known orchestra or band.",
+      "I composed an original piece of music.",
+      "A local organization mentioned my musical talents.",
+      "My composition has been recorded.",
+      "I have publicly sold recordings of my own compositions.",
+      "A national or international organization has mentioned my musical compositions."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Music, including singing"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_architect_achievements",
+    "question": "List all the statements that apply to you in the field of architecture .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I designed an original structure.",
+      "A structure I designed was built.",
+      "I sold an original architectural creation.",
+      "One structure I designed and sold was built by a professional.",
+      "My architectural creation has won one or more awards.",
+      "A local organization mentioned my architectural creation.",
+      "A national or international organization has mentioned my architectural creation."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Architectural design"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_dance_achievements",
+    "question": "Indicate all the statements that apply to you in the field of dance .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I danced in a company whose qualities are appreciated by the public.",
+      "I choreographed an original dance number.",
+      "My choreography was performed in public.",
+      "A local organization mentioned my dancing skills.",
+      "I choreographed a professional dance.",
+      "A local organization mentioned my choreography.",
+      "A national or international organization talked about my choreography."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Dance"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_humour_achievements",
+    "question": "List all the statements that apply to you in the field of humor .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "People have often commented on my original sense of humor.",
+      "I created jokes that are now regularly repeated by others.",
+      "I've written jokes for other people.",
+      "I wrote a joke or a cartoon that was published.",
+      "I worked as a professional comedian.",
+      "I worked as a professional comedian. (2)"
+     ],
+     "max-choices": 7
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Humor / comedy"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_acting_achievements",
+    "question": "List all the statements that apply to you in the field of theater and film / acting .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field",
+      "I've acted in plays and films.",
+      "A local organization mentioned my acting skills.",
+      "I've directed or produced a play or film.",
+      "I've won an award or prize for acting in a play or film.",
+      "I've been paid to act in theater or film.",
+      "I've been paid to direct a theater production or a film.",
+      "A national or international organization has mentioned my work in theater or film."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Theater and film / acting"
+    }
+   },
+   {
+    "type": "question",
+    "variable-name": "caq_cook_achievements",
+    "question": "Indicate all the statements that apply to you in the field of culinary arts .",
+    "response-constraints": {
+     "type": "mcq",
+     "options": [
+      "I have no obvious training, talent or skill in this field.",
+      "I often experiment with recipes.",
+      "My recipes have been published in a local cookbook.",
+      "My recipes have been used in restaurants and other public places.",
+      "I've been asked to prepare food for celebrities and dignitaries.",
+      "My recipes have won prizes and awards.",
+      "I received a degree in culinary arts.",
+      "My recipes have been published nationally and internationally."
+     ],
+     "max-choices": 8
+    },
+    "text_source": "extracted",
+    "show_if": {
+     "variable": "idiff_caq_domains",
+     "op": "contains",
+     "value": "Culinary arts"
+    }
+   },
+   {
+    "type": "stimuli",
+    "variable-name": "end_slide",
+    "content": "Thank you, the experiment is over. If you were in fullscreen move, press F11 to get out. Please answer these last demographic questions. Click VALIDATE to complete the experience and obtain your validation code.",
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comment_distraction",
+    "question": "Do you have comments concerning elements that distracted you during the tasks (like friends, noisy place, and so on)?",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "text_source": "extracted"
+   },
+   {
+    "type": "question",
+    "variable-name": "comment_general",
+    "question": "Do you have any general comments or issues that you want to report?",
+    "response-constraints": {
+     "type": "free-response",
+     "response-limit": null
+    },
+    "text_source": "extracted"
    }
   ]
  ],
@@ -3394,7 +4084,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 4.14,
+ "reward_usd": 4.76,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -3420,13 +4110,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 21 minutes."
+    "Your participation will take approximately 24 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $4.14, paid through Prolific, as payment for your participation."
+    "You will receive $4.76, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -3457,7 +4147,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 21 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $4.14, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 20.7,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 24 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $4.76, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 23.8,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/kxcwm/"
 }

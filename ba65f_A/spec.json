@@ -2,14 +2,14 @@
  "app": "ba65f_A",
  "study": "ba65f",
  "archive_experiment": "experiment_1",
- "target": "f16",
+ "target": "f09",
  "title": "Short scenarios about two friends",
  "blocks": [
   {
    "type": "stimuli",
    "variable-name": "intro",
    "content": "In this study you will read a series of short scenarios about two friends, John and Bob. In each scenario John finds himself in a situation, and his friend Bob has the opportunity to take an action to help him. Please treat each scenario independently, as if the people involved were different each time.",
-   "text_source": "paraphrased"
+   "text_source": "synthesized"
   },
   {
    "type": "group",
@@ -23,6 +23,7 @@
        "type": "stimuli",
        "variable-name": "Dog_situation",
        "content": "John's dog gets hit by a car.",
+       "condition": "Dog",
        "text_source": "extracted"
       },
       {
@@ -32,12 +33,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Dog"
+       "condition": "Dog",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -51,8 +50,8 @@
            "type": "stimuli",
            "variable-name": "Dog_High_action",
            "content": "His friend Bob takes time off to help care for the dog while John is at work during the day.",
-           "text_source": "extracted",
-           "condition": "Dog_High"
+           "condition": "Dog_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -65,8 +64,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_High"
+           "condition": "Dog_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -79,8 +78,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_High"
+           "condition": "Dog_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -93,8 +92,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_High"
+           "condition": "Dog_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -107,8 +106,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_High"
+           "condition": "Dog_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -120,8 +119,8 @@
            "type": "stimuli",
            "variable-name": "Dog_Low_action",
            "content": "His friend Bob donates $20 to their GoFundMe page to help cover vet bills.",
-           "text_source": "extracted",
-           "condition": "Dog_Low"
+           "condition": "Dog_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -134,8 +133,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_Low"
+           "condition": "Dog_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -148,8 +147,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_Low"
+           "condition": "Dog_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -162,8 +161,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_Low"
+           "condition": "Dog_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -176,8 +175,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Dog_Low"
+           "condition": "Dog_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -193,6 +192,7 @@
        "type": "stimuli",
        "variable-name": "Research_situation",
        "content": "John is up late at night working on a big research presentation for work.",
+       "condition": "Research",
        "text_source": "extracted"
       },
       {
@@ -202,12 +202,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Research"
+       "condition": "Research",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -221,8 +219,8 @@
            "type": "stimuli",
            "variable-name": "Research_High_action",
            "content": "His friend Bob listens to a practice run of his presentation and provides tips and feedback.",
-           "text_source": "extracted",
-           "condition": "Research_High"
+           "condition": "Research_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -235,8 +233,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_High"
+           "condition": "Research_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -249,8 +247,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_High"
+           "condition": "Research_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -263,8 +261,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_High"
+           "condition": "Research_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -277,8 +275,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_High"
+           "condition": "Research_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -290,8 +288,8 @@
            "type": "stimuli",
            "variable-name": "Research_Low_action",
            "content": "His friend Bob brings him a cup of coffee or tea as they prepare.",
-           "text_source": "extracted",
-           "condition": "Research_Low"
+           "condition": "Research_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -304,8 +302,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_Low"
+           "condition": "Research_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -318,8 +316,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_Low"
+           "condition": "Research_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -332,8 +330,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_Low"
+           "condition": "Research_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -346,8 +344,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Research_Low"
+           "condition": "Research_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -363,6 +361,7 @@
        "type": "stimuli",
        "variable-name": "Divorce_situation",
        "content": "John is going through a divorce.",
+       "condition": "Divorce",
        "text_source": "extracted"
       },
       {
@@ -372,12 +371,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Divorce"
+       "condition": "Divorce",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -391,8 +388,8 @@
            "type": "stimuli",
            "variable-name": "Divorce_High_action",
            "content": "His friend Bob accompanies him to divorce attorney consultation appointments.",
-           "text_source": "extracted",
-           "condition": "Divorce_High"
+           "condition": "Divorce_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -405,8 +402,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_High"
+           "condition": "Divorce_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -419,8 +416,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_High"
+           "condition": "Divorce_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -433,8 +430,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_High"
+           "condition": "Divorce_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -447,8 +444,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_High"
+           "condition": "Divorce_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -460,8 +457,8 @@
            "type": "stimuli",
            "variable-name": "Divorce_Low_action",
            "content": "His friend Bob sends a sympathy card expressing that he is there if John needs anything.",
-           "text_source": "extracted",
-           "condition": "Divorce_Low"
+           "condition": "Divorce_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -474,8 +471,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_Low"
+           "condition": "Divorce_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -488,8 +485,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_Low"
+           "condition": "Divorce_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -502,8 +499,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_Low"
+           "condition": "Divorce_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -516,8 +513,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Divorce_Low"
+           "condition": "Divorce_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -533,6 +530,7 @@
        "type": "stimuli",
        "variable-name": "Exam_situation",
        "content": "John fails a big exam and must retake it.",
+       "condition": "Exam",
        "text_source": "extracted"
       },
       {
@@ -542,12 +540,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Exam"
+       "condition": "Exam",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -561,8 +557,8 @@
            "type": "stimuli",
            "variable-name": "Exam_High_action",
            "content": "His friend Bob helps him study for retaking the exam by organizing study sessions to review concepts and course material.",
-           "text_source": "extracted",
-           "condition": "Exam_High"
+           "condition": "Exam_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -575,8 +571,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_High"
+           "condition": "Exam_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -589,8 +585,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_High"
+           "condition": "Exam_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -603,8 +599,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_High"
+           "condition": "Exam_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -617,8 +613,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_High"
+           "condition": "Exam_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -630,8 +626,8 @@
            "type": "stimuli",
            "variable-name": "Exam_Low_action",
            "content": "His friend Bob sends a supportive text message.",
-           "text_source": "extracted",
-           "condition": "Exam_Low"
+           "condition": "Exam_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -644,8 +640,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_Low"
+           "condition": "Exam_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -658,8 +654,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_Low"
+           "condition": "Exam_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -672,8 +668,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_Low"
+           "condition": "Exam_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -686,8 +682,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Exam_Low"
+           "condition": "Exam_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -703,6 +699,7 @@
        "type": "stimuli",
        "variable-name": "Job_situation",
        "content": "John loses his job.",
+       "condition": "Job",
        "text_source": "extracted"
       },
       {
@@ -712,12 +709,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Job"
+       "condition": "Job",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -731,8 +726,8 @@
            "type": "stimuli",
            "variable-name": "Job_High_action",
            "content": "His friend Bob helps him look online for job advertisements and helps him update his CV.",
-           "text_source": "extracted",
-           "condition": "Job_High"
+           "condition": "Job_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -745,8 +740,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_High"
+           "condition": "Job_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -759,8 +754,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_High"
+           "condition": "Job_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -773,8 +768,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_High"
+           "condition": "Job_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -787,8 +782,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_High"
+           "condition": "Job_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -800,8 +795,8 @@
            "type": "stimuli",
            "variable-name": "Job_Low_action",
            "content": "His friend Bob takes him on a long walk to provide him with a healthy distraction.",
-           "text_source": "extracted",
-           "condition": "Job_Low"
+           "condition": "Job_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -814,8 +809,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_Low"
+           "condition": "Job_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -828,8 +823,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_Low"
+           "condition": "Job_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -842,8 +837,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_Low"
+           "condition": "Job_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -856,8 +851,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Job_Low"
+           "condition": "Job_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -873,6 +868,7 @@
        "type": "stimuli",
        "variable-name": "Laptop_situation",
        "content": "John has their laptop stolen.",
+       "condition": "Laptop",
        "text_source": "extracted"
       },
       {
@@ -882,12 +878,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Laptop"
+       "condition": "Laptop",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -901,8 +895,8 @@
            "type": "stimuli",
            "variable-name": "Laptop_High_action",
            "content": "His friend Bob lends him his laptop while John waits to get a new one.",
-           "text_source": "extracted",
-           "condition": "Laptop_High"
+           "condition": "Laptop_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -915,8 +909,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_High"
+           "condition": "Laptop_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -929,8 +923,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_High"
+           "condition": "Laptop_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -943,8 +937,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_High"
+           "condition": "Laptop_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -957,8 +951,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_High"
+           "condition": "Laptop_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -970,8 +964,8 @@
            "type": "stimuli",
            "variable-name": "Laptop_Low_action",
            "content": "His friend Bob lends him his library card so John can use the computers there.",
-           "text_source": "extracted",
-           "condition": "Laptop_Low"
+           "condition": "Laptop_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -984,8 +978,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_Low"
+           "condition": "Laptop_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -998,8 +992,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_Low"
+           "condition": "Laptop_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1012,8 +1006,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_Low"
+           "condition": "Laptop_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1026,8 +1020,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Laptop_Low"
+           "condition": "Laptop_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -1043,6 +1037,7 @@
        "type": "stimuli",
        "variable-name": "Death_situation",
        "content": "John's mom dies unexpectedly.",
+       "condition": "Death",
        "text_source": "extracted"
       },
       {
@@ -1052,12 +1047,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Death"
+       "condition": "Death",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -1071,8 +1064,8 @@
            "type": "stimuli",
            "variable-name": "Death_High_action",
            "content": "His friend Bob handles calling and sorting out his mother's life insurance policy paperwork.",
-           "text_source": "extracted",
-           "condition": "Death_High"
+           "condition": "Death_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1085,8 +1078,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_High"
+           "condition": "Death_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1099,8 +1092,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_High"
+           "condition": "Death_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1113,8 +1106,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_High"
+           "condition": "Death_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1127,8 +1120,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_High"
+           "condition": "Death_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -1140,8 +1133,8 @@
            "type": "stimuli",
            "variable-name": "Death_Low_action",
            "content": "His friend Bob sends a condolence card and flowers.",
-           "text_source": "extracted",
-           "condition": "Death_Low"
+           "condition": "Death_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1154,8 +1147,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_Low"
+           "condition": "Death_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1168,8 +1161,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_Low"
+           "condition": "Death_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1182,8 +1175,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_Low"
+           "condition": "Death_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1196,8 +1189,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Death_Low"
+           "condition": "Death_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -1213,6 +1206,7 @@
        "type": "stimuli",
        "variable-name": "Car_situation",
        "content": "John is in a fender-bender and his car needs to be repaired.",
+       "condition": "Car",
        "text_source": "extracted"
       },
       {
@@ -1222,12 +1216,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Car"
+       "condition": "Car",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -1241,8 +1233,8 @@
            "type": "stimuli",
            "variable-name": "Car_High_action",
            "content": "His friend Bob drives him around while his car is being fixed.",
-           "text_source": "extracted",
-           "condition": "Car_High"
+           "condition": "Car_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1255,8 +1247,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_High"
+           "condition": "Car_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1269,8 +1261,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_High"
+           "condition": "Car_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1283,8 +1275,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_High"
+           "condition": "Car_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1297,8 +1289,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_High"
+           "condition": "Car_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -1310,8 +1302,8 @@
            "type": "stimuli",
            "variable-name": "Car_Low_action",
            "content": "His friend Bob recommended an autobody shop to repair the damage to his car.",
-           "text_source": "extracted",
-           "condition": "Car_Low"
+           "condition": "Car_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1324,8 +1316,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_Low"
+           "condition": "Car_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1338,8 +1330,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_Low"
+           "condition": "Car_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1352,8 +1344,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_Low"
+           "condition": "Car_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1366,8 +1358,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Car_Low"
+           "condition": "Car_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -1383,6 +1375,7 @@
        "type": "stimuli",
        "variable-name": "Sick_situation",
        "content": "John is out sick from work with a sudden stomach-bug.",
+       "condition": "Sick",
        "text_source": "extracted"
       },
       {
@@ -1392,12 +1385,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Sick"
+       "condition": "Sick",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -1411,8 +1402,8 @@
            "type": "stimuli",
            "variable-name": "Sick_High_action",
            "content": "His work friend Bob covers his workload so he doesn't miss anything while he's gone.",
-           "text_source": "extracted",
-           "condition": "Sick_High"
+           "condition": "Sick_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1425,8 +1416,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_High"
+           "condition": "Sick_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1439,8 +1430,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_High"
+           "condition": "Sick_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1453,8 +1444,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_High"
+           "condition": "Sick_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1467,8 +1458,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_High"
+           "condition": "Sick_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -1480,8 +1471,8 @@
            "type": "stimuli",
            "variable-name": "Sick_Low_action",
            "content": "His work friend Bob texts to ask if there's anything he can do.",
-           "text_source": "extracted",
-           "condition": "Sick_Low"
+           "condition": "Sick_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1494,8 +1485,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_Low"
+           "condition": "Sick_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1508,8 +1499,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_Low"
+           "condition": "Sick_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1522,8 +1513,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_Low"
+           "condition": "Sick_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1536,8 +1527,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Sick_Low"
+           "condition": "Sick_Low",
+           "text_source": "extracted"
           }
          ]
         }
@@ -1553,6 +1544,7 @@
        "type": "stimuli",
        "variable-name": "Flood_situation",
        "content": "John's room flooded after a pipe burst.",
+       "condition": "Flood",
        "text_source": "extracted"
       },
       {
@@ -1562,12 +1554,10 @@
        "response-constraints": {
         "type": "scalar",
         "scale-min": 0,
-        "scale-max": 100,
-        "scale-min-desc": "not likely at all",
-        "scale-max-desc": "extremely likely"
+        "scale-max": 100
        },
-       "text_source": "extracted",
-       "condition": "Flood"
+       "condition": "Flood",
+       "text_source": "extracted"
       },
       {
        "type": "group",
@@ -1581,8 +1571,8 @@
            "type": "stimuli",
            "variable-name": "Flood_High_action",
            "content": "His friend Bob helped him clean up the room in the aftermath of the flood.",
-           "text_source": "extracted",
-           "condition": "Flood_High"
+           "condition": "Flood_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1595,8 +1585,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_High"
+           "condition": "Flood_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1609,8 +1599,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_High"
+           "condition": "Flood_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1623,8 +1613,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_High"
+           "condition": "Flood_High",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1637,8 +1627,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_High"
+           "condition": "Flood_High",
+           "text_source": "extracted"
           }
          ]
         },
@@ -1650,8 +1640,8 @@
            "type": "stimuli",
            "variable-name": "Flood_Low_action",
            "content": "His friend Bob has a garage that he let John store his belongings in.",
-           "text_source": "extracted",
-           "condition": "Flood_Low"
+           "condition": "Flood_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1664,8 +1654,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_Low"
+           "condition": "Flood_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1678,8 +1668,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_Low"
+           "condition": "Flood_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1692,8 +1682,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_Low"
+           "condition": "Flood_Low",
+           "text_source": "extracted"
           },
           {
            "type": "question",
@@ -1706,8 +1696,8 @@
             "scale-min-desc": "none at all",
             "scale-max-desc": "a great deal"
            },
-           "text_source": "extracted",
-           "condition": "Flood_Low"
+           "condition": "Flood_Low",
+           "text_source": "extracted"
           }
          ]
         }

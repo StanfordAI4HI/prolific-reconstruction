@@ -253,7 +253,8 @@
    "type": "stimuli",
    "variable-name": "globalism_instructions",
    "content": "Please indicate how much you agree with the following statements.",
-   "text_source": "synthesized"
+   "text_source": "paraphrased",
+   "note": "v1 reconstruction wording; the block instruction is not deposited."
   },
   {
    "type": "group",
@@ -317,7 +318,8 @@
    "type": "stimuli",
    "variable-name": "rwa_instructions",
    "content": "Please indicate how much you agree with the following statements.",
-   "text_source": "synthesized"
+   "text_source": "paraphrased",
+   "note": "v1 reconstruction wording; the block instruction is not deposited."
   },
   {
    "type": "group",
@@ -407,7 +409,8 @@
    "type": "stimuli",
    "variable-name": "sdo_instructions",
    "content": "Please indicate how much you agree with the following statements.",
-   "text_source": "synthesized"
+   "text_source": "paraphrased",
+   "note": "v1 reconstruction wording; the block instruction is not deposited."
   },
   {
    "type": "group",

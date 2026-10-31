@@ -4,7 +4,8 @@
 //   node tools/test_render.js
 //
 // 1. every listing runs to a submitted payload for a spread of participant ids;
-// 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, kf4e6).
+// 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, kf4e6,
+//    fxp7g, kfrux, kxcwm), and every answer carries rt_ms.
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
@@ -93,7 +94,9 @@ for (const listing of fs.readdirSync(SITE).sort()) {
   assert.strictEqual(s.onScreen().filter(n => n.startsWith('habit_')).length, 4);
   s.answer({ habit_env_good_1: 'cycling to work' });
   s.next();
-  assert(runTo(s, () => s.text().includes('How strong is cycling to work'), vals), 'piped');
+  assert(runTo(s, () => s.text().includes('How strong are those habits?')
+                && s.text().includes('cycling to work'), vals), 'piped');
+  assert(!s.text().includes('The first habit you listed'), 'phrase left in place');
   const got = finish(s, vals);
   const returns = got.filter(n => n.startsWith('return_home_')).sort();
   assert.strictEqual(JSON.stringify(returns),
@@ -139,5 +142,46 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   assert.strictEqual(s.d.querySelectorAll('.stim').length, 1);
   assert.strictEqual(s.d.querySelectorAll('.qtext').length, 1);
   console.log('ok  kf4e6: vignette and its rating share one page');
+}
+
+// ---------- fxp7g: manipulated_goal draws either framing; ratings are one matrix page
+{
+  const seen = new Set();
+  for (let k = 0; k < 120 && seen.size < 2; k++) {
+    const s = boot('fxp7g', `g${k}`);
+    s.next();
+    for (let j = 0; j < 4; j++) {
+      if (s.text().includes('credible and trustworthy news. ')) seen.add('credible');
+      if (s.text().includes('entertaining and fun news. ')) seen.add('entertaining');
+      s.answer(); s.next();
+    }
+  }
+  assert.strictEqual(seen.size, 2, `fxp7g: framings drawn ${[...seen]}`);
+  const s = boot('fxp7g', 'm1');
+  s.next();
+  assert(runTo(s, () => s.d.querySelectorAll('.qtext').length === 8), 'matrix page');
+  console.log('ok  fxp7g: both goal framings are drawn; eight headlines share a page');
+}
+
+// ---------- kfrux: price is a number box and comes back as a number
+{
+  const s = boot('kfrux', 'p1');
+  s.next();
+  assert(runTo(s, () => s.d.querySelector('input.num-in')), 'price box');
+  const got = finish(s, { price: '25' });
+  void got;
+  const t = s.box.payload.trials.find(x => x.variable_name === 'price');
+  assert.strictEqual(t.answer, 25);
+  assert(s.box.payload.trials.every(x => typeof x.rt_ms === 'number'), 'rt_ms missing');
+  console.log('ok  kfrux: price submitted as a number; every answer has rt_ms');
+}
+
+// ---------- kxcwm: a CAQ checklist appears only for a domain the participant picked
+{
+  const s = boot('kxcwm', 'q1');
+  const got = finish(s, { idiff_caq_domains: 'Music, including singing' });
+  assert(got.includes('caq_music_achievements') && !got.includes('caq_dance_achievements'),
+         'kxcwm CAQ gate');
+  console.log('ok  kxcwm: CAQ achievements gated on the domains picked');
 }
 console.log('all passed');

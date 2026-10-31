@@ -31,7 +31,7 @@ body {
 
 .stim, .qtext { text-align: left; }
 .stim { margin-bottom: 1.4em; white-space: pre-line; }
-.qtext { margin-bottom: 1.4em; font-size: 1.05em; }
+.qtext { margin-bottom: 1.4em; font-size: 1.05em; white-space: pre-line; }
 .stim h3 { margin-top: 0; }
 
 /* ---- navigation ---- */

@@ -2,14 +2,14 @@
  "app": "ba65f_B",
  "study": "ba65f",
  "archive_experiment": "experiment_1",
- "target": "f16",
+ "target": "f09",
  "title": "Short scenarios about two friends",
  "blocks": [
   {
    "type": "stimuli",
    "variable-name": "intro",
    "content": "In this study you will read a series of short scenarios about two friends, John and Bob. In each scenario John finds himself in a situation, and his friend Bob has the opportunity to take an action to help him. Please treat each scenario independently, as if the people involved were different each time.",
-   "text_source": "paraphrased"
+   "text_source": "synthesized"
   },
   {
    "type": "balanced",
@@ -32,44 +32,38 @@
         },
         {
          "type": "question",
-         "variable-name": "dog_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Dog_Low",
+         "variable-name": "dog_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Dog_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "dog_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Dog_Low",
+         "variable-name": "dog_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Dog_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "dog_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Dog_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Dog_Low",
          "text_source": "extracted"
         }
        ]
@@ -88,44 +82,38 @@
         },
         {
          "type": "question",
-         "variable-name": "dog_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Dog_High",
+         "variable-name": "dog_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Dog_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "dog_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Dog_High",
+         "variable-name": "dog_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Dog_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "dog_h_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Dog_High",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Dog_High",
          "text_source": "extracted"
         }
        ]
@@ -150,44 +138,38 @@
         },
         {
          "type": "question",
-         "variable-name": "research_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Research_Low",
+         "variable-name": "research_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Research_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "research_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Research_Low",
+         "variable-name": "research_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Research_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "research_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Research_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Research_Low",
          "text_source": "extracted"
         }
        ]
@@ -206,44 +188,38 @@
         },
         {
          "type": "question",
-         "variable-name": "research_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Research_High",
+         "variable-name": "research_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Research_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "research_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Research_High",
+         "variable-name": "research_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Research_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "research_h_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Research_High",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Research_High",
          "text_source": "extracted"
         }
        ]
@@ -254,62 +230,6 @@
      "type": "group",
      "cell": "Divorce",
      "items": [
-      {
-       "type": "group",
-       "shuffle": false,
-       "level": "High",
-       "items": [
-        {
-         "type": "stimuli",
-         "variable-name": "Divorce_High_vignette",
-         "content": "John is going through a divorce. His friend Bob accompanies him to divorce attorney consultation appointments.",
-         "condition": "Divorce_High",
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "divorce_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Divorce_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "divorce_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Divorce_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "divorce_h_e_as",
-         "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Divorce_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
-         },
-         "text_source": "extracted"
-        }
-       ]
-      },
       {
        "type": "group",
        "shuffle": false,
@@ -324,44 +244,88 @@
         },
         {
          "type": "question",
-         "variable-name": "divorce_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Divorce_Low",
+         "variable-name": "divorce_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Divorce_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "divorce_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Divorce_Low",
+         "variable-name": "divorce_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Divorce_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "divorce_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Divorce_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Divorce_Low",
+         "text_source": "extracted"
+        }
+       ]
+      },
+      {
+       "type": "group",
+       "shuffle": false,
+       "level": "High",
+       "items": [
+        {
+         "type": "stimuli",
+         "variable-name": "Divorce_High_vignette",
+         "content": "John is going through a divorce. His friend Bob accompanies him to divorce attorney consultation appointments.",
+         "condition": "Divorce_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "divorce_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Divorce_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "divorce_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Divorce_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "divorce_h_e_as",
+         "question": "How likely is it that Bob feels empathy for John?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Divorce_High",
          "text_source": "extracted"
         }
        ]
@@ -386,44 +350,38 @@
         },
         {
          "type": "question",
-         "variable-name": "exam_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Exam_Low",
+         "variable-name": "exam_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Exam_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "exam_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Exam_Low",
+         "variable-name": "exam_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Exam_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "exam_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Exam_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Exam_Low",
          "text_source": "extracted"
         }
        ]
@@ -442,44 +400,38 @@
         },
         {
          "type": "question",
-         "variable-name": "exam_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Exam_High",
+         "variable-name": "exam_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Exam_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "exam_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Exam_High",
+         "variable-name": "exam_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Exam_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "exam_h_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Exam_High",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Exam_High",
          "text_source": "extracted"
         }
        ]
@@ -490,62 +442,6 @@
      "type": "group",
      "cell": "Job",
      "items": [
-      {
-       "type": "group",
-       "shuffle": false,
-       "level": "High",
-       "items": [
-        {
-         "type": "stimuli",
-         "variable-name": "Job_High_vignette",
-         "content": "John loses his job. His friend Bob helps him look online for job advertisements and helps him update his CV.",
-         "condition": "Job_High",
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "job_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Job_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "job_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Job_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "job_h_e_as",
-         "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Job_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
-         },
-         "text_source": "extracted"
-        }
-       ]
-      },
       {
        "type": "group",
        "shuffle": false,
@@ -560,44 +456,88 @@
         },
         {
          "type": "question",
-         "variable-name": "job_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Job_Low",
+         "variable-name": "job_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Job_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "job_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Job_Low",
+         "variable-name": "job_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Job_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "job_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Job_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Job_Low",
+         "text_source": "extracted"
+        }
+       ]
+      },
+      {
+       "type": "group",
+       "shuffle": false,
+       "level": "High",
+       "items": [
+        {
+         "type": "stimuli",
+         "variable-name": "Job_High_vignette",
+         "content": "John loses his job. His friend Bob helps him look online for job advertisements and helps him update his CV.",
+         "condition": "Job_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "job_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Job_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "job_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Job_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "job_h_e_as",
+         "question": "How likely is it that Bob feels empathy for John?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Job_High",
          "text_source": "extracted"
         }
        ]
@@ -608,62 +548,6 @@
      "type": "group",
      "cell": "Laptop",
      "items": [
-      {
-       "type": "group",
-       "shuffle": false,
-       "level": "High",
-       "items": [
-        {
-         "type": "stimuli",
-         "variable-name": "Laptop_High_vignette",
-         "content": "John has their laptop stolen. His friend Bob lends him his laptop while John waits to get a new one.",
-         "condition": "Laptop_High",
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "laptop_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Laptop_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "laptop_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Laptop_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "laptop_h_e_as",
-         "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Laptop_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
-         },
-         "text_source": "extracted"
-        }
-       ]
-      },
       {
        "type": "group",
        "shuffle": false,
@@ -678,44 +562,88 @@
         },
         {
          "type": "question",
-         "variable-name": "laptop_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Laptop_Low",
+         "variable-name": "laptop_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Laptop_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "laptop_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Laptop_Low",
+         "variable-name": "laptop_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Laptop_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "laptop_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Laptop_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Laptop_Low",
+         "text_source": "extracted"
+        }
+       ]
+      },
+      {
+       "type": "group",
+       "shuffle": false,
+       "level": "High",
+       "items": [
+        {
+         "type": "stimuli",
+         "variable-name": "Laptop_High_vignette",
+         "content": "John has their laptop stolen. His friend Bob lends him his laptop while John waits to get a new one.",
+         "condition": "Laptop_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "laptop_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Laptop_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "laptop_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Laptop_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "laptop_h_e_as",
+         "question": "How likely is it that Bob feels empathy for John?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Laptop_High",
          "text_source": "extracted"
         }
        ]
@@ -726,62 +654,6 @@
      "type": "group",
      "cell": "Death",
      "items": [
-      {
-       "type": "group",
-       "shuffle": false,
-       "level": "High",
-       "items": [
-        {
-         "type": "stimuli",
-         "variable-name": "Death_High_vignette",
-         "content": "John's mom dies unexpectedly. His friend Bob handles calling and sorting out his mother's life insurance policy paperwork.",
-         "condition": "Death_High",
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "death_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Death_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "death_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Death_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "death_h_e_as",
-         "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Death_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
-         },
-         "text_source": "extracted"
-        }
-       ]
-      },
       {
        "type": "group",
        "shuffle": false,
@@ -796,44 +668,88 @@
         },
         {
          "type": "question",
-         "variable-name": "death_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Death_Low",
+         "variable-name": "death_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Death_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "death_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Death_Low",
+         "variable-name": "death_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Death_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "death_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Death_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Death_Low",
+         "text_source": "extracted"
+        }
+       ]
+      },
+      {
+       "type": "group",
+       "shuffle": false,
+       "level": "High",
+       "items": [
+        {
+         "type": "stimuli",
+         "variable-name": "Death_High_vignette",
+         "content": "John's mom dies unexpectedly. His friend Bob handles calling and sorting out his mother's life insurance policy paperwork.",
+         "condition": "Death_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "death_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Death_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "death_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Death_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "death_h_e_as",
+         "question": "How likely is it that Bob feels empathy for John?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Death_High",
          "text_source": "extracted"
         }
        ]
@@ -858,44 +774,38 @@
         },
         {
          "type": "question",
-         "variable-name": "car_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Car_Low",
+         "variable-name": "car_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Car_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "car_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Car_Low",
+         "variable-name": "car_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Car_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "car_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Car_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Car_Low",
          "text_source": "extracted"
         }
        ]
@@ -914,44 +824,38 @@
         },
         {
          "type": "question",
-         "variable-name": "car_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Car_High",
+         "variable-name": "car_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Car_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "car_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Car_High",
+         "variable-name": "car_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Car_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "car_h_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Car_High",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Car_High",
          "text_source": "extracted"
         }
        ]
@@ -962,62 +866,6 @@
      "type": "group",
      "cell": "Sick",
      "items": [
-      {
-       "type": "group",
-       "shuffle": false,
-       "level": "High",
-       "items": [
-        {
-         "type": "stimuli",
-         "variable-name": "Sick_High_vignette",
-         "content": "John is out sick from work with a sudden stomach-bug. His work friend Bob covers his workload so he doesn't miss anything while he's gone.",
-         "condition": "Sick_High",
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "sick_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Sick_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "sick_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Sick_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
-         },
-         "text_source": "extracted"
-        },
-        {
-         "type": "question",
-         "variable-name": "sick_h_e_as",
-         "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Sick_High",
-         "response-constraints": {
-          "type": "scalar",
-          "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
-         },
-         "text_source": "extracted"
-        }
-       ]
-      },
       {
        "type": "group",
        "shuffle": false,
@@ -1032,44 +880,88 @@
         },
         {
          "type": "question",
-         "variable-name": "sick_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Sick_Low",
+         "variable-name": "sick_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Sick_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "sick_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Sick_Low",
+         "variable-name": "sick_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Sick_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "sick_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Sick_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Sick_Low",
+         "text_source": "extracted"
+        }
+       ]
+      },
+      {
+       "type": "group",
+       "shuffle": false,
+       "level": "High",
+       "items": [
+        {
+         "type": "stimuli",
+         "variable-name": "Sick_High_vignette",
+         "content": "John is out sick from work with a sudden stomach-bug. His work friend Bob covers his workload so he doesn't miss anything while he's gone.",
+         "condition": "Sick_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "sick_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Sick_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "sick_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Sick_High",
+         "text_source": "extracted"
+        },
+        {
+         "type": "question",
+         "variable-name": "sick_h_e_as",
+         "question": "How likely is it that Bob feels empathy for John?",
+         "response-constraints": {
+          "type": "scalar",
+          "scale-min": 0,
+          "scale-max": 100
+         },
+         "condition": "Sick_High",
          "text_source": "extracted"
         }
        ]
@@ -1094,44 +986,38 @@
         },
         {
          "type": "question",
-         "variable-name": "flood_l_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Flood_Low",
+         "variable-name": "flood_l_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Flood_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "flood_l_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Flood_Low",
+         "variable-name": "flood_l_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Flood_Low",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "flood_l_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Flood_Low",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Flood_Low",
          "text_source": "extracted"
         }
        ]
@@ -1150,44 +1036,38 @@
         },
         {
          "type": "question",
-         "variable-name": "flood_h_a_es",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
-         "condition": "Flood_High",
+         "variable-name": "flood_h_a_s",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Flood_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
-         "variable-name": "flood_h_a_s",
-         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity?",
-         "condition": "Flood_High",
+         "variable-name": "flood_h_a_es",
+         "question": "Out of 100 people in Bob's situation, how many would do what he did if they had the opportunity and felt empathy for their friend?",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "0 of 100 people",
-          "scale-max-desc": "100 of 100 people"
+          "scale-max": 100
          },
+         "condition": "Flood_High",
          "text_source": "extracted"
         },
         {
          "type": "question",
          "variable-name": "flood_h_e_as",
          "question": "How likely is it that Bob feels empathy for John?",
-         "condition": "Flood_High",
          "response-constraints": {
           "type": "scalar",
           "scale-min": 0,
-          "scale-max": 100,
-          "scale-min-desc": "not likely at all",
-          "scale-max-desc": "extremely likely"
+          "scale-max": 100
          },
+         "condition": "Flood_High",
          "text_source": "extracted"
         }
        ]
