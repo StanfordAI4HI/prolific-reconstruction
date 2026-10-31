@@ -59,7 +59,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "1_L1rt"
    },
    {
     "type": "question",
@@ -87,7 +88,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "2_L1rt"
    },
    {
     "type": "question",
@@ -115,7 +117,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "3_L1rt"
    },
    {
     "type": "question",
@@ -143,7 +146,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "4_L1rt"
    },
    {
     "type": "question",
@@ -171,7 +175,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "5_L1rt"
    },
    {
     "type": "question",
@@ -199,7 +204,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "6_L1rt"
    },
    {
     "type": "question",
@@ -227,7 +233,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "7_L1rt"
    },
    {
     "type": "question",
@@ -255,7 +262,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "8_L1rt"
    },
    {
     "type": "question",
@@ -283,7 +291,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "9_L1rt"
    },
    {
     "type": "question",
@@ -311,7 +320,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "10_L1rt"
    },
    {
     "type": "question",
@@ -339,7 +349,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "11_L1rt"
    },
    {
     "type": "question",
@@ -367,7 +378,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "12_L1rt"
    },
    {
     "type": "question",
@@ -395,7 +407,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "13_L1rt"
    },
    {
     "type": "question",
@@ -423,7 +436,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "14_L1rt"
    },
    {
     "type": "question",
@@ -451,7 +465,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "15_L1rt"
    },
    {
     "type": "question",
@@ -479,7 +494,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "16_L1rt"
    },
    {
     "type": "question",
@@ -507,7 +523,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "17_L1rt"
    },
    {
     "type": "question",
@@ -535,7 +552,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "18_L1rt"
    },
    {
     "type": "question",
@@ -579,6 +597,48 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ],
   [
@@ -611,7 +671,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "1_L1rt"
    },
    {
     "type": "question",
@@ -639,7 +700,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "2_L1rt"
    },
    {
     "type": "question",
@@ -667,7 +729,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "3_L1rt"
    },
    {
     "type": "question",
@@ -695,7 +758,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "4_L1rt"
    },
    {
     "type": "question",
@@ -723,7 +787,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "5_L1rt"
    },
    {
     "type": "question",
@@ -751,7 +816,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "6_L1rt"
    },
    {
     "type": "question",
@@ -779,7 +845,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "7_L1rt"
    },
    {
     "type": "question",
@@ -807,7 +874,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "8_L1rt"
    },
    {
     "type": "question",
@@ -835,7 +903,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "9_L1rt"
    },
    {
     "type": "question",
@@ -863,7 +932,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "10_L1rt"
    },
    {
     "type": "question",
@@ -891,7 +961,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "11_L1rt"
    },
    {
     "type": "question",
@@ -919,7 +990,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "12_L1rt"
    },
    {
     "type": "question",
@@ -947,7 +1019,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "13_L1rt"
    },
    {
     "type": "question",
@@ -975,7 +1048,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "14_L1rt"
    },
    {
     "type": "question",
@@ -1003,7 +1077,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "15_L1rt"
    },
    {
     "type": "question",
@@ -1031,7 +1106,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "16_L1rt"
    },
    {
     "type": "question",
@@ -1059,7 +1135,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "17_L1rt"
    },
    {
     "type": "question",
@@ -1087,7 +1164,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "18_L1rt"
    },
    {
     "type": "question",
@@ -1131,6 +1209,48 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ],
   [
@@ -1163,7 +1283,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "1_L1rt"
    },
    {
     "type": "question",
@@ -1191,7 +1312,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "2_L1rt"
    },
    {
     "type": "question",
@@ -1219,7 +1341,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "3_L1rt"
    },
    {
     "type": "question",
@@ -1247,7 +1370,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "4_L1rt"
    },
    {
     "type": "question",
@@ -1275,7 +1399,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "5_L1rt"
    },
    {
     "type": "question",
@@ -1303,7 +1428,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "6_L1rt"
    },
    {
     "type": "question",
@@ -1331,7 +1457,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "7_L1rt"
    },
    {
     "type": "question",
@@ -1359,7 +1486,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "8_L1rt"
    },
    {
     "type": "question",
@@ -1387,7 +1515,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "9_L1rt"
    },
    {
     "type": "question",
@@ -1415,7 +1544,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "10_L1rt"
    },
    {
     "type": "question",
@@ -1443,7 +1573,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "11_L1rt"
    },
    {
     "type": "question",
@@ -1471,7 +1602,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "12_L1rt"
    },
    {
     "type": "question",
@@ -1499,7 +1631,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "13_L1rt"
    },
    {
     "type": "question",
@@ -1527,7 +1660,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "14_L1rt"
    },
    {
     "type": "question",
@@ -1555,7 +1689,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "15_L1rt"
    },
    {
     "type": "question",
@@ -1583,7 +1718,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "16_L1rt"
    },
    {
     "type": "question",
@@ -1611,7 +1747,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "17_L1rt"
    },
    {
     "type": "question",
@@ -1639,7 +1776,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "18_L1rt"
    },
    {
     "type": "question",
@@ -1683,6 +1821,48 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ],
   [
@@ -1715,7 +1895,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "1_L1rt"
    },
    {
     "type": "question",
@@ -1743,7 +1924,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "2_L1rt"
    },
    {
     "type": "question",
@@ -1771,7 +1953,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "3_L1rt"
    },
    {
     "type": "question",
@@ -1799,7 +1982,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "4_L1rt"
    },
    {
     "type": "question",
@@ -1827,7 +2011,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "5_L1rt"
    },
    {
     "type": "question",
@@ -1855,7 +2040,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "6_L1rt"
    },
    {
     "type": "question",
@@ -1883,7 +2069,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "7_L1rt"
    },
    {
     "type": "question",
@@ -1911,7 +2098,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "8_L1rt"
    },
    {
     "type": "question",
@@ -1939,7 +2127,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "9_L1rt"
    },
    {
     "type": "question",
@@ -1967,7 +2156,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "10_L1rt"
    },
    {
     "type": "question",
@@ -1995,7 +2185,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "11_L1rt"
    },
    {
     "type": "question",
@@ -2023,7 +2214,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "12_L1rt"
    },
    {
     "type": "question",
@@ -2051,7 +2243,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "13_L1rt"
    },
    {
     "type": "question",
@@ -2079,7 +2272,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "14_L1rt"
    },
    {
     "type": "question",
@@ -2107,7 +2301,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "15_L1rt"
    },
    {
     "type": "question",
@@ -2135,7 +2330,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "16_L1rt"
    },
    {
     "type": "question",
@@ -2163,7 +2359,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "17_L1rt"
    },
    {
     "type": "question",
@@ -2191,7 +2388,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "18_L1rt"
    },
    {
     "type": "question",
@@ -2235,6 +2433,48 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ],
   [
@@ -2267,7 +2507,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "1_L1rt"
    },
    {
     "type": "question",
@@ -2295,7 +2536,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "2_L1rt"
    },
    {
     "type": "question",
@@ -2323,7 +2565,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "3_L1rt"
    },
    {
     "type": "question",
@@ -2351,7 +2594,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "4_L1rt"
    },
    {
     "type": "question",
@@ -2379,7 +2623,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "5_L1rt"
    },
    {
     "type": "question",
@@ -2407,7 +2652,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "6_L1rt"
    },
    {
     "type": "question",
@@ -2435,7 +2681,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "7_L1rt"
    },
    {
     "type": "question",
@@ -2463,7 +2710,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "8_L1rt"
    },
    {
     "type": "question",
@@ -2491,7 +2739,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "9_L1rt"
    },
    {
     "type": "question",
@@ -2519,7 +2768,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "10_L1rt"
    },
    {
     "type": "question",
@@ -2547,7 +2797,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "11_L1rt"
    },
    {
     "type": "question",
@@ -2575,7 +2826,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "12_L1rt"
    },
    {
     "type": "question",
@@ -2603,7 +2855,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "13_L1rt"
    },
    {
     "type": "question",
@@ -2631,7 +2884,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "14_L1rt"
    },
    {
     "type": "question",
@@ -2659,7 +2913,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "15_L1rt"
    },
    {
     "type": "question",
@@ -2687,7 +2942,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "16_L1rt"
    },
    {
     "type": "question",
@@ -2715,7 +2971,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "17_L1rt"
    },
    {
     "type": "question",
@@ -2743,7 +3000,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "18_L1rt"
    },
    {
     "type": "question",
@@ -2787,6 +3045,48 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ],
   [
@@ -2819,7 +3119,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "1_L1rt"
    },
    {
     "type": "question",
@@ -2847,7 +3148,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "2_L1rt"
    },
    {
     "type": "question",
@@ -2875,7 +3177,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_2",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "3_L1rt"
    },
    {
     "type": "question",
@@ -2903,7 +3206,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "4_L1rt"
    },
    {
     "type": "question",
@@ -2931,7 +3235,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "5_L1rt"
    },
    {
     "type": "question",
@@ -2959,7 +3264,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_1",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "6_L1rt"
    },
    {
     "type": "question",
@@ -2987,7 +3293,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "7_L1rt"
    },
    {
     "type": "question",
@@ -3015,7 +3322,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "8_L1rt"
    },
    {
     "type": "question",
@@ -3043,7 +3351,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_3",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "9_L1rt"
    },
    {
     "type": "question",
@@ -3071,7 +3380,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "10_L1rt"
    },
    {
     "type": "question",
@@ -3099,7 +3409,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "11_L1rt"
    },
    {
     "type": "question",
@@ -3127,7 +3438,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_4",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "12_L1rt"
    },
    {
     "type": "question",
@@ -3155,7 +3467,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "13_L1rt"
    },
    {
     "type": "question",
@@ -3183,7 +3496,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "14_L1rt"
    },
    {
     "type": "question",
@@ -3211,7 +3525,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_5",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "15_L1rt"
    },
    {
     "type": "question",
@@ -3239,7 +3554,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "16_L1rt"
    },
    {
     "type": "question",
@@ -3267,7 +3583,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "17_L1rt"
    },
    {
     "type": "question",
@@ -3295,7 +3612,8 @@
      "scale-max-desc": "Highly likely"
     },
     "condition": "problem_group_6",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "rt_as": "18_L1rt"
    },
    {
     "type": "question",
@@ -3339,6 +3657,48 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ]
  ],
@@ -3352,7 +3712,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 1.56,
+ "reward_usd": 1.64,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -3383,7 +3743,7 @@
   [
    "PAYMENTS:",
    [
-    "You will receive $1.56, paid through Prolific, as payment for your participation."
+    "You will receive $1.64, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -3414,7 +3774,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read short descriptions of people and answer 36 questions about how likely certain statements are and how confident you feel. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 8 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.56, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 7.8,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to read short descriptions of people and answer 36 questions about how likely certain statements are and how confident you feel. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 8 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $1.64, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 8.2,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/aj5mt/"
 }

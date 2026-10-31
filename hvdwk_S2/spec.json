@@ -1156,7 +1156,10 @@
     "scale-min": 18,
     "open": true
    },
-   "text_source": "codebook_study2.xlsx"
+   "text_source": "codebook_study2.xlsx",
+   "to_info": {
+    "key": "age"
+   }
   },
   {
    "type": "question",
@@ -1172,7 +1175,16 @@
     ],
     "max-choices": 1
    },
-   "text_source": "codebook_study2.xlsx"
+   "text_source": "codebook_study2.xlsx",
+   "to_info": {
+    "key": "gender",
+    "map": {
+     "Male": "male",
+     "Female": "female",
+     "Other": "other",
+     "Prefer not to say": "prefer not to say"
+    }
+   }
   },
   {
    "type": "question",
@@ -1189,7 +1201,17 @@
     ],
     "max-choices": 1
    },
-   "text_source": "codebook_study2.xlsx"
+   "text_source": "codebook_study2.xlsx",
+   "to_info": {
+    "key": "income",
+    "map": {
+     "Less than 20,000 pounds": "Less than 20,000 pounds",
+     "20,000-39,999 pounds": "20,000-39,999 pounds",
+     "40,000-59,999 pounds": "40,000-59,999 pounds",
+     "60,000-99,999 pounds": "60,000-99,999 pounds",
+     "More than 100,000 pounds": "More than 100,000 pounds"
+    }
+   }
   },
   {
    "type": "question",
@@ -1206,7 +1228,17 @@
     ],
     "max-choices": 1
    },
-   "text_source": "codebook_study2.xlsx"
+   "text_source": "codebook_study2.xlsx",
+   "to_info": {
+    "key": "education",
+    "map": {
+     "Primary school": "Primary school",
+     "Secondary School": "Secondary School",
+     "Bachelor's degree": "Bachelor's degree",
+     "Master's degree": "Master's degree",
+     "Doctoral degree": "Doctoral degree"
+    }
+   }
   },
   {
    "type": "question",

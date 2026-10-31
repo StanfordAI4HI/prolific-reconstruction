@@ -24,8 +24,9 @@ record this script
 
 - takes only people the record does not flag in `participant-meta.excluded` when
   choosing a path (the revision restored excluded people as flagged rows);
-- skips items marked `is-measured` (e.g. aj5mt's response times): those are measured,
-  not asked, and the renderer records `rt_ms` for every answer instead;
+- does not ask items marked `is-measured`. A response time (aj5mt's `<n>_L1rt`) is
+  tagged onto the question it times as `rt_as`, and ingest writes it, in seconds, from
+  that answer's `rt_ms`; any other measured item is skipped;
 - skips the reconstruction's narration — `synthesized` stimuli written in the second
   person ("You type your four good habits into four boxes...") that describe a step
   whose material was not deposited. They are not something a participant can be
@@ -85,7 +86,7 @@ def clean(it):
         assert len(gate) == 1, f"{it['variable-name']}: compound gate {gate}"
         c = gate[0]
         out['show_if'] = {'variable': c['item'], 'op': c['op'], 'value': c.get('value')}
-    for k in ('show_if', 'pipe', 'note'):          # set by a listing on a replacement
+    for k in ('show_if', 'pipe', 'note', 'rt_as'):  # set by a listing or by sequence()
         if k in it and k not in out:
             out[k] = copy.deepcopy(it[k])
     return out
@@ -151,6 +152,12 @@ class Record:
                     out.append(clean(replace[name]))
                 continue
             if name in SITE_PAGES:
+                continue
+            if it.get('is-measured') and re.search(r'(rt|_time)$', name, re.I) \
+                    and out and out[-1]['type'] == 'question':
+                # a response time is measured on the question it follows: ingest
+                # writes it as this item, in seconds, from that answer's rt_ms
+                out[-1]['rt_as'] = name
                 continue
             if it.get('is-measured') or narration(it):
                 dropped.append(name)
@@ -419,28 +426,21 @@ def hvdwk_demographics(n):
     original survey (codebook_study{2,3}.xlsx). The record keeps them only as
     participant-info, so respec would otherwise never field them, yet the paper's
     Table 3 correlations, every listwise sample built on it and the Table 5-7
-    regressions all control for them. Ingest moves the answers into participant-info
-    (gender lower-cased) under the names the measures read."""
+    regressions all control for them. Each carries `to_info`, which ingest uses to
+    write the answer into participant-info under the name and spelling the measures
+    read."""
     src = f'codebook_study{n}.xlsx'
-    mcq = lambda opts: {'type': 'mcq', 'options': opts, 'max-choices': 1}
+    income = ['Less than 20,000 pounds', '20,000-39,999 pounds', '40,000-59,999 pounds',
+              '60,000-99,999 pounds', 'More than 100,000 pounds']
     return [
-        {'type': 'question', 'variable-name': 'age',
-         'question': 'Please state your age in full years.',
-         'response-constraints': {'type': 'scalar', 'scale-min': 18, 'open': True},
-         'text_source': src},
-        {'type': 'question', 'variable-name': 'Gender',
-         'question': 'What gender do you identify with?',
-         'response-constraints': mcq(['Male', 'Female', 'Other', 'Prefer not to say']),
-         'text_source': src},
-        {'type': 'question', 'variable-name': 'income',
-         'question': 'Gross annual household income in British Pounds',
-         'response-constraints': mcq(['Less than 20,000 pounds', '20,000-39,999 pounds',
-                                      '40,000-59,999 pounds', '60,000-99,999 pounds',
-                                      'More than 100,000 pounds']),
-         'text_source': src},
-        {'type': 'question', 'variable-name': 'education',
-         'question': 'Please indicate your highest completed level of education.',
-         'response-constraints': mcq(HVDWK_EDUCATION[n]), 'text_source': src},
+        demo('age', 'Please state your age in full years.', None, name='age', src=src),
+        demo('gender', 'What gender do you identify with?',
+             {'Male': 'male', 'Female': 'female', 'Other': 'other',
+              'Prefer not to say': 'prefer not to say'}, name='Gender', src=src),
+        demo('income', 'Gross annual household income in British Pounds',
+             {o: o for o in income}, name='income', src=src),
+        demo('education', 'Please indicate your highest completed level of education.',
+             {o: o for o in HVDWK_EDUCATION[n]}, name='education', src=src),
     ]
 
 
@@ -769,6 +769,121 @@ def cse5r(spec):
                            for c in labs]}
 
 
+
+# ---------------------------------------------------------------- demographics
+#: A finding may read participant-info (age, gender, education, ...). The records keep
+#: those as the person's background, not as items, so nothing above fields them; each
+#: listing below asks them as questions instead, and nothing is taken from Prolific's
+#: export. `to_info` tells ingest where an answer goes: participant-info[key], through
+#: `map` (option shown -> the record's own value, the spelling the measures compare
+#: against) or `format` (a number into the record's string). Fields, values and which
+#: findings need them: scratchpad info_dependence.py, run over every record.
+
+
+def demo(key, question, values, name=None, multi=False, src='authored', fmt=None,
+         scale=None):
+    if values is None and scale is None:
+        rc = {'type': 'scalar', 'scale-min': 18, 'open': True}
+        to = {'key': key}
+    elif scale is not None:
+        rc = dict({'type': 'scalar'}, **scale)
+        to = {'key': key, 'format': fmt}
+    else:
+        rc = {'type': 'mcq', 'options': list(values), 'max-choices': len(values) if multi else 1}
+        to = {'key': key, 'map': dict(values)}
+    it = {'type': 'question', 'variable-name': name or f'demo_{key}', 'question': question,
+          'response-constraints': rc, 'text_source': src, 'to_info': to}
+    if src == 'authored':
+        it['note'] = ('Authored: the record keeps this only as participant-info, without '
+                      'its wording; the options are the values it records.')
+    return it
+
+
+AGE = 'What is your age (in years)?'
+GENDER = 'What is your gender?'
+
+#: listing -> (where, questions). `start` where the record places the original
+#: demographics before the study (9ebhq: the opening sociodemographics block; fkrsd:
+#: the demographics step right after consent), `end` otherwise.
+DEMOGRAPHICS = {
+    '9ebhq_S1': ('start', [
+        demo('age', AGE, None),
+        demo('gender', GENDER + ' (select all that apply)',
+             {'Female': 'female', 'Male': 'male', 'Non-binary / other': 'non-binary/other'},
+             multi=True)]),
+    '9ebhq_S2': ('start', [
+        demo('age', AGE, None),
+        demo('gender', GENDER + ' (select all that apply)',
+             {'Female': 'female', 'Male': 'male', 'Non-binary / other': 'non-binary/other'},
+             multi=True),
+        demo('education', 'What is your level of education?', None,
+             scale={'scale-min': 1, 'scale-max': 5, 'scale-min-desc': 'No formal education',
+                    'scale-max-desc': 'College education, graduate degree'},
+             fmt='{} of 5 (1 = no formal education, 5 = college education, graduate '
+                 'degree)')]),
+    'aj5mt': ('end', [demo('age', AGE, None),
+                      demo('gender', GENDER, {'Female': 'female', 'Male': 'male'})]),
+    'ba65f_A': ('end', [demo('age', AGE, None),
+                        demo('gender', GENDER, {'Female': 'female', 'Male': 'male',
+                                                'Non-binary': 'non-binary'})]),
+    'ba65f_B': ('end', [demo('age', AGE, None),
+                        demo('gender', GENDER, {'Female': 'female', 'Male': 'male',
+                                                'Non-binary': 'non-binary'})]),
+    'cse5r': ('end', [demo('age', AGE, None),
+                      demo('gender', GENDER, {'Female': 'Female', 'Male': 'Male',
+                                              'Other / non-binary': 'Other/Nonbinary'})]),
+    'dqsv6': ('end', [demo('age', AGE, None),
+                      demo('gender', GENDER, {'Woman': 'woman', 'Man': 'man',
+                                              'Non-binary': 'non-binary'})]),
+    'fkrsd': ('start', [
+        demo('age', AGE, None),
+        demo('gender', GENDER, {o: o for o in ('Female', 'Male', 'Non-binary / third gender',
+                                               'Prefer not to say')}),
+        demo('country', 'In which country do you currently live?',
+             {'United States': 'United States of America', 'Canada': 'Canada',
+              'Australia': 'Australia',
+              'United Kingdom': 'United Kingdom of Great Britain and Northern Ireland',
+              'New Zealand': 'New Zealand', 'Other': 'Other'})]),
+    'kxcwm': ('end', [
+        demo('age', AGE, None),
+        demo('gender', GENDER, {'Female': 'female', 'Male': 'male',
+                                'Other / non-binary': 'other / non-binary',
+                                'Prefer not to say': 'prefer not to say'}),
+        demo('employment', 'What is your current employment status?',
+             {o[0].upper() + o[1:]: o for o in (
+                 'working full-time', 'working part-time', 'unemployed or looking for work',
+                 'homemaker or stay-at-home parent', 'student', 'retired',
+                 'prefer not to say')}),
+        demo('education', 'What is the highest level of education you have completed?',
+             {o[0].upper() + o[1:]: o for o in (
+                 'some high school or less', 'high school diploma or GED',
+                 'some college, but no degree', "associate's or technical degree",
+                 "Bachelor's degree", 'graduate or professional degree',
+                 'prefer not to say')}),
+        demo('household_income', 'What is your annual household income?',
+             {o[0].upper() + o[1:]: o for o in (
+                 'less than $25,000', '$25,000 - $49,000', '$50,000 - $74,000',
+                 '$75,000 - $99,999', '$100,000 - $149,000', '$150,000 or more',
+                 'prefer not to say')})]),
+}
+
+
+def with_demographics(name, built):
+    if name not in DEMOGRAPHICS:
+        return built
+    where, qs = DEMOGRAPHICS[name]
+    page = {'type': 'page', 'items': copy.deepcopy(qs)}
+
+    def add(blocks):
+        return [page] + blocks if where == 'start' else blocks + [page]
+    out = dict(built)
+    if 'arm_blocks' in out:
+        out['arm_blocks'] = [add(b) for b in out['arm_blocks']]
+    else:
+        out['blocks'] = add(out['blocks'])
+    return out
+
+
 LISTINGS = {
     'kfrux': kfrux, 'cse5r': cse5r, 'efk28': efk28, 'fkrsd': fkrsd, '6fjdr': sixfjdr,
     '6cxdn': sixcxdn, '9ebhq_S1': ninebhq_s1, '9ebhq_S2': ninebhq_s2,
@@ -862,7 +977,7 @@ def main():
         new = copy.deepcopy(old)
         for k in ('blocks', 'arms', 'arm_keys', 'arm_labels', 'arm_blocks'):
             new.pop(k, None)
-        new.update(build(old))
+        new.update(with_demographics(name, build(old)))
         new['target'] = TARGETS.get(name, new['target'])
         if 'arm_blocks' in new and 'arms' not in new:
             new['arms'] = old['arms']

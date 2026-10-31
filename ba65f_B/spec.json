@@ -1075,6 +1075,50 @@
      ]
     }
    ]
+  },
+  {
+   "type": "page",
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "demo_age",
+     "question": "What is your age (in years)?",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 18,
+      "open": true
+     },
+     "text_source": "authored",
+     "to_info": {
+      "key": "age"
+     },
+     "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+    },
+    {
+     "type": "question",
+     "variable-name": "demo_gender",
+     "question": "What is your gender?",
+     "response-constraints": {
+      "type": "mcq",
+      "options": [
+       "Female",
+       "Male",
+       "Non-binary"
+      ],
+      "max-choices": 1
+     },
+     "text_source": "authored",
+     "to_info": {
+      "key": "gender",
+      "map": {
+       "Female": "female",
+       "Male": "male",
+       "Non-binary": "non-binary"
+      }
+     },
+     "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+    }
+   ]
   }
  ],
  "prescreen": {

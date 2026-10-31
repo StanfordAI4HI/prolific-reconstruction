@@ -2043,6 +2043,148 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male",
+        "Other / non-binary",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male",
+        "Other / non-binary": "other / non-binary",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_employment",
+      "question": "What is your current employment status?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Working full-time",
+        "Working part-time",
+        "Unemployed or looking for work",
+        "Homemaker or stay-at-home parent",
+        "Student",
+        "Retired",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "employment",
+       "map": {
+        "Working full-time": "working full-time",
+        "Working part-time": "working part-time",
+        "Unemployed or looking for work": "unemployed or looking for work",
+        "Homemaker or stay-at-home parent": "homemaker or stay-at-home parent",
+        "Student": "student",
+        "Retired": "retired",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_education",
+      "question": "What is the highest level of education you have completed?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Some high school or less",
+        "High school diploma or GED",
+        "Some college, but no degree",
+        "Associate's or technical degree",
+        "Bachelor's degree",
+        "Graduate or professional degree",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "education",
+       "map": {
+        "Some high school or less": "some high school or less",
+        "High school diploma or GED": "high school diploma or GED",
+        "Some college, but no degree": "some college, but no degree",
+        "Associate's or technical degree": "associate's or technical degree",
+        "Bachelor's degree": "Bachelor's degree",
+        "Graduate or professional degree": "graduate or professional degree",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_household_income",
+      "question": "What is your annual household income?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Less than $25,000",
+        "$25,000 - $49,000",
+        "$50,000 - $74,000",
+        "$75,000 - $99,999",
+        "$100,000 - $149,000",
+        "$150,000 or more",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "household_income",
+       "map": {
+        "Less than $25,000": "less than $25,000",
+        "$25,000 - $49,000": "$25,000 - $49,000",
+        "$50,000 - $74,000": "$50,000 - $74,000",
+        "$75,000 - $99,999": "$75,000 - $99,999",
+        "$100,000 - $149,000": "$100,000 - $149,000",
+        "$150,000 or more": "$150,000 or more",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ],
   [
@@ -4071,6 +4213,148 @@
      "response-limit": null
     },
     "text_source": "extracted"
+   },
+   {
+    "type": "page",
+    "items": [
+     {
+      "type": "question",
+      "variable-name": "demo_age",
+      "question": "What is your age (in years)?",
+      "response-constraints": {
+       "type": "scalar",
+       "scale-min": 18,
+       "open": true
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "age"
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_gender",
+      "question": "What is your gender?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Female",
+        "Male",
+        "Other / non-binary",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "gender",
+       "map": {
+        "Female": "female",
+        "Male": "male",
+        "Other / non-binary": "other / non-binary",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_employment",
+      "question": "What is your current employment status?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Working full-time",
+        "Working part-time",
+        "Unemployed or looking for work",
+        "Homemaker or stay-at-home parent",
+        "Student",
+        "Retired",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "employment",
+       "map": {
+        "Working full-time": "working full-time",
+        "Working part-time": "working part-time",
+        "Unemployed or looking for work": "unemployed or looking for work",
+        "Homemaker or stay-at-home parent": "homemaker or stay-at-home parent",
+        "Student": "student",
+        "Retired": "retired",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_education",
+      "question": "What is the highest level of education you have completed?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Some high school or less",
+        "High school diploma or GED",
+        "Some college, but no degree",
+        "Associate's or technical degree",
+        "Bachelor's degree",
+        "Graduate or professional degree",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "education",
+       "map": {
+        "Some high school or less": "some high school or less",
+        "High school diploma or GED": "high school diploma or GED",
+        "Some college, but no degree": "some college, but no degree",
+        "Associate's or technical degree": "associate's or technical degree",
+        "Bachelor's degree": "Bachelor's degree",
+        "Graduate or professional degree": "graduate or professional degree",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     },
+     {
+      "type": "question",
+      "variable-name": "demo_household_income",
+      "question": "What is your annual household income?",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "Less than $25,000",
+        "$25,000 - $49,000",
+        "$50,000 - $74,000",
+        "$75,000 - $99,999",
+        "$100,000 - $149,000",
+        "$150,000 or more",
+        "Prefer not to say"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "authored",
+      "to_info": {
+       "key": "household_income",
+       "map": {
+        "Less than $25,000": "less than $25,000",
+        "$25,000 - $49,000": "$25,000 - $49,000",
+        "$50,000 - $74,000": "$50,000 - $74,000",
+        "$75,000 - $99,999": "$75,000 - $99,999",
+        "$100,000 - $149,000": "$100,000 - $149,000",
+        "$150,000 or more": "$150,000 or more",
+        "Prefer not to say": "prefer not to say"
+       }
+      },
+      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+     }
+    ]
    }
   ]
  ],
@@ -4084,7 +4368,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 4.76,
+ "reward_usd": 4.94,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -4110,13 +4394,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 24 minutes."
+    "Your participation will take approximately 25 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $4.76, paid through Prolific, as payment for your participation."
+    "You will receive $4.94, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -4147,7 +4431,7 @@
   ]
  ],
  "gdpr_attestation": null,
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 24 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $4.76, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 23.8,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to complete two two-minute timed tasks in which you type as many ideas as you can, rate how original your own ideas were, and answer 48 true/false questions about yourself. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask about your mood, your energy levels, and how you see yourself.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 25 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $4.94, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 24.7,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/kxcwm/"
 }
