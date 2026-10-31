@@ -405,17 +405,59 @@ HVDWK_SCALES = {
 }
 
 
-def hvdwk_s2(spec):
-    r = Record('hvdwk', 2)
+#: Education options differ between the two studies' instruments.
+HVDWK_EDUCATION = {
+    2: ['Primary school', 'Secondary School', "Bachelor's degree", "Master's degree",
+        'Doctoral degree'],
+    3: ['Secondary school or lower', "Bachelor's degree or equivalent",
+        "Master's degree or higher"],
+}
+
+
+def hvdwk_demographics(n):
+    """Age, gender, income and education, asked just before political_1 as in the
+    original survey (codebook_study{2,3}.xlsx). The record keeps them only as
+    participant-info, so respec would otherwise never field them, yet the paper's
+    Table 3 correlations, every listwise sample built on it and the Table 5-7
+    regressions all control for them. Ingest moves the answers into participant-info
+    (gender lower-cased) under the names the measures read."""
+    src = f'codebook_study{n}.xlsx'
+    mcq = lambda opts: {'type': 'mcq', 'options': opts, 'max-choices': 1}
+    return [
+        {'type': 'question', 'variable-name': 'age',
+         'question': 'Please state your age in full years.',
+         'response-constraints': {'type': 'scalar', 'scale-min': 18, 'open': True},
+         'text_source': src},
+        {'type': 'question', 'variable-name': 'Gender',
+         'question': 'What gender do you identify with?',
+         'response-constraints': mcq(['Male', 'Female', 'Other', 'Prefer not to say']),
+         'text_source': src},
+        {'type': 'question', 'variable-name': 'income',
+         'question': 'Gross annual household income in British Pounds',
+         'response-constraints': mcq(['Less than 20,000 pounds', '20,000-39,999 pounds',
+                                      '40,000-59,999 pounds', '60,000-99,999 pounds',
+                                      'More than 100,000 pounds']),
+         'text_source': src},
+        {'type': 'question', 'variable-name': 'education',
+         'question': 'Please indicate your highest completed level of education.',
+         'response-constraints': mcq(HVDWK_EDUCATION[n]), 'text_source': src},
+    ]
+
+
+def _hvdwk(n):
+    items = upto(Record('hvdwk', n).sequence(), 'worry_')
+    k = [it['variable-name'] for it in items].index('political_1')
     # "Item order within each scale was randomized per participant"; the instructed
     # check CR_efficacy_9 sits inside its scale and is shuffled with it
-    return {'blocks': shuffle_scales(upto(r.sequence(), 'worry_'), HVDWK_SCALES),
-            'target': 'f19'}
+    return shuffle_scales(items[:k] + hvdwk_demographics(n) + items[k:], HVDWK_SCALES)
+
+
+def hvdwk_s2(spec):
+    return {'blocks': _hvdwk(2), 'target': 'f19'}
 
 
 def hvdwk_s3(spec):
-    r = Record('hvdwk', 3)
-    return {'blocks': shuffle_scales(upto(r.sequence(), 'worry_'), HVDWK_SCALES)}
+    return {'blocks': _hvdwk(3)}
 
 
 def aj5mt(spec):
