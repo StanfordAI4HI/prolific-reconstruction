@@ -816,7 +816,7 @@ DEMOGRAPHICS = {
         demo('gender', GENDER + ' (select all that apply)',
              {'Female': 'female', 'Male': 'male', 'Non-binary / other': 'non-binary/other'},
              multi=True),
-        demo('education', 'What is your level of education?', None,
+        demo('education', 'What is the highest degree you have obtained?', None,
              scale={'scale-min': 1, 'scale-max': 5, 'scale-min-desc': 'No formal education',
                     'scale-max-desc': 'College education, graduate degree'},
              fmt='{} of 5 (1 = no formal education, 5 = college education, graduate '

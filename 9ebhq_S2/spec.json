@@ -50,7 +50,7 @@
     {
      "type": "question",
      "variable-name": "demo_education",
-     "question": "What is your level of education?",
+     "question": "What is the highest degree you have obtained?",
      "response-constraints": {
       "type": "scalar",
       "scale-min": 1,
