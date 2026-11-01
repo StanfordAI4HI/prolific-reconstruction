@@ -102,8 +102,8 @@ produce unattributable data — it shows "this link is missing its Prolific ID" 
 | 05 | `6fjdr` | The impact of everyday climate actions | 440 | 10 | 1 | [debug](https://proliferate.alps.science/experiment/2ab3c7c1-b6f1-45d6-87b6-a5ecf1024ce8/debug) |
 | 06 | `fkrsd` | Habits and holidays | 80 | 14 | 1 | [debug](https://proliferate.alps.science/experiment/85cd14df-1564-4491-ac1c-2a797047f167/debug) |
 | 07 | `6cxdn` | Your romantic relationship | 80 | 16 | 1 | [debug](https://proliferate.alps.science/experiment/88cd8ab4-972d-4765-a24b-f7d802b4dbbb/debug) |
-| 08 | `ba65f_A` | Short scenarios about two friends | 30 | 20 | 1 | [debug](https://proliferate.alps.science/experiment/e2653cfb-a802-42f5-9ffd-c74c624c42a0/debug) |
-| 09 | `ba65f_B` | Short scenarios about two friends | 50 | 7 | 1 | [debug](https://proliferate.alps.science/experiment/ba6be750-44c9-4ace-b46c-d3245fd57b71/debug) |
+| 08 | `ba65f_A` | Short scenarios about two friends | 50 | 12 | 1 | [debug](https://proliferate.alps.science/experiment/e2653cfb-a802-42f5-9ffd-c74c624c42a0/debug) |
+| 09 | `ba65f_B` | Short scenarios about two friends | 100 | 7 | 1 | [debug](https://proliferate.alps.science/experiment/ba6be750-44c9-4ace-b46c-d3245fd57b71/debug) |
 | 10 | `aj5mt` | Reasoning about likelihoods | 230 | 8 | 6 | [debug](https://proliferate.alps.science/experiment/c637ac22-b60d-4855-a9fa-1311b6735075/debug) |
 | 11 | `dqsv6` | Views about Britain and world affairs | 180 | 6 | 1 | [debug](https://proliferate.alps.science/experiment/b261283e-0f76-47b2-b331-e20057743cc3/debug) |
 | 12 | `9ebhq_S1` | Beliefs about widely discussed claims | 180 | 7 | 1 | [debug](https://proliferate.alps.science/experiment/9f35a038-98ed-47d0-89e8-a9b2372e9c63/debug) |
