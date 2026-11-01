@@ -1,7 +1,9 @@
 # Validating Reconstructed Experiments
 
 Participant-facing experiments for Stanford IRB protocol **88942** (Non-Medical,
-Expedited, umbrella). Eighteen Prolific listings reproducing fifteen archived studies.
+Expedited, umbrella). Seventeen Prolific listings reproducing fifteen archived studies.
+
+`hvdwk_S2` is kept for its numbering and page but is not recruited. Not fielded (decided 2026-10-31): only Study 3, the preregistered confirmatory study, is replicated; Study 2's exploratory sample is not re-run.
 
 Generated — do not edit by hand; `battery_deploy.py` rewrites this file. Rebuild with
 
@@ -89,7 +91,7 @@ identifying file in a collection.
 The renderer refuses to run without an id in the URL, so a bare Pages link cannot
 produce unattributable data — it shows "this link is missing its Prolific ID" instead.
 
-## The eighteen listings
+## The listings
 
 | # | listing | study | N | minutes | arms | debug link |
 |---|---|---|---|---|---|---|
@@ -108,7 +110,7 @@ produce unattributable data — it shows "this link is missing its Prolific ID" 
 | 13 | `9ebhq_S2` | Beliefs about widely discussed claims | 180 | 11 | 1 | [debug](https://proliferate.alps.science/experiment/a55e36ce-9fe0-4c7f-a191-dc9675a52eb4/debug) |
 | 14 | `fxp7g` | Reading news headlines | 300 | 12 | 8 | [debug](https://proliferate.alps.science/experiment/9b8bb2a4-ae78-42a1-b5b4-6e03aae2602a/debug) |
 | 15 | `ky9u6` | Personality and well-being | 80 | 38 | 1 | [debug](https://proliferate.alps.science/experiment/a6444ab0-0926-4ed9-a410-29a829e02aba/debug) |
-| 16 | `hvdwk_S2` | Views on environmental sustainability | 80 | 16 | 1 | [debug](https://proliferate.alps.science/experiment/acca6f51-9e2e-44f7-9ace-21a4944546f3/debug) |
+| 16 | `hvdwk_S2` | Views on environmental sustainability | not fielded | 16 | 1 | [debug](https://proliferate.alps.science/experiment/acca6f51-9e2e-44f7-9ace-21a4944546f3/debug) |
 | 17 | `hvdwk_S3` | Views on environmental sustainability | 80 | 13 | 1 | [debug](https://proliferate.alps.science/experiment/6680057c-11fc-4209-8773-d1f728bffc21/debug) |
 | 18 | `kxcwm` | Creativity exercises and ways of thinking | 270 | 25 | 2 | [debug](https://proliferate.alps.science/experiment/7df4e3a1-8424-4109-9d2e-48819893382c/debug) |
 
