@@ -52,16 +52,26 @@
      "variable-name": "demo_education",
      "question": "What is the highest degree you have obtained?",
      "response-constraints": {
-      "type": "scalar",
-      "scale-min": 1,
-      "scale-max": 5,
-      "scale-min-desc": "No formal education",
-      "scale-max-desc": "College education, graduate degree"
+      "type": "mcq",
+      "options": [
+       "No formal education",
+       "Primary / middle school",
+       "High school",
+       "College degree (undergraduate)",
+       "Graduate degree"
+      ],
+      "max-choices": 1
      },
      "text_source": "authored",
      "to_info": {
       "key": "education",
-      "format": "{} of 5 (1 = no formal education, 5 = college education, graduate degree)"
+      "map": {
+       "No formal education": "1 of 5 (no formal education)",
+       "Primary / middle school": "2 of 5 (primary / middle school)",
+       "High school": "3 of 5 (high school)",
+       "College degree (undergraduate)": "4 of 5 (college degree, undergraduate)",
+       "Graduate degree": "5 of 5 (graduate degree)"
+      }
      },
      "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
     }

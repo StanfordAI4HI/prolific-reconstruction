@@ -816,11 +816,16 @@ DEMOGRAPHICS = {
         demo('gender', GENDER + ' (select all that apply)',
              {'Female': 'female', 'Male': 'male', 'Non-binary / other': 'non-binary/other'},
              multi=True),
-        demo('education', 'What is the highest degree you have obtained?', None,
-             scale={'scale-min': 1, 'scale-max': 5, 'scale-min-desc': 'No formal education',
-                    'scale-max-desc': 'College education, graduate degree'},
-             fmt='{} of 5 (1 = no formal education, 5 = college education, graduate '
-                 'degree)')]),
+        # The original ticked one of five labelled boxes (OSF dazqb, `educ.1.`-`educ.5.`,
+        # coded 1-5 by the box). Only the end labels are published; the middle three are
+        # reconstructed to fit its distribution (2% / 37% / 42% / 18% on 2-5). A 1-5
+        # scale with only the ends labelled sent bachelor's holders to 5.
+        demo('education', 'What is the highest degree you have obtained?',
+             {'No formal education': '1 of 5 (no formal education)',
+              'Primary / middle school': '2 of 5 (primary / middle school)',
+              'High school': '3 of 5 (high school)',
+              'College degree (undergraduate)': '4 of 5 (college degree, undergraduate)',
+              'Graduate degree': '5 of 5 (graduate degree)'})]),
     'aj5mt': ('end', [demo('age', AGE, None),
                       demo('gender', GENDER, {'Female': 'female', 'Male': 'male'})]),
     'ba65f_A': ('end', [demo('age', AGE, None),
