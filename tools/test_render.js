@@ -184,4 +184,26 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
          'kxcwm CAQ gate');
   console.log('ok  kxcwm: CAQ achievements gated on the domains picked');
 }
+// ---------- ba65f_B: 5 high + 5 low per person, levels not shown in a fixed pattern
+{
+  const patterns = new Set();
+  const firstHigh = [];
+  for (let k = 0; k < 200; k++) {
+    const s = boot('ba65f_B', `b${k}`);
+    const sits = [];
+    for (const v of finish(s)) {
+      const m = v.match(/^([a-z]+)_([hl])_/);
+      if (m && (!sits.length || sits[sits.length - 1][0] !== m[1])) sits.push([m[1], m[2]]);
+    }
+    const seq = sits.map(x => x[1]).join('');
+    assert.strictEqual(sits.length, 10, `ba65f_B: ${sits.length} situations`);
+    assert.strictEqual(seq.split('h').length - 1, 5, `ba65f_B: ${seq} is not 5 high + 5 low`);
+    patterns.add(seq);
+    firstHigh.push(seq[0] === 'h');
+  }
+  const share = firstHigh.filter(Boolean).length / firstHigh.length;
+  assert(patterns.size > 50, `ba65f_B: only ${patterns.size} level orders`);
+  assert(share > 0.35 && share < 0.65, `ba65f_B: first situation high-cost ${share}`);
+  console.log(`ok  ba65f_B: 5+5 levels, ${patterns.size} distinct level orders in 200`);
+}
 console.log('all passed');
