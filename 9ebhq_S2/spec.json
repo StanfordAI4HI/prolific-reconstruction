@@ -273,7 +273,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -286,7 +293,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -299,7 +313,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -312,7 +333,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -325,7 +353,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -338,7 +373,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -351,7 +393,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -364,7 +413,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -377,7 +433,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -390,7 +453,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -403,7 +473,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -416,7 +493,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },
@@ -429,7 +513,14 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "not at all informed",
-    "scale-max-desc": "extremely informed"
+    "scale-max-desc": "extremely informed",
+    "scale-labels": [
+     "Not at all informed",
+     "Minimally informed",
+     "Somewhat informed",
+     "Well informed",
+     "Extremely informed"
+    ]
    },
    "text_source": "extracted"
   },

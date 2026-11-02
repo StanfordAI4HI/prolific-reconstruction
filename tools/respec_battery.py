@@ -394,10 +394,22 @@ def ninebhq_s1(spec):
             + items[c:], 'target': 'f06'}
 
 
+#: The original's perceived-knowledge grid labelled every column; its instructions
+#: (OSF dazqb, "Scales used in the three studies") define these five. Labelled only at
+#: its ends, the first 15 Study 2 participants rated the made-up theories well above
+#: the original (2.31 vs 1.53), so from 2026-11-01 every point carries its label.
+#: Study 1 was fielded with the ends only and is left as fielded.
+INFORMED_LABELS = ['Not at all informed', 'Minimally informed', 'Somewhat informed',
+                   'Well informed', 'Extremely informed']
+
+
 def ninebhq_s2(spec):
     r = Record('9ebhq', 2)
-    return {'blocks': upto(r.sequence(replace={'baguettecheck': BAGUETTE}),
-                           'informed.MU3.')}
+    items = upto(r.sequence(replace={'baguettecheck': BAGUETTE}), 'informed.MU3.')
+    for it in items:
+        if it.get('variable-name', '').startswith('informed.'):
+            it['response-constraints']['scale-labels'] = INFORMED_LABELS
+    return {'blocks': items}
 
 
 HVDWK_SCALES = {
