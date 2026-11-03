@@ -608,44 +608,45 @@ def _fxp7g_layout(r, items):
     imi = [i for i, x in enumerate(n) if re.fullmatch(r'IMI_\d+_h\d+', x)]
     assert rate == list(range(rate[0], rate[-1] + 1)), 'fxp7g: ratings not contiguous'
     assert imi == list(range(imi[0], imi[-1] + 1)), 'fxp7g: IMI block not contiguous'
-    cut = rate[0] - 1 if n[rate[0] - 1].endswith('_repeated') else rate[0]
+    # Every "_repeated" reminder belongs on the ratings page. In the measured arms
+    # there is one per answer, each gated on it, so all of them go there (only the
+    # participant's own is shown); taking only the one adjacent to the ratings left
+    # the other branch's reminder on a page of its own and its ratings without it.
+    head = [it for it in items[:rate[0]] if not n[items.index(it)].endswith('_repeated')]
+    lead = [it for it in items[:rate[0]] if n[items.index(it)].endswith('_repeated')]
     statements = collections.OrderedDict()
     for i in imi:
         statements.setdefault(n[i].split('_h')[0], []).append(items[i])
-    page = _fxp7g_matrix(r, items[rate[0]:rate[-1] + 1], items[cut:rate[0]])
-    return (items[:cut], page, items[rate[-1] + 1:imi[0]]
+    page = _fxp7g_matrix(r, items[rate[0]:rate[-1] + 1], lead)
+    return (head, page, items[rate[-1] + 1:imi[0]]
             + [_fxp7g_matrix(r, rows) for rows in statements.values()] + items[imi[-1] + 1:])
 
 
 def fxp7g(spec):
-    """Four conditions x two headline sets. Within manipulated_goal the record assigns
-    a credibility or an enjoyment goal (about half each); the arm draws one of the two
-    framings at random, so the condition keeps its share of the sample."""
+    """Four conditions x two headline sets. Within manipulated_goal the original
+    randomized a credibility or an enjoyment goal (Qualtrics' `credibility` field,
+    about half each). That goal is the measures' `goal_orientation`, and it is shown
+    only as a stimulus, which the payload does not carry, so it is made part of the
+    arm: ingest copies an arm's labels into participant-meta. To keep the original's
+    equal split over the four conditions, each of the other conditions' arms appears
+    twice, so every condition x set is 2 of the 16 arms and each goal 1 of them."""
     r = Record('fxp7g', 4)
     labels, arms = [], []
     for c in FXP7G_CONDS:
         for s in (1, 2):
             if c == 'manipulated_goal':
-                variants = [_fxp7g_layout(r, r.sequence(condition=c, set=s,
-                                                        goal_orientation=g))
-                            for g in ('credibility', 'enjoyment')]
-                heads = [v[0] for v in variants]
-                rest = variants[0][2]
-                assert json.dumps(variants[1][2]) == json.dumps(rest), \
-                    'fxp7g: goal framings differ beyond the framing pages'
-                common = 0
-                while (common < min(map(len, heads)) and
-                       heads[0][common]['variable-name'] == heads[1][common]['variable-name']):
-                    common += 1
-                blocks = heads[0][:common] + [shuffle(
-                    [seq(*h[common:], v[1]) for h, v in zip(heads, variants)], pick=1)] + rest
+                for g in ('credibility', 'enjoyment'):
+                    head, page, rest = _fxp7g_layout(
+                        r, r.sequence(condition=c, set=s, goal_orientation=g))
+                    labels.append({'condition': c, 'set': str(s), 'goal_orientation': g})
+                    arms.append(head + [page] + rest)
             else:
                 head, page, rest = _fxp7g_layout(r, r.sequence(condition=c, set=s))
-                blocks = head + [page] + rest
-            labels.append({'condition': c, 'set': str(s)})
-            arms.append(blocks)
-    return {'arms': len(arms), 'arm_keys': ['condition', 'set'], 'arm_labels': labels,
-            'arm_blocks': arms}
+                for _ in range(2):
+                    labels.append({'condition': c, 'set': str(s)})
+                    arms.append(head + [page] + rest)
+    return {'arms': len(arms), 'arm_keys': ['condition', 'set', 'goal_orientation'],
+            'arm_labels': labels, 'arm_blocks': arms}
 
 
 #: The three attention statements the record knows the wording of (from the QSF) but
