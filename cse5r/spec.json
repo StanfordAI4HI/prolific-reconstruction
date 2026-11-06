@@ -123,49 +123,63 @@
     "text_source": "extracted"
    },
    {
-    "type": "question",
-    "variable-name": "gl_rank_0_1_RANK",
-    "question": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).\nRank you gave to: Choosing candidates that have enough available hours each week",
-    "response-constraints": {
-     "type": "mcq",
-     "options": [
-      "1",
-      "2",
-      "3"
-     ],
-     "max-choices": 1
-    },
-    "text_source": "paraphrased"
-   },
-   {
-    "type": "question",
-    "variable-name": "gl_rank_0_2_RANK",
-    "question": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).\nRank you gave to: Choosing the most qualified candidates",
-    "response-constraints": {
-     "type": "mcq",
-     "options": [
-      "1",
-      "2",
-      "3"
-     ],
-     "max-choices": 1
-    },
-    "text_source": "paraphrased"
-   },
-   {
-    "type": "question",
-    "variable-name": "gl_rank_0_3_RANK",
-    "question": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).\nRank you gave to: Choosing at least one woman candidate",
-    "response-constraints": {
-     "type": "mcq",
-     "options": [
-      "1",
-      "2",
-      "3"
-     ],
-     "max-choices": 1
-    },
-    "text_source": "paraphrased"
+    "type": "page",
+    "rank": true,
+    "items": [
+     {
+      "type": "stimuli",
+      "variable-name": "gl_rank_stem",
+      "content": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).",
+      "text_source": "paraphrased"
+     },
+     {
+      "type": "question",
+      "variable-name": "gl_rank_0_1_RANK",
+      "question": "Choosing candidates that have enough available hours each week",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "paraphrased"
+     },
+     {
+      "type": "question",
+      "variable-name": "gl_rank_0_2_RANK",
+      "question": "Choosing the most qualified candidates",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "paraphrased"
+     },
+     {
+      "type": "question",
+      "variable-name": "gl_rank_0_3_RANK",
+      "question": "Choosing at least one woman candidate",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "paraphrased"
+     }
+    ],
+    "rank_note": "1 = most important, 3 = least important. Each rank can be given to only one goal.",
+    "note": "Layout restored: a drag-and-drop ranking in the original. The note is authored (the record codes 1 as most important)."
    },
    {
     "type": "stimuli",
@@ -1002,49 +1016,63 @@
     "text_source": "extracted"
    },
    {
-    "type": "question",
-    "variable-name": "gl_rank_0_1_RANK",
-    "question": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).\nRank you gave to: Choosing candidates that have enough available hours each week",
-    "response-constraints": {
-     "type": "mcq",
-     "options": [
-      "1",
-      "2",
-      "3"
-     ],
-     "max-choices": 1
-    },
-    "text_source": "paraphrased"
-   },
-   {
-    "type": "question",
-    "variable-name": "gl_rank_0_2_RANK",
-    "question": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).\nRank you gave to: Choosing the most qualified candidates",
-    "response-constraints": {
-     "type": "mcq",
-     "options": [
-      "1",
-      "2",
-      "3"
-     ],
-     "max-choices": 1
-    },
-    "text_source": "paraphrased"
-   },
-   {
-    "type": "question",
-    "variable-name": "gl_rank_0_3_RANK",
-    "question": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).\nRank you gave to: Choosing at least one woman candidate",
-    "response-constraints": {
-     "type": "mcq",
-     "options": [
-      "1",
-      "2",
-      "3"
-     ],
-     "max-choices": 1
-    },
-    "text_source": "paraphrased"
+    "type": "page",
+    "rank": true,
+    "items": [
+     {
+      "type": "stimuli",
+      "variable-name": "gl_rank_stem",
+      "content": "Please rank the following goals in order of their importance in determining your decision (choosing candidates that have enough available hours each week; choosing the most qualified candidates; choosing at least one woman candidate).",
+      "text_source": "paraphrased"
+     },
+     {
+      "type": "question",
+      "variable-name": "gl_rank_0_1_RANK",
+      "question": "Choosing candidates that have enough available hours each week",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "paraphrased"
+     },
+     {
+      "type": "question",
+      "variable-name": "gl_rank_0_2_RANK",
+      "question": "Choosing the most qualified candidates",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "paraphrased"
+     },
+     {
+      "type": "question",
+      "variable-name": "gl_rank_0_3_RANK",
+      "question": "Choosing at least one woman candidate",
+      "response-constraints": {
+       "type": "mcq",
+       "options": [
+        "1",
+        "2",
+        "3"
+       ],
+       "max-choices": 1
+      },
+      "text_source": "paraphrased"
+     }
+    ],
+    "rank_note": "1 = most important, 3 = least important. Each rank can be given to only one goal.",
+    "note": "Layout restored: a drag-and-drop ranking in the original. The note is authored (the record codes 1 as most important)."
    },
    {
     "type": "stimuli",

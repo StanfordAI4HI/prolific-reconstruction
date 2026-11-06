@@ -788,8 +788,40 @@ def cse5r(spec):
     fields them behind that gate rather than fielding either branch unconditionally."""
     r = Record('cse5r', 1)
     labs = [l['condition'] for l in spec['arm_labels']]
-    return {'arm_blocks': [upto(r.sequence(condition=c, longest=FULL), 'asn_womn')
+    return {'arm_blocks': [cse5r_ranking(upto(r.sequence(condition=c, longest=FULL),
+                                              'asn_womn'))
                            for c in labs]}
+
+
+#: The goals were ranked in Qualtrics by drag and drop, so every participant's three
+#: ranks are distinct (all 985 analysed are a permutation of 1-2-3). The record stores
+#: them as three single-choice items; asked that way a participant could give 1, 1, 1.
+#: They are fielded as one ranking page instead (render.js `rank`): the shared
+#: instruction once, a row per goal, and a rank can go to only one row. The three
+#: variables and their "1"/"2"/"3" answers are unchanged, so measures and ingest are.
+CSE5R_RANKS = ('gl_rank_0_1_RANK', 'gl_rank_0_2_RANK', 'gl_rank_0_3_RANK')
+CSE5R_RANK_SPLIT = '\nRank you gave to: '
+
+
+def cse5r_ranking(items):
+    n = [it['variable-name'] for it in items]
+    if CSE5R_RANKS[0] not in n:
+        return items                       # outcome-only scope stops before them
+    a = n.index(CSE5R_RANKS[0])
+    assert tuple(n[a:a + 3]) == CSE5R_RANKS, f'cse5r: rank items not contiguous {n[a:a + 3]}'
+    stems = {it['question'].split(CSE5R_RANK_SPLIT)[0] for it in items[a:a + 3]}
+    assert len(stems) == 1 and all(CSE5R_RANK_SPLIT in it['question']
+                                   for it in items[a:a + 3]), 'cse5r: rank stems differ'
+    rows = [dict(it, question=it['question'].split(CSE5R_RANK_SPLIT)[1])
+            for it in items[a:a + 3]]
+    stem = {'type': 'stimuli', 'variable-name': 'gl_rank_stem', 'content': stems.pop(),
+            'text_source': items[a].get('text_source')}
+    page = {'type': 'page', 'rank': True, 'items': [stem] + rows,
+            'rank_note': '1 = most important, 3 = least important. Each rank can be '
+                         'given to only one goal.',
+            'note': 'Layout restored: a drag-and-drop ranking in the original. The note '
+                    'is authored (the record codes 1 as most important).'}
+    return items[:a] + [page] + items[a + 3:]
 
 
 

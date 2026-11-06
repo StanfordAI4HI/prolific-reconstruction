@@ -161,3 +161,14 @@ button {
 /* several items on one page (a vignette with its rating, a matrix) */
 .q + .q { margin-top: 1.6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
 .freetext.line { width: 100%; box-sizing: border-box; min-height: 0; }
+
+/* ranking page: one row per thing ranked, the ranks side by side */
+.rank-note { font-size: .92em; color: var(--muted); margin: -.6em 0 1em; }
+.rankgrid .rank-row { display: flex; align-items: center; justify-content: space-between;
+  gap: 1em; border-top: 1px solid var(--line); padding: .5em 0; margin: 0; }
+.rankgrid .rank-row .qtext { margin: 0; flex: 1; }
+.rankgrid .rank-row .opts { flex-direction: row; gap: .6em; flex: none; }
+.rankgrid .rank-row .opt { padding: .2em .4em; }
+@media (max-width: 520px) {
+  .rankgrid .rank-row { flex-direction: column; align-items: flex-start; }
+}

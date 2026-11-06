@@ -42,9 +42,14 @@ function boot(listing, pid) {
       for (const el of d.querySelectorAll('input[type=radio], input[type=checkbox]')) {
         (radios[el.name] = radios[el.name] || []).push(el);
       }
+      const ranked = new Set();     // a ranking page takes each rank once
       for (const [nm, els] of Object.entries(radios)) {
         const want = values[nm.replace(/^w_/, '')];
-        (els.find(e => e.value === String(want)) || els[0]).checked = true;
+        const inRank = els[0].closest('.rank-row');
+        const pick = els.find(e => e.value === String(want))
+          || (inRank && els.find(e => !ranked.has(e.value))) || els[0];
+        pick.checked = true;
+        if (inRank) ranked.add(pick.value);
       }
     },
     next() { d.getElementById('next').click(); },
@@ -242,5 +247,26 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   }
   assert.strictEqual(firsts.size, 2, 'goal options never reordered');
   console.log('ok  fxp7g: goal-measure options shuffled per participant, stable on Back');
+}
+// ---------- cse5r: the goal ranking is one page, and a rank goes to one goal only
+{
+  const s = boot('cse5r', 'r1');
+  s.next();
+  assert(runTo(s, () => s.d.querySelector('.rankgrid')), 'ranking page');
+  const radio = (n, v) => s.d.querySelector(`input[name="w_gl_rank_0_${n}_RANK"][value="${v}"]`);
+  const pick = (n, v) => { const el = radio(n, v); el.checked = true;
+                           el.dispatchEvent(new s.d.defaultView.Event('change')); };
+  assert.strictEqual(s.d.querySelectorAll('.rank-row').length, 3);
+  pick(1, '1'); pick(2, '1');                 // the second takes rank 1 from the first
+  assert(!radio(1, '1').checked && radio(2, '1').checked, 'repeat rank not cleared');
+  pick(1, '2'); pick(3, '3');
+  s.next();
+  assert(!s.d.querySelector('.rankgrid'), 'ranking page did not advance');
+  finish(s);
+  const got = Object.fromEntries(s.box.payload.trials
+    .filter(t => t.variable_name.startsWith('gl_rank_')).map(t => [t.variable_name, t.answer]));
+  assert.deepStrictEqual(got, { gl_rank_0_1_RANK: '2', gl_rank_0_2_RANK: '1',
+                                gl_rank_0_3_RANK: '3' });
+  console.log('ok  cse5r: ranking on one page; a repeated rank moves, never duplicates');
 }
 console.log('all passed');
