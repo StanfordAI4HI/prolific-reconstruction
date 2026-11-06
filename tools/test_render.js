@@ -21,6 +21,13 @@ function boot(listing, pid) {
   w.TextEncoder = TextEncoder;
   const box = { payload: null };
   w.proliferate = { submit: p => { box.payload = p; } };
+  // a fake clock, so a timed page's two minutes pass on demand (box.advance)
+  let now = 0, tid = 0;
+  const timers = new Map();
+  Object.defineProperty(w, 'performance', { value: { now: () => now }, configurable: true });
+  w.setInterval = f => { timers.set(++tid, f); return tid; };
+  w.clearInterval = id => { timers.delete(id); };
+  box.advance = ms => { now += ms; for (const f of [...timers.values()]) f(); };
   w.eval(RENDER);
   w.runSpec(JSON.parse(fs.readFileSync(path.join(SITE, listing, 'spec.json'))));
   const d = w.document;
@@ -34,9 +41,19 @@ function boot(listing, pid) {
         el.value = values[v] !== undefined ? values[v] : 40;
         el.dispatchEvent(new w.Event('input'));
       }
-      for (const el of d.querySelectorAll('input.freetext, textarea, input.idea-in')) {
+      for (const el of d.querySelectorAll('input.freetext, textarea')) {
         const v = el.id.replace(/^w_/, '');
         el.value = values[v] !== undefined ? values[v] : `my ${v}`;
+      }
+      // idea boxes are typed: one keydown per character, then an input event
+      for (const el of d.querySelectorAll('input.idea-in')) {
+        const v = values[el.id] !== undefined ? values[el.id] : `my ${el.id}`;
+        if (v === '' || el.value) continue;
+        for (let c = 0; c < String(v).length; c++) {
+          el.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'a' }));
+        }
+        el.value = v;
+        el.dispatchEvent(new w.Event('input'));
       }
       const radios = {};
       for (const el of d.querySelectorAll('input[type=radio], input[type=checkbox]')) {
@@ -52,7 +69,14 @@ function boot(listing, pid) {
         if (inRank) ranked.add(pick.value);
       }
     },
-    next() { d.getElementById('next').click(); },
+    // a timed page cannot be left early: let its time run out instead
+    next() {
+      if (d.getElementById('ti-clock') && d.getElementById('next').disabled) {
+        box.advance(120001);
+      } else {
+        d.getElementById('next').click();
+      }
+    },
     back() { d.getElementById('back').click(); },
     onScreen: () => [...d.querySelectorAll('input, textarea')]
       .map(e => (e.id || e.name).replace(/^w_/, '')),
@@ -268,5 +292,50 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   assert.deepStrictEqual(got, { gl_rank_0_1_RANK: '2', gl_rank_0_2_RANK: '1',
                                 gl_rank_0_3_RANK: '3' });
   console.log('ok  cse5r: ranking on one page; a repeated rank moves, never duplicates');
+}
+// ---------- kxcwm: the timed page holds for its full two minutes, with no way back
+{
+  const s = boot('kxcwm', 't1');
+  s.next();
+  assert(runTo(s, () => s.d.getElementById('ti-clock')), 'reach a timed page');
+  const base = s.d.querySelector('input.idea-in').id.replace(/_1$/, '');
+  assert(!s.d.getElementById('back'), 'timed page offers Back');
+  assert(s.d.getElementById('next').disabled, "I'm done enabled before time is up");
+  // type three ideas: one by hand (6 keys), two "pasted" (no keys)
+  const typed = { [`${base}_1`]: 'a doorstop' };
+  for (let k = 2; k <= 15; k++) typed[`${base}_${k}`] = '';
+  s.answer(typed);
+  for (const k of [2, 3]) {
+    const el = s.d.getElementById(`${base}_${k}`);
+    el.dispatchEvent(new s.d.defaultView.Event('paste'));
+    el.value = 'pasted idea';
+    el.dispatchEvent(new s.d.defaultView.Event('input'));
+  }
+  s.d.getElementById('next').click();
+  assert(s.d.getElementById('ti-clock'), "a disabled I'm done still left the page");
+  s.box.advance(60000);
+  assert(s.d.getElementById('ti-clock'), 'left the page before the time was up');
+  s.box.advance(60001);
+  assert(!s.d.getElementById('ti-clock') || !s.d.querySelector(`#${base}_1`),
+         'still on the page after the time was up');
+  finish(s);
+  const t = Object.fromEntries(s.box.payload.trials.map(x => [x.variable_name, x.answer]));
+  assert.strictEqual(t[`${base}_1`], 'a doorstop', 'typed idea not submitted');
+  assert.strictEqual(t[`${base}_1__keys`], 10);
+  assert.strictEqual(t[`${base}_2__keys`], 0);
+  assert.strictEqual(t[`${base}_2__pastes`], 1);
+  assert.strictEqual(t[`${base}__n_submitted`], 3);
+  console.log('ok  kxcwm: timed page holds two minutes, no Back; keys and pastes per idea');
+}
+{
+  // all fifteen boxes filled: the page may be left early, as the original allowed
+  const s = boot('kxcwm', 't2');
+  s.next();
+  assert(runTo(s, () => s.d.getElementById('ti-clock')), 'reach a timed page');
+  s.answer();
+  assert(!s.d.getElementById('next').disabled, "I'm done still disabled with 15 ideas");
+  s.d.getElementById('next').click();
+  assert(!s.d.getElementById('ti-clock'), 'did not move on after 15 ideas');
+  console.log("ok  kxcwm: I'm done opens once all fifteen boxes are filled");
 }
 console.log('all passed');

@@ -132,6 +132,8 @@ button {
 }
 #ti-clock { font-weight: 600; color: var(--ink); }
 #ti-clock.low { color: #b00020; }
+.timer-note { font-size: .9em; }
+#next:disabled { opacity: .45; cursor: default; }
 
 .idea-grid {
   display: grid;
