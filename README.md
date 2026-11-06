@@ -108,7 +108,7 @@ produce unattributable data — it shows "this link is missing its Prolific ID" 
 | 11 | `dqsv6` | Views about Britain and world affairs | 180 | 6 | 1 | [debug](https://proliferate.alps.science/experiment/b261283e-0f76-47b2-b331-e20057743cc3/debug) |
 | 12 | `9ebhq_S1` | Beliefs about widely discussed claims | 180 | 7 | 1 | [debug](https://proliferate.alps.science/experiment/9f35a038-98ed-47d0-89e8-a9b2372e9c63/debug) |
 | 13 | `9ebhq_S2` | Beliefs about widely discussed claims | 180 | 11 | 1 | [debug](https://proliferate.alps.science/experiment/a55e36ce-9fe0-4c7f-a191-dc9675a52eb4/debug) |
-| 14 | `fxp7g` | Reading news headlines | 300 | 12 | 8 | [debug](https://proliferate.alps.science/experiment/9b8bb2a4-ae78-42a1-b5b4-6e03aae2602a/debug) |
+| 14 | `fxp7g` | Reading news headlines | 380 | 12 | 16 | [debug](https://proliferate.alps.science/experiment/9b8bb2a4-ae78-42a1-b5b4-6e03aae2602a/debug) |
 | 15 | `ky9u6` | Personality and well-being | 80 | 38 | 1 | [debug](https://proliferate.alps.science/experiment/a6444ab0-0926-4ed9-a410-29a829e02aba/debug) |
 | 16 | `hvdwk_S2` | Views on environmental sustainability | not fielded | 16 | 1 | [debug](https://proliferate.alps.science/experiment/acca6f51-9e2e-44f7-9ace-21a4944546f3/debug) |
 | 17 | `hvdwk_S3` | Views on environmental sustainability | 80 | 13 | 1 | [debug](https://proliferate.alps.science/experiment/6680057c-11fc-4209-8773-d1f728bffc21/debug) |
