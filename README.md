@@ -112,7 +112,7 @@ produce unattributable data — it shows "this link is missing its Prolific ID" 
 | 15 | `ky9u6` | Personality and well-being | 80 | 38 | 1 | [debug](https://proliferate.alps.science/experiment/a6444ab0-0926-4ed9-a410-29a829e02aba/debug) |
 | 16 | `hvdwk_S2` | Views on environmental sustainability | not fielded | 16 | 1 | [debug](https://proliferate.alps.science/experiment/acca6f51-9e2e-44f7-9ace-21a4944546f3/debug) |
 | 17 | `hvdwk_S3` | Views on environmental sustainability | 80 | 13 | 1 | [debug](https://proliferate.alps.science/experiment/6680057c-11fc-4209-8773-d1f728bffc21/debug) |
-| 18 | `kxcwm` | Creativity exercises and ways of thinking | 270 | 25 | 2 | [debug](https://proliferate.alps.science/experiment/7df4e3a1-8424-4109-9d2e-48819893382c/debug) |
+| 18 | `kxcwm` | Creativity exercises and ways of thinking | 250 | 25 | 2 | [debug](https://proliferate.alps.science/experiment/7df4e3a1-8424-4109-9d2e-48819893382c/debug) |
 
 A **debug link** opens the listing through proliferate the way a participant reaches
 it, but flagged as sandbox. Every visit creates a fresh participant record and draws a
