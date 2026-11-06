@@ -206,4 +206,41 @@ for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking
   assert(share > 0.35 && share < 0.65, `ba65f_B: first situation high-cost ${share}`);
   console.log(`ok  ba65f_B: 5+5 levels, ${patterns.size} distinct level orders in 200`);
 }
+// ---------- fxp7g: the attention check's Other box, and shuffled goal options
+{
+  let got = null;
+  for (let k = 0; k < 40 && !got; k++) {
+    const s = boot('fxp7g', `o${k}`);
+    s.next();
+    if (!runTo(s, () => s.d.querySelector('input.other-in'), {}, 60)) continue;
+    const box = s.d.querySelector('input.other-in');
+    box.value = 'yes';
+    box.dispatchEvent(new s.d.defaultView.Event('input'));
+    const radio = box.closest('label').querySelector('input[type=radio]');
+    assert(radio.checked, 'typing in Other did not choose it');
+    s.next();
+    finish(s);
+    got = s.box.payload.trials;
+  }
+  assert(got, 'attention page not reached');
+  const ch = got.find(t => t.variable_name === 'attention');
+  const tx = got.find(t => t.variable_name === 'attention__other');
+  assert.strictEqual(ch.answer, 'Other (please specify)');
+  assert.strictEqual(tx.answer, 'yes');
+  console.log('ok  fxp7g: Other is chosen by typing in its box, and the text is submitted');
+
+  const firsts = new Set();
+  for (let k = 0; k < 60 && firsts.size < 2; k++) {
+    const s = boot('fxp7g', `m${k}`);
+    s.next();
+    if (!runTo(s, () => s.d.querySelector('input[name="w_mindset_measure"],input[name="w_characteristic_measure"]'), {}, 6)) continue;
+    const order = () => [...s.d.querySelectorAll('.opts input[type=radio]')].map(e => e.value).join('|');
+    const before = order();
+    firsts.add(before.split('|')[0]);
+    s.answer(); s.next(); s.back();
+    assert.strictEqual(order(), before, 'option order changed on Back');
+  }
+  assert.strictEqual(firsts.size, 2, 'goal options never reordered');
+  console.log('ok  fxp7g: goal-measure options shuffled per participant, stable on Back');
+}
 console.log('all passed');

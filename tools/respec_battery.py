@@ -580,6 +580,7 @@ def kf4e6(spec):
     return {'arm_blocks': arms}
 
 
+FXP7G_SHUFFLED = ('mindset_measure', 'characteristic_measure')
 FXP7G_CONDS = ['control', 'manipulated_goal', 'measured_goal', 'measured_site_preference']
 
 
@@ -645,6 +646,15 @@ def fxp7g(spec):
                 for _ in range(2):
                     labels.append({'condition': c, 'set': str(s)})
                     arms.append(head + [page] + rest)
+    # As the Qualtrics file has them (Heterogeneity_-_..._Sentiment_Mechanism.qsf):
+    # the two goal measures (Q37, Q63) randomize the order of their two answers, and
+    # the attention check (Q113) asks for "yes" typed in its "Other" box.
+    for arm in arms:
+        for it in _items(arm):
+            if it['variable-name'] in FXP7G_SHUFFLED:
+                it['shuffle_options'] = True
+            if it['variable-name'] == 'attention':
+                it['other_text'] = 'Other (please specify)'
     return {'arms': len(arms), 'arm_keys': ['condition', 'set', 'goal_orientation'],
             'arm_labels': labels, 'arm_blocks': arms}
 

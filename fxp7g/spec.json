@@ -1010,7 +1010,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -1951,7 +1952,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -2892,7 +2894,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -3833,7 +3836,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -4791,7 +4795,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -5749,7 +5754,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -6707,7 +6713,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -7665,7 +7672,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -7696,7 +7704,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -8652,7 +8661,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -8683,7 +8693,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -9639,7 +9650,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -9670,7 +9682,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -10626,7 +10639,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -10657,7 +10671,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -11613,7 +11628,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -11644,7 +11660,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -12600,7 +12617,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -12631,7 +12649,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -13587,7 +13606,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -13618,7 +13638,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -14574,7 +14595,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
@@ -14605,7 +14627,8 @@
      ],
      "max-choices": 1
     },
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "shuffle_options": true
    },
    {
     "type": "stimuli",
@@ -15561,7 +15584,8 @@
      "max-choices": 1
     },
     "check": "instructed",
-    "text_source": "extracted"
+    "text_source": "extracted",
+    "other_text": "Other (please specify)"
    },
    {
     "type": "question",
