@@ -4,8 +4,8 @@
 //   node tools/test_render.js
 //
 // 1. every listing runs to a submitted payload for a spread of participant ids;
-// 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, kf4e6,
-//    fxp7g, kfrux, kxcwm), and every answer carries rt_ms.
+// 2. show_if, pipe and page behave as the rebuilt specs rely on (fkrsd, 6cxdn, ky9u6,
+//    efk28, kf4e6, fxp7g, kfrux, kxcwm), and every answer carries rt_ms.
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
@@ -156,12 +156,38 @@ for (const listing of fs.readdirSync(SITE).sort()) {
 }
 
 // ---------- 6cxdn: the status answer takes the reconstruction's branch
-for (const [status, want, not] of [['Yes', 'PRQC.1', 'liking.1'], ['No', 'liking.1', 'PRQC.1']]) {
-  const s = boot('6cxdn', 'c' + status);
-  s.next();
-  const got = finish(s, { relationship_status: status });
-  assert(got.includes(want) && !got.includes(not), `6cxdn ${status}`);
-  console.log(`ok  6cxdn: "${status}" shows ${want}, hides ${not}`);
+{
+  const spec = JSON.parse(fs.readFileSync(path.join(SITE, '6cxdn/spec.json')));
+  const [yes, no] = spec.blocks[0]['response-constraints'].options;
+  for (const [status, want, not] of [[yes, 'PRQC.1', 'liking.1'], [no, 'liking.1', 'PRQC.1']]) {
+    const s = boot('6cxdn', 'c' + status.slice(0, 3));
+    s.next();
+    const got = finish(s, { relationship_status: status });
+    assert(got.includes(want) && !got.includes(not), `6cxdn ${status}`);
+    assert(got.includes('ac1'), '6cxdn: instructed-response item missing');
+    console.log(`ok  6cxdn: "${status.slice(0, 20)}..." shows ${want}, hides ${not}`);
+  }
+}
+
+// ---------- ky9u6: each HEMA-R block names the participant's own project
+{
+  const s = boot('ky9u6', 'y1');
+  s.next(); // consent
+  const vals = { pp_1: 'learning the cello', pp_2: 'my thesis', pp_3: 'running' }; // ids use _ for .
+  assert(runTo(s, () => s.text().includes('your project #2: my thesis'), vals, 600),
+         'ky9u6: project #2 not piped');
+  assert(!s.text().includes('the project you wrote as'), 'ky9u6: slot left in place');
+  console.log('ok  ky9u6: project names piped into the HEMA-R headers');
+}
+
+// ---------- efk28: the attention item is asked in every arm
+{
+  for (let k = 0; k < 12; k++) {
+    const s = boot('efk28', `e${k}`);
+    const got = finish(s);
+    assert(got.some(n => /^Q\d_20$/.test(n)), `efk28 e${k}: no attention item`);
+  }
+  console.log('ok  efk28: every arm asks its attention item');
 }
 
 // ---------- kf4e6: vignette and rating on one page

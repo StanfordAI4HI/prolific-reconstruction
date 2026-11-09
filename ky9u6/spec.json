@@ -2,14 +2,14 @@
  "app": "ky9u6",
  "study": "ky9u6",
  "archive_experiment": "experiment_1",
- "target": "f20",
+ "target": "f31",
  "title": "Personality and well-being",
  "blocks": [
   {
    "type": "stimuli",
    "variable-name": "bfi_instructions",
    "content": "The Big Five Inventory. Here are a number of characteristics that may or may not apply to you. Please write a number next to each statement to indicate the extent to which you agree or disagree with that statement. 1 = Strongly disagree  2 = Disagree  3 = Somewhat disagree  4 = Neutral  5 = Somewhat agree  6 = Agree  7 = Strongly agree. I see myself as someone who...",
-   "text_source": "extracted"
+   "text_source": "paraphrased"
   },
   {
    "type": "question",
@@ -1019,6 +1019,181 @@
   },
   {
    "type": "stimuli",
+   "variable-name": "sc_instructions",
+   "content": "Brief Trait Self-Control Scale. Please answer the following questions about yourself by indicating the extent to which each statement reflects you (1 = not at all like me, 5 = very much like me).",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.1",
+   "question": "I am good at resisting temptation.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.2",
+   "question": "I have a hard time breaking bad habits.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.3",
+   "question": "I am lazy.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.4",
+   "question": "I say inappropriate things.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.5",
+   "question": "I do certain things that are bad for me, if they are fun.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.6",
+   "question": "I refuse things that are bad for me.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.7",
+   "question": "I wish I had more self-discipline.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.8",
+   "question": "People would say that I have iron self-discipline.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.9",
+   "question": "Pleasure and fun sometimes keep me from getting work done.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.10",
+   "question": "I have trouble concentrating.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.11",
+   "question": "I am able to work effectively toward long-term goals.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.12",
+   "question": "Sometimes I can’t stop myself from doing something, even if I know it is wrong.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "sc.13",
+   "question": "I often act without thinking through all the alternatives.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
    "variable-name": "sbi_instructions",
    "content": "Savouring Beliefs Inventory. For each statement listed below, please circle the one number that best indicates how true the particular statement is for you. 1 = strongly disagree, 2 = somewhat disagree, 3 = disagree, 4 = neither agree nor disagree, 5 = agree, 6 = somewhat agree, 7 = strongly agree.",
    "text_source": "extracted"
@@ -1337,479 +1512,6 @@
   },
   {
    "type": "stimuli",
-   "variable-name": "sc_instructions",
-   "content": "Brief Trait Self-Control Scale. Please answer the following questions about yourself by indicating the extent to which each statement reflects you (1 = not at all like me, 5 = very much like me).",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.1",
-   "question": "I am good at resisting temptation.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.2",
-   "question": "I have a hard time breaking bad habits.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.3",
-   "question": "I am lazy.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.4",
-   "question": "I say inappropriate things.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.5",
-   "question": "I do certain things that are bad for me, if they are fun.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.6",
-   "question": "I refuse things that are bad for me.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.7",
-   "question": "I wish I had more self-discipline.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.8",
-   "question": "People would say that I have iron self-discipline.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.9",
-   "question": "Pleasure and fun sometimes keep me from getting work done.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.10",
-   "question": "I have trouble concentrating.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.11",
-   "question": "I am able to work effectively toward long-term goals.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.12",
-   "question": "Sometimes I can’t stop myself from doing something, even if I know it is wrong.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "sc.13",
-   "question": "I often act without thinking through all the alternatives.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "hc_instructions",
-   "content": "Trait Hedonic Capacity Scale. Please answer the following questions about yourself by indicating the extent to which each statement reflects you (1 = not at all like me, 5 = very much like me).",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.1",
-   "question": "I am good at pursuing my desires.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.2",
-   "question": "I can follow my desires in the here and now.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.3",
-   "question": "I often do what I feel like doing.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.4",
-   "question": "In my spare time, I can relax well.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.5",
-   "question": "In my spare time, I can “switch off” well.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.6",
-   "question": "In my spare time, I find it difficult to turn off thoughts about what is still left to do.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.7",
-   "question": "Thoughts about my work sometimes prevent me from enjoying pleasant activities and moments.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.8",
-   "question": "Sometimes I cannot stop myself from thinking about things I still need to do.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.9",
-   "question": "I often think about my duties even while I am enjoying a good moment.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "hc.10",
-   "question": "I often think after the fact that I should have enjoyed the moment more.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "not at all like me",
-    "scale-max-desc": "very much like me"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "bpn_instructions",
-   "content": "Modified Basic Psychology Need Satisfaction Scale. Enter the number from the scale below to identify the extent to which you perceived each basic need was satisfied in the past week (Not at all true — Very true).",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.1",
-   "question": "I felt that my choices were based on my own interests and values",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.2",
-   "question": "I felt that my choices expressed my ‘true self’",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.3",
-   "question": "I felt very capable in what I did",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.4",
-   "question": "I felt that I was taking on and mastering hard challenges",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.5",
-   "question": "I felt close and connected with other people",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.6",
-   "question": "I felt a strong sense of intimacy with the people I spent time with",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.7",
-   "question": "I feel I do novel things",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.8",
-   "question": "I frequently feel there are novelties for me",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.9",
-   "question": "I feel new sensations",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.10",
-   "question": "I think that new situations come up for me",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.11",
-   "question": "I have the opportunity to innovate",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "bpn.12",
-   "question": "I think I discover new things frequently",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all true",
-    "scale-max-desc": "very true"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
    "variable-name": "oth_instructions",
    "content": "Orientation to Happiness Scale. State the extent to which each of the statements below reflects who you are. 1 = Very much unlike me, 2 = Somewhat unlike me, 3 = Neither like nor unlike me, 4 = Somewhat like me, 5 = Very much like me.",
    "text_source": "extracted"
@@ -2050,8 +1752,306 @@
   },
   {
    "type": "stimuli",
+   "variable-name": "bpn_instructions",
+   "content": "Modified Basic Psychology Need Satisfaction Scale. Enter the number from the scale below to identify the extent to which you perceived each basic need was satisfied in the past week (Not at all true — Very true).",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.1",
+   "question": "I felt that my choices were based on my own interests and values",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.2",
+   "question": "I felt that my choices expressed my ‘true self’",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.3",
+   "question": "I felt very capable in what I did",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.4",
+   "question": "I felt that I was taking on and mastering hard challenges",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.5",
+   "question": "I felt close and connected with other people",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.6",
+   "question": "I felt a strong sense of intimacy with the people I spent time with",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.7",
+   "question": "I feel I do novel things",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.8",
+   "question": "I frequently feel there are novelties for me",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.9",
+   "question": "I feel new sensations",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.10",
+   "question": "I think that new situations come up for me",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.11",
+   "question": "I have the opportunity to innovate",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "bpn.12",
+   "question": "I think I discover new things frequently",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all true",
+    "scale-max-desc": "very true"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "hc_instructions",
+   "content": "Trait Hedonic Capacity Scale. Please answer the following questions about yourself by indicating the extent to which each statement reflects you (1 = not at all like me, 5 = very much like me).",
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.1",
+   "question": "I am good at pursuing my desires.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.2",
+   "question": "I can follow my desires in the here and now.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.3",
+   "question": "I often do what I feel like doing.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.4",
+   "question": "In my spare time, I can relax well.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.5",
+   "question": "In my spare time, I can “switch off” well.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.6",
+   "question": "In my spare time, I find it difficult to turn off thoughts about what is still left to do.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.7",
+   "question": "Thoughts about my work sometimes prevent me from enjoying pleasant activities and moments.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.8",
+   "question": "Sometimes I cannot stop myself from thinking about things I still need to do.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.9",
+   "question": "I often think about my duties even while I am enjoying a good moment.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "hc.10",
+   "question": "I often think after the fact that I should have enjoyed the moment more.",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 5,
+    "scale-min-desc": "not at all like me",
+    "scale-max-desc": "very much like me"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
    "variable-name": "pp_instructions",
-   "content": "Personal Project Analysis – Elicitation Stage. We are interested in studying the kinds of activities and concerns that people have over the course of their lives. We call these personal projects. Please take a few minutes and think about your 3 core life projects. Remember these need not be formal projects or even important ones — we would prefer you to give us more of the everyday kinds of activities or concerns that characterize your life at present.",
+   "content": "Personal Project Analysis – Elicitation Stage. We are interested in studying the kinds of activities and concerns that people have over the course of their lives. We call these personal projects. All of us have a number of personal projects at any given time that we think about, plan for, carry out and sometimes (though not always) complete. Some projects may be focused on achievement others on the process; they may be things we choose to do or things we have to do; they may be things we are working towards or things we are trying to avoid. Projects may be related to any aspect of your daily life, university, work, home, leisure and community, among others. Please think of projects in this broad way. Please take a few minutes and think about your 3 core life projects. Remember these need not be formal projects or even important ones -- we would prefer you to give us more of the everyday kinds of activities or concerns that characterize your life at present.",
    "text_source": "extracted"
   },
   {
@@ -2083,432 +2083,6 @@
     "response-limit": null
    },
    "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "hema_instructions",
-   "content": "Hedonic and Eudaimonic Motives for Activities – Revised. For each of your three projects, to what degree do you typically approach the activity with each of the following intentions, whether or not you actually achieve your aim? 1 (not at all) to 7 (very much).",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.1",
-   "question": "Seeking relaxation?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.2",
-   "question": "Seeking to develop a skill, learn, or gain insight into something?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.3",
-   "question": "Seeking to do what you believe in?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.4",
-   "question": "Seeking pleasure?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.5",
-   "question": "Seeking to pursue excellence or a personal ideal?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.6",
-   "question": "Seeking enjoyment?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.7",
-   "question": "Seeking to take it easy?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.8",
-   "question": "Seeking to use the best in yourself?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.9",
-   "question": "Seeking fun?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.1.hema.10",
-   "question": "Seeking to contribute to others or the surrounding world?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_1"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.1",
-   "question": "Seeking relaxation?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.2",
-   "question": "Seeking to develop a skill, learn, or gain insight into something?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.3",
-   "question": "Seeking to do what you believe in?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.4",
-   "question": "Seeking pleasure?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.5",
-   "question": "Seeking to pursue excellence or a personal ideal?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.6",
-   "question": "Seeking enjoyment?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.7",
-   "question": "Seeking to take it easy?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.8",
-   "question": "Seeking to use the best in yourself?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.9",
-   "question": "Seeking fun?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.2.hema.10",
-   "question": "Seeking to contribute to others or the surrounding world?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_2"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.1",
-   "question": "Seeking relaxation?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.2",
-   "question": "Seeking to develop a skill, learn, or gain insight into something?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.3",
-   "question": "Seeking to do what you believe in?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.4",
-   "question": "Seeking pleasure?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.5",
-   "question": "Seeking to pursue excellence or a personal ideal?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.6",
-   "question": "Seeking enjoyment?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.7",
-   "question": "Seeking to take it easy?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.8",
-   "question": "Seeking to use the best in yourself?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.9",
-   "question": "Seeking fun?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
-  },
-  {
-   "type": "question",
-   "variable-name": "pp.3.hema.10",
-   "question": "Seeking to contribute to others or the surrounding world?",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "not at all",
-    "scale-max-desc": "very much"
-   },
-   "text_source": "extracted",
-   "condition": "project_3"
   },
   {
    "type": "stimuli",
@@ -2736,6 +2310,473 @@
     "scale-max-desc": "very much true"
    },
    "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "hema_instructions",
+   "content": "Hedonic and Eudaimonic Motives for Activities – Revised. To what degree do you typically approach your activities with each of the following intentions, whether or not you actually achieve your aim? 1 (not at all) to 7 (very much).",
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "hema_project_1",
+   "content": "The next questions are about your project #1: (the project you wrote as #1)",
+   "text_source": "synthesized",
+   "pipe": {
+    "(the project you wrote as #1)": "pp.1"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.1",
+   "question": "Seeking relaxation?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.2",
+   "question": "Seeking to develop a skill, learn, or gain insight into something?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.3",
+   "question": "Seeking to do what you believe in?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.4",
+   "question": "Seeking pleasure?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.5",
+   "question": "Seeking to pursue excellence or a personal ideal?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.6",
+   "question": "Seeking enjoyment?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.7",
+   "question": "Seeking to take it easy?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.8",
+   "question": "Seeking to use the best in yourself?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.9",
+   "question": "Seeking fun?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.1.hema.10",
+   "question": "Seeking to contribute to others or the surrounding world?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "hema_project_2",
+   "content": "The next questions are about your project #2: (the project you wrote as #2)",
+   "text_source": "synthesized",
+   "pipe": {
+    "(the project you wrote as #2)": "pp.2"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.1",
+   "question": "Seeking relaxation?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.2",
+   "question": "Seeking to develop a skill, learn, or gain insight into something?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.3",
+   "question": "Seeking to do what you believe in?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.4",
+   "question": "Seeking pleasure?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.5",
+   "question": "Seeking to pursue excellence or a personal ideal?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.6",
+   "question": "Seeking enjoyment?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.7",
+   "question": "Seeking to take it easy?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.8",
+   "question": "Seeking to use the best in yourself?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.9",
+   "question": "Seeking fun?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.2.hema.10",
+   "question": "Seeking to contribute to others or the surrounding world?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "stimuli",
+   "variable-name": "hema_project_3",
+   "content": "The next questions are about your project #3: (the project you wrote as #3)",
+   "text_source": "synthesized",
+   "pipe": {
+    "(the project you wrote as #3)": "pp.3"
+   }
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.1",
+   "question": "Seeking relaxation?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.2",
+   "question": "Seeking to develop a skill, learn, or gain insight into something?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.3",
+   "question": "Seeking to do what you believe in?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.4",
+   "question": "Seeking pleasure?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.5",
+   "question": "Seeking to pursue excellence or a personal ideal?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.6",
+   "question": "Seeking enjoyment?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.7",
+   "question": "Seeking to take it easy?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.8",
+   "question": "Seeking to use the best in yourself?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.9",
+   "question": "Seeking fun?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "question",
+   "variable-name": "pp.3.hema.10",
+   "question": "Seeking to contribute to others or the surrounding world?",
+   "response-constraints": {
+    "type": "scalar",
+    "scale-min": 1,
+    "scale-max": 7,
+    "scale-min-desc": "not at all",
+    "scale-max-desc": "very much"
+   },
+   "text_source": "extracted"
+  },
+  {
+   "type": "page",
+   "items": [
+    {
+     "type": "question",
+     "variable-name": "demo_age",
+     "question": "What is your age (in years)?",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 18,
+      "open": true
+     },
+     "text_source": "authored",
+     "to_info": {
+      "key": "age"
+     },
+     "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+    },
+    {
+     "type": "question",
+     "variable-name": "demo_gender",
+     "question": "What is your gender?",
+     "response-constraints": {
+      "type": "mcq",
+      "options": [
+       "Woman",
+       "Man",
+       "Non-binary or gender fluid"
+      ],
+      "max-choices": 1
+     },
+     "text_source": "authored",
+     "to_info": {
+      "key": "gender",
+      "map": {
+       "Woman": "Woman",
+       "Man": "Man",
+       "Non-binary or gender fluid": "Non-binary or gender fluid"
+      }
+     },
+     "note": "Authored: the record keeps this only as participant-info, without its wording; the options are the values it records."
+    }
+   ]
   }
  ],
  "prescreen": {
@@ -2748,7 +2789,7 @@
   ],
   "exclude_prior_listings": true
  },
- "reward_usd": 7.62,
+ "reward_usd": 7.72,
  "consent_sections": [
   [
    "FOR QUESTIONS ABOUT THE STUDY, CONTACT:",
@@ -2774,13 +2815,13 @@
   [
    "TIME INVOLVEMENT:",
    [
-    "Your participation will take approximately 38 minutes."
+    "Your participation will take approximately 39 minutes."
    ]
   ],
   [
    "PAYMENTS:",
    [
-    "You will receive $7.62, paid through Prolific, as payment for your participation."
+    "You will receive $7.72, paid through Prolific, as payment for your participation."
    ]
   ],
   [
@@ -2826,7 +2867,7 @@
   ]
  ],
  "gdpr_attestation": "You consent to the collection, use and transfer of Your Study Data, which includes other sensitive personal data, for the purpose of carrying out the research study, and know that you can withdraw your consent at any time, and we will stop processing your personal data, except as described above.",
- "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 58 questions about your personality and about how you have been feeling over the past month. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask how you have been feeling over the past month.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 38 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $7.62, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
- "estimated_minutes": 38.1,
+ "consent": "<h4>FOR QUESTIONS ABOUT THE STUDY, CONTACT:</h4><p>Noah Goodman, PhD, Department of Psychology, Stanford University, Building 420, 450 Jane Stanford Way, Stanford, CA 94305. Phone: (650) 725-2400.</p><h4>DESCRIPTION:</h4><p>You are invited to participate in a research study about how well automated computer tools can summarise published psychology studies. You will be asked to answer 58 questions about your personality and about how you have been feeling over the past month. There are no right or wrong answers and we are interested in your own view.</p><p>The purpose of this research is to check how accurately automated computer tools can summarise published psychology studies. We are re-asking questions taken from a previously published study so that we can compare the answers with the original study's results.</p><p>Some questions ask how you have been feeling over the past month.</p><p>You must be 18 or older to take part in this study.</p><p>Participation in this research is voluntary, and you are free to withdraw your consent at any time.</p><h4>TIME INVOLVEMENT:</h4><p>Your participation will take approximately 39 minutes.</p><h4>PAYMENTS:</h4><p>You will receive $7.72, paid through Prolific, as payment for your participation.</p><h4>PRIVACY AND CONFIDENTIALITY:</h4><p>The risks associated with this study are minimal. The greatest risk is a breach of confidentiality, and it is small because we hold nothing that identifies you.</p><p>Your answers will be kept confidential. We do not collect your name, your email address, or your IP address. Your answers are stored with your Prolific ID only, which we use to pay you and to avoid duplicate submissions; Stanford cannot use it to find out who you are. We have procedures to protect your privacy, and your identity will not be included in written materials resulting from the study.</p><p>GENERAL DATA PROTECTION REGULATION (GDPR): We will collect your personal data for this study, including other sensitive personal data as described in this consent form. We refer to this data as “Your Study Data.” Any Study Data from this research that is conducted in the European Union/European Economic Area (EU/EEA) or the United Kingdom will be collected, stored, used, and shared (processed) as required by the EU/EEA law known as the General Data Protection Regulation (“GDPR”) and by the UK GDPR. Your Study Data may be processed for the following reasons (purposes):</p><p>• to carry out and confirm the accuracy of the study;</p><p>• to help us monitor and ensure that the study is following research best practices;</p><p>• to make required reports to domestic and foreign regulatory agencies and government officials who have a duty to monitor and oversee studies like this one; and,</p><p>• to follow applicable laws and regulations, including requirements that data from this study, without information that could directly identify you, be made available to other researchers not affiliated with the study team. For example, regulatory authorities in some countries may require that Your Study Data, without information that could directly identify you, be made publicly available on the internet or in other ways, to make research data more widely available to other researchers.</p><p>The following persons and organizations may process Your Study Data for the purposes listed above:</p><p>• the study team at Stanford University;</p><p>• Prolific, the online platform through which you were recruited and are paid;</p><p>• proliferate, a data-collection service operated by the Stanford ALPS Lab, which stores study responses until the study team transfers them to Stanford storage;</p><p>• the ethics committee or institutional review board that approved this study; and</p><p>• domestic and foreign regulatory agencies and government officials who have a duty to monitor or oversee studies like this one.</p><p>We may conduct the study in the United States and other countries where the laws do not protect your privacy to the same extent as the laws in the country where you live (reside). Your Study Data may be transferred to these countries for the purposes described above. We will take reasonable steps to protect your privacy, consistent with applicable laws. For example, where appropriate, we enter into data transfer agreements with standard contractual clauses approved by European authorities that provide certain terms and conditions on how Your Data can be used and shared. These data transfer agreements help ensure Your Study Data is adequately protected.</p><p>The GDPR gives you certain rights with regard to Your Study Data, including the right to: (1) request access to, correct, or erase Your Study Data, (2) object to or restrict our processing of Your Study Data, and (3) request that we move, copy or transfer Your Study Data to another organization. To make any such requests, please contact the Protocol Director, Noah Goodman, at ngoodman@stanford.edu or (650) 725-2400.</p><p>You may also withdraw your consent at any time. If you withdraw your consent or request Your Study Data be erased, we can still legally collect, use and share Your Study Data up to the point in time that you withdraw your consent or request your data be erased. Even if you withdraw your consent, we may still use Your Study Data that has been anonymized by removing any data that identifies you. We may also use and share Your Study Data that has been pseudonymized by removing certain identifiers so that the data does not directly identify you, where permitted by law. Your anonymized or pseudonymized data may be used for purposes of scientific or historical research or statistical analysis as allowed by the EU or EU Member State laws, and saving or storing for important reasons of public interest. We will keep Your Study Data in identifiable form if required by law.</p><p>There is no limit on the length of time we will keep Your Study Data for this research because it may be analyzed for many years. We will also keep Your Study Data to follow our legal and regulatory requirements. We will keep it as long as it is useful, unless you decide you no longer want to take part. You are allowing access to this information indefinitely as long as you do not withdraw your consent.</p><h4>CONTACT INFORMATION:</h4><p><b>Questions:</b> If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman, at (650) 725-2400.</p><p><b>INDEPENDENT CONTACT:</b> If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-5244 or toll free at 1-866-680-2906. You can also write to the Stanford IRB at irbeducation@stanford.edu.</p><p>Save or print a copy of this page for your records.</p><p><b>If you agree to participate in this research, click the Continue button below.</b></p>",
+ "estimated_minutes": 38.6,
  "deployed_at": "https://stanfordai4hi.github.io/prolific-reconstruction/ky9u6/"
 }

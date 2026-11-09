@@ -17,10 +17,9 @@ raw deposit, no paper — under four rules:
 4. No item text or scale is changed; an error there is the reconstruction's and is
    what the re-run measures.
 
-Records. Eleven studies are read from the revised `ba/3` records (data1030:
-`<id>/data/study_N.json`); the other four (efk28, 6fjdr, 6cxdn, ky9u6) have no revised
-record and are still read from the v1 battery's `final/experiment_N.json`. From a ba/3
-record this script
+Records. All fifteen studies are read from the revised `ba/3` records (data1030:
+`<id>/data/study_N.json`; efk28, 6fjdr, 6cxdn and ky9u6 came in the second batch,
+prolific_4_records.zip). From a ba/3 record this script
 
 - takes only people the record does not flag in `participant-meta.excluded` when
   choosing a path (the revision restored excluded people as flagged rows);
@@ -36,9 +35,8 @@ record this script
 - turns `shown-if` on an earlier answer into the renderer's `show_if`; a `shown-if` on
   an assignment is what the arm (or a random pick inside it) already decides.
 
-The reconstructions are read from: --records PATH (or $BA_RECORDS, or
-../../data1030/records beside the deploy checkout) for ba/3, and --archive PATH (or
-$BA_ARCHIVE, or ../behavioral_archive) for the v1 battery.
+The reconstructions are read from --records PATH (or $BA_RECORDS, or
+../../data1030/records beside the deploy checkout).
 
     python3 tools/respec_battery.py --full     # rewrite the specs in place
     python3 tools/respec_battery.py --check    # print what would change, write nothing
@@ -60,15 +58,13 @@ def _arg(flag, env, default):
     return Path(os.environ.get(env, default))
 
 
-LEGACY = _arg('--archive', 'BA_ARCHIVE', SITE.parent / 'behavioral_archive') / \
-    'runs/replication/prolific_battery_v1/studies'
 RECORDS = _arg('--records', 'BA_RECORDS', SITE.parent.parent / 'data1030' / 'records')
 
 KEEP = ('type', 'variable-name', 'question', 'content', 'response-constraints',
         'text_source', 'condition', 'check')
 # Pages the site supplies itself (consent is spec['consent']; there is no debrief page).
 SITE_PAGES = {'consent', 'consent_intro', 'consent_information', 'IC', 'Q17', 'debrief',
-              'Informed_consent'}
+              'Informed_consent', 'Consent'}
 NARRATION = re.compile(r'(You|For each)\b')
 
 
@@ -170,35 +166,6 @@ class Record:
         return out
 
 
-class Recon:
-    """A v1 battery reconstruction (final/experiment_N.json), for the four listings
-    with no revised record."""
-
-    def __init__(self, study, experiment):
-        self.ex = json.loads((LEGACY / study / 'final' / f'{experiment}.json').read_text())
-        self.items = {}
-        for p in self.ex['data']:
-            for it in p['study-content']:
-                self.items.setdefault(it['variable-name'], it)
-
-    def people(self, **meta):
-        return [p for p in self.ex['data']
-                if all(p['participant-meta'].get(k) == v for k, v in meta.items())]
-
-    def sequence(self, longest=False, **meta):
-        """The modal presentation order of the matching participants, as their items.
-
-        `longest` takes the fullest path instead, for studies whose orders differ
-        only because answers hid items."""
-        people = self.people(**meta)
-        seqs = collections.Counter(_names(p['study-content']) for p in people)
-        seq = (max(seqs, key=len) if longest else seqs.most_common(1)[0][0])
-        # take each item from a participant on that path, so per-arm text is right
-        owner = next(p for p in people if _names(p['study-content']) == seq)
-        return [clean(it) for it in owner['study-content']
-                if it['variable-name'] not in SITE_PAGES]
-
-
 #: --full fields the whole arm instead of stopping at the outcome item. The default
 #: (False) keeps the original behaviour: what followed the outcome cannot have shaped
 #: it, so it is left out. Full scope administers the study as the archive records it
@@ -260,10 +227,14 @@ def authored(name, question, rc, note, **extra):
 
 
 # ---------------------------------------------------------------- per listing
-# The four listings with no revised record, unchanged.
+# The four listings added in the second revised batch (prolific_4_records.zip).
 
 def efk28(spec):
-    r = Recon('efk28', 'experiment_2')
+    """Study 2: six arms (three life stories x impact ending). The revised record adds
+    the per-story lead-in, the attention item `Q1_20` ("He was a rockstar.", the
+    check the authors excluded 83 people on) and the closing religiosity and
+    politics questions."""
+    r = Record('efk28', 2)
     arms = []
     for lab in spec['arm_labels']:
         items = r.sequence(case=int(lab['case']), condition=lab['condition'])
@@ -272,32 +243,83 @@ def efk28(spec):
 
 
 def sixfjdr(spec):
-    r = Recon('6fjdr', 'experiment_1')
+    """Study 1. The record's Prolific attention check is narration (its five options
+    were not deposited) and is skipped; the carbon-numeracy estimates are now
+    number boxes (kg) rather than text."""
+    r = Record('6fjdr', 1)
     return {'blocks': upto(r.sequence(), 'Impact_vegetarian')}
 
 
+#: 6cxdn branches on participant-info.relationship_status, which the original took
+#: from its screener rather than asking in the survey. The question below asks it and
+#: writes it to participant-info under the record's own values.
+SIXCXDN_STATUS = {
+    'Yes, I am in a romantic relationship': 'in a romantic relationship',
+    'No, I am single, and there is someone I have a romantic interest in or have '
+    'recently dated': 'single with a current romantic interest',
+}
+
+
+def _merge(a, b):
+    """Items of path `a`, with those only in path `b` inserted after the item that
+    precedes them in `b` (the two branches of one instrument)."""
+    out = list(a)
+    have = [it['variable-name'] for it in out]
+    prev = None
+    for it in b:
+        name = it['variable-name']
+        if name not in have:
+            k = have.index(prev) + 1 if prev else 0
+            have.insert(k, name)
+            out.insert(k, it)
+        prev = name
+    return out
+
+
 def sixcxdn(spec):
-    r = Recon('6cxdn', 'experiment_2')
-    partnered = r.sequence(analysis_relationship_group='partnered')
-    single = by_name(r.sequence(analysis_relationship_group='single'))
-    head = upto(partnered, 'RoCh.31')
-    status = next(it for it in _items(spec['blocks'])
-                  if it['variable-name'] == 'relationship_status')
-    status = dict(status, note=(
-        'Authored. The reconstruction branches on participant-meta.'
-        'analysis_relationship_group, which no archive item asks; this question '
-        'stands in for it so the branch can be taken.'))
-    prqc = dict(by_name(partnered)['PRQC.1'],
-                show_if={'variable': 'relationship_status', 'op': '==', 'value': 'Yes'})
-    liking = [dict(single[f'liking.{k}'],
-                   show_if={'variable': 'relationship_status', 'op': '==', 'value': 'No'})
-              for k in (1, 2, 3)]
-    return {'blocks': head + [status, prqc] + liking}
+    """Study 3 (record study 2): one instrument with a partnered and a single branch.
+    The authored status question takes the branch; the record's instructed-response
+    item `ac1` keeps its place and answer (2, chosen by 1,110 of 1,113) with authored
+    wording, as its own was not deposited."""
+    r = Record('6cxdn', 2)
+    label = {v: k for k, v in SIXCXDN_STATUS.items()}
+    ac1 = authored('ac1', 'For this line, please select 2.',
+                   r.items['ac1']['response-constraints'],
+                   'Authored. The record keeps this instructed-response check (answer 2) '
+                   'without its wording.', check='instructed')
+    paths = [r.sequence(analysis_relationship_group=g, replace={'ac1': ac1})
+             for g in ('partnered', 'single')]
+    items = _merge(*paths)
+    for it in items:
+        crit = (r.items.get(it['variable-name'], {}).get('shown-if') or {}).get('criteria', [])
+        gate = [c for c in crit if c.get('field') == 'participant-info.relationship_status']
+        if gate:
+            it['show_if'] = {'variable': 'relationship_status', 'op': '==',
+                             'value': label[gate[0]['value']]}
+    status = demo('relationship_status', 'Are you currently in a romantic relationship?',
+                  SIXCXDN_STATUS, name='relationship_status')
+    status['note'] = ('Authored. The record branches on participant-info.'
+                      'relationship_status, which the original took from its screener; '
+                      'the options are the values it records.')
+    return {'blocks': [status] + upto(items, 'RoCh.31')}
+
+
+#: ky9u6's HEMA-R block names each project the participant wrote (`pp.1`-`pp.3`).
+KY9U6_PROJECT = '(the project you wrote as #{k})'
 
 
 def ky9u6(spec):
-    r = Recon('ky9u6', 'experiment_1')
-    return {'blocks': upto(r.sequence(), 'mhc.14')}
+    r = Record('ky9u6', 1)
+    items = r.sequence()
+    for it in items:
+        m = re.fullmatch(r'hema_project_(\d)', it['variable-name'])
+        if m:
+            k = m.group(1)
+            slot = KY9U6_PROJECT.format(k=k)
+            it['content'] = r.items[it['variable-name']]['template'].replace(
+                f'{{project_{k}}}', slot)
+            it['pipe'] = {slot: f'pp.{k}'}
+    return {'blocks': upto(items, 'mhc.14')}
 
 
 # The eleven listings read from the revised records.
@@ -904,6 +926,9 @@ DEMOGRAPHICS = {
               'Australia': 'Australia',
               'United Kingdom': 'United Kingdom of Great Britain and Northern Ireland',
               'New Zealand': 'New Zealand', 'Other': 'Other'})]),
+    'ky9u6': ('end', [demo('age', AGE, None),
+                      demo('gender', GENDER, {o: o for o in (
+                          'Woman', 'Man', 'Non-binary or gender fluid')})]),
     'kxcwm': ('end', [
         demo('age', AGE, None),
         demo('gender', GENDER, {'Female': 'female', 'Male': 'male',
@@ -953,9 +978,10 @@ LISTINGS = {
 }
 
 #: Targets moved by the revised findings: the deployed one was demoted to secondary
-#: (cse5r f04, kxcwm f65) or changed meaning (ba65f f16). The replacement is the main,
+#: (cse5r f04, kxcwm f65, 6cxdn f35, ky9u6 f20) or changed meaning (ba65f f16). The replacement is the main,
 #: scored finding in the SAME archive study, so no listing changes experiment.
-TARGETS = {'cse5r': 'f24', 'kxcwm': 'f85', 'ba65f_A': 'f09', 'ba65f_B': 'f09'}
+TARGETS = {'cse5r': 'f24', 'kxcwm': 'f85', 'ba65f_A': 'f09', 'ba65f_B': 'f09',
+           '6cxdn': 'f39', 'ky9u6': 'f31'}
 
 
 # ---------------------------------------------------------------- session length
