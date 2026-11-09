@@ -167,6 +167,23 @@ for (const listing of fs.readdirSync(SITE).sort()) {
     assert(got.includes('ac1'), '6cxdn: instructed-response item missing');
     console.log(`ok  6cxdn: "${status.slice(0, 20)}..." shows ${want}, hides ${not}`);
   }
+  // no current romantic interest: the session ends at the status question, screened out
+  const none = spec.blocks[0]['response-constraints'].options[2];
+  const s = boot('6cxdn', 'cnone');
+  s.next();
+  const got = finish(s, { relationship_status: none });
+  assert.strictEqual(s.box.payload.subject_information.screened_out, 'relationship_status');
+  assert(!got.includes('RoCh.1'), '6cxdn: screened-out session went on to the scale');
+  console.log('ok  6cxdn: no romantic interest screens out at the status question');
+  // the typed initials replace "this person" in the later items
+  const t = boot('6cxdn', 'cinit');
+  t.next();
+  const vals = { relationship_status: spec.blocks[0]['response-constraints'].options[0],
+                 initials: 'J.K.' };
+  assert(runTo(t, () => t.text().includes('J.K. and I share a common vision.'), vals, 300),
+         '6cxdn: initials not piped');
+  assert(!t.text().includes('this person'), '6cxdn: "this person" left in place');
+  console.log('ok  6cxdn: the initials are piped in place of "this person"');
 }
 
 // ---------- ky9u6: each HEMA-R block names the participant's own project

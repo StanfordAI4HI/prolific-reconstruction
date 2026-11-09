@@ -330,7 +330,26 @@ SIXCXDN_STATUS = {
     'Yes, I am in a romantic relationship': 'in a romantic relationship',
     'No, I am single, and there is someone I have a romantic interest in or have '
     'recently dated': 'single with a current romantic interest',
+    'No, I am single, and there is no one I currently have a romantic interest in':
+        'single without a current romantic interest',
 }
+#: The original removed 17 people "for stating they did not currently have a romantic
+#: interest"; this option ends the session there (screened out, paid for their time).
+SIXCXDN_SCREEN_OUT = 'single without a current romantic interest'
+#: The original asked for the initials of the partner or romantic interest and showed
+#: them in place of a name ("How much do you like <initials>?"). The record keeps
+#: "this person" for them, as the initials were not deposited; the page pipes them back.
+SIXCXDN_INITIALS = authored(
+    'initials',
+    'Please type the initials of your current romantic partner or, if you are single, of '
+    'the person you have a romantic interest in or have recently dated (for example, '
+    'A.B.). This must be a person you have interacted with in person. The next '
+    'questions will refer to them by these initials.',
+    {'type': 'free-response', 'response-limit': 10},
+    'Authored from the paper (Study 3 Participants and procedure): participants entered '
+    'the initials of their romantic interest to complete the measures, and items showed '
+    'them as <initials>. The record keeps "this person" for them.')
+SIXCXDN_PIPE = {'this person': 'initials', 'This person': 'initials'}
 
 
 def _merge(a, b):
@@ -351,7 +370,9 @@ def _merge(a, b):
 
 def sixcxdn(spec):
     """Study 3 (record study 2): one instrument with a partnered and a single branch.
-    The authored status question takes the branch; the record's instructed-response
+    The authored status question takes the branch (or screens out someone with no
+    current romantic interest); the authored initials entry is piped wherever the record
+    says "this person", as the original showed the initials; the record's instructed-response
     item `ac1` keeps its place and answer (2, chosen by 1,110 of 1,113) with authored
     wording, as its own was not deposited."""
     r = Record('6cxdn', 2)
@@ -369,12 +390,21 @@ def sixcxdn(spec):
         if gate:
             it['show_if'] = {'variable': 'relationship_status', 'op': '==',
                              'value': label[gate[0]['value']]}
+    for it in items:
+        text = (it.get('question') or '') + (it.get('content') or '')
+        pipe = {k: v for k, v in SIXCXDN_PIPE.items() if k in text}
+        if pipe:
+            it['pipe'] = pipe
     status = demo('relationship_status', 'Are you currently in a romantic relationship?',
                   SIXCXDN_STATUS, name='relationship_status')
+    status['disqualify_values'] = [k for k, v in SIXCXDN_STATUS.items()
+                                   if v == SIXCXDN_SCREEN_OUT]
     status['note'] = ('Authored. The record branches on participant-info.'
                       'relationship_status, which the original took from its screener; '
-                      'the options are the values it records.')
-    return {'blocks': [status] + upto(items, 'RoCh.31')}
+                      'the first two options are the values it records. The third '
+                      'screens out, as the original removed people with no current '
+                      'romantic interest.')
+    return {'blocks': [status, copy.deepcopy(SIXCXDN_INITIALS)] + upto(items, 'RoCh.31')}
 
 
 #: ky9u6's HEMA-R block names each project the participant wrote (`pp.1`-`pp.3`).
