@@ -7,6 +7,25 @@
  "blocks": [
   {
    "type": "question",
+   "variable-name": "attention_check",
+   "question": "For this question, to show that you have read these instructions carefully, please select all five of the answers below.",
+   "response-constraints": {
+    "type": "mcq",
+    "options": [
+     "Extremely important",
+     "Very important",
+     "Somewhat important",
+     "Only a little important",
+     "Not at all important"
+    ],
+    "max-choices": 5
+   },
+   "text_source": "survey_pdf",
+   "check": "attention",
+   "note": "Verbatim from the Study 1 survey PDF, where it follows the Prolific ID. The record keeps only a summary of this step (all analysed people passed). Passing means selecting all five; the original ended a failing session, ours excludes it at ingest."
+  },
+  {
+   "type": "question",
    "variable-name": "climate_worry_1",
    "question": "How worried are you about the issue of climate change?",
    "response-constraints": {
@@ -19,384 +38,549 @@
    "text_source": "extracted"
   },
   {
-   "type": "stimuli",
-   "variable-name": "persact_freq_instructions",
-   "content": "How often do you take the following actions to help reduce your carbon footprint?",
-   "text_source": "extracted"
+   "type": "page",
+   "shuffle": false,
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "persact_freq_instructions",
+     "content": "How often do you take the following actions to help reduce your carbon footprint?",
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_vegan",
+     "question": "Eating a vegan diet",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_vegetarian",
+     "question": "Eating a vegetarian diet",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_eatseasonal",
+     "question": "Eating seasonally",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_energyefficappl",
+     "question": "Using energy-efficient appliances",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_lessfoodwaste",
+     "question": "Reducing food waste",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_buyless",
+     "question": "Buying fewer things",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_recycle",
+     "question": "Recycling",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_avoidflights",
+     "question": "Avoiding long-haul flights",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_lowertemp",
+     "question": "Lowering the room temperature",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_carpool",
+     "question": "Car-pooling",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Never",
+      "scale-max-desc": "Always",
+      "scale-labels": [
+       "Never",
+       "Rarely",
+       "Sometimes",
+       "Most of the time",
+       "Always"
+      ]
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
-   "type": "question",
-   "variable-name": "persact_vegan",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Eating a vegan diet",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
+   "type": "page",
+   "shuffle": false,
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "persact_owncar_stem",
+     "content": "Please answer the following questions.",
+     "text_source": "survey_pdf",
+     "note": "The grid stem, verbatim from the Study 1 survey PDF."
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_owncar",
+     "question": "Do you own a car?",
+     "response-constraints": {
+      "type": "mcq",
+      "options": [
+       "Yes",
+       "No"
+      ],
+      "max-choices": 1
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_electriccar",
+     "question": "Do you own specifically an electric car?",
+     "response-constraints": {
+      "type": "mcq",
+      "options": [
+       "Yes",
+       "No"
+      ],
+      "max-choices": 1
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_heatpumps",
+     "question": "Do you have heat pumps installed in your home?",
+     "response-constraints": {
+      "type": "mcq",
+      "options": [
+       "Yes",
+       "No"
+      ],
+      "max-choices": 1
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "persact_renewelec",
+     "question": "Do you purchase or produce your own renewable electricity?",
+     "response-constraints": {
+      "type": "mcq",
+      "options": [
+       "Yes",
+       "No"
+      ],
+      "max-choices": 1
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
-   "type": "question",
-   "variable-name": "persact_vegetarian",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Eating a vegetarian diet",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_eatseasonal",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Eating seasonally",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_energyefficappl",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Using energy-efficient appliances",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_lessfoodwaste",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Reducing food waste",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_buyless",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Buying fewer things",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_recycle",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Recycling",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_avoidflights",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Avoiding long-haul flights",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_lowertemp",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Lowering the room temperature",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_carpool",
-   "question": "How often do you take the following action to help reduce your carbon footprint? — Car-pooling",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Never",
-    "scale-max-desc": "Always"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_owncar",
-   "question": "Do you own a car?",
-   "response-constraints": {
-    "type": "mcq",
-    "options": [
-     "Yes",
-     "No"
-    ],
-    "max-choices": 1
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_electriccar",
-   "question": "Do you own specifically an electric car?",
-   "response-constraints": {
-    "type": "mcq",
-    "options": [
-     "Yes",
-     "No"
-    ],
-    "max-choices": 1
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_heatpumps",
-   "question": "Do you have heat pumps installed in your home?",
-   "response-constraints": {
-    "type": "mcq",
-    "options": [
-     "Yes",
-     "No"
-    ],
-    "max-choices": 1
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "persact_renewelec",
-   "question": "Do you purchase or produce your own renewable electricity?",
-   "response-constraints": {
-    "type": "mcq",
-    "options": [
-     "Yes",
-     "No"
-    ],
-    "max-choices": 1
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "impact_instructions",
-   "content": "The UK is committed to reducing greenhouse gas emissions to net zero by 2050. To the best of your knowledge, what effect do you think each of the actions listed below have on reducing personal carbon emissions?",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_buyless",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Buying fewer things",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_energyeffappl",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Using energy-efficient appliances",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_eatseasonal",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Eating seasonally",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_recycle",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Recycling",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_livecarfree",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Living car-free",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_carpooling",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Car-pooling",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_purchaserenewelec",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Purchasing renewable electricity",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_heatpumps",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Installing heat pumps",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_ownelectriccar",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Owning an electric car",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_avoidflight",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Avoiding one long-haul flight",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_reducefoodwaste",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Reducing food waste",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_vegan",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Eating a vegan diet",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_lowerroomtemp",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Lowering the room temperature",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "Impact_vegetarian",
-   "question": "What effect do you think the following action has on reducing personal carbon emissions? — Eating a vegetarian diet",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 3,
-    "scale-min-desc": "Small",
-    "scale-max-desc": "Large"
-   },
-   "text_source": "extracted"
+   "type": "page",
+   "shuffle": false,
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "impact_instructions",
+     "content": "The UK is committed to reducing greenhouse gas emissions to net zero by 2050. To the best of your knowledge, what effect do you think each of the actions listed below have on reducing personal carbon emissions?",
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_buyless",
+     "question": "Buying fewer things",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_energyeffappl",
+     "question": "Using energy-efficient appliances",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_eatseasonal",
+     "question": "Eating seasonally",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_recycle",
+     "question": "Recycling",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_livecarfree",
+     "question": "Living car-free",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_carpooling",
+     "question": "Car-pooling",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_purchaserenewelec",
+     "question": "Purchasing renewable electricity",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_heatpumps",
+     "question": "Installing heat pumps",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_ownelectriccar",
+     "question": "Owning an electric car",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_avoidflight",
+     "question": "Avoiding one long-haul flight",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_reducefoodwaste",
+     "question": "Reducing food waste",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_vegan",
+     "question": "Eating a vegan diet",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_lowerroomtemp",
+     "question": "Lowering the room temperature",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "Impact_vegetarian",
+     "question": "Eating a vegetarian diet",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 3,
+      "scale-min-desc": "Small",
+      "scale-max-desc": "Large",
+      "scale-labels": [
+       "Small",
+       "Moderate",
+       "Large"
+      ]
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "question",
@@ -420,223 +604,318 @@
     "scale-min": 1,
     "scale-max": 5,
     "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
+    "scale-max-desc": "Strongly agree",
+    "scale-labels": [
+     "Strongly disagree",
+     "Somewhat disagree",
+     "Neither agree nor disagree",
+     "Somewhat agree",
+     "Strongly agree"
+    ]
    },
    "text_source": "extracted"
   },
   {
-   "type": "question",
-   "variable-name": "mot_re_convenience",
-   "question": "I generally help reduce climate change by taking the types of actions that are most convenient for me to implement.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "page",
+   "shuffle": false,
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "mot_re_convenience_stem",
+     "content": "Please indicate the extent to which you agree or disagree with these statements:",
+     "text_source": "survey_pdf",
+     "note": "The grid stem, verbatim from the Study 1 survey PDF."
+    },
+    {
+     "type": "question",
+     "variable-name": "mot_re_convenience",
+     "question": "I generally help reduce climate change by taking the types of actions that are most convenient for me to implement.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "heu_social_heur",
+     "question": "I mostly engage in the types of climate mitigation behaviours that I see other people doing.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "mot_re_persvalues",
+     "question": "I generally help reduce climate change by taking the types of actions that align most with my personal values.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
-   "type": "question",
-   "variable-name": "heu_social_heur",
-   "question": "I mostly engage in the types of climate mitigation behaviours that I see other people doing.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
+   "type": "page",
+   "shuffle": false,
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "heu_balance1_stem",
+     "content": "To what extent do you agree or disagree with the following statements?",
+     "text_source": "survey_pdf",
+     "note": "The grid stem, verbatim from the Study 1 survey PDF."
+    },
+    {
+     "type": "question",
+     "variable-name": "heu_balance1",
+     "question": "It is okay to drink bottled water if you limit the number of car journeys that you make.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "heu_restriction2",
+     "question": "The Western lifestyle is the cause of climate change, and it is only fair that we are now affected by severe restrictions.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "heu_restriction1",
+     "question": "We cannot buy our way out of our culpability for the climate crisis.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "heu_balance3",
+     "question": "It does not matter how much energy you use if you are on a green energy tariff.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "heu_balance2",
+     "question": "Recycling compensates for driving a car.",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 5,
+      "scale-min-desc": "Strongly disagree",
+      "scale-max-desc": "Strongly agree",
+      "scale-labels": [
+       "Strongly disagree",
+       "Somewhat disagree",
+       "Neither agree nor disagree",
+       "Somewhat agree",
+       "Strongly agree"
+      ]
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
-   "type": "question",
-   "variable-name": "mot_re_persvalues",
-   "question": "I generally help reduce climate change by taking the types of actions that align most with my personal values.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "heu_balance1",
-   "question": "It is okay to drink bottled water if you limit the number of car journeys that you make.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "heu_restriction2",
-   "question": "The Western lifestyle is the cause of climate change, and it is only fair that we are now affected by severe restrictions.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "heu_restriction1",
-   "question": "We cannot buy our way out of our culpability for the climate crisis.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "heu_balance3",
-   "question": "It does not matter how much energy you use if you are on a green energy tariff.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "heu_balance2",
-   "question": "Recycling compensates for driving a car.",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 5,
-    "scale-min-desc": "Strongly disagree",
-    "scale-max-desc": "Strongly agree"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "stimuli",
-   "variable-name": "conflation_instructions",
-   "content": "Please indicate to what extent each of the following is a cause of climate change, to the best of your knowledge.",
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_heatingcooling",
-   "question": "To what extent is the following a cause of climate change? — People heating and cooling their homes",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_electricityfromff",
-   "question": "To what extent is the following a cause of climate change? — Use of electricity from coal and oil",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_popgrowth",
-   "question": "To what extent is the following a cause of climate change? — Population growth",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_aerosol",
-   "question": "To what extent is the following a cause of climate change? — Use of aerosol spray cans",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_nuclear",
-   "question": "To what extent is the following a cause of climate change? — Nuclear energy",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_ozonehole",
-   "question": "To what extent is the following a cause of climate change? — The ozone hole in the upper atmosphere",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_livestockproduc",
-   "question": "To what extent is the following a cause of climate change? — Livestock production",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
-  },
-  {
-   "type": "question",
-   "variable-name": "conflation_airpoll",
-   "question": "To what extent is the following a cause of climate change? — Air pollution from toxic chemicals",
-   "response-constraints": {
-    "type": "scalar",
-    "scale-min": 1,
-    "scale-max": 7,
-    "scale-min-desc": "Not a cause at all",
-    "scale-max-desc": "A major cause"
-   },
-   "text_source": "extracted"
+   "type": "page",
+   "shuffle": false,
+   "items": [
+    {
+     "type": "stimuli",
+     "variable-name": "conflation_instructions",
+     "content": "Please indicate to what extent each of the following is a cause of climate change, to the best of your knowledge.",
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_heatingcooling",
+     "question": "People heating and cooling their homes",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_electricityfromff",
+     "question": "Use of electricity from coal and oil",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_popgrowth",
+     "question": "Population growth",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_aerosol",
+     "question": "Use of aerosol spray cans",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_nuclear",
+     "question": "Nuclear energy",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_ozonehole",
+     "question": "The ozone hole in the upper atmosphere",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_livestockproduc",
+     "question": "Livestock production",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    },
+    {
+     "type": "question",
+     "variable-name": "conflation_airpoll",
+     "question": "Air pollution from toxic chemicals",
+     "response-constraints": {
+      "type": "scalar",
+      "scale-min": 1,
+      "scale-max": 7,
+      "scale-min-desc": "Not a cause at all",
+      "scale-max-desc": "A major cause"
+     },
+     "text_source": "extracted"
+    }
+   ]
   },
   {
    "type": "question",
@@ -688,7 +967,16 @@
     "scale-min": 1,
     "scale-max": 7,
     "scale-min-desc": "Left",
-    "scale-max-desc": "Right"
+    "scale-max-desc": "Right",
+    "scale-labels": [
+     "Left",
+     "",
+     "",
+     "Center",
+     "",
+     "",
+     "Right"
+    ]
    },
    "text_source": "extracted"
   }
@@ -700,7 +988,9 @@
   "min_age": 18,
   "other": [
    "concerned about environmental issues",
-   "believes climate change is happening"
+   "believes climate change is happening",
+   "fluent English",
+   "gender-balanced sample (Prolific balanced-sample option)"
   ],
   "exclude_prior_listings": true
  },

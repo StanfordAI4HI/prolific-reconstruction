@@ -190,6 +190,22 @@ for (const listing of fs.readdirSync(SITE).sort()) {
   console.log('ok  efk28: every arm asks its attention item');
 }
 
+// ---------- 6fjdr: the survey PDF's attention check, grids and scale labels
+{
+  const s = boot('6fjdr', 'f1');
+  s.next(); // consent
+  const boxes = s.d.querySelectorAll('input[type=checkbox]');
+  assert.strictEqual(boxes.length, 5, '6fjdr: attention check is not a 5-way multi-select');
+  assert(s.text().includes('select all five'), '6fjdr: attention wording');
+  assert(runTo(s, () => s.text().includes('Living car-free')), '6fjdr: impact grid');
+  assert.strictEqual(new Set(s.onScreen().filter(n => n.startsWith('Impact_'))).size, 14,
+                     '6fjdr: impact rows not on one page');
+  assert(s.text().includes('Moderate'), '6fjdr: middle impact label missing');
+  const got = finish(s);
+  assert(got.includes('attention_check') && got.includes('Impact_livecarfree'));
+  console.log('ok  6fjdr: attention check, one-page grids, every point labelled');
+}
+
 // ---------- kf4e6: vignette and rating on one page
 {
   const s = boot('kf4e6', 'k1');

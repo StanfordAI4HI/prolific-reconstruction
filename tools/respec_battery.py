@@ -242,12 +242,85 @@ def efk28(spec):
     return {'arm_blocks': arms}
 
 
+#: 6fjdr's Study 1 survey PDF (deposit rdy2v, Survey/Study 1_survey.pdf) holds what the
+#: record dropped or flattened: the attention check's wording and options, every scale
+#: point's label, and the grids the items were asked in. Taken verbatim from it.
+SIXFJDR_ATTENTION = authored(
+    'attention_check',
+    'For this question, to show that you have read these instructions carefully, '
+    'please select all five of the answers below.',
+    {'type': 'mcq', 'options': ['Extremely important', 'Very important',
+                                'Somewhat important', 'Only a little important',
+                                'Not at all important'], 'max-choices': 5},
+    'Verbatim from the Study 1 survey PDF, where it follows the Prolific ID. The '
+    'record keeps only a summary of this step (all analysed people passed). Passing '
+    'means selecting all five; the original ended a failing session, ours excludes '
+    'it at ingest.', check='attention')
+SIXFJDR_ATTENTION['text_source'] = 'survey_pdf'
+SIXFJDR_AGREE = ['Strongly disagree', 'Somewhat disagree', 'Neither agree nor disagree',
+                 'Somewhat agree', 'Strongly agree']
+SIXFJDR_LABELS = (
+    (r'persact_(vegan|vegetarian|eatseasonal|energyefficappl|lessfoodwaste|buyless|'
+     r'recycle|avoidflights|lowertemp|carpool)',
+     ['Never', 'Rarely', 'Sometimes', 'Most of the time', 'Always']),
+    (r'Impact_.*', ['Small', 'Moderate', 'Large']),
+    (r'misinformation2|mot_re_.*|heu_.*', SIXFJDR_AGREE),
+    (r'politics', ['Left', '', '', 'Center', '', '', 'Right']),
+)
+#: The survey's grids, one page each: (first row, last row, stem). A stem of None is the
+#: record's own instruction item just before the first row; otherwise the PDF's stem.
+SIXFJDR_GRIDS = (
+    ('persact_vegan', 'persact_carpool', None),
+    ('persact_owncar', 'persact_renewelec', 'Please answer the following questions.'),
+    ('Impact_buyless', 'Impact_vegetarian', None),
+    ('mot_re_convenience', 'mot_re_persvalues',
+     'Please indicate the extent to which you agree or disagree with these statements:'),
+    ('heu_balance1', 'heu_balance2',
+     'To what extent do you agree or disagree with the following statements?'),
+    ('conflation_heatingcooling', 'conflation_airpoll', None),
+)
+
+
 def sixfjdr(spec):
-    """Study 1. The record's Prolific attention check is narration (its five options
-    were not deposited) and is skipped; the carbon-numeracy estimates are now
-    number boxes (kg) rather than text."""
+    """Study 1, laid out as its survey PDF: the attention check after consent, every
+    scale point labelled, and each grid of the PDF on one page with the action (or
+    statement) as the row, in the PDF's row order (the deposit records no
+    randomisation). The carbon-numeracy estimates are number boxes (kg)."""
     r = Record('6fjdr', 1)
-    return {'blocks': upto(r.sequence(), 'Impact_vegetarian')}
+    items = upto(r.sequence(replace={'prolific_attention_check': SIXFJDR_ATTENTION}),
+                 'Impact_vegetarian')
+    for it in items:
+        for rx, labels in SIXFJDR_LABELS:
+            if re.fullmatch(rx, it['variable-name']):
+                rc = it['response-constraints']
+                assert rc['scale-max'] - rc['scale-min'] + 1 == len(labels), it['variable-name']
+                rc['scale-labels'] = labels
+    names = [it['variable-name'] for it in items]
+    out, i = [], 0
+    starts = {g[0]: g for g in SIXFJDR_GRIDS}
+    while i < len(items):
+        g = starts.get(names[i])
+        if g is None:
+            out.append(items[i])
+            i += 1
+            continue
+        j = names.index(g[1]) + 1
+        if g[2] is None:
+            stem = out.pop()
+            assert stem['type'] == 'stimuli', f'6fjdr: no stem before {g[0]}'
+        else:
+            stem = {'type': 'stimuli', 'variable-name': f'{g[0]}_stem', 'content': g[2],
+                    'text_source': 'survey_pdf',
+                    'note': 'The grid stem, verbatim from the Study 1 survey PDF.'}
+        rows = []
+        for it in items[i:j]:
+            q = it['question']
+            # the record turned each grid row into "<stem> — <row>"; the stem is on
+            # the page, so the row keeps only its own label
+            rows.append(dict(it, question=q.split(' \u2014 ', 1)[1]) if ' \u2014 ' in q else it)
+        out.append({'type': 'page', 'shuffle': False, 'items': [stem] + rows})
+        i = j
+    return {'blocks': out}
 
 
 #: 6cxdn branches on participant-info.relationship_status, which the original took
